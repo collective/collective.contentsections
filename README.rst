@@ -14,6 +14,7 @@ Features
 It provides :
 
 - Basic schema and class for section content types
+- A *Page view* for folderish content types
 - *BasicPage*, *EventPage* page content types
 - *HTMLSection*, *TextSection*, *GallerySection* section content types
 - *ImageElement*, *LinkElement* element content types

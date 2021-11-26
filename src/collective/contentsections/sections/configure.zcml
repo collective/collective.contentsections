@@ -1,0 +1,25 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser">
+
+  <subscriber
+    for=".base.ISection
+         zope.lifecycleevent.interfaces.IObjectAddedEvent"
+    handler=".base.reindex_parent_page"
+    />
+
+  <subscriber
+    for=".base.ISection
+         zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+    handler=".base.reindex_parent_page"
+    />
+
+  <subscriber
+    for=".base.ISection
+         zope.lifecycleevent.interfaces.IObjectRemovedEvent"
+    handler=".base.reindex_parent_page"
+    />
+
+  <include package=".text" />
+
+</configure>

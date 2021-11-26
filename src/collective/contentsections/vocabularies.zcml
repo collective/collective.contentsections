@@ -1,0 +1,22 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope">
+
+  <utility
+    name="collective.contentsections.ImageAlignments"
+    component=".vocabularies.ImageAlignmentsVocabulary"
+    provides="zope.schema.interfaces.IVocabularyFactory"
+    />
+
+  <utility
+    name="collective.contentsections.ImageSizes"
+    component=".vocabularies.ImageSizesVocabulary"
+    provides="zope.schema.interfaces.IVocabularyFactory"
+    />
+
+  <utility
+    name="collective.contentsections.SectionWidths"
+    component=".vocabularies.SectionWidthsVocabulary"
+    provides="zope.schema.interfaces.IVocabularyFactory"
+    />
+
+</configure>

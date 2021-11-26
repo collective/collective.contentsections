@@ -1,0 +1,10 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser">
+
+  <permission
+    id="collective.contentsections.AddBasicPage"
+    title="collective.contentsections: Add BasicPage"
+    />
+
+</configure>

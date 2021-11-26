@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<object name="collective.contentsections.TextSection" meta_type="Dexterity FTI"
+    i18n:domain="collective.contentsections" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+    <property name="title" i18n:translate="">Text section</property>
+    <property name="icon_expr">string:file-earmark-richtext</property>
+
+    <property name="add_permission">cmf.AddPortalContent</property>
+    <property name="klass">collective.contentsections.sections.TextSection</property>
+    <property name="schema">collective.contentsections.sections.ITextSection</property>
+
+    <property name="global_allow">False</property>
+    <property name="filter_content_types">True</property>
+    <property name="allowed_content_types" />
+
+    <property name="behaviors" purge="false">
+        <element value="plone.richtext"/>
+        <element value="plone.leadimage"/>
+        <element value="plone.locking"/>
+        <element value="plone.namefromtitle"/>
+        <element value="plone.versioning" />
+    </property>
+
+</object>

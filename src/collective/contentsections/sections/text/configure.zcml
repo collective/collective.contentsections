@@ -1,0 +1,15 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser">
+
+  <!-- View view -->
+  <browser:page
+    name="view"
+    for="collective.contentsections.sections.ITextSection"
+    class="collective.contentsections.sections.SectionView"
+    template="view.pt"
+    permission="zope2.View"
+    layer="collective.contentsections.interfaces.IBrowserLayer"
+    />
+
+</configure>

@@ -1,0 +1,11 @@
+<html metal:use-macro="context/@@main_template/macros/master">
+
+<metal:main fill-slot="content-core">
+      <div tal:attributes="style view/background_style;" class="section-container section-html">
+            <div class="body-section">
+                  <div class="html" tal:content="structure context/html | nothing" />
+            </div>
+      </div>
+</metal:main>
+
+</html>

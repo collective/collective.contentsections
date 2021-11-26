@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<object name="collective.contentsections.BasicPage" meta_type="Dexterity FTI"
+    i18n:domain="collective.contentsections" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+    <property name="title" i18n:translate="">Basic page</property>
+    <property name="icon_expr">string:file-earmark-text-fill</property>
+
+    <property name="add_permission">collective.contentsections.AddBasicPage</property>
+    <property name="klass">collective.contentsections.pages.BasicPage</property>
+    <property name="schema">collective.contentsections.pages.IBasicPage</property>
+
+    <property name="global_allow">True</property>
+    <property name="filter_content_types">True</property>
+    <property name="allowed_content_types">
+        <element value="collective.contentsections.TextSection"/>
+    </property>
+
+    <property name="behaviors" purge="false">
+        <element value="plone.basic"/>
+        <element value="plone.leadimage"/>
+        <element value="plone.categorization"/>
+        <element value="plone.excludefromnavigation"/>
+        <element value="plone.locking"/>
+        <element value="plone.namefromtitle"/>
+        <element value="plone.publication"/>
+        <element value="plone.shortname"/>
+    </property>
+
+    <property name="default_view">page_view</property>
+    <property name="view_methods">
+        <element value="page_view"/>
+    </property>
+
+</object>
+

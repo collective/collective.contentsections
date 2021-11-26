@@ -1,0 +1,19 @@
+<tal:block
+  tal:define="
+    content_core_macro nocall:view/item_macros/content-core|nothing;
+    view nocall:view/default_view;
+    plone_view context/@@plone;
+    portal_state context/@@plone_portal_state;
+    context_state context/@@plone_context_state;
+    plone_layout context/@@plone_layout;
+    lang portal_state/language;
+    dummy python: plone_layout.mark_view(view);
+    portal_url portal_state/portal_url;
+    checkPermission nocall: context/portal_membership/checkPermission;
+    site_properties context/portal_properties/site_properties;"
+  tal:condition="content_core_macro">
+
+  <div metal:use-macro="content_core_macro" />
+
+</tal:block>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rolemap>
+  <permissions>
+
+    <permission name="collective.contentsections: Add BasicPage" acquire="False">
+      <role name="Manager"/>
+      <role name="Contributor"/>
+    </permission>
+
+  </permissions>
+</rolemap>
