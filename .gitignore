@@ -19,6 +19,7 @@ dist/*
 test.plone_addon/
 var/
 # files
+pyvenv.cfg
 .DS_Store
 .installed.cfg
 .mr.developer.cfg
