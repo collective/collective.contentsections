@@ -1,14 +1,15 @@
 <configure
-    xmlns="http://namespaces.zope.org/zope"
-    xmlns:browser="http://namespaces.zope.org/browser">
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser">
 
+  <!-- View view -->
   <browser:page
-      name="view"
-      for=".content.ISectionHTML"
-      class="netvaast.contenttypes.sections.base.SectionView"
-      template="view.pt"
-      permission="zope2.View"
-      layer="netvaast.contenttypes.IBrowserLayer"
-      />
+    name="view"
+    for=".content.IHTMLSection"
+    class="collective.contentsections.sections.SectionView"
+    template="view.pt"
+    permission="zope2.View"
+    layer="collective.contentsections.interfaces.IBrowserLayer"
+    />
 
 </configure>

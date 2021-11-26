@@ -20,6 +20,7 @@
     handler=".base.reindex_parent_page"
     />
 
+  <include package=".html" />
   <include package=".text" />
 
 </configure>

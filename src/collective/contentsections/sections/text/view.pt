@@ -6,7 +6,7 @@
       <?python
         figure_class = {"top": "text-center", "right": "float-end ms-4", "bottom": "text-center", "left": "float-start me-4"}
         ?>
-      <h2>${context/title}</h2>
+      <h2 tal:condition="not:context/hide_title">${context/title}</h2>
       <div class="section-container section-text" style="${view/background_image_style}">
         <div tal:condition="python: context.image_alignment=='bottom'"
           class="text" tal:content="structure context/text/output | nothing" />

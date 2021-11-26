@@ -1,19 +1,19 @@
+from collective.contentsections import _
+from collective.contentsections.sections.base import ISection
+from collective.contentsections.sections.base import Section
 from plone import schema
 from zope.interface import implementer
 
-from ..base import ISection
-from ..base import Section
 
-
-class ISectionHTML(ISection):
-    """Marker interface and Dexterity Python Schema for SectionHTML"""
+class IHTMLSection(ISection):
+    """HTMLSection schema"""
 
     html = schema.SourceText(
-        title=u"HTML",
+        title=_(u"HTML"),
         required=True,
     )
 
 
-@implementer(ISectionHTML)
-class SectionHTML(Section):
-    """SectionHTML class"""
+@implementer(IHTMLSection)
+class HTMLSection(Section):
+    """HTMLSection content type"""
