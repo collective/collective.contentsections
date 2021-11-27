@@ -7,7 +7,7 @@
     name="default"
     title="collective.contentsections"
     directory="profiles/default"
-    description="Installs the collective.contentsections add-on."
+    description="Installs the collective.contentsections add-on"
     provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 
@@ -15,7 +15,15 @@
     name="uninstall"
     title="collective.contentsections (uninstall)"
     directory="profiles/uninstall"
-    description="Uninstalls the collective.contentsections add-on."
+    description="Uninstalls the collective.contentsections add-on"
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+  <genericsetup:registerProfile
+    name="policy"
+    title="collective.contentsections (policy profile)"
+    directory="profiles/policy"
+    description="Configures Plone to work with sections"
     provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 
