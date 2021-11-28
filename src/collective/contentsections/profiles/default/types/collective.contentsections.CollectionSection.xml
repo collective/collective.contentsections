@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<object name="collective.contentsections.CollectionSection" meta_type="Dexterity FTI"
+    i18n:domain="collective.contentsections" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+    <property name="title" i18n:translate="">Collection section</property>
+    <property name="icon_expr">string:file-earmark-richtext</property>
+
+    <property name="add_permission">cmf.AddPortalContent</property>
+    <property name="klass">collective.contentsections.sections.CollectionSection</property>
+    <property name="schema">collective.contentsections.sections.ICollectionSection</property>
+
+    <property name="global_allow">False</property>
+    <property name="filter_content_types">True</property>
+    <property name="allowed_content_types" />
+
+    <property name="behaviors" purge="false">
+        <element value="plone.locking"/>
+        <element value="plone.namefromtitle"/>
+    </property>
+
+    <property name="default_view">card_view</property>
+    <property name="view_methods">
+        <element value="carousel_view"/>
+        <element value="card_view"/>
+    </property>
+
+</object>

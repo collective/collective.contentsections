@@ -1,0 +1,29 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser">
+
+  <!-- Card view -->
+  <browser:page
+    name="card_view"
+    for=".content.ICollectionSection"
+    class=".views.CollectionSectionView"
+    template="../base_card.pt"
+    permission="zope2.View"
+    menu="plone_displayviews"
+    title="List view"
+    layer="collective.contentsections.interfaces.IBrowserLayer"
+    />
+
+  <!-- Carousel view -->
+  <browser:page
+    name="carousel_view"
+    for=".content.ICollectionSection"
+    class=".views.CollectionSectionView"
+    template="../base_carousel.pt"
+    permission="zope2.View"
+    menu="plone_displayviews"
+    title="Carousel view"
+    layer="collective.contentsections.interfaces.IBrowserLayer"
+    />
+
+</configure>

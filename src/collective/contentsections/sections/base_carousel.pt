@@ -1,0 +1,16 @@
+<html metal:use-macro="context/@@main_template/macros/master">
+  <metal:main fill-slot="main">
+    <metal:content-core define-macro="content-core">
+
+      <h2 tal:condition="not:context/hide_title">${context/title}</h2>
+      <div id="carousel-${context/UID}" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div tal:repeat="item view/items" class="${python:' .active' if repeat.item.start else ''}">
+            <img src="${item/lead_image_url}" class="d-block w-100" alt="Item image" />
+          </div>
+        </div>
+      </div>
+
+    </metal:content-core>
+  </metal:main>
+</html>

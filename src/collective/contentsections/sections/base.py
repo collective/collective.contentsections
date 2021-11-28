@@ -37,7 +37,7 @@ class ISection(model.Schema):
     model.fieldset(
         "layout",
         label="Layout",
-        fields=["hide_title", "background_image", "css_width", "css_classes"],
+        fields=["hide_title", "css_width", "background_image", "css_classes"],
     )
 
 
