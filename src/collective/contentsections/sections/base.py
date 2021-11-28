@@ -40,9 +40,6 @@ class ISection(model.Schema):
         fields=["hide_title", "background_image", "css_width", "css_classes"],
     )
 
-    directives.write_permission(background_image="cmf.ManagePortal")
-    directives.write_permission(css_classes="cmf.ManagePortal")
-
 
 @implementer(ISection)
 class Section(Container):
