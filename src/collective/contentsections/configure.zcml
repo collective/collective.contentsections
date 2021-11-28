@@ -19,14 +19,6 @@
     provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 
-  <genericsetup:registerProfile
-    name="policy"
-    title="collective.contentsections (policy profile)"
-    directory="profiles/policy"
-    description="Configures Plone to work with sections"
-    provides="Products.GenericSetup.interfaces.EXTENSION"
-    />
-
   <include file="vocabularies.zcml" />
 
   <include package=".sections" />
