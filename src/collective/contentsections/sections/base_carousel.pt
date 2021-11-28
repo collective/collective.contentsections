@@ -3,9 +3,16 @@
     <metal:content-core define-macro="content-core">
 
       <h2 tal:condition="not:context/hide_title">${context/title}</h2>
-      <div id="carousel-${context/UID}" class="carousel slide" data-bs-ride="carousel">
+      <div tal:define="carousel_id string:carousel-${context/UID}"
+        id="${carousel_id}" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button tal:repeat="item view/items"
+            type="button" data-bs-target="#${carousel_id}" data-bs-slide-to="${repeat/item/index}"
+            class="${python:'active' if repeat.item.start else ''}"/>
+        </div>
         <div class="carousel-inner">
-          <div tal:repeat="item view/items" class="${python:' .active' if repeat.item.start else ''}">
+          <div tal:repeat="item view/items"
+            class="${python:'carousel-item active' if repeat.item.start else 'carousel-item'}">
             <img src="${item/lead_image_url}" class="d-block w-100" alt="Item image" />
           </div>
         </div>
