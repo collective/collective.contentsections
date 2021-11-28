@@ -1,16 +1,9 @@
 <html metal:use-macro="context/@@main_template/macros/master">
-
   <metal:main fill-slot="main">
     <metal:content-core define-macro="content-core">
 
-      <h2 tal:condition="not:context/hide_title">${context/title}</h2>
-      <div class="section-container section-html" style="${view/background_image_style}">
-        <div>
-          <div tal:content="structure context/html | nothing" />
-        </div>
-      </div>
+      <div tal:content="structure context/html | nothing" />
 
     </metal:content-core>
   </metal:main>
-
 </html>

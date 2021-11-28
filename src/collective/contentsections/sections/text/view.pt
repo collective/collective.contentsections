@@ -1,28 +1,23 @@
 <html metal:use-macro="context/@@main_template/macros/master">
-
   <metal:main fill-slot="main">
     <metal:content-core define-macro="content-core">
 
       <?python
         figure_class = {"top": "text-center", "right": "float-end ms-4", "bottom": "text-center", "left": "float-start me-4"}
         ?>
-      <h2 tal:condition="not:context/hide_title">${context/title}</h2>
-      <div class="section-container section-text" style="${view/background_image_style}">
-        <div tal:condition="python: context.image_alignment=='bottom'"
-          class="text" tal:content="structure context/text/output | nothing" />
-        <figure tal:condition="context/image | nothing"
-          class="${python:figure_class[context.image_alignment]}">
-          <img class="figure-image img-fluid img-size-${context/image_size}"
-            tal:attributes="src string:${context/absolute_url}/@@images/image/${context/image_size};" />
-          <figcaption tal:condition="context/image_caption" class="figure-caption">
-            ${context/image_caption}
-          </figcaption>
-        </figure>
-        <div tal:condition="python: context.image_alignment!='bottom'"
-          class="text" tal:content="structure context/text/output | nothing" />
-      </div>
+      <div tal:condition="python: context.image_alignment=='bottom'"
+        class="text" tal:content="structure context/text/output | nothing" />
+      <figure tal:condition="context/image | nothing"
+        class="${python:figure_class[context.image_alignment]}">
+        <img class="figure-image img-fluid img-size-${context/image_size}"
+          tal:attributes="src string:${context/absolute_url}/@@images/image/${context/image_size};" />
+        <figcaption tal:condition="context/image_caption" class="figure-caption">
+          ${context/image_caption}
+        </figcaption>
+      </figure>
+      <div tal:condition="python: context.image_alignment!='bottom'"
+        class="text" tal:content="structure context/text/output | nothing" />
 
     </metal:content-core>
   </metal:main>
-
 </html>

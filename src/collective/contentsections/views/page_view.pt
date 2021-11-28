@@ -1,30 +1,62 @@
 <html metal:use-macro="context/@@main_template/macros/master">
 
+  <metal:styleslot fill-slot="style_slot">
+    <style>
+      .section {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      --bs-gutter-x: 0.75rem;
+      --bs-gutter-y: 0rem;
+
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding: 2rem 0rem 2rem;
+      background-size:cover;
+      }
+      .section-edit-link {
+      margin-left: -50px;
+      position: relative;
+      }
+    </style>
+  </metal:styleslot>
+
   <metal:content-core fill-slot="content-core">
-    <metal:block define-macro="content-core"
-      tal:define="uuid context/@@uuid | nothing">
-      <div class="row">
-        <metal:listing use-macro="context/@@listing_view/macros/content-core">
-          <metal:entries fill-slot="entries">
-            <tal:def tal:define="can_edit python: checkPermission('Modify portal content', context)">
-              <metal:block use-macro="context/@@listing_view/macros/entries">
-                <metal:entry fill-slot="entry" tal:condition="python: item.UID != uuid">
-                  <tal:block define="obj item/getObject;">
-                    <a tal:attributes="name string:section-${obj/id}" />
-                    <a href="${obj/absolute_url}/${obj/main_editing_view_name}" tal:omit-tag="not:can_edit" class="position-relative" style="margin-left:-40px;">
-                      <button type="button" class="btn btn-danger position-absolute top-100 start-0">
+    <metal:listing use-macro="context/@@listing_view/macros/content-core">
+      <metal:entries fill-slot="entries">
+        <tal:def tal:define="can_edit python: checkPermission('Modify portal content', context)">
+          <metal:block use-macro="context/@@listing_view/macros/entries">
+            <metal:entry fill-slot="entry">
+              <tal:block define="obj item/getObject;
+                                 obj_url obj/absolute_url;
+                                 background_image_url string:url(${obj_url}/@@images/background_image/huge);
+                                 section_id python: 'section-' + obj.id;
+                                 section_class python:'section section-' + view.get_class(obj);
+                                 section_style python:'background-image: '+ background_image_url;
+                                 ">
+                <div id="${section_id}" class="${section_class}" style="${section_style}">
+                  <a tal:attributes="name string:section-${obj/id}" />
+                  <div class="container">
+                    <a href="${obj_url}/${obj/main_editing_view_name}" tal:omit-tag="not:can_edit" class="section-edit-link">
+                      <button tal:condition="can_edit"
+                        type="button" class="btn btn-danger position-absolute top-100 start-0">
                         <tal:icon replace="structure python:icons.tag('pencil', tag_class='')" />
                       </button>
                     </a>
+                    <h2 tal:condition="not:obj/hide_title">${obj/title}</h2>
                     <span tal:replace="structure obj/@@page_section_view | nothing" />
-                  </tal:block>
-                </metal:entry>
-              </metal:block>
-            </tal:def>
-          </metal:entries>
-        </metal:listing>
-      </div>
-    </metal:block>
+                  </div>
+                </div>
+              </tal:block>
+            </metal:entry>
+          </metal:block>
+        </tal:def>
+      </metal:entries>
+    </metal:listing>
   </metal:content-core>
+
 
 </html>

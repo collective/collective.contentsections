@@ -64,14 +64,6 @@ class SectionView(BrowserView):
         url = f"{page.absolute_url()}#section-{self.context.id}"
         self.request.response.redirect(url)
 
-    def background_image_style(self):
-        if not self.context.background_image:
-            return ""
-        css_bg_image = "background-image:url('{}/@@images/background_image/large');"
-        css_bg_image = css_bg_image.format(self.context.absolute_url())
-        css_bg_size = "background-size:cover;"
-        return " ".join([css_bg_image, css_bg_size])
-
 
 def reindex_parent_page(section, event):
     page = section.__parent__
