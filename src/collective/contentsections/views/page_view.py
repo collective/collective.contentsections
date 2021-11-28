@@ -48,11 +48,12 @@ class PageView(FolderView):
 
     @property
     def no_items_message(self):
-        return _(u"There is no section on this page.")
+        return _("There is no section on this page.")
 
-    def get_class(self, obj):
-        section_type = obj.portal_type.split(".")[-1]
-        return " ".join([section_type.lower(), obj.css_classes or "", obj.css_width or ""])
+    def get_section_classes(self, section):
+        section_type = section.portal_type.split(".")[-1]
+        section_type_class = f"section-{section_type.lower()}"
+        return " ".join(["section", section_type_class, section.css_classes or "", section.css_width or ""])
 
 
 class PageSectionView(FullViewItem):

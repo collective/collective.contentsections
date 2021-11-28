@@ -2,6 +2,7 @@
   <metal:main fill-slot="main">
     <metal:content-core define-macro="content-core">
 
+      <h2 tal:condition="not:context/hide_title">${context/title}</h2>
       <div tal:content="structure context/html | nothing" />
 
     </metal:content-core>

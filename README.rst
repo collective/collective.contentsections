@@ -11,14 +11,15 @@ A section can contain elements of the same type. Folders, pages, sections and el
 Features
 --------
 
-It provides :
-
+This product provides :
 - Basic schema and class for section content types
+- *HTMLSection*, *TextSection*, *CollectionSection*, *ImagesSection*, *LinksSection*, *FilesSection* section content types
 - A *Page view* for folderish content types
 - *BasicPage*, *EventPage* page content types
-- *HTMLSection*, *TextSection*, *GallerySection* section content types
-- *ImageElement*, *LinkElement* element content types
 
+This product fits Plone with:
+- new image sizes
+- a new default page name *index*
 
 Installation
 ------------
