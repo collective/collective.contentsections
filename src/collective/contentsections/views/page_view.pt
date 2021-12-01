@@ -14,7 +14,7 @@
       .section-edit-link {
       float: right
       }
-      .row-full-width {
+      #content-core {  /* FULL WIDTH */
       width: 100vw;
       position: relative;
       left: 50%;
@@ -27,56 +27,46 @@
 
   <metal:content-core fill-slot="content-core"
     tal:define="can_edit python: checkPermission('Modify portal content', context)">
-    <div class="section-group">
-      <tal:emptypage tal:condition="not:view/rows">
-        <div class="row">
-          <div class="col-sm-12">
-            <p class="container" i18n:translate="">There is no section on this page.</p>
-          </div>
+    <tal:emptypage tal:condition="not:view/rows">
+      <div class="row">
+        <div class="col-sm-12">
+          <p class="container" i18n:translate="">There is no section on this page.</p>
         </div>
-      </tal:emptypage>
-      <tal:row tal:repeat="row view/rows">
-        <?python
-          row_has_one_section = (len(row) == 1)
-          row_class = "row row-full-width" if row_has_one_section else "row"
-          ?>
-        <div id="row-${repeat/row/number}" class="${row_class}">
-          <tal:section tal:repeat="section row">
-            <?python
-              section_url = section.absolute_url()
-              background_image_url = f"url({section_url}/@@images/background_image/huge)"
-              section_id = f"section-{section.id}"
-              section_type = section.portal_type.split(".")[-1]
-              section_type_class = f"section-{section_type.lower()}"
-              section_bootstrap_width = f"col-sm-{section.width}"
-              section_full_width = "section-full-width" if len(row) == 1 else ""
-              section_css_classes = section.css_classes if section.css_classes else ""
-              section_class = " ".join(["section", section_type_class, section_css_classes, section_bootstrap_width])
-              section_style = f"background-image: {background_image_url}; background-size: cover; background-position: center;"
+      </div>
+    </tal:emptypage>
+    <tal:row tal:repeat="row view/rows">
+      <div id="row-${repeat/row/number}" class="row">
+        <tal:section tal:repeat="section row">
+          <?python
+            section_url = section.absolute_url()
+            background_image_url = f"url({section_url}/@@images/background_image/huge)"
+            section_id = f"section-{section.id}"
+            section_type = section.portal_type.split(".")[-1]
+            section_type_class = f"section-{section_type.lower()}"
+            section_bootstrap_width = f"col-sm-{section.width}"
+            section_full_width = "section-full-width" if len(row) == 1 else ""
+            section_css_classes = section.css_classes if section.css_classes else ""
+            section_class = " ".join(["section", section_type_class, section_css_classes, section_bootstrap_width])
+            section_style = f"background-image: {background_image_url}; background-size: cover; background-position: center;"
 
-              ?>
-            <div id="${section_id}" class="${section_class}" style="${section_style}">
-              <a tal:attributes="name string:section-${section_id}" />
+            ?>
+          <div id="${section_id}" class="${section_class}" style="${section_style}">
+            <a tal:attributes="name string:section-${section_id}" />
 
-              <div class="container">
-                <a href="${section_url}/${section/main_editing_view_name}" tal:omit-tag="not:can_edit" class="section-edit-link">
-                  <button tal:condition="can_edit"
-                    type="button" class="btn btn-dark">
-                    <tal:icon replace="structure python:icons.tag('pencil', tag_class='')" />
-                  </button>
-                </a>
-                <span tal:replace="structure section/@@page_section_view | nothing" />
-              </div>
-
+            <div class="container">
+              <a href="${section_url}/${section/main_editing_view_name}" tal:omit-tag="not:can_edit" class="section-edit-link">
+                <button tal:condition="can_edit"
+                  type="button" class="btn btn-dark">
+                  <tal:icon replace="structure python:icons.tag('pencil', tag_class='')" />
+                </button>
+              </a>
+              <span tal:replace="structure section/@@page_section_view | nothing" />
             </div>
-          </tal:section>
-        </div>
-      </tal:row>
-    </div>
-    <script>
-      console.log($("#section-section-section-xxx").width());
-    </script>
-  </metal:content-core>
 
+          </div>
+        </tal:section>
+      </div>
+    </tal:row>
+  </metal:content-core>
 
 </html>
