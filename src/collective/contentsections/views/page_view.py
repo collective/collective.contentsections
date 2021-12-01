@@ -1,5 +1,7 @@
 from Acquisition import aq_inner
 from collective.contentsections import _
+from collective.contentsections.sections import ISection
+from plone import api
 from plone.app.contenttypes.browser.folder import FolderView
 from plone.app.contenttypes.browser.full_view import FullViewItem
 from plone.dexterity.content import Container
@@ -22,38 +24,29 @@ class Page(Container):
 class PageView(FolderView):
     """Page view"""
 
-    def __call__(self):
-        # galleries_sections = self.context.listFolderContents(
-        #     contentFilter={"portal_type": "imio.smartweb.SectionGallery"}
-        # )
-        # if len(galleries_sections) > 0:
-        #     add_bundle_on_request(self.request, "spotlightjs")
-        #     add_bundle_on_request(self.request, "flexbin")
-        return self.index()
-
-    def results(self, **kwargs):
-        """
-        Gets results for folder listings without taking care of friendly_types
-        """
-        # Extra filter
-        kwargs.update(self.request.get("contentFilter", {}))
-        kwargs.setdefault("batch", True)
-        kwargs.setdefault("b_size", self.b_size)
-        kwargs.setdefault("b_start", self.b_start)
-        kwargs.setdefault("orphan", 1)
-
-        listing = aq_inner(self.context).restrictedTraverse("@@folderListing", None)
-        results = listing(**kwargs)
-        return results
+    @property
+    def sections(self):
+        section_brains = api.content.find(
+            context=self.context,
+            depth=1,
+            object_provides=ISection,
+            sort_on="getObjPositionInParent",
+        )
+        section_objects = [b.getObject() for b in section_brains]
+        return section_objects
 
     @property
-    def no_items_message(self):
-        return _("There is no section on this page.")
-
-    def get_section_classes(self, section):
-        section_type = section.portal_type.split(".")[-1]
-        section_type_class = f"section-{section_type.lower()}"
-        return " ".join(["section", section_type_class, section.css_classes or "", section.css_width or ""])
+    def rows(self):
+        page_rows = []
+        last_row_width = 12
+        for section in self.sections:
+            if last_row_width + section.width <= 12:
+                page_rows[-1].append(section)
+                last_row_width += section.width
+            else:  # Start a new row
+                page_rows.append([section])
+                last_row_width = section.width
+        return page_rows
 
 
 class PageSectionView(FullViewItem):

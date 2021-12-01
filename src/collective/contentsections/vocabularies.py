@@ -14,12 +14,12 @@ IMAGE_SIZES = {
     "mini": _("Mini"),
 }
 SECTION_WIDTHS = {
-    "col-sm-3": _("Quarter of width"),
-    "col-sm-4": _("Third of width"),
-    "col-sm-6": _("Half of width"),
-    "col-sm-8": _("Two third of width"),
-    "col-sm-9": _("Three quarter of width"),
-    "col-sm-12": _("Full width"),
+    12: _("Full width"),
+    9: _("Three quarter of width"),
+    8: _("Two third of width"),
+    6: _("Half of width"),
+    4: _("Third of width"),
+    3: _("Quarter of width"),
 }
 
 

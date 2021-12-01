@@ -13,31 +13,29 @@ class ISection(model.Schema):
 
     title = schema.TextLine(
         title=_("Section title"),
-        required=True,
     )
     hide_title = schema.Bool(
         title=_("Hide section title in page"),
-        required=False,
         default=False,
     )
     background_image = NamedBlobImage(
-        title="Image de fond",
+        title=_("Background image"),
         required=False,
     )
-    css_width = schema.Choice(
-        title="Largeur de la section",
-        required=False,
+    width = schema.Choice(
+        title=_("Width"),
         vocabulary="collective.contentsections.SectionWidths",
+        default=12,
     )
     css_classes = schema.TextLine(
-        title="Classes CSS",
+        title=_("CSS Classes"),
         required=False,
     )
 
     model.fieldset(
         "layout",
         label="Layout",
-        fields=["hide_title", "css_width", "background_image", "css_classes"],
+        fields=["hide_title", "width", "background_image", "css_classes"],
     )
 
 
