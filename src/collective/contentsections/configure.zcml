@@ -21,6 +21,7 @@
 
   <include file="vocabularies.zcml" />
 
+  <include package=".behaviors" />
   <include package=".sections" />
   <include package=".pages" />
   <include package=".views" />
