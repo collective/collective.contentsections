@@ -12,6 +12,7 @@
     <property name="global_allow">True</property>
     <property name="filter_content_types">True</property>
     <property name="allowed_content_types">
+        <element value="collective.contentsections.CardsSection"/>
         <element value="collective.contentsections.CollectionSection"/>
         <element value="collective.contentsections.HTMLSection"/>
         <element value="collective.contentsections.TextSection"/>
@@ -26,11 +27,6 @@
         <element value="plone.namefromtitle"/>
         <element value="plone.publication"/>
         <element value="plone.shortname"/>
-    </property>
-
-    <property name="default_view">page_view</property>
-    <property name="view_methods">
-        <element value="page_view"/>
     </property>
 
 </object>

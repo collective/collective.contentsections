@@ -1,0 +1,17 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser">
+
+  <!-- Card view -->
+  <browser:page
+    name="view"
+    for=".content.ICardsSection"
+    class=".views.CardsSectionView"
+    template="view.pt"
+    permission="zope2.View"
+    menu="plone_displayviews"
+    title="Card view"
+    layer="collective.contentsections.interfaces.IBrowserLayer"
+    />
+
+</configure>

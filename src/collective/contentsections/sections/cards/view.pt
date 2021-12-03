@@ -1,0 +1,27 @@
+<html metal:use-macro="context/@@main_template/macros/master">
+    <metal:main fill-slot="main">
+        <metal:content-core define-macro="content-core"
+            tal:define="icons python:context.restrictedTraverse('@@iconresolver');">
+
+            <h2 tal:condition="not:context/hide_title">${context/title}</h2>
+            <div class="row row-cols-1 row-cols-md-${context/group_size} g-4">
+                <div class="col" tal:repeat="item view/items">
+                    <div class="card">
+                        <div class="card-icon" style="font-size: 50px;" tal:condition="item/icon">
+                            <tal:icon replace="structure python:icons.tag(item['icon'], tag_alt=item['icon'])" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" tal:condition="item/title">${item/title}</h5>
+                            <h6 class="card-subtitle" tal:condition="item/subtitle">${item/subtitle}</h6>
+                            <p class="card-text" tal:condition="item/description">${item/description}</p>
+                            <a href="${item/relation_link_url}" tal:condition="item/relation_link_url">
+                                ${view/relation_link_text}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </metal:content-core>
+    </metal:main>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<object name="collective.contentsections.CardsSection" meta_type="Dexterity FTI"
+    i18n:domain="collective.contentsections" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+    <property name="title" i18n:translate="">Cards section</property>
+    <property name="icon_expr">string:card-heading</property>
+
+    <property name="add_permission">cmf.AddPortalContent</property>
+    <property name="klass">collective.contentsections.sections.CardsSection</property>
+    <property name="schema">collective.contentsections.sections.ICardsSection</property>
+
+    <property name="global_allow">False</property>
+    <property name="filter_content_types">True</property>
+    <property name="allowed_content_types" />
+
+    <property name="behaviors" purge="false">
+        <element value="plone.locking"/>
+        <element value="plone.namefromtitle"/>
+        <element value="plone.versioning" />
+    </property>
+
+    <property name="default_view">view</property>
+    <property name="view_methods">
+        <element value="view"/>
+    </property>
+
+</object>
+

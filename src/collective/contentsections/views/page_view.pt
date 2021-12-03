@@ -51,7 +51,7 @@
 
             ?>
           <div id="${section_id}" class="${section_class}" style="${section_style}">
-            <a tal:attributes="name string:section-${section_id}" />
+            <a tal:attributes="name string:${section_id}" />
 
             <div class="container">
               <a href="${section_url}/${section/main_editing_view_name}" tal:omit-tag="not:can_edit" class="section-edit-link">

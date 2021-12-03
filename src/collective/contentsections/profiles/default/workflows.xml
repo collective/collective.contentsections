@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <object name="portal_workflow" meta_type="Plone Workflow Tool">
   <bindings>
+    <type type_id="collective.contentsections.CardsSection"/>
     <type type_id="collective.contentsections.CollectionSection"/>
     <type type_id="collective.contentsections.HTMLSection"/>
     <type type_id="collective.contentsections.TextSection"/>

@@ -12,8 +12,12 @@ Features
 --------
 
 This product provides :
+
 - Basic schema and class for section content types
-- *HTMLSection*, *TextSection*, *CollectionSection*, *ImagesSection*, *LinksSection*, *FilesSection* section content types
+- *LeadIcon* vocabulary and behavior based on plone.icons registry records
+- *HTMLSection*, *TextSection*, *CollectionSection* content types
+- *CardsSection* content type based on a collective.z3cform.datagridfield field
+- *ImagesSection*, *LinksSection*, *FilesSection* folderish section content types
 - A *Page view* for folderish content types
 - *BasicPage*, *EventPage* page content types
 

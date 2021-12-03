@@ -10,7 +10,7 @@
     template="../base_card.pt"
     permission="zope2.View"
     menu="plone_displayviews"
-    title="List view"
+    title="Card view"
     layer="collective.contentsections.interfaces.IBrowserLayer"
     />
 

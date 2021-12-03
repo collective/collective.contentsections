@@ -26,5 +26,10 @@
   <include package=".pages" />
   <include package=".views" />
 
+  <plone:static
+    name="collective.contentsections"
+    type="plone"
+    directory="static"
+    />
 
 </configure>
