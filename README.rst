@@ -26,6 +26,7 @@ This product provides :
 - *BasicPage*, *EventPage* page content types
 
 This product fits Plone with:
+
 - new image sizes
 - a new default page name *index*
 
