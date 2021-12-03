@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="Image">
+
+  <property name="global_allow">False</property>
+
+  <property name="behaviors" purge="true">
+    <element value="plone.namefromfilename"/>
+    <element value="plone.shortname"/>
+  </property>
+
+</object>
