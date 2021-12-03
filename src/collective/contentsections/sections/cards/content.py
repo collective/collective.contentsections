@@ -79,7 +79,7 @@ class ICardsSection(ISection):
         required=False,
     )
 
-    directives.widget("cards", DataGridFieldFactory)
+    directives.widget("cards", DataGridFieldFactory, allow_reorder=True)
 
 
 @implementer(ICardsSection)
