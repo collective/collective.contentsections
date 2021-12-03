@@ -1,15 +1,13 @@
+from collective.contentsections.pages.base import IPage
+from collective.contentsections.pages.base import Page
 from plone.dexterity.content import Container
-from plone.supermodel import model
 from zope.interface import implementer
 
 
-class IBasicPage(model.Schema):
+class IBasicPage(IPage):
     """BasicPage schema"""
 
 
 @implementer(IBasicPage)
-class BasicPage(Container):
+class BasicPage(Page):
     """BasicPage class"""
-
-    def canSetDefaultPage(self):
-        return False
