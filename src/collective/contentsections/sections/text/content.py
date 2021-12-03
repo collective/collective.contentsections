@@ -17,7 +17,7 @@ class ITextSection(ISection):
     )
     image_size = schema.Choice(
         title=_(u"Image size"),
-        vocabulary="collective.contentsections.ImageSizes",
+        vocabulary="plone.app.vocabularies.ImagesScales",
         default="preview",
         required=True,
     )

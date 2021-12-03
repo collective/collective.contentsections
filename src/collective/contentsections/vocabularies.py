@@ -13,11 +13,6 @@ IMAGE_ALIGNMENTS = {
     "bottom": _("Bottom"),
     "top": _("Top"),
 }
-IMAGE_SIZES = {
-    "large": _("Large"),
-    "preview": _("Preview"),
-    "mini": _("Mini"),
-}
 SECTION_WIDTHS = {
     12: _("Container 1/1"),
     9: _("Container 3/4"),
@@ -39,7 +34,6 @@ class VocabularyFactory:
 
 
 ImageAlignmentsVocabulary = VocabularyFactory(IMAGE_ALIGNMENTS)
-ImageSizesVocabulary = VocabularyFactory(IMAGE_SIZES)
 SectionWidthsVocabulary = VocabularyFactory(SECTION_WIDTHS)
 
 
