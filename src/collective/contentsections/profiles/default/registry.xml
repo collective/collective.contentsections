@@ -31,4 +31,19 @@
     <value key="csscompilation">++plone++collective.contentsections/base.css</value>
   </records>
 
+  <record name="plone.displayed_types">
+    <value purge="false">
+      <element>collective.contentsections.BasicPage</element>
+    </value>
+  </record>
+
+  <record name="plone.types_not_searched">
+    <value purge="false">
+      <element>collective.contentsections.CardsSection</element>
+      <element>collective.contentsections.CollectionSection</element>
+      <element>collective.contentsections.HTMLSection</element>
+      <element>collective.contentsections.TextSection</element>
+    </value>
+  </record>
+
 </registry>
