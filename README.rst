@@ -8,7 +8,7 @@ It is largely based on the code that was developed in the *imio.smartweb.core* p
 The plone site is seen as a folder hierarchy that contains pages. A page is composed of sections.
 A section can contain elements of the same type. Folders, pages, sections and elements are all Dexterity content types.
 
-Images and files are seen as elements. Images are only available in images sections and as LeadImage.
+Images and files are seen as elements. Images are only available in images sections and as lead image in all content types.
 Files are only available in files sections.
 Links are sometimes seen as elements of the links section and sometimes as redirect pages.
 
