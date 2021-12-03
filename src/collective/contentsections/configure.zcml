@@ -19,7 +19,9 @@
     provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 
+  <include file="indexers.zcml" />
   <include file="vocabularies.zcml" />
+
 
   <include package=".behaviors" />
   <include package=".sections" />
