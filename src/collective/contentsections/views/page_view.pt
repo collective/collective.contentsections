@@ -55,16 +55,15 @@
             ?>
           <div id="${section_id}" class="${section_class}" style="${section_style}">
             <a tal:attributes="name string:${section_id}" />
-
             <div class="container">
               <div class="section-edit-links" tal:condition="can_edit">
-                <a href="${section_url}/select_default_view">
+                <a href="${section_url}/select_default_view" tal:condition="python:len(section.getAvailableLayouts())>1">
                   <button
                     type="button" class="btn btn-dark">
                     <tal:icon replace="structure python:icons.tag('list', tag_class='')" />
                   </button>
                 </a>
-                <a href="${section_url}/folder_contents">
+                <a href="${section_url}/folder_contents" tal:condition="section/allowedContentTypes">
                   <button
                     type="button" class="btn btn-dark">
                     <tal:icon replace="structure python:icons.tag('folder', tag_class='')" />
@@ -74,6 +73,12 @@
                   <button
                     type="button" class="btn btn-dark">
                     <tal:icon replace="structure python:icons.tag('pencil', tag_class='')" />
+                  </button>
+                </a>
+                <a href="${section_url}/@@delete_confirmation">
+                  <button
+                    type="button" class="btn btn-dark">
+                    <tal:icon replace="structure python:icons.tag('trash', tag_class='')" />
                   </button>
                 </a>
               </div>
