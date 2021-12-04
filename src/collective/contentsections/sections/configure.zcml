@@ -22,7 +22,13 @@
 
   <include package=".cards" />
   <include package=".collection" />
+  <include package=".files" />
   <include package=".html" />
+  <include package=".images" />
+  <include package=".links" />
   <include package=".text" />
+
+
+
 
 </configure>

@@ -41,7 +41,10 @@
     <value purge="false">
       <element>collective.contentsections.CardsSection</element>
       <element>collective.contentsections.CollectionSection</element>
+      <element>collective.contentsections.FilesSection</element>
       <element>collective.contentsections.HTMLSection</element>
+      <element>collective.contentsections.ImagesSection</element>
+      <element>collective.contentsections.LinksSection</element>
       <element>collective.contentsections.TextSection</element>
     </value>
   </record>

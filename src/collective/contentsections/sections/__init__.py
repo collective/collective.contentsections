@@ -5,7 +5,13 @@ from .cards.content import CardsSection
 from .cards.content import ICardsSection
 from .collection.content import CollectionSection
 from .collection.content import ICollectionSection
+from .files.content import FilesSection
+from .files.content import IFilesSection
 from .html.content import HTMLSection
 from .html.content import IHTMLSection
+from .images.content import IImagesSection
+from .images.content import ImagesSection
+from .links.content import ILinksSection
+from .links.content import LinksSection
 from .text.content import ITextSection
 from .text.content import TextSection

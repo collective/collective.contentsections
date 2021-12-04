@@ -46,10 +46,6 @@ class Section(Container):
     def canSetDefaultPage(self):
         return False
 
-    @property
-    def main_editing_view_name(self):
-        return "@@edit"
-
 
 class SectionView(BrowserView):
     """Section view"""

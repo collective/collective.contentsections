@@ -16,6 +16,7 @@
     <property name="behaviors" purge="false">
         <element value="plone.locking"/>
         <element value="plone.namefromtitle"/>
+        <element value="plone.versioning" />
     </property>
 
     <property name="default_view">card_view</property>

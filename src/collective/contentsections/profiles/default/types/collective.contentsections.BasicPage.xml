@@ -14,7 +14,10 @@
     <property name="allowed_content_types">
         <element value="collective.contentsections.CardsSection"/>
         <element value="collective.contentsections.CollectionSection"/>
+        <element value="collective.contentsections.FilesSection"/>
         <element value="collective.contentsections.HTMLSection"/>
+        <element value="collective.contentsections.ImagesSection"/>
+        <element value="collective.contentsections.LinksSection"/>
         <element value="collective.contentsections.TextSection"/>
     </property>
 
@@ -27,6 +30,7 @@
         <element value="plone.namefromtitle"/>
         <element value="plone.publication"/>
         <element value="plone.shortname"/>
+        <element value="plone.versioning" />
     </property>
 
 </object>

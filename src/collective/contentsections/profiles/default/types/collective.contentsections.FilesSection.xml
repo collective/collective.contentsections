@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<object name="collective.contentsections.FilesSection" meta_type="Dexterity FTI"
+    i18n:domain="collective.contentsections" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+    <property name="title" i18n:translate="">Files section</property>
+    <property name="icon_expr">string:file-pdf</property>
+
+    <property name="add_permission">cmf.AddPortalContent</property>
+    <property name="klass">collective.contentsections.sections.FilesSection</property>
+    <property name="schema">collective.contentsections.sections.IFilesSection</property>
+
+    <property name="global_allow">False</property>
+    <property name="filter_content_types">True</property>
+    <property name="allowed_content_types">
+        <element value="File"/>
+    </property>
+
+    <property name="behaviors" purge="false">
+        <element value="plone.locking"/>
+        <element value="plone.namefromtitle"/>
+        <element value="plone.versioning" />
+    </property>
+
+</object>
+
