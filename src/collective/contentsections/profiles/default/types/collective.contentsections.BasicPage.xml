@@ -18,10 +18,11 @@
         <element value="collective.contentsections.HTMLSection"/>
         <element value="collective.contentsections.ImagesSection"/>
         <element value="collective.contentsections.LinksSection"/>
+        <element value="collective.contentsections.SelectionSection"/>
         <element value="collective.contentsections.TextSection"/>
     </property>
 
-    <property name="behaviors" purge="false">
+    <property name="behaviors">
         <element value="plone.basic"/>
         <element value="plone.leadimage"/>
         <element value="plone.categorization"/>

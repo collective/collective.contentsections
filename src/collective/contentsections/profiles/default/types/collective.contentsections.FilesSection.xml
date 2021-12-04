@@ -15,7 +15,7 @@
         <element value="File"/>
     </property>
 
-    <property name="behaviors" purge="false">
+    <property name="behaviors">
         <element value="plone.locking"/>
         <element value="plone.namefromtitle"/>
         <element value="plone.versioning" />

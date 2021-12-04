@@ -13,7 +13,7 @@
     <property name="filter_content_types">True</property>
     <property name="allowed_content_types" />
 
-    <property name="behaviors" purge="false">
+    <property name="behaviors">
         <element value="plone.richtext"/>
         <element value="plone.leadimage"/>
         <element value="plone.locking"/>
