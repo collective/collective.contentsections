@@ -11,7 +11,7 @@
       <figure tal:condition="context/image | nothing"
         class="${python:figure_class[context.image_alignment]}">
         <img class="figure-image img-fluid img-size-${context/image_size}"
-          tal:attributes="src string:${context/absolute_url}/@@images/image/${context/image_size};" />
+          tal:attributes="src string:${context/absolute_url}/@@images/image/${context/lead_image_scale};" />
         <figcaption tal:condition="context/image_caption" class="figure-caption">
           ${context/image_caption}
         </figcaption>

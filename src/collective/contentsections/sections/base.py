@@ -23,7 +23,7 @@ class ISection(model.Schema):
         required=False,
     )
     width = schema.Choice(
-        title=_("Width"),
+        title=_("Section width"),
         vocabulary="collective.contentsections.SectionWidths",
         default=12,
     )
@@ -36,6 +36,49 @@ class ISection(model.Schema):
         "layout",
         label="Layout",
         fields=["hide_title", "width", "background_image", "css_classes"],
+    )
+
+
+class ILinksSection(ISection):
+    """Shared base marker interface and schema for CollectionSection, SelectionSection and LinksSection"""
+
+    group_size = schema.Choice(
+        title=_("Group size"),
+        values=[1, 2, 3, 4],
+        default=3,
+    )
+
+    lead_image_scale = schema.Choice(
+        title=_("Lead image size"),
+        vocabulary="plone.app.vocabularies.ImagesScales",
+        default="preview",
+    )
+
+    show_lead_image = schema.Bool(
+        title=_("Show items lead image"),
+        required=False,
+        default=True,
+    )
+    show_description = schema.Bool(
+        title=_("Show items description"),
+        required=False,
+        default=True,
+    )
+    show_publication_date = schema.Bool(
+        title=_("Show items publication date"),
+        required=False,
+        default=False,
+    )
+
+    model.fieldset(
+        "layout",
+        fields=[
+            "group_size",
+            "lead_image_scale",
+            "show_lead_image",
+            "show_description",
+            "show_publication_date",
+        ],
     )
 
 
@@ -54,6 +97,22 @@ class SectionView(BrowserView):
         page = self.context.__parent__
         url = f"{page.absolute_url()}#section-{self.context.id}"
         self.request.response.redirect(url)
+
+
+class LinksSectionView(SectionView):
+    """Section view for CollectionSection, SelectionSection and LinksSection"""
+
+    @property
+    def items(self):
+        raise NotImplementedError()
+
+    @property
+    def more_link_url(self):
+        return None
+
+    @property
+    def more_link_text(self):
+        return None
 
 
 def reindex_parent_page(section, event):

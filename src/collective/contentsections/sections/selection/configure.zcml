@@ -5,8 +5,8 @@
   <!-- Card view -->
   <browser:page
     name="card_view"
-    for=".content.ICollectionSection"
-    class=".views.CollectionSectionView"
+    for=".content.ISelectionSection"
+    class=".views.SelectionSectionView"
     template="../base_links_card.pt"
     permission="zope2.View"
     menu="plone_displayviews"
@@ -17,8 +17,8 @@
   <!-- Carousel view -->
   <browser:page
     name="carousel_view"
-    for=".content.ICollectionSection"
-    class=".views.CollectionSectionView"
+    for=".content.ISelectionSection"
+    class=".views.SelectionSectionView"
     template="../base_links_carousel.pt"
     permission="zope2.View"
     menu="plone_displayviews"

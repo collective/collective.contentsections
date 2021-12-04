@@ -26,6 +26,7 @@
   <include package=".html" />
   <include package=".images" />
   <include package=".links" />
+  <include package=".selection" />
   <include package=".text" />
 
 

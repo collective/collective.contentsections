@@ -9,21 +9,21 @@ from zope.interface import implementer
 class ITextSection(ISection):
     """TextSection schema"""
 
-    image_alignment = schema.Choice(
+    lead_image_alignment = schema.Choice(
         title=_(u"Image alignment"),
         vocabulary="collective.contentsections.ImageAlignments",
         default="left",
         required=True,
     )
-    image_size = schema.Choice(
-        title=_(u"Image size"),
+    lead_image_scale = schema.Choice(
+        title=_(u"Image scale"),
         vocabulary="plone.app.vocabularies.ImagesScales",
         default="preview",
         required=True,
     )
 
-    directives.order_before(image_alignment="IVersionable.changeNote")
-    directives.order_after(image_size="image_alignment")
+    directives.order_before(lead_image_alignment="IVersionable.changeNote")
+    directives.order_after(lead_image_scale="image_alignment")
 
 
 @implementer(ITextSection)

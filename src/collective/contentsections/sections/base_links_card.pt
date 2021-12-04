@@ -6,18 +6,19 @@
       <div class="row row-cols-1 row-cols-md-${context/group_size} g-4">
         <div class="col" tal:repeat="item view/items">
           <div class="card">
-            <img tal:condition="view/show_item_lead_image" src="${item/lead_image_url}" class="card-img-top" alt="Lead image" />
+            <img tal:condition="context/show_lead_image" src="${item/lead_image_url}" class="card-img-top" alt="Lead image" />
             <div class="card-body">
+              <h5 class="card-title">${item/title}</h5>
+              <p class="card-text" tal:condition="context/show_description">${item/description}</p>
               <a href="${item/url}">
-                <span class="section-item-title">${item/title}</span>
+                En savoir plus
               </a>
-              <p class="section-item-description" tal:condition="view/show_item_description">${item/description}</p>
             </div>
           </div>
         </div>
       </div>
-      <div tal:condition="view/all_items_link_text | nothing" class="section-all-items-link">
-        <a href="${view/all_items_link_url}">${view/all_items_link_text}</a>
+      <div tal:condition="view/more_link_text | nothing" class="section-more-link">
+        <a href="${view/more_link_url}">${view/more_link_text}</a>
       </div>
 
     </metal:content-core>
