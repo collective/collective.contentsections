@@ -11,8 +11,11 @@
       margin-bottom: 0px;
       padding: 2rem 0rem 2rem;
       }
-      .section-edit-link {
+      .section-edit-links {
       float: right
+      }
+      .section-edit-links a{
+      text-decoration: none;
       }
       #content-core {  /* FULL WIDTH */
       width: 100vw;
@@ -54,12 +57,26 @@
             <a tal:attributes="name string:${section_id}" />
 
             <div class="container">
-              <a href="${section_url}/${section/main_editing_view_name}" tal:omit-tag="not:can_edit" class="section-edit-link">
-                <button tal:condition="can_edit"
-                  type="button" class="btn btn-dark">
-                  <tal:icon replace="structure python:icons.tag('pencil', tag_class='')" />
-                </button>
-              </a>
+              <div class="section-edit-links" tal:condition="can_edit">
+                <a href="${section_url}/select_default_view">
+                  <button
+                    type="button" class="btn btn-dark">
+                    <tal:icon replace="structure python:icons.tag('list', tag_class='')" />
+                  </button>
+                </a>
+                <a href="${section_url}/folder_contents">
+                  <button
+                    type="button" class="btn btn-dark">
+                    <tal:icon replace="structure python:icons.tag('folder', tag_class='')" />
+                  </button>
+                </a>
+                <a href="${section_url}/@@edit">
+                  <button
+                    type="button" class="btn btn-dark">
+                    <tal:icon replace="structure python:icons.tag('pencil', tag_class='')" />
+                  </button>
+                </a>
+              </div>
               <span tal:replace="structure section/@@page_section_view | nothing" />
             </div>
 
