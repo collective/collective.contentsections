@@ -10,20 +10,20 @@ class ITextSection(ISection):
     """TextSection schema"""
 
     lead_image_alignment = schema.Choice(
-        title=_(u"Image alignment"),
+        title=_(u"Lead image alignment"),
         vocabulary="collective.contentsections.ImageAlignments",
         default="left",
         required=True,
     )
     lead_image_scale = schema.Choice(
-        title=_(u"Image scale"),
+        title=_(u"Lead image scale"),
         vocabulary="plone.app.vocabularies.ImagesScales",
         default="preview",
         required=True,
     )
 
     directives.order_before(lead_image_alignment="IVersionable.changeNote")
-    directives.order_after(lead_image_scale="image_alignment")
+    directives.order_after(lead_image_scale="lead_image_alignment")
 
 
 @implementer(ITextSection)

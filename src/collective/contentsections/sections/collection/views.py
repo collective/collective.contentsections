@@ -15,7 +15,7 @@ class CollectionSectionView(SectionView):
                 "title": brain.Title,
                 "description": brain.Description,
                 "url": brain.getURL(),
-                "lead_image_url": f"{brain.getURL()}/@@images/image/{self.context.lead_image_scale}",
+                "lead_image_url": f"{brain.getURL()}/@@images/image/{self.context.item_lead_image_scale}",
                 "effective_date": brain.effective,
                 "start_date": brain.start,
                 "end_date": brain.end,

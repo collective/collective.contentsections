@@ -31,6 +31,8 @@ class ISelectionSection(ILinksSection):
         },
     )
 
+    directives.order_after(relations="hide_title")
+
 
 @implementer(ISelectionSection)
 class SelectionSection(Section):

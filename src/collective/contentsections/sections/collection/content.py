@@ -34,6 +34,9 @@ class ICollectionSection(ILinksSection):
         pattern_options={"selectableTypes": ["Collection"], "favorites": []},
     )
 
+    directives.order_after(collection="hide_title")
+    directives.order_after(items_number="collection")
+
 
 @implementer(ICollectionSection)
 class CollectionSection(Section):

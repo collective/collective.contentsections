@@ -35,51 +35,49 @@ class ISection(model.Schema):
     model.fieldset(
         "layout",
         label="Layout",
-        fields=["hide_title", "width", "background_image", "css_classes"],
+        fields=["width", "background_image", "css_classes"],
     )
 
 
 class ILinksSection(ISection):
     """Shared base marker interface and schema for CollectionSection, SelectionSection and LinksSection"""
 
+    hide_item_lead_images = schema.Bool(
+        title=_("Hide item lead images"),
+        required=False,
+        default=False,
+    )
+    hide_item_descriptions = schema.Bool(
+        title=_("Hide item descriptions"),
+        required=False,
+        default=False,
+    )
+    hide_item_publication_dates = schema.Bool(
+        title=_("Hide item publication dates"),
+        required=False,
+        default=True,
+    )
     group_size = schema.Choice(
         title=_("Group size"),
         values=[1, 2, 3, 4],
         default=3,
     )
-
-    lead_image_scale = schema.Choice(
-        title=_("Lead image size"),
+    item_lead_image_scale = schema.Choice(
+        title=_("Lead image size of items"),
         vocabulary="plone.app.vocabularies.ImagesScales",
         default="preview",
-    )
-
-    hide_lead_image = schema.Bool(
-        title=_("Hide items lead image"),
-        required=False,
-        default=False,
-    )
-    hide_description = schema.Bool(
-        title=_("Hide items description"),
-        required=False,
-        default=False,
-    )
-    hide_publication_date = schema.Bool(
-        title=_("Hide items publication date"),
-        required=False,
-        default=True,
     )
 
     model.fieldset(
         "layout",
         fields=[
             "group_size",
-            "lead_image_scale",
-            "hide_lead_image",
-            "hide_description",
-            "hide_publication_date",
+            "item_lead_image_scale",
         ],
     )
+
+    directives.order_after(group_size="width")
+    directives.order_after(item_lead_image_scale="group_size")
 
 
 @implementer(ISection)

@@ -6,10 +6,10 @@
             <div class="row row-cols-1 row-cols-md-${context/group_size} g-4">
                 <div class="col" tal:repeat="item view/items">
                     <div class="card">
-                        <img tal:condition="not:context/hide_lead_image" src="${item/lead_image_url}" class="card-img-top" alt="Lead image" />
+                        <img tal:condition="not:context/hide_item_lead_images" src="${item/lead_image_url}" class="card-img-top" alt="Lead image" />
                         <div class="card-body">
                             <h5 class="card-title">${item/title}</h5>
-                            <p class="card-text" tal:condition="not:context/hide_description">${item/description}</p>
+                            <p class="card-text" tal:condition="not:context/hide_item_descriptions">${item/description}</p>
                             <a href="${item/url}">
                                 En savoir plus
                             </a>
