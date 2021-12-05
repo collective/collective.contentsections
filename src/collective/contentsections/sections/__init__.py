@@ -1,8 +1,8 @@
 from plone.app.z3cform.widget import SelectFieldWidget
 
-from .base import ILinksSection
+from .base import BaseLinksSectionView
+from .base import IBaseLinksSection
 from .base import ISection
-from .base import LinksSectionView
 from .base import Section
 from .base import SectionView
 from .cards.content import CardsSection

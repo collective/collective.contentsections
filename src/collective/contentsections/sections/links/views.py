@@ -1,20 +1,18 @@
 from collective.contentsections.sections.base import BaseLinksSectionView
+from collective.contentsections.sections.base import ISection
+from plone import api
 
 
-class CollectionSectionView(BaseLinksSectionView):
-    """Collection Section view"""
+class LinksSectionView(BaseLinksSectionView):
+    """LinksSection view"""
 
     def items(self):
-        brains = self.context.collection.to_object.results(
-            batch=False,
-            brains=True,
-            limit=self.context.items_number,
-        )
+        brains = api.content.find(context=self.context, depth=1, portal_type="Link")
         results = [
             {
                 "title": brain.Title,
                 "description": brain.Description,
-                "url": brain.getURL(),
+                "url": brain.getRemoteUrl,
                 "lead_image_url": f"{brain.getURL()}/@@images/image/{self.item_lead_image_scale}",
                 "effective_date": brain.effective,
                 "start_date": brain.start,
@@ -23,11 +21,3 @@ class CollectionSectionView(BaseLinksSectionView):
             for brain in brains
         ]
         return results
-
-    @property
-    def more_link_url(self):
-        return self.context.collection.to_object.absolute_url()
-
-    @property
-    def more_link_text(self):
-        return self.context.collection_link_text

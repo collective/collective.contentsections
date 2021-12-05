@@ -1,5 +1,5 @@
 from collective.contentsections import _
-from collective.contentsections.sections.base import ILinksSection
+from collective.contentsections.sections.base import IBaseLinksSection
 from collective.contentsections.sections.base import Section
 from plone import schema
 from plone.app.vocabularies.catalog import CatalogSource
@@ -10,7 +10,7 @@ from z3c.relationfield.schema import RelationChoice
 from zope.interface import implementer
 
 
-class ICollectionSection(ILinksSection):
+class ICollectionSection(IBaseLinksSection):
     """CollectionSection schema"""
 
     collection = RelationChoice(

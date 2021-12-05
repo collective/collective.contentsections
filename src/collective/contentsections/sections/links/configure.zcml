@@ -2,5 +2,28 @@
   xmlns="http://namespaces.zope.org/zope"
   xmlns:browser="http://namespaces.zope.org/browser">
 
+  <!-- Card view -->
+  <browser:page
+    name="card_view"
+    for=".content.ILinksSection"
+    class=".views.LinksSectionView"
+    template="../base_links_card.pt"
+    permission="zope2.View"
+    menu="plone_displayviews"
+    title="Card view"
+    layer="collective.contentsections.interfaces.IBrowserLayer"
+    />
+
+  <!-- Carousel view -->
+  <browser:page
+    name="carousel_view"
+    for=".content.ILinksSection"
+    class=".views.LinksSectionView"
+    template="../base_links_carousel.pt"
+    permission="zope2.View"
+    menu="plone_displayviews"
+    title="Carousel view"
+    layer="collective.contentsections.interfaces.IBrowserLayer"
+    />
 
 </configure>

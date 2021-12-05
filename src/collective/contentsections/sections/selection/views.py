@@ -1,8 +1,8 @@
-from collective.contentsections.sections.base import LinksSectionView
+from collective.contentsections.sections.base import BaseLinksSectionView
 from plone import api
 
 
-class SelectionSectionView(LinksSectionView):
+class SelectionSectionView(BaseLinksSectionView):
     """Selection Section view"""
 
     def items(self):

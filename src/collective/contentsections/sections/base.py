@@ -39,7 +39,7 @@ class ISection(model.Schema):
     )
 
 
-class ILinksSection(ISection):
+class IBaseLinksSection(ISection):
     """Shared base marker interface and schema for CollectionSection, SelectionSection and LinksSection"""
 
     hide_item_lead_images = schema.Bool(
@@ -90,8 +90,8 @@ class SectionView(BrowserView):
         self.request.response.redirect(url)
 
 
-class LinksSectionView(SectionView):
-    """Section view for CollectionSection, SelectionSection and LinksSection"""
+class BaseLinksSectionView(SectionView):
+    """Shared section view for CollectionSection, SelectionSection and LinksSection"""
 
     @property
     def items(self):

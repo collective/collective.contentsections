@@ -1,5 +1,5 @@
 from collective.contentsections import _
-from collective.contentsections.sections.base import ILinksSection
+from collective.contentsections.sections.base import IBaseLinksSection
 from collective.contentsections.sections.base import Section
 from plone.app.vocabularies.catalog import StaticCatalogVocabulary
 from plone.app.z3cform.widget import AjaxSelectFieldWidget
@@ -9,7 +9,7 @@ from z3c.relationfield.schema import RelationList
 from zope.interface import implementer
 
 
-class ISelectionSection(ILinksSection):
+class ISelectionSection(IBaseLinksSection):
     """SelectionSection schema"""
 
     relations = RelationList(

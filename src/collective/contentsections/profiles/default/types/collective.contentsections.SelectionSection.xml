@@ -21,8 +21,8 @@
 
     <property name="default_view">card_view</property>
     <property name="view_methods">
-        <element value="carousel_view"/>
         <element value="card_view"/>
+        <element value="carousel_view"/>
     </property>
 
 </object>
