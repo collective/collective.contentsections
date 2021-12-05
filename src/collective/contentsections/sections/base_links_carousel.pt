@@ -17,7 +17,9 @@
           </div>
         </div>
       </div>
-
+      <div tal:condition="view/more_link_text | nothing" class="section-more-link">
+        <a href="${view/more_link_url}">${view/more_link_text}</a>
+      </div>
     </metal:content-core>
   </metal:main>
 </html>

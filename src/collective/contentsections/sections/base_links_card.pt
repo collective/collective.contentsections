@@ -1,26 +1,26 @@
 <html metal:use-macro="context/@@main_template/macros/master">
-  <metal:main fill-slot="main">
-    <metal:content-core define-macro="content-core">
+    <metal:main fill-slot="main">
+        <metal:content-core define-macro="content-core">
 
-      <h2 tal:condition="not:context/hide_title">${context/title}</h2>
-      <div class="row row-cols-1 row-cols-md-${context/group_size} g-4">
-        <div class="col" tal:repeat="item view/items">
-          <div class="card">
-            <img tal:condition="context/show_lead_image" src="${item/lead_image_url}" class="card-img-top" alt="Lead image" />
-            <div class="card-body">
-              <h5 class="card-title">${item/title}</h5>
-              <p class="card-text" tal:condition="context/show_description">${item/description}</p>
-              <a href="${item/url}">
-                En savoir plus
-              </a>
+            <h2 tal:condition="not:context/hide_title">${context/title}</h2>
+            <div class="row row-cols-1 row-cols-md-${context/group_size} g-4">
+                <div class="col" tal:repeat="item view/items">
+                    <div class="card">
+                        <img tal:condition="context/show_lead_image" src="${item/lead_image_url}" class="card-img-top" alt="Lead image" />
+                        <div class="card-body">
+                            <h5 class="card-title">${item/title}</h5>
+                            <p class="card-text" tal:condition="context/show_description">${item/description}</p>
+                            <a href="${item/url}">
+                                En savoir plus
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div tal:condition="view/more_link_text | nothing" class="section-more-link">
-        <a href="${view/more_link_url}">${view/more_link_text}</a>
-      </div>
+            <div tal:condition="view/more_link_text | nothing" class="section-more-link">
+                <a href="${view/more_link_url}">${view/more_link_text}</a>
+            </div>
 
-    </metal:content-core>
-  </metal:main>
+        </metal:content-core>
+    </metal:main>
 </html>

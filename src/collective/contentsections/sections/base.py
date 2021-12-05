@@ -54,20 +54,20 @@ class ILinksSection(ISection):
         default="preview",
     )
 
-    show_lead_image = schema.Bool(
+    hide_lead_image = schema.Bool(
         title=_("Show items lead image"),
         required=False,
-        default=True,
+        default=False,
     )
-    show_description = schema.Bool(
+    hide_description = schema.Bool(
         title=_("Show items description"),
         required=False,
-        default=True,
+        default=False,
     )
-    show_publication_date = schema.Bool(
+    hide_publication_date = schema.Bool(
         title=_("Show items publication date"),
         required=False,
-        default=False,
+        default=True,
     )
 
     model.fieldset(
@@ -75,9 +75,9 @@ class ILinksSection(ISection):
         fields=[
             "group_size",
             "lead_image_scale",
-            "show_lead_image",
-            "show_description",
-            "show_publication_date",
+            "hide_lead_image",
+            "hide_description",
+            "hide_publication_date",
         ],
     )
 
@@ -104,7 +104,7 @@ class LinksSectionView(SectionView):
 
     @property
     def items(self):
-        raise NotImplementedError()
+        return []
 
     @property
     def more_link_url(self):
