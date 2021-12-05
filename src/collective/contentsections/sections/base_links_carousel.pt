@@ -14,6 +14,10 @@
           <div tal:repeat="item view/items"
             class="${python:'carousel-item active' if repeat.item.start else 'carousel-item'}">
             <img src="${item/lead_image_url}" class="d-block w-100" alt="Item image" />
+            <div class="carousel-caption">
+              <h5>${item/title}</h5>
+              <p tal:condition="not:context/hide_description">${item/description}</p>
+            </div>
           </div>
         </div>
       </div>

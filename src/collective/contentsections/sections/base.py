@@ -55,17 +55,17 @@ class ILinksSection(ISection):
     )
 
     hide_lead_image = schema.Bool(
-        title=_("Show items lead image"),
+        title=_("Hide items lead image"),
         required=False,
         default=False,
     )
     hide_description = schema.Bool(
-        title=_("Show items description"),
+        title=_("Hide items description"),
         required=False,
         default=False,
     )
     hide_publication_date = schema.Bool(
-        title=_("Show items publication date"),
+        title=_("Hide items publication date"),
         required=False,
         default=True,
     )
