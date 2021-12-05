@@ -47,6 +47,8 @@
       <element>collective.contentsections.LinksSection</element>
       <element>collective.contentsections.SelectionSection</element>
       <element>collective.contentsections.TextSection</element>
+      <element>Image</element>
+      <element>Link</element>
     </value>
   </record>
 
