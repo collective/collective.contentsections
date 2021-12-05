@@ -12,7 +12,7 @@ class SelectionSectionView(LinksSectionView):
                 "title": obj.title,
                 "description": obj.description,
                 "url": obj.absolute_url(),
-                "lead_image_url": f"{obj.absolute_url()}/@@images/image/{self.context.item_lead_image_scale}",
+                "lead_image_url": f"{obj.absolute_url()}/@@images/image/{self.item_lead_image_scale}",
                 "effective_date": obj.effective if hasattr(obj, "effective") else None,
                 "start_date": obj.start if hasattr(obj, "start") else None,
                 "end_date": obj.start if hasattr(obj, "start") else None,

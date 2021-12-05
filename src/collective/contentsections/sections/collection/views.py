@@ -1,7 +1,7 @@
-from collective.contentsections.sections import SectionView
+from collective.contentsections.sections import LinksSectionView
 
 
-class CollectionSectionView(SectionView):
+class CollectionSectionView(LinksSectionView):
     """Collection Section view"""
 
     def items(self):
@@ -15,7 +15,7 @@ class CollectionSectionView(SectionView):
                 "title": brain.Title,
                 "description": brain.Description,
                 "url": brain.getURL(),
-                "lead_image_url": f"{brain.getURL()}/@@images/image/{self.context.item_lead_image_scale}",
+                "lead_image_url": f"{brain.getURL()}/@@images/image/{self.item_lead_image_scale}",
                 "effective_date": brain.effective,
                 "start_date": brain.start,
                 "end_date": brain.end,

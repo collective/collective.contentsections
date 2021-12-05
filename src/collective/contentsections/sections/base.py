@@ -62,22 +62,15 @@ class ILinksSection(ISection):
         values=[1, 2, 3, 4],
         default=3,
     )
-    item_lead_image_scale = schema.Choice(
-        title=_("Lead image size of items"),
-        vocabulary="plone.app.vocabularies.ImagesScales",
-        default="preview",
-    )
 
     model.fieldset(
         "layout",
         fields=[
             "group_size",
-            "item_lead_image_scale",
         ],
     )
 
     directives.order_after(group_size="width")
-    directives.order_after(item_lead_image_scale="group_size")
 
 
 @implementer(ISection)
@@ -111,6 +104,21 @@ class LinksSectionView(SectionView):
     @property
     def more_link_text(self):
         return None
+
+    @property
+    def item_lead_image_scale(self):
+        layout = self.context.getLayout()
+        section_size = self.context.width
+        group_size = self.context.group_size
+        cols = section_size / group_size
+        if layout == "carousel_view" or "cards_view":
+            if cols > 6:
+                return "huge"
+            elif cols > 3:
+                return "large"
+        elif layout == "listing_view":
+            return "mini"
+        return "preview"
 
 
 def reindex_parent_page(section, event):

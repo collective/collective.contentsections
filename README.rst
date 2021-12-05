@@ -45,3 +45,10 @@ Install collective.contentsections by adding it to your buildout::
 
 and then running ``bin/buildout``
 
+
+TODO
+----
+
+Remove *item_lead_image_scale* on context and add a view property *item_lead_image_scale*.
+Il can be caculated from the type of view and *group size*.
+
