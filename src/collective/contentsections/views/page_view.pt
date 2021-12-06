@@ -60,7 +60,7 @@
                 <a href="${section_url}/select_default_view" tal:condition="python:len(section.getAvailableLayouts())>1">
                   <button
                     type="button" class="btn btn-dark">
-                    <tal:icon replace="structure python:icons.tag('list', tag_class='')" />
+                    <tal:icon replace="structure python:icons.tag('eye', tag_class='')" />
                   </button>
                 </a>
                 <a href="${section_url}/folder_contents" tal:condition="section/allowedContentTypes">
