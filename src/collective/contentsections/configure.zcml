@@ -26,7 +26,6 @@
   <include package=".behaviors" />
   <include package=".sections" />
   <include package=".pages" />
-  <include package=".views" />
 
   <plone:static
     name="collective.contentsections"

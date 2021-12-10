@@ -2,6 +2,23 @@
   xmlns="http://namespaces.zope.org/zope"
   xmlns:browser="http://namespaces.zope.org/browser">
 
+  <browser:page
+    name="page_view"
+    for="plone.dexterity.interfaces.IDexterityContainer"
+    template="base_page_view.pt"
+    class=".base.PageView"
+    permission="zope2.View"
+    layer="collective.contentsections.interfaces.IBrowserLayer" />
+
+  <browser:page
+    name="page_section_view"
+    for="collective.contentsections.sections.ISection"
+    class=".base.PageSectionView"
+    template="base_page_section_view.pt"
+    permission="zope2.View"
+    layer="collective.contentsections.interfaces.IBrowserLayer"
+    />
+
   <include package=".basic" />
 
 </configure>
