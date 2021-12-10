@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registry>
+
+    <record name="plone.plugins"
+        interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
+        <value purge="true">
+            <element>autosave</element>
+            <element>code</element>
+            <element>fullscreen</element>
+            <element>lists</element>
+            <element>paste</element>
+            <element>searchreplace</element>
+            <element>table</element>
+            <element>visualblocks</element>
+            <element>wordcount</element>
+        </value>
+    </record>
+
+    <!-- See possible values in https://www.tiny.cloud/docs-4x/advanced/editor-control-identifiers/#menucontrols -->
+    <record name="plone.menu"
+        interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
+        <value>
+            {
+            "edit": {
+            "title": "Edit",
+            "items": "undo redo | pastetext | searchreplace textpattern selectall | emoticons template"
+            },
+            "formats": {
+            "title": "Formats",
+            "items": "formats"
+            },
+            "table": {
+            "title": "Table",
+            "items": "inserttable tableprops deletetable | cell row column"
+            },
+            "view": {
+            "title": "View",
+            "items": "fullscreen code visualblocks"
+            }
+            }
+        </value>
+    </record>
+
+    <!-- Superseded  by plone.menu but can not be empty -->
+    <record name="plone.menubar"
+        interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
+        <value>
+            <element>null</element>
+        </value>
+    </record>
+
+    <!-- See possible values in https://www.tiny.cloud/docs-4x/advanced/editor-control-identifiers/#toolbarcontrols -->
+    <record name="plone.toolbar"
+        interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
+        <value>formatselect | undo redo | bold italic | bullist numlist | plonelink unlink</value>
+    </record>
+
+
+    <!-- See plugins options in https://www.tiny.cloud/docs-4x/plugins/ -->
+    <record name="plone.other_settings"
+        interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
+        <value>
+            {
+            "paste_as_text": true,
+            "style_formats": [
+            { "title": "Headers", "items": [
+            { "title": "Heading 2", "block": "h2"},
+            { "title": "Heading 3", "block": "h3" },
+            { "title": "Heading 4", "block": "h4" },
+            { "title": "Heading 5", "block": "h5" },
+            { "title": "Heading 6", "block": "h6" }
+            ]},
+            { "title": "Blocks", "items": [
+            { "title": "Paragraph", "block": "p"},
+            { "title": "Blockquote", "block": "blockquote"},
+            { "title": "Mark", "block": "mark"},
+            { "title": "Pre", "block": "pre"}
+            ]},
+            { "title": "Inline", "items": [
+            { "title": "Bold", "inline": "bold" },
+            { "title": "Italic", "inline": "em" },
+            { "title": "Superscript", "inline": "sup" },
+            { "title": "Subscript", "inline": "sub" },
+            { "title": "Code", "inline": "code" }
+            ]},
+            { "title": "Table", "items": [
+            { "title": "Listing", "selector": "table", "classes": "listing" }
+            ]}
+            ],
+            "table_responsive_width": true,
+            "table_appearance_options": false,
+            "table_advtab": false,
+            "table_row_advtab": false,
+            "table_cell_advtab": false,
+            "table_default_styles": {
+            "width": "100%"
+            },
+            "table_class_list": [
+            {"title": "Standard", "value": "table"},
+            {"title": "Striped", "value": "table table-striped"},
+            {"title": "Bordered", "value": "table table-bordered "}
+            ],
+            "table_row_class_list": [
+            {"title": "None", "value": ""},
+            {"title": "Important row", "value": "important"}
+            ],
+            "table_cell_class_list": [
+            {"title": "None", "value": ""},
+            {"title": "Important cell", "value": "important"}
+            ]
+            }
+        </value>
+    </record>
+</registry>
