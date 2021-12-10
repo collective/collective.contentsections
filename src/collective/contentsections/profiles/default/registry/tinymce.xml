@@ -52,7 +52,7 @@
     <!-- See possible values in https://www.tiny.cloud/docs-4x/advanced/editor-control-identifiers/#toolbarcontrols -->
     <record name="plone.toolbar"
         interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
-        <value>formatselect | undo redo | bold italic | bullist numlist | plonelink unlink</value>
+        <value>undo redo | bold italic | bullist numlist | plonelink unlink</value>
     </record>
 
 
@@ -82,9 +82,6 @@
             { "title": "Superscript", "inline": "sup" },
             { "title": "Subscript", "inline": "sub" },
             { "title": "Code", "inline": "code" }
-            ]},
-            { "title": "Table", "items": [
-            { "title": "Listing", "selector": "table", "classes": "listing" }
             ]}
             ],
             "table_responsive_width": true,
