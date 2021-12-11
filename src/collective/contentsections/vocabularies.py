@@ -13,14 +13,13 @@ IMAGE_ALIGNMENTS = {
     "bottom": _("Bottom"),
     "top": _("Top"),
 }
-SECTION_WIDTHS = {
-    "quarter": _("Quarter of page"),
-    "third": _("Third of page"),
-    "half": _("Half of page"),
-    "two-thirds": _("Two thirds of page"),
-    "three-quarters": _("Three quarters of page"),
-    "full": _("Full page"),
-    "screen": _("Full screen"),
+COLUMN_WIDTHS = {
+    3: _("Quarter of row"),
+    4: _("Third of row"),
+    6: _("Half of row"),
+    8: _("Two thirds of row"),
+    9: _("Three quarters of row"),
+    12: _("Full row"),
 }
 
 
@@ -29,12 +28,12 @@ class VocabularyFactory:
         self.terms = terms
 
     def __call__(self, context=None):
-        terms = [SimpleTerm(value=key, token=key, title=title) for key, title in self.terms.items()]
+        terms = [SimpleTerm(value=value, token=str(value), title=title) for value, title in self.terms.items()]
         return SimpleVocabulary(terms)
 
 
 ImageAlignmentsVocabulary = VocabularyFactory(IMAGE_ALIGNMENTS)
-SectionWidthsVocabulary = VocabularyFactory(SECTION_WIDTHS)
+ColumnWidthsVocabulary = VocabularyFactory(COLUMN_WIDTHS)
 
 
 class IconsVocabularyFactory:
@@ -49,7 +48,7 @@ class IconsVocabularyFactory:
             if key.startswith(self.prefix)
         ]
         items.sort(key=itemgetter(1))
-        terms = [SimpleTerm(value=key, token=key, title=title) for key, title in items]
+        terms = [SimpleTerm(value=value, token=str(value), title=title) for value, title in items]
         return SimpleVocabulary(terms)
 
 

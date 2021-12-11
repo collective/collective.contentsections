@@ -2,6 +2,12 @@
   xmlns="http://namespaces.zope.org/zope">
 
   <utility
+    name="collective.contentsections.ColumnWidths"
+    component=".vocabularies.ColumnWidthsVocabulary"
+    provides="zope.schema.interfaces.IVocabularyFactory"
+    />
+
+  <utility
     name="collective.contentsections.ImageAlignments"
     component=".vocabularies.ImageAlignmentsVocabulary"
     provides="zope.schema.interfaces.IVocabularyFactory"
@@ -10,12 +16,6 @@
   <utility
     name="collective.contentsections.LeadIcons"
     component=".vocabularies.LeadIconsVocabulary"
-    provides="zope.schema.interfaces.IVocabularyFactory"
-    />
-
-  <utility
-    name="collective.contentsections.SectionWidths"
-    component=".vocabularies.SectionWidthsVocabulary"
     provides="zope.schema.interfaces.IVocabularyFactory"
     />
 

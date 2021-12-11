@@ -8,6 +8,7 @@
   <object meta_type="Dexterity FTI" name="collective.contentsections.HTMLSection"/>
   <object meta_type="Dexterity FTI" name="collective.contentsections.ImagesSection"/>
   <object meta_type="Dexterity FTI" name="collective.contentsections.LinksSection"/>
+  <object meta_type="Dexterity FTI" name="collective.contentsections.Row"/>
   <object meta_type="Dexterity FTI" name="collective.contentsections.SelectionSection"/>
   <object meta_type="Dexterity FTI" name="collective.contentsections.TextSection"/>
 
