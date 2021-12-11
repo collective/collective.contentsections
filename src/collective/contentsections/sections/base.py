@@ -25,7 +25,7 @@ class ISection(model.Schema):
     width = schema.Choice(
         title=_("Section width"),
         vocabulary="collective.contentsections.SectionWidths",
-        default=12,
+        default="full",
     )
     css_classes = schema.TextLine(
         title=_("CSS Classes"),
@@ -80,6 +80,19 @@ class Section(Container):
     def canSetDefaultPage(self):
         return False
 
+    @property
+    def cols(self):
+        width_to_cols = {
+            "full": 12,
+            "three-quarters": 9,
+            "two-thirds": 8,
+            "half": 6,
+            "third": 4,
+            "quarter": 3,
+            "screen": 12,
+        }
+        return width_to_cols.get(self.width, 12)
+
 
 class SectionView(BrowserView):
     """Section view"""
@@ -108,7 +121,7 @@ class BaseLinksSectionView(SectionView):
     @property
     def item_lead_image_scale(self):
         layout = self.context.getLayout()
-        section_size = self.context.width
+        section_size = self.context.cols
         group_size = self.context.group_size
         cols = section_size / group_size
         if layout == "carousel_view" or "cards_view":

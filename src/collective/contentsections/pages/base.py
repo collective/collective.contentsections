@@ -40,12 +40,12 @@ class PageView(FolderView):
         page_rows = []
         last_row_width = 12
         for section in self.sections:
-            if last_row_width + section.width <= 12:
+            if last_row_width + section.cols <= 12:
                 page_rows[-1].append(section)
-                last_row_width += section.width
+                last_row_width += section.cols
             else:  # Start a new row
                 page_rows.append([section])
-                last_row_width = section.width
+                last_row_width = section.cols
         return page_rows
 
 

@@ -8,14 +8,14 @@
     />
 
   <utility
-    name="collective.contentsections.SectionWidths"
-    component=".vocabularies.SectionWidthsVocabulary"
+    name="collective.contentsections.LeadIcons"
+    component=".vocabularies.LeadIconsVocabulary"
     provides="zope.schema.interfaces.IVocabularyFactory"
     />
 
   <utility
-    name="collective.contentsections.LeadIcons"
-    component=".vocabularies.LeadIconsVocabulary"
+    name="collective.contentsections.SectionWidths"
+    component=".vocabularies.SectionWidthsVocabulary"
     provides="zope.schema.interfaces.IVocabularyFactory"
     />
 

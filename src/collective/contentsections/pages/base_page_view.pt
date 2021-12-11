@@ -46,16 +46,15 @@
             section_id = f"section-{section.id}"
             section_type = section.portal_type.split(".")[-1]
             section_type_class = f"section-{section_type.lower()}"
-            section_bootstrap_width = f"col-sm-{section.width}"
-            section_full_width = "section-full-width" if len(row) == 1 else ""
+            section_bootstrap_width = f"col-sm-{section.cols}"
+            section_full_width = True if len(row) == 1 and section.width == "screen" else False
             section_css_classes = section.css_classes if section.css_classes else ""
             section_class = " ".join(["section", section_type_class, section_css_classes, section_bootstrap_width])
             section_style = f"background-image: {background_image_url}; background-size: cover; background-position: center;"
-
             ?>
           <div id="${section_id}" class="${section_class}" style="${section_style}">
             <a tal:attributes="name string:${section_id}" />
-            <div class="container">
+            <div class="${python:'' if section_full_width else 'container'}">
               <div class="section-edit-links" tal:condition="can_edit">
                 <a href="${section_url}/select_default_view" tal:condition="python:len(section.getAvailableLayouts())>1">
                   <button

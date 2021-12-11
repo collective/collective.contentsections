@@ -14,13 +14,13 @@ IMAGE_ALIGNMENTS = {
     "top": _("Top"),
 }
 SECTION_WIDTHS = {
-    12: _("Container 1/1"),
-    9: _("Container 3/4"),
-    8: _("Container 2/3"),
-    6: _("Container 1/2"),
-    4: _("Container 1/3"),
-    3: _("Container 1/4"),
-    0: _("Full page width"),
+    "quarter": _("Quarter of page"),
+    "third": _("Third of page"),
+    "half": _("Half of page"),
+    "two-thirds": _("Two thirds of page"),
+    "three-quarters": _("Three quarters of page"),
+    "full": _("Full page"),
+    "screen": _("Full screen"),
 }
 
 
