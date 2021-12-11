@@ -6,17 +6,17 @@
       <?python
         figure_class = {"top": "text-center", "right": "float-end ms-4", "bottom": "text-center", "left": "float-start me-4"}
         ?>
-      <div tal:condition="python: context.image_alignment=='bottom'"
+      <div tal:condition="python: context.lead_image_alignment=='bottom'"
         class="text" tal:content="structure context/text/output | nothing" />
       <figure tal:condition="context/image | nothing"
-        class="${python:figure_class[context.image_alignment]}">
+        class="${python:figure_class[context.lead_image_alignment]}">
         <img class="figure-image img-fluid img-size-${context/image_size}"
           tal:attributes="src string:${context/absolute_url}/@@images/image/${context/lead_image_scale};" />
         <figcaption tal:condition="context/image_caption" class="figure-caption">
           ${context/image_caption}
         </figcaption>
       </figure>
-      <div tal:condition="python: context.image_alignment!='bottom'"
+      <div tal:condition="python: context.lead_image_alignment!='bottom'"
         class="text" tal:content="structure context/text/output | nothing" />
 
     </metal:content-core>

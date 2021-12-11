@@ -12,14 +12,14 @@ class ITextSection(ISection):
     lead_image_alignment = schema.Choice(
         title=_(u"Lead image alignment"),
         vocabulary="collective.contentsections.ImageAlignments",
-        default="left",
-        required=True,
+        required=False,
+        missing_value="left",
     )
     lead_image_scale = schema.Choice(
         title=_(u"Lead image scale"),
         vocabulary="plone.app.vocabularies.ImagesScales",
-        default="preview",
-        required=True,
+        required=False,
+        missing_value="preview",
     )
 
     directives.order_before(lead_image_alignment="IVersionable.changeNote")
