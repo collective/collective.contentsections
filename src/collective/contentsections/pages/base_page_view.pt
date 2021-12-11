@@ -2,6 +2,10 @@
 
   <metal:styleslot fill-slot="style_slot">
     <style>
+      .plone-toolbar-left-default,
+      .plone-toolbar-left-expanded {
+      padding-left: 0px;
+      }
       #content-core .row {
       --bs-gutter-x: 0.75rem;
       --bs-gutter-y: 0rem;
