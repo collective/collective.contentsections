@@ -10,7 +10,6 @@ from plone.app.z3cform.widget import SelectFieldWidget
 from plone.autoform import directives
 from plone.supermodel import model
 from z3c.relationfield.schema import RelationChoice
-from zope import schema
 from zope.interface import Interface
 from zope.interface import implementer
 
