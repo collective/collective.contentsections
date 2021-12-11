@@ -21,17 +21,17 @@ class ICard(Interface):
     title = schema.TextLine(
         title=_("Title"),
         required=False,
-        default="",
+        missing_value="",
     )
     subtitle = schema.TextLine(
         title=_("Subtitle"),
         required=False,
-        default="",
+        missing_value="",
     )
     description = schema.Text(
         title=_("Text"),
         required=False,
-        default="",
+        missing_value="",
     )
     icon = schema.Choice(
         title=_("Icon"),
