@@ -18,24 +18,25 @@ class ISection(model.Schema):
         title=_("Hide section title in page"),
         default=False,
     )
+    is_full_width = schema.Bool(
+        title=_("Full width"),
+        default=False,
+        missing_value=False,
+    )
     background_image = NamedBlobImage(
         title=_("Background image"),
         required=False,
     )
-    width = schema.Choice(
-        title=_("Section width"),
-        vocabulary="collective.contentsections.SectionWidths",
-        default="full",
-    )
     css_classes = schema.TextLine(
         title=_("CSS Classes"),
         required=False,
+        missing_value="",
     )
 
     model.fieldset(
         "layout",
         label="Layout",
-        fields=["width", "background_image", "css_classes"],
+        fields=["is_full_width", "background_image", "css_classes"],
     )
 
 
@@ -69,8 +70,7 @@ class IBaseLinksSection(ISection):
             "group_size",
         ],
     )
-
-    directives.order_after(group_size="width")
+    directives.order_before(group_size="is_full_width")
 
 
 @implementer(ISection)
@@ -79,19 +79,6 @@ class Section(Container):
 
     def canSetDefaultPage(self):
         return False
-
-    @property
-    def cols(self):
-        width_to_cols = {
-            "full": 12,
-            "three-quarters": 9,
-            "two-thirds": 8,
-            "half": 6,
-            "third": 4,
-            "quarter": 3,
-            "screen": 12,
-        }
-        return width_to_cols.get(self.width, 12)
 
 
 class SectionView(BrowserView):
@@ -120,17 +107,17 @@ class BaseLinksSectionView(SectionView):
 
     @property
     def item_lead_image_scale(self):
-        layout = self.context.getLayout()
-        section_size = self.context.cols
-        group_size = self.context.group_size
-        cols = section_size / group_size
-        if layout == "carousel_view" or "cards_view":
-            if cols > 6:
-                return "huge"
-            elif cols > 3:
-                return "large"
-        elif layout == "listing_view":
-            return "mini"
+        # layout = self.context.getLayout()
+        # section_size = self.context.cols
+        # group_size = self.context.group_size
+        # cols = section_size / group_size
+        # if layout == "carousel_view" or "cards_view":
+        #     if cols > 6:
+        #         return "huge"
+        #     elif cols > 3:
+        #         return "large"
+        # elif layout == "listing_view":
+        #     return "mini"
         return "preview"
 
 

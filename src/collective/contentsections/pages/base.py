@@ -37,15 +37,7 @@ class PageView(FolderView):
 
     @property
     def rows(self):
-        page_rows = []
-        last_row_width = 12
-        for section in self.sections:
-            if last_row_width + section.cols <= 12:
-                page_rows[-1].append(section)
-                last_row_width += section.cols
-            else:  # Start a new row
-                page_rows.append([section])
-                last_row_width = section.cols
+        page_rows = [[section] for section in self.sections]
         return page_rows
 
 
