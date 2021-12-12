@@ -43,4 +43,5 @@ class Row(Item):
     """Row class"""
 
     def Title(self):
-        return _("Configuration row")
+        widths = [f"{col['width']}/12" for col in self.columns]
+        return _("Row") + " " + " - ".join(widths)
