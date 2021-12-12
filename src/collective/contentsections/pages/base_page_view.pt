@@ -6,7 +6,7 @@
       .plone-toolbar-left-expanded {
       padding-left: 0px;
       }
-      #content-core .row {
+      #content-core > div {
       --bs-gutter-x: 0.75rem;
       --bs-gutter-y: 0rem;
       }
@@ -33,64 +33,73 @@
   </metal:styleslot>
 
   <metal:content-core fill-slot="content-core"
-    tal:define="can_edit python: checkPermission('Modify portal content', context)">
-    <tal:emptypage tal:condition="not:view/rows">
+    tal:define="can_edit python: checkPermission('Modify portal content', context);
+                rows view/rows;">
+    <tal:emptypage tal:condition="not:rows">
       <div class="row">
         <div class="col-sm-12">
           <p class="container" i18n:translate="">There is no section on this page.</p>
         </div>
       </div>
     </tal:emptypage>
-    <tal:row tal:repeat="row view/rows">
+    <tal:row tal:repeat="row rows">
       <?python
-
+        row_config = row['config']
+        row_is_full_width = row_config.is_full_width if row_config else True
         ?>
-      <div id="row-${repeat/row/number}" class="row">
-        <tal:section tal:repeat="section row">
-          <?python
-            section_url = section.absolute_url()
-            section_background_image_url = f"url({section_url}/@@images/background_image/huge)"
-            section_id = f"section-{section.id}"
-            section_type = section.portal_type.split(".")[-1]
-            section_type_class = f"section-{section_type.lower()}"
-            section_css_classes = section.css_classes if section.css_classes else ""
-            section_class = " ".join(["section", section_type_class, section_css_classes])
-            section_style = f"background-image: {section_background_image_url}; background-size: cover; background-position: center;"
-            ?>
-          <div id="${section_id}" class="${section_class}" style="${section_style}">
-            <a tal:attributes="name string:${section_id}" />
-            <div class="${python:'' if section.is_full_width else 'container'}">
-              <div class="section-edit-links" tal:condition="can_edit">
-                <a href="${section_url}/select_default_view" tal:condition="python:len(section.getAvailableLayouts())>1">
-                  <button
-                    type="button" class="btn btn-dark">
-                    <tal:icon replace="structure python:icons.tag('eye', tag_class='')" />
-                  </button>
-                </a>
-                <a href="${section_url}/folder_contents" tal:condition="section/allowedContentTypes">
-                  <button
-                    type="button" class="btn btn-dark">
-                    <tal:icon replace="structure python:icons.tag('folder', tag_class='')" />
-                  </button>
-                </a>
-                <a href="${section_url}/@@edit">
-                  <button
-                    type="button" class="btn btn-dark">
-                    <tal:icon replace="structure python:icons.tag('pencil', tag_class='')" />
-                  </button>
-                </a>
-                <a href="${section_url}/@@delete_confirmation">
-                  <button
-                    type="button" class="btn btn-dark">
-                    <tal:icon replace="structure python:icons.tag('trash', tag_class='')" />
-                  </button>
-                </a>
+      <div id="row-${repeat/row/number}">
+        <div class="container" tal:omit-tag="row_is_full_width">
+          <div class="row" tal:omit-tag="not:row_config">
+
+            <tal:section tal:repeat="section row/sections">
+              <?python
+                column_config = row_config.columns[repeat.section.index] if row_config else None
+                section_url = section.absolute_url()
+                section_background_image_url = f"url({section_url}/@@images/background_image/huge)"
+                section_id = f"section-{section.id}"
+                section_type = section.portal_type.split(".")[-1]
+                section_type_class = f"section-{section_type.lower()}"
+                section_col_class = f"col-sm-{column_config['width']}" if column_config else ""
+                section_css_classes = section.css_classes if section.css_classes else ""
+                section_class = " ".join(["section", section_type_class, section_css_classes, section_col_class])
+                section_style = f"background-image: {section_background_image_url}; background-size: cover; background-position: center;"
+                ?>
+              <div id="${section_id}" class="${section_class}" style="${section_style}">
+                <a tal:attributes="name string:${section_id}" />
+                <div class="${python:'' if section.is_full_width else 'container'}">
+                  <div class="section-edit-links" tal:condition="can_edit">
+                    <a href="${section_url}/select_default_view" tal:condition="python:len(section.getAvailableLayouts())>1">
+                      <button
+                        type="button" class="btn btn-dark">
+                        <tal:icon replace="structure python:icons.tag('eye', tag_class='')" />
+                      </button>
+                    </a>
+                    <a href="${section_url}/folder_contents" tal:condition="section/allowedContentTypes">
+                      <button
+                        type="button" class="btn btn-dark">
+                        <tal:icon replace="structure python:icons.tag('folder', tag_class='')" />
+                      </button>
+                    </a>
+                    <a href="${section_url}/@@edit">
+                      <button
+                        type="button" class="btn btn-dark">
+                        <tal:icon replace="structure python:icons.tag('pencil', tag_class='')" />
+                      </button>
+                    </a>
+                    <a href="${section_url}/@@delete_confirmation">
+                      <button
+                        type="button" class="btn btn-dark">
+                        <tal:icon replace="structure python:icons.tag('trash', tag_class='')" />
+                      </button>
+                    </a>
+                  </div>
+                  <span tal:replace="structure section/@@page_section_view | nothing" />
+                </div>
               </div>
-              <span tal:replace="structure section/@@page_section_view | nothing" />
-            </div>
+            </tal:section>
 
           </div>
-        </tal:section>
+        </div>
       </div>
     </tal:row>
   </metal:content-core>

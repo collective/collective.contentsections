@@ -1,5 +1,6 @@
 from Acquisition import aq_inner
 from collective.contentsections import _
+from collective.contentsections.contents import IRow
 from collective.contentsections.sections import ISection
 from plone import api
 from plone.app.contenttypes.browser.folder import FolderView
@@ -25,19 +26,41 @@ class PageView(FolderView):
     """Page view"""
 
     @property
-    def sections(self):
-        section_brains = api.content.find(
+    def items(self):
+        item_brains = api.content.find(
             context=self.context,
             depth=1,
-            object_provides=ISection,
+            object_provides=[ISection, IRow],
             sort_on="getObjPositionInParent",
         )
-        section_objects = [b.getObject() for b in section_brains]
-        return section_objects
+        items_objects = [b.getObject() for b in item_brains]
+        return items_objects
 
     @property
     def rows(self):
-        page_rows = [[section] for section in self.sections]
+        page_rows = []
+        row_with_config = None
+        for item in self.items:
+            if IRow.providedBy(item):
+                if row_with_config:
+                    page_rows.append(row_with_config)
+                row_with_config = {
+                    "sections": [],
+                    "config": item,
+                }
+            if ISection.providedBy(item):
+                if not row_with_config:
+                    page_rows.append({"sections": [item], "config": None})
+                else:
+                    row_with_config["sections"].append(item)
+                    columns_number = len(row_with_config["config"].columns)
+                    sections_number = len(row_with_config["sections"])
+                    if columns_number == sections_number:
+                        page_rows.append(row_with_config)
+                        row_with_config = None
+        if row_with_config:
+            page_rows.append(row_with_config)
+
         return page_rows
 
 

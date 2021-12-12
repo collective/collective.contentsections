@@ -26,6 +26,13 @@ class IRow(model.Schema):
         title=_("Columns"),
         value_type=DictRow(title=_("Column"), schema=IColumn),
         missing_value=[],
+        min_length=1,
+    )
+
+    is_full_width = schema.Bool(
+        title=_("Full width"),
+        default=False,
+        missing_value=False,
     )
 
     directives.widget("columns", DataGridFieldFactory)
