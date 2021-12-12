@@ -68,20 +68,20 @@
             <div class="row-edit-links">
               <a href="${row_config_url}/@@edit">
                 <button
-                  type="button" class="btn btn-dark">
+                  type="button" class="btn btn-dark btn-sm">
                   <tal:icon replace="structure python:icons.tag('pencil', tag_class='')" />
                 </button>
               </a>
               <a href="${row_config_url}/@@delete_confirmation">
                 <button
-                  type="button" class="btn btn-dark">
+                  type="button" class="btn btn-dark btn-sm">
                   <tal:icon replace="structure python:icons.tag('trash', tag_class='')" />
                 </button>
               </a>
             </div>
-            <h2>
+            <div class="fs-4">
               ${python:row_config.Title()}
-            </h2>
+            </div>
           </div>
           <div class="row" tal:omit-tag="python:row_config is None">
             <tal:section tal:repeat="section row/sections">
