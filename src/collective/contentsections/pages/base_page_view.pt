@@ -13,7 +13,19 @@
       .section {
       margin-top: 0px;
       margin-bottom: 0px;
-      padding: 2rem 0rem 2rem;
+      padding: 1rem 0rem;
+      }
+      .row-edit-toolbar {
+      background-color: black;
+      color: white;
+      padding: 5px 10px 1px 10px;
+      }
+      .row-edit-links {
+      float: right;
+      }
+      .row-edit-links a{
+      text-decoration: none;
+      color: white;
       }
       .section-edit-links {
       float: right
@@ -45,12 +57,33 @@
     <tal:row tal:repeat="row rows">
       <?python
         row_config = row['config']
+        row_config_url = row_config.absolute_url() if row_config else None
+        row_anchor_name = f"row-{row_config.id}" if row_config else None
         row_is_full_width = row_config.is_full_width if row_config else True
         ?>
       <div id="row-${repeat/row/number}">
         <div class="container" tal:omit-tag="row_is_full_width">
-          <div class="row" tal:omit-tag="not:row_config">
-
+          <div class="row-edit-toolbar" tal:condition="python:row_config and can_edit">
+            <a tal:attributes="name string:${row_anchor_name}" />
+            <div class="row-edit-links">
+              <a href="${row_config_url}/@@edit">
+                <button
+                  type="button" class="btn btn-dark">
+                  <tal:icon replace="structure python:icons.tag('pencil', tag_class='')" />
+                </button>
+              </a>
+              <a href="${row_config_url}/@@delete_confirmation">
+                <button
+                  type="button" class="btn btn-dark">
+                  <tal:icon replace="structure python:icons.tag('trash', tag_class='')" />
+                </button>
+              </a>
+            </div>
+            <h2>
+              ${python:row_config.Title()}
+            </h2>
+          </div>
+          <div class="row" tal:omit-tag="python:row_config is None">
             <tal:section tal:repeat="section row/sections">
               <?python
                 column_config = row_config.columns[repeat.section.index] if row_config else None
@@ -61,7 +94,7 @@
                 section_type_class = f"section-{section_type.lower()}"
                 section_col_class = f"col-sm-{column_config['width']}" if column_config else ""
                 section_css_classes = section.css_classes if section.css_classes else ""
-                section_class = " ".join(["section", section_type_class, section_css_classes, section_col_class])
+                section_class = " ".join(["clearfix section", section_type_class, section_css_classes, section_col_class])
                 section_style = f"background-image: {section_background_image_url}; background-size: cover; background-position: center;"
                 ?>
               <div id="${section_id}" class="${section_class}" style="${section_style}">
