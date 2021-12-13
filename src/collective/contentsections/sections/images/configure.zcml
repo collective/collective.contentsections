@@ -26,4 +26,17 @@
     layer="collective.contentsections.interfaces.IBrowserLayer"
     />
 
+  t
+  <!-- Spotlight view -->
+  <browser:page
+    name="gallery_view"
+    for=".content.IImagesSection"
+    class=".views.ImagesSectionGalleryView"
+    template="gallery.pt"
+    permission="zope2.View"
+    menu="plone_displayviews"
+    title="Gallery view"
+    layer="collective.contentsections.interfaces.IBrowserLayer"
+    />
+
 </configure>

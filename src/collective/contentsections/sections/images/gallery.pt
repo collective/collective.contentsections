@@ -1,0 +1,40 @@
+<html metal:use-macro="context/@@main_template/macros/master">
+    <metal:main fill-slot="main">
+        <metal:content-core define-macro="content-core">
+            <link rel="stylesheet" href="${portal_url}/++plone++collective.contentsections/flexbin.css" />
+            <style>
+                .flexbin > * {
+                height: 150px;
+                }
+                .flexbin > * > img {
+                height: 150px;
+                }
+                .flexbin a {
+                text-decoration: none;
+                }
+                .flexbin-image-title {
+                position: absolute;
+                bottom: 5px;
+                left: 5px;
+                padding: 5px;
+                color: white;
+                background-color: black;
+                opacity: 0.6;
+
+                display: none;
+                }
+            </style>
+            <script src="${portal_url}/++plone++collective.contentsections/spotlight.bundle.js"/>
+
+            <h2 tal:condition="not:context/hide_title">${context/title}</h2>
+            <div class="flexbin flexbin-margin">
+                <a tal:repeat="item view/items" href="${item/full_image_url}"
+                    title="${item/title}" data-description="${item/description}"
+                    class="spotlight">
+                    <img src="${item/preview_image_url}" alt="${item/title}" title="${item/title}"/>
+                    <div class="flexbin-image-title">${item/title}</div>
+                </a>
+            </div>
+        </metal:content-core>
+    </metal:main>
+</html>

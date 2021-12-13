@@ -1,5 +1,6 @@
 from collective.contentsections.sections.base import BaseLinksSectionView
 from collective.contentsections.sections.base import ISection
+from collective.contentsections.sections.base import SectionView
 from plone import api
 
 
@@ -15,6 +16,23 @@ class ImagesSectionView(BaseLinksSectionView):
                 "url": None,  # TODO
                 "lead_image_url": f"{brain.getURL()}/@@images/image/{self.item_lead_image_scale}",
                 "effective_date": brain.effective,
+            }
+            for brain in brains
+        ]
+        return results
+
+
+class ImagesSectionGalleryView(SectionView):
+    """ImagesSection gallery view"""
+
+    def items(self):
+        brains = api.content.find(context=self.context, depth=1, portal_type="Image")
+        results = [
+            {
+                "title": brain.Title,
+                "description": brain.Description,
+                "full_image_url": f"{brain.getURL()}/@@images/image/huge",
+                "preview_image_url": f"{brain.getURL()}/@@images/image/preview",
             }
             for brain in brains
         ]
