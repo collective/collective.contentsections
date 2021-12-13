@@ -29,6 +29,7 @@
     <value key="compile">False</value>
     <value key="merge_with">default</value>
     <value key="csscompilation">++plone++collective.contentsections/base.css</value>
+    <value key="jscompilation">++plone++collective.contentsections/base.js</value>
   </records>
 
   <record name="plone.displayed_types">
