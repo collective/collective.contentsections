@@ -14,12 +14,12 @@ IMAGE_ALIGNMENTS = {
     "top": _("Top"),
 }
 COLUMN_WIDTHS = {
-    3: _("Quarter of row"),
-    4: _("Third of row"),
-    6: _("Half of row"),
-    8: _("Two thirds of row"),
-    9: _("Three quarters of row"),
-    12: _("Full row"),
+    3: _("1/4"),
+    4: _("1/3"),
+    6: _("1/2"),
+    8: _("2/3"),
+    9: _("3/4"),
+    12: _("1/1"),
 }
 
 
