@@ -21,6 +21,11 @@ COLUMN_WIDTHS = {
     9: _("3/4"),
     12: _("1/1"),
 }
+COLUMN_ALIGNMENTS = {
+    "start": _("Start"),
+    "center": _("Center"),
+    "end": _("End"),
+}
 
 
 class VocabularyFactory:
@@ -34,6 +39,7 @@ class VocabularyFactory:
 
 ImageAlignmentsVocabulary = VocabularyFactory(IMAGE_ALIGNMENTS)
 ColumnWidthsVocabulary = VocabularyFactory(COLUMN_WIDTHS)
+ColumnAlignmentsVocabulary = VocabularyFactory(COLUMN_ALIGNMENTS)
 
 
 class IconsVocabularyFactory:

@@ -61,6 +61,7 @@
         row_anchor_name = f"{row_config.id}" if row_config else None
         row_is_full_width = row_config.is_full_width if row_config else True
         row_css_classes = row_config.css_classes if row_config else ""
+        row_alignment_class = f"align-items-{row_config.column_alignment}" if row_config else ""
         row_background_image_url = f"url({row_config_url}/@@images/background_image/huge)"
         row_style = f"background-image: {row_background_image_url}; background-size: cover; background-position: center;"
         ?>
@@ -86,7 +87,7 @@
               ${python:row_config.Title()}
             </div>
           </div>
-          <div class="row" tal:omit-tag="python:row_config is None">
+          <div class="row ${row_alignment_class}" tal:omit-tag="python:row_config is None">
             <tal:section tal:repeat="section row/sections">
               <?python
                 column_config = row_config.columns[repeat.section.index] if row_config else None
@@ -95,7 +96,7 @@
                 section_id = f"section-{section.id}"
                 section_type = section.portal_type.split(".")[-1]
                 section_type_class = f"section-{section_type.lower()}"
-                section_col_class = f"col-sm-{column_config['width']}" if column_config else ""
+                section_col_class = f"col-sm-{column_config['width']} {column_config['css_classes']}" if column_config else ""
                 section_css_classes = section.css_classes if section.css_classes else ""
                 section_class = " ".join(["clearfix section", section_type_class, section_css_classes, section_col_class])
                 section_style = f"background-image: {section_background_image_url}; background-size: cover; background-position: center;"

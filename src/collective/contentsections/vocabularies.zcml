@@ -2,6 +2,12 @@
   xmlns="http://namespaces.zope.org/zope">
 
   <utility
+    name="collective.contentsections.ColumnAlignments"
+    component=".vocabularies.ColumnAlignmentsVocabulary"
+    provides="zope.schema.interfaces.IVocabularyFactory"
+    />
+
+  <utility
     name="collective.contentsections.ColumnWidths"
     component=".vocabularies.ColumnWidthsVocabulary"
     provides="zope.schema.interfaces.IVocabularyFactory"

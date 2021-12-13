@@ -18,6 +18,12 @@ class IColumn(Interface):
         vocabulary="collective.contentsections.ColumnWidths",
         required=False,
     )
+    css_classes = schema.TextLine(
+        title=_("Column CSS Classes"),
+        required=False,
+        default="",
+        missing_value="",
+    )
 
 
 class IRow(model.Schema):
@@ -28,6 +34,12 @@ class IRow(model.Schema):
         value_type=DictRow(title=_("Column"), schema=IColumn),
         missing_value=[],
         min_length=1,
+    )
+    column_alignment = schema.Choice(
+        title=_("Column alignment"),
+        vocabulary="collective.contentsections.ColumnAlignments",
+        default="center",
+        missing_value="",
     )
     is_full_width = schema.Bool(
         title=_("Full width"),
