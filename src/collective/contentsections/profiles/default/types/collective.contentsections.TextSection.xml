@@ -14,10 +14,10 @@
     <property name="allowed_content_types" />
 
     <property name="behaviors">
+        <element value="collective.contentsections.namefromuuid"/>
         <element value="plone.richtext"/>
         <element value="plone.leadimage"/>
         <element value="plone.locking"/>
-        <element value="plone.namefromtitle"/>
         <element value="plone.versioning" />
     </property>
 

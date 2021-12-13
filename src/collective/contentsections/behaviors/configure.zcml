@@ -17,4 +17,12 @@
     marker=".leadicon.ILeadIcon"
     />
 
+  <plone:behavior
+    name="collective.contentsections.namefromuuid"
+    title="Name from uuid"
+    description="Use uuid.uuid4 to generate short name of new object."
+    provides=".namechooser.INameFromUUID"
+    />
+  <adapter factory=".namechooser.NameFromUUID" />
+
 </configure>
