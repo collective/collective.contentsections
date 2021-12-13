@@ -10,7 +10,7 @@
                         <div class="card-body">
                             <h5 class="card-title">${item/title}</h5>
                             <p class="card-text" tal:condition="not:context/hide_item_descriptions">${item/description}</p>
-                            <a href="${item/url}">
+                            <a tal:condition="item/url" href="${item/url}">
                                 En savoir plus
                             </a>
                         </div>
