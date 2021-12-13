@@ -4,6 +4,7 @@ from collective.z3cform.datagridfield.row import DictRow
 from plone import schema
 from plone.autoform import directives
 from plone.dexterity.content import Item
+from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from zope.interface import Interface
 from zope.interface import implementer
@@ -28,11 +29,20 @@ class IRow(model.Schema):
         missing_value=[],
         min_length=1,
     )
-
     is_full_width = schema.Bool(
         title=_("Full width"),
         default=False,
         missing_value=False,
+    )
+    background_image = NamedBlobImage(
+        title=_("Background image"),
+        required=False,
+    )
+    css_classes = schema.TextLine(
+        title=_("CSS Classes"),
+        required=False,
+        default="",
+        missing_value="",
     )
 
     directives.widget("columns", DataGridFieldFactory)

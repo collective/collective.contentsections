@@ -60,8 +60,11 @@
         row_config_url = row_config.absolute_url() if row_config else None
         row_anchor_name = f"row-{row_config.id}" if row_config else None
         row_is_full_width = row_config.is_full_width if row_config else True
+        row_css_classes = row_config.css_classes if row_config else ""
+        row_background_image_url = f"url({row_config_url}/@@images/background_image/huge)"
+        row_style = f"background-image: {row_background_image_url}; background-size: cover; background-position: center;"
         ?>
-      <div id="row-${repeat/row/number}">
+      <div id="row-${repeat/row/number}" class="${row_css_classes}" style="${row_style}">
         <div class="container" tal:omit-tag="row_is_full_width">
           <div class="row-edit-toolbar" tal:condition="python:row_config and can_edit">
             <a tal:attributes="name string:${row_anchor_name}" />
@@ -103,25 +106,25 @@
                   <div class="section-edit-links" tal:condition="can_edit">
                     <a href="${section_url}/select_default_view" tal:condition="python:len(section.getAvailableLayouts())>1">
                       <button
-                        type="button" class="btn btn-dark">
+                        type="button" class="btn btn-dark btn-sm">
                         <tal:icon replace="structure python:icons.tag('eye', tag_class='')" />
                       </button>
                     </a>
                     <a href="${section_url}/folder_contents" tal:condition="section/allowedContentTypes">
                       <button
-                        type="button" class="btn btn-dark">
+                        type="button" class="btn btn-dark btn-sm">
                         <tal:icon replace="structure python:icons.tag('folder', tag_class='')" />
                       </button>
                     </a>
                     <a href="${section_url}/@@edit">
                       <button
-                        type="button" class="btn btn-dark">
+                        type="button" class="btn btn-dark btn-sm">
                         <tal:icon replace="structure python:icons.tag('pencil', tag_class='')" />
                       </button>
                     </a>
                     <a href="${section_url}/@@delete_confirmation">
                       <button
-                        type="button" class="btn btn-dark">
+                        type="button" class="btn btn-dark btn-sm">
                         <tal:icon replace="structure python:icons.tag('trash', tag_class='')" />
                       </button>
                     </a>
