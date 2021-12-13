@@ -10,7 +10,7 @@
         class="text" tal:content="structure context/text/output | nothing" />
       <figure tal:condition="context/image | nothing"
         class="${python:figure_class[context.lead_image_alignment]}">
-        <img class="figure-image img-fluid img-size-${context/image_size}"
+        <img class="figure-image img-fluid img-size-${context/lead_image_scale}"
           tal:attributes="src string:${context/absolute_url}/@@images/image/${context/lead_image_scale};" />
         <figcaption tal:condition="context/image_caption" class="figure-caption">
           ${context/image_caption}
