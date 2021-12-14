@@ -19,7 +19,7 @@ This product provides :
 
 - Basic schema and class for section content types
 - *LeadIcon* vocabulary and behavior based on plone.icons registry records
-- *HTMLSection*, *TextSection*, *CollectionSection* content types
+- *HTMLSection*, *TextSection*, *SelectionSection* and *CollectionSection* content types
 - *CardsSection* content type based on a collective.z3cform.datagridfield field
 - *ImagesSection*, *LinksSection*, *FilesSection* folderish section content types
 - A *Page view* for folderish content types
@@ -29,6 +29,9 @@ This product fits Plone with:
 
 - new image sizes
 - a new default page name *index*
+- LeadImage on *File* and *Link* content types
+- hiding *contentleadimage* viewlet: content LeadImage is used only on listing/collection/parent views
+- a profile to simplify TinyMCE interface
 
 Installation
 ------------
@@ -45,7 +48,15 @@ Install collective.contentsections by adding it to your buildout::
 
 and then running ``bin/buildout``
 
+Development
+-----------
+
+::
+
+    make install
+    make start
 
 TODO
 ----
-
+- Tests, Tests, Tests
+- A FormSection based on Easyform ?
