@@ -13,6 +13,19 @@
     height: 100%;
 }
 
+.section .carousel-caption a {
+    display: block;
+    background-color: var(--bs-dark);
+    opacity: 0.8;
+    color: var(--bs-white);
+    text-decoration: none;
+    padding: 5px;
+}
+
+.section .carousel-caption p {
+    margin: 0px;
+}
+
 .background-image-fixed {
     background-attachment: fixed;
 }
