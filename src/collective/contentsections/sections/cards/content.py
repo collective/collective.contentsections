@@ -20,14 +20,17 @@ class ICard(Interface):
     title = schema.TextLine(
         title=_("Title"),
         required=False,
+        default="",
     )
     subtitle = schema.TextLine(
         title=_("Subtitle"),
         required=False,
+        default="",
     )
     description = schema.Text(
         title=_("Text"),
         required=False,
+        default="",
     )
     icon = schema.Choice(
         title=_("Icon"),
@@ -42,6 +45,7 @@ class ICard(Interface):
     remote_url = schema.TextLine(
         title=_("Remote url"),
         required=False,
+        default="",
     )
 
     directives.widget("title", placeholder=_("Card title"))
