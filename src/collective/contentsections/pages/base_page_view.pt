@@ -28,7 +28,8 @@
       color: white;
       }
       .section-edit-links {
-      float: right
+      float: right;
+      height: 20px;
       }
       .section-edit-links a{
       text-decoration: none;
