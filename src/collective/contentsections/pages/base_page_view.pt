@@ -74,7 +74,7 @@
               <a href="${row_config_url}/@@edit">
                 <button
                   type="button" class="btn btn-dark btn-sm">
-                  <tal:icon replace="structure python:icons.tag('pencil', tag_class='')" />
+                  <tal:icon replace="structure python:icons.tag('toolbar-action/edit', tag_class='')" />
                 </button>
               </a>
               <a href="${row_config_url}/@@delete_confirmation">
@@ -108,30 +108,58 @@
                 <a tal:attributes="name string:${section_id}" />
                 <div class="${python:'' if section.is_full_width else 'container'}">
                   <div class="section-edit-links" tal:condition="can_edit">
-                    <a href="${section_url}/select_default_view" tal:condition="python:len(section.getAvailableLayouts())>1">
-                      <button
-                        type="button" class="btn btn-dark btn-sm">
-                        <tal:icon replace="structure python:icons.tag('eye', tag_class='')" />
-                      </button>
-                    </a>
-                    <a href="${section_url}/folder_contents" tal:condition="section/allowedContentTypes">
-                      <button
-                        type="button" class="btn btn-dark btn-sm">
-                        <tal:icon replace="structure python:icons.tag('folder', tag_class='')" />
-                      </button>
-                    </a>
-                    <a href="${section_url}/@@edit">
-                      <button
-                        type="button" class="btn btn-dark btn-sm">
-                        <tal:icon replace="structure python:icons.tag('pencil', tag_class='')" />
-                      </button>
-                    </a>
-                    <a href="${section_url}/@@delete_confirmation">
-                      <button
-                        type="button" class="btn btn-dark btn-sm">
-                        <tal:icon replace="structure python:icons.tag('trash', tag_class='')" />
-                      </button>
-                    </a>
+                    <div class="btn-group">
+                      <div class="dropdown">
+                        <button class="btn btn-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                          <tal:icon replace="structure python:icons.tag('toolbar-action/actions', tag_class='')" />
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href="${section_url}/folder_contents"
+                              tal:condition="section/allowedContentTypes">
+                              <tal:icon replace="structure python:icons.tag('toolbar-action/folderContents', tag_class='')" />
+                              Section content
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="${section_url}/@@edit">
+                              <tal:icon replace="structure python:icons.tag('toolbar-action/edit', tag_class='')" />
+                              Edit section
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="${section_url}/select_default_view"
+                              tal:condition="python:len(section.getAvailableLayouts())>1">
+                              <tal:icon replace="structure python:icons.tag('toolbar-action/view', tag_class='')" />
+                              Change section view
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="${section_url}/@@delete_confirmation">
+                              <tal:icon replace="structure python:icons.tag('trash', tag_class='')" />
+                              Delete section
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="btn-group">
+                      <div class="dropdown">
+                        <button class="btn btn-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                          <tal:icon replace="structure python:icons.tag('plus', tag_class='')" />
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <tal:icon replace="structure python:icons.tag('arrow-up', tag_class='')" />
+                            Add section above
+                          </li>
+                          <li>
+                            <tal:icon replace="structure python:icons.tag('arrow-down', tag_class='')" />
+                            Add section below
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                   <span tal:replace="structure section/@@page_section_view | nothing" />
                 </div>
