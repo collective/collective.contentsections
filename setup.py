@@ -10,7 +10,7 @@ long_description = "\n\n".join(
 )
 setup(
     name="collective.contentsections",
-    version="1.0a1",
+    version="1.0.0a1dev",
     description="An add-on for Plone",
     long_description=long_description,
     classifiers=[
