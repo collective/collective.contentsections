@@ -107,17 +107,18 @@ class BaseLinksSectionView(SectionView):
 
     @property
     def item_lead_image_scale(self):
-        # layout = self.context.getLayout()
-        # section_size = self.context.cols
-        # group_size = self.context.group_size
-        # cols = section_size / group_size
-        # if layout == "carousel_view" or "cards_view":
-        #     if cols > 6:
-        #         return "huge"
-        #     elif cols > 3:
-        #         return "large"
-        # elif layout == "listing_view":
-        #     return "mini"
+        layout = self.context.getLayout()
+        group_size = self.context.group_size
+        cols = 12 / group_size
+        if layout in ["carousel_view", "cards_view"]:
+            if cols > 6:
+                return "huge"
+            elif cols > 3:
+                return "large"
+            else:
+                return "preview"
+        elif layout == "list_view":
+            return "thumb"
         return "preview"
 
 
