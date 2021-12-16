@@ -60,3 +60,12 @@ TODO
 
 - Tests, Tests, Tests
 - A FormSection based on Easyform ?
+
+Previews
+--------
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr);grid-gap: 10px;">
+  <img  alt="Preview one"  src="./docs/images/preview1.png" />
+  <img  alt="Preview two"  src="./docs/images/preview2.png" />
+</div>
+
