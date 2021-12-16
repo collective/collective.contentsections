@@ -7,13 +7,14 @@ class FilesSectionView(BaseLinksSectionView):
     """FilesSection view"""
 
     def items(self):
+        lead_image_scale = self.item_lead_image_scale
         brains = api.content.find(context=self.context, depth=1, portal_type="File")
         results = [
             {
                 "title": brain.Title,
                 "description": brain.Description,
                 "url": brain.getURL(),
-                "lead_image_url": f"{brain.getURL()}/@@images/image/{self.item_lead_image_scale}",
+                "lead_image_url": f"{brain.getURL()}/@@images/image/{lead_image_scale}",
                 "effective_date": brain.effective,
             }
             for brain in brains
