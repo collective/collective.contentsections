@@ -3,9 +3,9 @@ from collective.contentsections import _
 from collective.contentsections.contents import IRow
 from collective.contentsections.sections import ISection
 from plone import api
-from plone.app.contenttypes.browser.folder import FolderView
 from plone.app.contenttypes.browser.full_view import FullViewItem
 from plone.dexterity.content import Container
+from Products.Five.browser import BrowserView
 from zope.interface import Interface
 from zope.interface import implementer
 
@@ -22,7 +22,7 @@ class Page(Container):
         return False
 
 
-class PageView(FolderView):
+class PageView(BrowserView):
     """Page view"""
 
     @property
