@@ -67,8 +67,8 @@
         row_style = f"background-image: {row_background_image_url}; background-size: cover; background-position: center;"
         ?>
       <div id="row-${repeat/row/number}" class="${row_css_classes}" style="${row_style}">
-        <div class="container" tal:omit-tag="row_is_full_width">
-          <div class="row-edit-toolbar" tal:condition="python:row_config and can_edit">
+        <div class="row-edit-toolbar" tal:condition="python:row_config and can_edit">
+          <div class="container">
             <a tal:attributes="name string:${row_anchor_name}" />
             <div class="row-edit-links">
               <a href="${row_config_url}/@@edit">
@@ -88,6 +88,8 @@
               ${python:row_config.Title()}
             </div>
           </div>
+        </div>
+        <div class="container" tal:omit-tag="row_is_full_width">
           <div class="row ${row_alignment_class}" tal:omit-tag="python:row_config is None">
             <tal:section tal:repeat="section row/sections">
               <?python
