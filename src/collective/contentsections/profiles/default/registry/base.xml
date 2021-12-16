@@ -7,6 +7,10 @@
     </value>
   </record>
 
+  <record name="plone.toolbar_position">
+    <value>top</value>
+  </record>
+
   <record name="plone.allowed_sizes" purge="True">
     <!-- Purge the existing ones! -->
     <value>
