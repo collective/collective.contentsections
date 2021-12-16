@@ -1,0 +1,35 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:plone="http://namespaces.plone.org/plone">
+
+
+  <!-- Custom add view and form - invoked from ++add++ traverser -->
+  <adapter
+    for="Products.CMFCore.interfaces.IFolderish
+           collective.contentsections.interfaces.IBrowserLayer
+           plone.dexterity.interfaces.IDexterityFTI"
+    provides="zope.publisher.interfaces.browser.IBrowserPage"
+    factory=".forms.CustomAddView"
+    />
+  <class class=".forms.CustomAddView">
+    <require
+      permission="cmf.AddPortalContent"
+      interface="zope.publisher.interfaces.browser.IBrowserPage"
+      />
+  </class>
+
+  <!-- Custom edit view -->
+  <browser:page
+    for="plone.dexterity.interfaces.IDexterityContent"
+    name="edit"
+    class=".forms.CustomEditView"
+    permission="cmf.ModifyPortalContent"
+    layer="collective.contentsections.interfaces.IBrowserLayer"
+    />
+
+
+
+
+
+</configure>

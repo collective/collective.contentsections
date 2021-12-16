@@ -1,0 +1,18 @@
+form.accordion-form fieldset legend {
+    cursor: pointer;
+}
+
+form.accordion-form fieldset:not(:nth-child(1)) legend::after {
+    content: '\e84b';
+    font-family: fontello;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: all .3s ease-in;
+    transform-origin: center center;
+    margin-left: 7px;
+}
+
+form.accordion-form fieldset:not(:nth-child(1)) legend.expanded::after {
+    transform: rotate(180deg);
+}
