@@ -11,15 +11,22 @@ class CardsSectionView(SectionView):
         results = []
         for card in self.context.cards:
             relation_uid = card.get("relation_uid")
-            relation = api.content.get(UID=relation_uid) if relation_uid else None
-            relation_url = relation.absolute_url() if relation else None
+            remote_url = card.get("remote_url")
+            if relation_uid:  # relation takes precedence over remote_url
+                relation = api.content.get(UID=relation_uid) if relation_uid else None
+                relation_link_url = relation.absolute_url() if relation else None
+            elif remote_url:
+                relation_link_url = remote_url
+            else:
+                relation_link_url = None
+
             results.append(
                 {
                     "icon": card["icon"],
                     "title": card["title"],
                     "subtitle": card["subtitle"],
                     "description": card["description"],
-                    "relation_link_url": relation_url,
+                    "relation_link_url": relation_link_url,
                 }
             )
         return results
