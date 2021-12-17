@@ -5,7 +5,7 @@ Changelog
 1.0.0a2 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Add Event Page portal type [sverbois]
 
 
 1.0.0a1 (2021-12-17)

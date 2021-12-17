@@ -19,6 +19,14 @@
     layer="collective.contentsections.interfaces.IBrowserLayer"
     />
 
+  <browser:page
+    name="base_page_template"
+    for="*"
+    class=".base.PageTemplateView"
+    permission="zope.Public"
+    />
+
   <include package=".basic" />
+  <include package=".event" />
 
 </configure>

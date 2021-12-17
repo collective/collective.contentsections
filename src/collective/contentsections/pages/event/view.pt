@@ -1,0 +1,7 @@
+<html metal:use-macro="context/@@base_page_template/macros/master">
+  <metal:content-tot fill-slot="content-top">
+    <div id="content-top" class="container">
+      <tal:eventsummary replace="structure context/@@event_summary"/>
+    </div>
+  </metal:content-tot>
+</html>

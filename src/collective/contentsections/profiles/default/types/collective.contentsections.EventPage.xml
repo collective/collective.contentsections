@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<object name="collective.contentsections.EventPage" meta_type="Dexterity FTI"
+    i18n:domain="collective.contentsections" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+    <property name="title" i18n:translate="">Event</property>
+    <property name="icon_expr">string:calendar-date</property>
+
+    <property name="add_permission">collective.contentsections.AddEventPage</property>
+    <property name="klass">collective.contentsections.pages.EventPage</property>
+    <property name="schema">collective.contentsections.pages.IEventPage</property>
+
+    <property name="global_allow">True</property>
+    <property name="filter_content_types">True</property>
+    <property name="allowed_content_types">
+        <element value="collective.contentsections.CardsSection"/>
+        <element value="collective.contentsections.CollectionSection"/>
+        <element value="collective.contentsections.FilesSection"/>
+        <element value="collective.contentsections.HTMLSection"/>
+        <element value="collective.contentsections.ImagesSection"/>
+        <element value="collective.contentsections.LinksSection"/>
+        <element value="collective.contentsections.Row"/>
+        <element value="collective.contentsections.SelectionSection"/>
+        <element value="collective.contentsections.TextSection"/>
+    </property>
+
+    <property name="behaviors">
+        <element value="plone.basic"/>
+        <element value="plone.leadimage"/>
+        <element value="plone.categorization"/>
+        <element value="plone.eventbasic"/>
+        <element value="plone.eventrecurrence"/>
+        <element value="plone.eventlocation"/>
+        <element value="plone.eventattendees"/>
+        <element value="plone.eventcontact"/>
+        <element value="plone.excludefromnavigation"/>
+        <element value="plone.locking"/>
+        <element value="plone.namefromtitle"/>
+        <element value="plone.publication"/>
+        <element value="plone.shortname"/>
+        <element value="plone.versioning" />
+    </property>
+
+    <property name="default_view">page_view</property>
+    <property name="view_methods">
+        <element value="page_view"/>
+    </property>
+
+</object>
+

@@ -1,171 +1,174 @@
-<html metal:use-macro="context/@@main_template/macros/master" i18n:domain="collective.contentsections">
+<metal:page define-macro="master">
+  <html metal:use-macro="context/@@main_template/macros/master" i18n:domain="collective.contentsections">
 
-  <metal:styleslot fill-slot="style_slot">
-    <style>
-      #content-core > div {
-      --bs-gutter-x: 0.75rem;
-      --bs-gutter-y: 0rem;
-      }
-      .section {
-      margin-top: 0px;
-      margin-bottom: 0px;
-      padding: 1rem 0rem;
-      }
-      .row-edit-toolbar {
-      background-color: black;
-      color: white;
-      padding: 5px 10px 1px 10px;
-      }
-      .row-edit-links {
-      float: right;
-      }
-      .row-edit-links a{
-      text-decoration: none;
-      color: white;
-      }
-      .section-edit-links {
-      float: right;
-      height: 20px;
-      }
-      .section-edit-links a{
-      text-decoration: none;
-      }
-      #content-core {  /* FULL WIDTH */
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      }
-    </style>
-  </metal:styleslot>
+    <metal:styleslot fill-slot="style_slot">
+      <style>
+        #content-core > div {
+        --bs-gutter-x: 0.75rem;
+        --bs-gutter-y: 0rem;
+        }
+        .section {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 1rem 0rem;
+        }
+        .row-edit-toolbar {
+        background-color: black;
+        color: white;
+        padding: 5px 10px 1px 10px;
+        }
+        .row-edit-links {
+        float: right;
+        }
+        .row-edit-links a{
+        text-decoration: none;
+        color: white;
+        }
+        .section-edit-links {
+        text-align: right;
+        }
+        .section-edit-links a{
+        text-decoration: none;
+        }
+        #content-core {  /* FULL WIDTH */
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        }
+      </style>
+    </metal:styleslot>
 
-  <metal:content-core fill-slot="content-core"
-    tal:define="can_edit python: checkPermission('Modify portal content', context);
+    <metal:content-core fill-slot="content-core"
+      tal:define="can_edit python: checkPermission('Modify portal content', context);
                 rows view/rows;">
-    <tal:emptypage tal:condition="not:rows">
-      <div class="row">
-        <div class="col-sm-12">
-          <p class="container" i18n:translate="">There is no section on this page.</p>
-        </div>
-      </div>
-    </tal:emptypage>
-    <tal:row tal:repeat="row rows">
-      <?python
-        row_config = row['config']
-        row_config_url = row_config.absolute_url() if row_config else None
-        row_anchor_name = f"{row_config.id}" if row_config else None
-        row_is_full_width = row_config.is_full_width if row_config else True
-        row_css_classes = row_config.css_classes if row_config else ""
-        row_alignment_class = f"align-items-{row_config.column_alignment}" if row_config else ""
-        row_background_image_url = f"url({row_config_url}/@@images/background_image/huge)"
-        row_style = f"background-image: {row_background_image_url}; background-size: cover; background-position: center;"
-        ?>
-      <div id="row-${repeat/row/number}" class="${row_css_classes}" style="${row_style}">
-        <div class="row-edit-toolbar" tal:condition="python:row_config and can_edit">
-          <div class="container">
-            <a tal:attributes="name string:${row_anchor_name}" />
-            <div class="row-edit-links">
-              <a href="${row_config_url}/@@edit">
-                <button
-                  type="button" class="btn btn-dark btn-sm">
-                  <tal:icon replace="structure python:icons.tag('toolbar-action/edit', tag_class='')" />
-                </button>
-              </a>
-              <a href="${row_config_url}/@@delete_confirmation">
-                <button
-                  type="button" class="btn btn-dark btn-sm">
-                  <tal:icon replace="structure python:icons.tag('trash', tag_class='')" />
-                </button>
-              </a>
-            </div>
-            <div class="fs-4">
-              ${python:row_config.Title()}
-            </div>
+      <metal:slot define-slot="content-top" />
+      <tal:emptypage tal:condition="not:rows">
+        <div class="row">
+          <div class="col-sm-12">
+            <p class="container" i18n:translate="">There is no section on this page.</p>
           </div>
         </div>
-        <div class="container" tal:omit-tag="row_is_full_width">
-          <div class="row ${row_alignment_class}" tal:omit-tag="python:row_config is None">
-            <tal:section tal:repeat="section row/sections">
-              <?python
-                column_config = row_config.columns[repeat.section.index] if row_config else None
-                section_url = section.absolute_url()
-                section_background_image_url = f"url({section_url}/@@images/background_image/huge)"
-                section_id = f"section-{section.id}"
-                section_type = section.portal_type.split(".")[-1]
-                section_type_class = f"section-{section_type.lower()}"
-                section_col_class = f"col-sm-{column_config['width']} {column_config['css_classes']}" if column_config else ""
-                section_css_classes = section.css_classes if section.css_classes else ""
-                section_class = " ".join(["clearfix section", section_type_class, section_css_classes, section_col_class])
-                section_style = f"background-image: {section_background_image_url}; background-size: cover; background-position: center;"
-                ?>
-              <div id="${section_id}" class="${section_class}" style="${section_style}">
-                <a tal:attributes="name string:${section_id}" />
-                <div class="${python:'' if section.is_full_width else 'container'}">
-                  <div class="section-edit-links" tal:condition="can_edit">
-                    <div class="btn-group">
-                      <div class="dropdown">
-                        <button class="btn btn-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                          <tal:icon replace="structure python:icons.tag('toolbar-action/actions', tag_class='')" />
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <a class="dropdown-item" href="${section_url}/folder_contents"
-                              tal:condition="section/allowedContentTypes">
-                              <tal:icon replace="structure python:icons.tag('toolbar-action/folderContents', tag_class='')" />
-                              Section content
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="${section_url}/@@edit">
-                              <tal:icon replace="structure python:icons.tag('toolbar-action/edit', tag_class='')" />
-                              Edit section
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="${section_url}/select_default_view"
-                              tal:condition="python:len(section.getAvailableLayouts())>1">
-                              <tal:icon replace="structure python:icons.tag('toolbar-action/view', tag_class='')" />
-                              Change section view
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="${section_url}/@@delete_confirmation">
-                              <tal:icon replace="structure python:icons.tag('trash', tag_class='')" />
-                              Delete section
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="btn-group">
-                      <div class="dropdown">
-                        <button class="btn btn-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                          <tal:icon replace="structure python:icons.tag('plus', tag_class='')" />
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <tal:icon replace="structure python:icons.tag('arrow-up', tag_class='')" />
-                            Add section above
-                          </li>
-                          <li>
-                            <tal:icon replace="structure python:icons.tag('arrow-down', tag_class='')" />
-                            Add section below
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <span tal:replace="structure section/@@page_section_view | nothing" />
-                </div>
+      </tal:emptypage>
+      <tal:row tal:repeat="row rows">
+        <?python
+          row_config = row['config']
+          row_config_url = row_config.absolute_url() if row_config else None
+          row_anchor_name = f"{row_config.id}" if row_config else None
+          row_is_full_width = row_config.is_full_width if row_config else True
+          row_css_classes = row_config.css_classes if row_config else ""
+          row_alignment_class = f"align-items-{row_config.column_alignment}" if row_config else ""
+          row_background_image_url = f"url({row_config_url}/@@images/background_image/huge)"
+          row_style = f"background-image: {row_background_image_url}; background-size: cover; background-position: center;"
+          ?>
+        <div id="row-${repeat/row/number}" class="${row_css_classes}" style="${row_style}">
+          <div class="row-edit-toolbar" tal:condition="python:row_config and can_edit">
+            <div class="container">
+              <a tal:attributes="name string:${row_anchor_name}" />
+              <div class="row-edit-links">
+                <a href="${row_config_url}/@@edit">
+                  <button
+                    type="button" class="btn btn-dark btn-sm">
+                    <tal:icon replace="structure python:icons.tag('toolbar-action/edit', tag_class='')" />
+                  </button>
+                </a>
+                <a href="${row_config_url}/@@delete_confirmation">
+                  <button
+                    type="button" class="btn btn-dark btn-sm">
+                    <tal:icon replace="structure python:icons.tag('trash', tag_class='')" />
+                  </button>
+                </a>
               </div>
-            </tal:section>
+              <div class="fs-4">
+                ${python:row_config.Title()}
+              </div>
+            </div>
+          </div>
+          <div class="container" tal:omit-tag="row_is_full_width">
+            <div class="row ${row_alignment_class}" tal:omit-tag="python:row_config is None">
+              <tal:section tal:repeat="section row/sections">
+                <?python
+                  column_config = row_config.columns[repeat.section.index] if row_config else None
+                  section_url = section.absolute_url()
+                  section_background_image_url = f"url({section_url}/@@images/background_image/huge)"
+                  section_id = f"section-{section.id}"
+                  section_type = section.portal_type.split(".")[-1]
+                  section_type_class = f"section-{section_type.lower()}"
+                  section_col_class = f"col-sm-{column_config['width']} {column_config['css_classes']}" if column_config else ""
+                  section_css_classes = section.css_classes if section.css_classes else ""
+                  section_class = " ".join(["clearfix section", section_type_class, section_css_classes, section_col_class])
+                  section_style = f"background-image: {section_background_image_url}; background-size: cover; background-position: center;"
+                  ?>
+                <div id="${section_id}" class="${section_class}" style="${section_style}">
+                  <a tal:attributes="name string:${section_id}" />
+                  <div class="${python:'' if section.is_full_width else 'container'}">
+                    <div class="section-edit-links" tal:condition="can_edit"
+                      tal:attributes="style python:'float: right' if not section.hide_title else ''">
+                      <div class="btn-group">
+                        <div class="dropdown">
+                          <button class="btn btn-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <tal:icon replace="structure python:icons.tag('toolbar-action/actions', tag_class='')" />
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="${section_url}/folder_contents"
+                                tal:condition="section/allowedContentTypes">
+                                <tal:icon replace="structure python:icons.tag('toolbar-action/folderContents', tag_class='')" />
+                                Section content
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="${section_url}/@@edit">
+                                <tal:icon replace="structure python:icons.tag('toolbar-action/edit', tag_class='')" />
+                                Edit section
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="${section_url}/select_default_view"
+                                tal:condition="python:len(section.getAvailableLayouts())>1">
+                                <tal:icon replace="structure python:icons.tag('toolbar-action/view', tag_class='')" />
+                                Change section view
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="${section_url}/@@delete_confirmation">
+                                <tal:icon replace="structure python:icons.tag('trash', tag_class='')" />
+                                Delete section
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="btn-group">
+                        <div class="dropdown">
+                          <button class="btn btn-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <tal:icon replace="structure python:icons.tag('plus', tag_class='')" />
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <tal:icon replace="structure python:icons.tag('arrow-up', tag_class='')" />
+                              Add section above
+                            </li>
+                            <li>
+                              <tal:icon replace="structure python:icons.tag('arrow-down', tag_class='')" />
+                              Add section below
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <span tal:replace="structure section/@@page_section_view | nothing" />
+                  </div>
+                </div>
+              </tal:section>
 
+            </div>
           </div>
         </div>
-      </div>
-    </tal:row>
-  </metal:content-core>
+      </tal:row>
+    </metal:content-core>
 
-</html>
+  </html>
+</metal:page>

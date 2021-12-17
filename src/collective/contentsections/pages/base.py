@@ -6,6 +6,7 @@ from plone import api
 from plone.app.contenttypes.browser.full_view import FullViewItem
 from plone.dexterity.content import Container
 from Products.Five.browser import BrowserView
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.interface import Interface
 from zope.interface import implementer
 
@@ -66,3 +67,16 @@ class PageView(BrowserView):
 
 class PageSectionView(FullViewItem):
     """Page view item"""
+
+
+class PageTemplateView(BrowserView):
+    def __call__(self):
+        return ViewPageTemplateFile(self.template_name)
+
+    @property
+    def template_name(self):
+        return "base_page_view.pt"
+
+    @property
+    def macros(self):
+        return ViewPageTemplateFile(self.template_name).macros

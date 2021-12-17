@@ -68,3 +68,5 @@ Previews
 ![Preview 1](https://raw.githubusercontent.com/sverbois/collective.contentsections/main/docs/images/preview1.png)
 
 ![Preview 2](https://raw.githubusercontent.com/sverbois/collective.contentsections/main/docs/images/preview2.png)
+
+![Preview 3](https://raw.githubusercontent.com/sverbois/collective.contentsections/main/docs/images/preview3.png)

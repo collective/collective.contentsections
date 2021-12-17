@@ -7,5 +7,10 @@
       <role name="Contributor"/>
     </permission>
 
+    <permission name="collective.contentsections: Add EventPage" acquire="False">
+      <role name="Manager"/>
+      <role name="Contributor"/>
+    </permission>
+
   </permissions>
 </rolemap>

@@ -4,6 +4,7 @@
   <object meta_type="Dexterity FTI" name="collective.contentsections.BasicPage"/>
   <object meta_type="Dexterity FTI" name="collective.contentsections.CardsSection"/>
   <object meta_type="Dexterity FTI" name="collective.contentsections.CollectionSection"/>
+  <object meta_type="Dexterity FTI" name="collective.contentsections.EventPage"/>
   <object meta_type="Dexterity FTI" name="collective.contentsections.FilesSection"/>
   <object meta_type="Dexterity FTI" name="collective.contentsections.HTMLSection"/>
   <object meta_type="Dexterity FTI" name="collective.contentsections.ImagesSection"/>

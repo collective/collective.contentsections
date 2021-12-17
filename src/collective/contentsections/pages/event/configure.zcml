@@ -1,0 +1,20 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser">
+
+  <permission
+    id="collective.contentsections.AddEventPage"
+    title="collective.contentsections: Add EventPage"
+    />
+
+  <!-- View view -->
+  <browser:page
+    name="page_view"
+    for=".content.IEventPage"
+    class="collective.contentsections.pages.PageView"
+    template="view.pt"
+    permission="zope2.View"
+    layer="collective.contentsections.interfaces.IBrowserLayer"
+    />
+
+</configure>
