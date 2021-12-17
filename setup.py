@@ -3,9 +3,9 @@ from setuptools import setup
 
 long_description = "\n\n".join(
     [
-        open("README.rst").read(),
-        open("CONTRIBUTORS.rst").read(),
-        open("CHANGES.rst").read(),
+        open("README.md").read(),
+        open("CONTRIBUTORS.md").read(),
+        open("CHANGES.md").read(),
     ]
 )
 setup(
@@ -19,7 +19,6 @@ setup(
         "Framework :: Plone :: Addon",
         "Framework :: Plone :: 6.0",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Operating System :: OS Independent",
@@ -28,11 +27,11 @@ setup(
     keywords="Python Plone CMS",
     author="Sébastien Verbois",
     author_email="sebastien.verbois@gmail.be",
-    url="https://github.com/collective/collective.contentsections",
+    url="https://github.com/sverbois/collective.contentsections",
     project_urls={
         "PyPI": "https://pypi.python.org/pypi/collective.contentsections",
-        "Source": "https://github.com/collective/collective.contentsections",
-        "Tracker": "https://github.com/collective/collective.contentsections/issues",
+        "Source": "https://github.com/sverbois/collective.contentsections",
+        "Tracker": "https://github.com/sverbois/collective.contentsections/issues",
         # 'Documentation': 'https://collective.contentsections.readthedocs.io/en/latest/',
     },
     license="GPL version 2",
@@ -41,7 +40,7 @@ setup(
     package_dir={"": "src"},
     include_package_data=True,
     zip_safe=False,
-    python_requires=">=3.7",
+    python_requires=">=3.8",
     install_requires=[
         "setuptools",
         # -*- Extra requirements: -*-
