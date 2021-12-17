@@ -5,3 +5,5 @@ include LICENCE
 include Makefile
 include buildout.cfg
 global-exclude *.pyc
+global-exclude .DS_Store
+recursive-exclude src/collective/contentsections/npm/node_modules *
