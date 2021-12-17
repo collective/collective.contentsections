@@ -4,8 +4,8 @@
   <property name="global_allow">True</property>
 
   <property name="behaviors" purge="true">
+    <element value="collective.contentsections.namefromuuid"/>
     <element value="plone.basic" />
-    <element value="plone.namefromtitle" />
     <element value="plone.leadimage"/>
     <element value="plone.shortname" />
     <element value="plone.versioning" />
