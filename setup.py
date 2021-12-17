@@ -11,8 +11,9 @@ long_description = "\n\n".join(
 setup(
     name="collective.contentsections",
     version="1.0.0a1dev",
-    description="An add-on for Plone",
+    description="A block approach for Plone 6 Classic",
     long_description=long_description,
+    long_description_content_type="text/markdown",
     classifiers=[
         "Environment :: Web Environment",
         "Framework :: Plone",
@@ -35,7 +36,7 @@ setup(
         # 'Documentation': 'https://collective.contentsections.readthedocs.io/en/latest/',
     },
     license="GPL version 2",
-    packages=find_packages("src", exclude=["ez_setup"]),
+    packages=find_packages(where="src", exclude=["ez_setup"]),
     namespace_packages=["collective"],
     package_dir={"": "src"},
     include_package_data=True,
