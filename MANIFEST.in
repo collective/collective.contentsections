@@ -1,4 +1,7 @@
 graft src/collective
 graft docs
 include *.md
+include LICENCE
+include Makefile
+include buildout.cfg
 global-exclude *.pyc
