@@ -65,8 +65,6 @@ TODO
 Previews
 --------
 
-<div style="display: grid; grid-template-columns: repeat(2, 1fr);grid-gap: 10px;">
-  <img  alt="Preview one"  src="./docs/images/preview1.png" />
-  <img  alt="Preview two"  src="./docs/images/preview2.png" />
-</div>
+![Preview 1](/docs/images/preview1.png)
 
+![Preview 2](/docs/images/preview2.png)
