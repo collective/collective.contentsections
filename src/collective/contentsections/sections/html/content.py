@@ -10,7 +10,6 @@ class IHTMLSection(ISection):
 
     html = schema.SourceText(
         title=_(u"HTML"),
-        required=True,
     )
 
 

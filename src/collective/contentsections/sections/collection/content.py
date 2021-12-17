@@ -25,6 +25,8 @@ class ICollectionSection(IBaseLinksSection):
     collection_link_text = schema.TextLine(
         title=_(u"Text for the link to the collection"),
         required=False,
+        default="",
+        missing_value="",
     )
 
     directives.widget(

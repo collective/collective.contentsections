@@ -30,7 +30,6 @@ class ISelectionSection(IBaseLinksSection):
             "ajax": {"quietMillis": 300},
         },
     )
-
     directives.order_after(relations="hide_title")
 
 

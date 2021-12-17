@@ -20,22 +20,26 @@ class ICard(Interface):
     title = schema.TextLine(
         title=_("Title"),
         required=False,
+        default="",
         missing_value="",
     )
     subtitle = schema.TextLine(
         title=_("Subtitle"),
         required=False,
+        default="",
         missing_value="",
     )
     description = schema.Text(
         title=_("Text"),
         required=False,
+        default="",
         missing_value="",
     )
     icon = schema.Choice(
         title=_("Icon"),
         vocabulary="collective.contentsections.LeadIcons",
         required=False,
+        default="",
         missing_value="",
     )
     relation_uid = schema.Choice(
@@ -46,6 +50,7 @@ class ICard(Interface):
     remote_url = schema.TextLine(
         title=_("Remote url"),
         required=False,
+        default="",
         missing_value="",
     )
 
@@ -73,12 +78,13 @@ class ICardsSection(ISection):
     cards = schema.List(
         title=_("Cards"),
         value_type=DictRow(title=_("Card"), schema=ICard),
-        default=[],
-        required=False,
+        min_length=1,
+        missing_value=[],
     )
     group_size = schema.Choice(
-        title=_(u"Group size"),
+        title=_("Group size"),
         values=[1, 2, 3, 4],
+        default=3,
     )
     relation_link_text = schema.TextLine(
         title=_(u"Text for the link to the related content"),
@@ -86,6 +92,7 @@ class ICardsSection(ISection):
     )
 
     directives.widget("cards", DataGridFieldFactory, allow_reorder=True)
+    directives.order_before(group_size="is_full_width")
 
 
 @implementer(ICardsSection)
