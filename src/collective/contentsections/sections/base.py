@@ -21,7 +21,6 @@ class ISection(model.Schema):
     is_full_width = schema.Bool(
         title=_("Full width"),
         default=False,
-        missing_value=False,
     )
     background_image = NamedBlobImage(
         title=_("Background image"),
@@ -30,6 +29,7 @@ class ISection(model.Schema):
     css_classes = schema.TextLine(
         title=_("CSS Classes"),
         required=False,
+        default="",
         missing_value="",
     )
 
@@ -45,17 +45,14 @@ class IBaseLinksSection(ISection):
 
     hide_item_lead_images = schema.Bool(
         title=_("Hide item lead images"),
-        required=False,
         default=False,
     )
     hide_item_descriptions = schema.Bool(
         title=_("Hide item descriptions"),
-        required=False,
         default=False,
     )
     hide_item_publication_dates = schema.Bool(
         title=_("Hide item publication dates"),
-        required=False,
         default=True,
     )
     group_size = schema.Choice(
