@@ -25,6 +25,7 @@
     <property name="view_methods">
         <element value="card_view"/>
         <element value="carousel_view"/>
+        <element value="list_view"/>
     </property>
 
 </object>

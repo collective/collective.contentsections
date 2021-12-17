@@ -1,0 +1,25 @@
+
+<html metal:use-macro="context/@@main_template/macros/master">
+    <metal:main fill-slot="main">
+        <metal:content-core define-macro="content-core">
+
+            <h2 tal:condition="not:context/hide_title">${context/title}</h2>
+            <article tal:repeat="item view/items" class="clearfix mb-3">
+                <img tal:condition="not:context/hide_item_lead_images" src="${item/lead_image_url}" class="float-start me-2" alt="Lead image" />
+                <h5>${item/title}</h5>
+                <p>
+                    <tal:if tal:condition="not:context/hide_item_descriptions">
+                        ${item/description}
+                        <br tal:omit-tag="not:item/description" />
+                    </tal:if>
+                    <a href="${item/url}">Télécharger le fichier</a>
+                </p>
+
+            </article>
+            <div tal:condition="view/more_link_text | nothing" class="section-more-link">
+                <a href="${view/more_link_url}">${view/more_link_text}</a>
+            </div>
+
+        </metal:content-core>
+    </metal:main>
+</html>

@@ -27,6 +27,7 @@ This product provides :
 This product fits Plone with:
 
 - top position for *Toolbar position*
+- use accordion instead of tabbing for edit forms
 - new image sizes
 - a new default page name *index*
 - LeadImage on *File* and *Link* content types

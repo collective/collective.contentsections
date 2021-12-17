@@ -26,4 +26,16 @@
     layer="collective.contentsections.interfaces.IBrowserLayer"
     />
 
+  <!-- List view -->
+  <browser:page
+    name="list_view"
+    for=".content.IFilesSection"
+    class=".views.FilesSectionView"
+    template="../base_links_list.pt"
+    permission="zope2.View"
+    menu="plone_displayviews"
+    title="List view"
+    layer="collective.contentsections.interfaces.IBrowserLayer"
+    />
+
 </configure>
