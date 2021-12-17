@@ -65,6 +65,6 @@ TODO
 Previews
 --------
 
-![Preview 1](/docs/images/preview1.png)
+![Preview 1](https://raw.githubusercontent.com/sverbois/collective.contentsections/main/docs/images/preview1.png)
 
-![Preview 2](/docs/images/preview2.png)
+![Preview 2](https://raw.githubusercontent.com/sverbois/collective.contentsections/main/docs/images/preview2.png)
