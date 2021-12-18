@@ -15,9 +15,9 @@
 
     <property name="behaviors">
         <element value="collective.contentsections.namefromuuid"/>
-        <element value="plone.richtext"/>
         <element value="plone.leadimage"/>
         <element value="plone.locking"/>
+        <element value="plone.richtext"/>
         <element value="plone.versioning" />
     </property>
 

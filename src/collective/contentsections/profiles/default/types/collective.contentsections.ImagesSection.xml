@@ -18,7 +18,6 @@
     <property name="behaviors">
         <element value="collective.contentsections.namefromuuid"/>
         <element value="plone.locking"/>
-        <element value="plone.versioning" />
     </property>
 
     <property name="default_view">gallery_view</property>
