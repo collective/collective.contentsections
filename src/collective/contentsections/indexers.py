@@ -52,10 +52,11 @@ def get_textsection_searchabletext(section):
 @indexer(ICardsSection)
 def get_cardssection_searchabletext(section):
     terms = get_title_and_description_terms(section)
-    for card in section.cards:
-        terms.append(card["title"])
-        terms.append(card["subtitle"])
-        terms.append(card["description"])
+    if section.cards:
+        for card in section.cards:
+            terms.append(card["title"])
+            terms.append(card["subtitle"])
+            terms.append(card["description"])
     return " ".join(terms)
 
 
