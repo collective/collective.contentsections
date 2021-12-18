@@ -67,6 +67,12 @@ Development
     make install
     make start
 
+Demo content
+------------
+
+The file https://github.com/sverbois/collective.contentsections/blob/main/demo.json
+contains some demo pages that can be loaded into the site using the *@@import_content* view of the *collective.exportimport* product. *collective.exportimport* is installed on the developement environment. You have to hide *Plone Leftcolumn* and *Plone Rightcolumn* portlets on your site to display the pages correctly.
+
 TODO
 ----
 
