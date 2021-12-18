@@ -112,9 +112,8 @@
                             <tal:icon replace="structure python:icons.tag('toolbar-action/actions', tag_class='')" />
                           </button>
                           <ul class="dropdown-menu">
-                            <li>
-                              <a class="dropdown-item" href="${section_url}/folder_contents"
-                                tal:condition="section/allowedContentTypes">
+                            <li tal:condition="section/allowedContentTypes">
+                              <a class="dropdown-item" href="${section_url}/folder_contents">
                                 <tal:icon replace="structure python:icons.tag('toolbar-action/folderContents', tag_class='')" />
                                 Section content
                               </a>
@@ -125,9 +124,8 @@
                                 Edit section
                               </a>
                             </li>
-                            <li>
-                              <a class="dropdown-item" href="${section_url}/select_default_view"
-                                tal:condition="python:len(section.getAvailableLayouts())>1">
+                            <li tal:condition="python:len(section.getAvailableLayouts())>1">
+                              <a class="dropdown-item" href="${section_url}/select_default_view">
                                 <tal:icon replace="structure python:icons.tag('toolbar-action/view', tag_class='')" />
                                 Change section view
                               </a>
@@ -148,12 +146,16 @@
                           </button>
                           <ul class="dropdown-menu">
                             <li>
-                              <tal:icon replace="structure python:icons.tag('arrow-up', tag_class='')" />
-                              Add section above
+                              <a class="dropdown-item" href="">
+                                <tal:icon replace="structure python:icons.tag('file-earmark-text-fill', tag_class='')" />
+                                TODO: section list
+                              </a>
                             </li>
                             <li>
-                              <tal:icon replace="structure python:icons.tag('arrow-down', tag_class='')" />
-                              Add section below
+                              <a class="dropdown-item" href="">
+                                <tal:icon replace="structure python:icons.tag('file-earmark-text-fill', tag_class='')" />
+                                TODO: section list
+                              </a>
                             </li>
                           </ul>
                         </div>
