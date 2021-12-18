@@ -1,3 +1,12 @@
+#section-leadimage {
+    float: right;
+}
+
+#section-leadimage img {
+    height: 100px;
+    width: auto;
+}
+
 .section-htmlsection div.iframe-container {
     position: relative;
     width: 100%;
