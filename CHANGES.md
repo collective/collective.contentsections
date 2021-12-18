@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a3 (unreleased)
+1.0.0a3 (2021-12-18)
 --------------------
 
 - Add a demo.json export of collective.exportimport with demo pages [sverbois]
