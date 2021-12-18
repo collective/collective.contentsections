@@ -30,6 +30,7 @@
   <record name="plone.displayed_types">
     <value purge="false">
       <element>collective.contentsections.BasicPage</element>
+      <element>collective.contentsections.EventPage</element>
     </value>
   </record>
 
