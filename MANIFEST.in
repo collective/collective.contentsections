@@ -3,6 +3,7 @@ include *.md
 include LICENCE
 include Makefile
 include buildout.cfg
+exclude demo.json
 global-exclude *.pyc
 global-exclude .DS_Store
 recursive-exclude src/collective/contentsections/npm/node_modules *
