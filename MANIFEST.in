@@ -6,5 +6,5 @@ include buildout.cfg
 exclude demo.json
 global-exclude *.pyc
 global-exclude .DS_Store
-recursive-exclude src/collective/contentsections/npm/node_modules *
+recursive-exclude node_modules *
 recursive-exclude docs *

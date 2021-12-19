@@ -1,0 +1,10 @@
+{
+    "dependencies": {
+        "copyfiles": "2.4.1",
+        "flexbin": "0.2.0",
+        "spotlight.js": "0.7.8"
+    },
+    "scripts": {
+        "update-dist-files": "copyfiles --flat --soft node_modules/spotlight.js/dist/spotlight.bundle.js node_modules/flexbin/flexbin.css src/collective/contentsections/static/"
+    }
+}
