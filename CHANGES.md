@@ -5,7 +5,7 @@ Changelog
 1.0.0a5 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Remove the row prototype. We want a KISS product. [sverbois]
 
 
 1.0.0a4 (2021-12-19)

@@ -42,7 +42,6 @@
       <element>collective.contentsections.HTMLSection</element>
       <element>collective.contentsections.ImagesSection</element>
       <element>collective.contentsections.LinksSection</element>
-      <element>collective.contentsections.Row</element>
       <element>collective.contentsections.SelectionSection</element>
       <element>collective.contentsections.TextSection</element>
       <element>Image</element>

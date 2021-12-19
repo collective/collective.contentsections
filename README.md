@@ -34,8 +34,6 @@ This product provides :
 - A *Page view* for folderish content types
 - *BasicPage*, *EventPage* page content types
 
-This product also provides a prototype of *row configuration* for when the editor wants multiple sections on the same row. It is inspired by the *Fieldset separator* concept used in *PloneformGen*. However, this prototype breaks the simplicity of editing and probably requires a refactoring or a switch to Volto :-)
-
 This product fits Plone with:
 
 - top position for *Toolbar position*

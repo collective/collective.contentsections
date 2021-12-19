@@ -18,7 +18,6 @@
         <element value="collective.contentsections.HTMLSection"/>
         <element value="collective.contentsections.ImagesSection"/>
         <element value="collective.contentsections.LinksSection"/>
-        <element value="collective.contentsections.Row"/>
         <element value="collective.contentsections.SelectionSection"/>
         <element value="collective.contentsections.TextSection"/>
     </property>
