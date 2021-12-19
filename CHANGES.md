@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a4 (unreleased)
+1.0.0a4 (2021-12-19)
 --------------------
 
 - Add tags information in section view which contains context subjects field value [sverbois]
