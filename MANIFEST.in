@@ -1,5 +1,6 @@
 graft src/collective
 include *.md
+include *.json
 include LICENCE
 include Makefile
 include buildout.cfg
