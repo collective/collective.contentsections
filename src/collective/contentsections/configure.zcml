@@ -24,7 +24,6 @@
 
 
   <include package=".behaviors" />
-  <include package=".browser" />
   <include package=".pages" />
   <include package=".sections" />
 

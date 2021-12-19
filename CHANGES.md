@@ -5,7 +5,8 @@ Changelog
 1.0.0a5 (unreleased)
 --------------------
 
-- Remove the row prototype. We want a KISS product. [sverbois]
+- Remove the use of accordion in edit forms [sverbois]
+- Remove the row prototype. We want a KISS product [sverbois]
 
 
 1.0.0a4 (2021-12-19)
