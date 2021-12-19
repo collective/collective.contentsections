@@ -16,6 +16,7 @@ class FilesSectionView(BaseLinksSectionView):
                 "url": brain.getURL(),
                 "lead_image_url": f"{brain.getURL()}/@@images/image/{lead_image_scale}",
                 "effective_date": brain.effective,
+                "tags": brain.Subject,
             }
             for brain in brains
         ]

@@ -17,6 +17,7 @@ class SelectionSectionView(BaseLinksSectionView):
                 "effective_date": obj.effective if hasattr(obj, "effective") else None,
                 "start_date": obj.start if hasattr(obj, "start") else None,
                 "end_date": obj.start if hasattr(obj, "start") else None,
+                "tags": obj.subjects,
             }
             for obj in objects
         ]

@@ -8,6 +8,9 @@
                     <div class="card">
                         <img tal:condition="not:context/hide_item_lead_images" src="${item/lead_image_url}" class="card-img-top" alt="Lead image" />
                         <div class="card-body">
+                            <div class="card-tags fs-6" tal:condition="item/tags">
+                                <span class="card-tag" tal:repeat="tag item/tags">${tag}</span>
+                            </div>
                             <h5 class="card-title">${item/title}</h5>
                             <p class="card-text" tal:condition="not:context/hide_item_descriptions">${item/description}</p>
                             <a tal:condition="item/url" href="${item/url}">

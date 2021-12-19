@@ -20,6 +20,7 @@ class CollectionSectionView(BaseLinksSectionView):
                 "effective_date": brain.effective,
                 "start_date": brain.start,
                 "end_date": brain.end,
+                "tags": brain.Subject,
             }
             for brain in brains
         ]

@@ -15,7 +15,8 @@ class LinksSectionView(BaseLinksSectionView):
                 "description": brain.Description,
                 "url": brain.getRemoteUrl,
                 "lead_image_url": f"{brain.getURL()}/@@images/image/{lead_image_scale}",
-                "effective_date": brain.effective,
+                "effective_date": None,
+                "tags": brain.Subject,
             }
             for brain in brains
         ]
