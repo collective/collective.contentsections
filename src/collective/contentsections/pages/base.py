@@ -8,6 +8,8 @@ from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.interface import Interface
 from zope.interface import implementer
+from plone.app.content.browser.contents.rearrange import OrderContentsBaseAction
+from plone.app.content.utils import json_loads
 
 
 class IPage(Interface):
@@ -52,3 +54,21 @@ class PageTemplateView(BrowserView):
     @property
     def macros(self):
         return ViewPageTemplateFile(self.template_name).macros
+
+
+class PageSectionsOrderingView(OrderContentsBaseAction):
+    """Page sections ordering view"""
+
+    def __call__(self):
+        self.protect()
+        form = self.request.form
+        section_id = form.get("section_id")
+        delta = int(form.get("delta"))
+        ordered_section_ids = json_loads(form.get("ordered_section_ids", "null"))
+        ordering = self.getOrdering()
+        if ordered_section_ids:
+            position_id = [(ordering.getObjectPosition(sid), sid) for sid in ordered_section_ids]
+            position_id.sort()
+            if ordered_section_ids != [sid for position, sid in position_id]:
+                return
+        ordering.moveObjectsByDelta([section_id], delta, ordered_section_ids)

@@ -26,6 +26,14 @@
     permission="zope.Public"
     />
 
+  <browser:page
+    name="reorder_sections"
+    for=".base.IPage"
+    class=".base.PageSectionsOrderingView"
+    permission="cmf.ModifyPortalContent"
+    layer="collective.contentsections.interfaces.IBrowserLayer"
+    />
+
   <include package=".basic" />
   <include package=".event" />
 

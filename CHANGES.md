@@ -5,7 +5,7 @@ Changelog
 1.0.0a6 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Use pat-sortable pattern to reorder sections in a page using drag and drop [sverbois] 
 
 
 1.0.0a5 (2021-12-19)
