@@ -43,7 +43,6 @@ This product fits Plone with:
 - new image sizes
 - a new default page name *index*
 - LeadImage on *File* and *Link* content types
-- hiding *contentleadimage* viewlet: content LeadImage is used only on listing/collection/parent views
 - a profile to simplify TinyMCE interface
 
 Installation
@@ -77,6 +76,7 @@ TODO
 ----
 
 - Tests, Tests, Tests
+- Try to use *RelationChoice* in *CardsSection* but problem with *RelationChoice* field in *DataGridField* required a fallback to UUID *StaticCatalogVocabulary*
 - A FormSection based on Easyform ?
 - A focal point feature behavior activated on LeadImage
 

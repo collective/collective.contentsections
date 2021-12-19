@@ -5,8 +5,9 @@ Changelog
 1.0.0a4 (unreleased)
 --------------------
 
-- Nothing changed yet.
-
+- Add tags information in section view which contains context subjects field value [sverbois]
+- Clean up the list of behaviours on content types [sverbois]
+- Don't hide *contentleadimage* viewlet [sverbois]
 
 1.0.0a3 (2021-12-18)
 --------------------
