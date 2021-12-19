@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a5 (unreleased)
+1.0.0a5 (2021-12-19)
 --------------------
 
 - Remove the use of accordion in edit forms [sverbois]
