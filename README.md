@@ -69,6 +69,18 @@ Demo content
 The file https://github.com/sverbois/collective.contentsections/blob/main/demo.json
 contains some demo pages that can be loaded into the site using the *@@import_content* view of the *collective.exportimport* product. *collective.exportimport* is installed on the developement environment. You have to hide *Plone Leftcolumn* and *Plone Rightcolumn* portlets on your site to display the pages correctly.
 
+Credits
+-------
+
+Most ideas developed in this product come from people who worked at iMio on the imio.smartweb product family during the year 2021. This team was composed of:
+
+- Christophe BOULANGER
+- Elisabeth DONNAY
+- Thomas LAMBERT
+- Laurent LASUDRY
+- Olivier SNICKERS
+- Sébastien VERBOIS
+
 TODO
 ----
 
