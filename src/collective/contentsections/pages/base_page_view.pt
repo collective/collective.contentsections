@@ -110,6 +110,7 @@
                         <div class="dropdown">
                           <button class="btn btn-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
                             <tal:icon replace="structure python:icons.tag('toolbar-action/actions', tag_class='')" />
+                            Actions
                           </button>
                           <ul class="dropdown-menu">
                             <li tal:condition="section/allowedContentTypes">
@@ -134,27 +135,6 @@
                               <a class="dropdown-item" href="${section_url}/@@delete_confirmation">
                                 <tal:icon replace="structure python:icons.tag('trash', tag_class='')" />
                                 Delete section
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="btn-group">
-                        <div class="dropdown">
-                          <button class="btn btn-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                            <tal:icon replace="structure python:icons.tag('plus', tag_class='')" />
-                          </button>
-                          <ul class="dropdown-menu">
-                            <li>
-                              <a class="dropdown-item" href="">
-                                <tal:icon replace="structure python:icons.tag('file-earmark-text-fill', tag_class='')" />
-                                TODO: section list
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="">
-                                <tal:icon replace="structure python:icons.tag('file-earmark-text-fill', tag_class='')" />
-                                TODO: section list
                               </a>
                             </li>
                           </ul>
