@@ -5,7 +5,7 @@ Changelog
 1.0.0a7 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Add model Archimate view [sverbois]
 
 
 1.0.0a6 (2021-12-20)

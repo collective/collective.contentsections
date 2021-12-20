@@ -18,6 +18,8 @@ Images are only available in images sections and as lead image in all content ty
 Files are only available in files sections.
 Links are sometimes seen as elements of the links section and sometimes as redirect pages.
 
+![Archimate Model](https://raw.githubusercontent.com/sverbois/collective.contentsections/main/docs/images/model.png)
+
 Features
 --------
 
