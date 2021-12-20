@@ -23,20 +23,21 @@
     </property>
 
     <property name="behaviors">
+        <!-- behaviors order determines fields order in add/edit forms -->
         <element value="plone.basic"/>
         <element value="plone.leadimage"/>
-        <element value="plone.categorization"/>
         <element value="plone.eventbasic"/>
         <element value="plone.eventrecurrence"/>
         <element value="plone.eventlocation"/>
         <element value="plone.eventattendees"/>
         <element value="plone.eventcontact"/>
+        <element value="plone.categorization"/>
         <element value="plone.excludefromnavigation"/>
-        <element value="plone.locking"/>
-        <element value="plone.namefromtitle"/>
-        <element value="plone.publication"/>
         <element value="plone.shortname"/>
         <element value="plone.versioning" />
+        <element value="plone.publication"/>
+        <element value="plone.locking"/>
+        <element value="plone.namefromtitle"/>
     </property>
 
     <property name="default_view">page_view</property>
