@@ -122,6 +122,7 @@
                   </div>
                 </div>
               </div>
+              <h2 tal:condition="not:section/hide_title">${section/title}</h2>
               <span tal:replace="structure section/@@page_section_view | nothing" />
             </div>
           </div>
