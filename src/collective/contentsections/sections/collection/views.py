@@ -4,6 +4,7 @@ from collective.contentsections.sections.base import BaseLinksSectionView
 class CollectionSectionView(BaseLinksSectionView):
     """Collection Section view"""
 
+    @property
     def items(self):
         lead_image_scale = self.item_lead_image_scale
         brains = self.context.collection.to_object.results(

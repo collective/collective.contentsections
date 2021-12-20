@@ -5,6 +5,7 @@ from plone import api
 class SelectionSectionView(BaseLinksSectionView):
     """Selection Section view"""
 
+    @property
     def items(self):
         lead_image_scale = self.item_lead_image_scale
         objects = [rel.to_object for rel in self.context.relations if not rel.isBroken()]

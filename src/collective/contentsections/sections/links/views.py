@@ -6,6 +6,7 @@ from plone import api
 class LinksSectionView(BaseLinksSectionView):
     """LinksSection view"""
 
+    @property
     def items(self):
         lead_image_scale = self.item_lead_image_scale
         brains = api.content.find(context=self.context, depth=1, portal_type="Link")
