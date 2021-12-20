@@ -81,14 +81,6 @@ Most ideas developed in this product come from people who worked at iMio on the 
 - Olivier SNICKERS
 - Sébastien VERBOIS
 
-TODO
-----
-
-- Tests, Tests, Tests
-- Try to use *RelationChoice* in *CardsSection* but problem with *RelationChoice* field in *DataGridField* required a fallback to UUID *StaticCatalogVocabulary*
-- A FormSection based on Easyform ?
-- A focal point feature behavior activated on LeadImage
-
 Previews
 --------
 
