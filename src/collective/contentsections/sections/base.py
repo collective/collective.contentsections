@@ -41,7 +41,7 @@ class ISection(model.Schema):
 
 
 class IBaseLinksSection(ISection):
-    """Shared base marker interface and schema for CollectionSection, SelectionSection and LinksSection"""
+    """Shared base marker interface and schema for link type sections"""
 
     hide_item_lead_images = schema.Bool(
         title=_("Hide item lead images"),
@@ -88,11 +88,17 @@ class SectionView(BrowserView):
 
 
 class BaseLinksSectionView(SectionView):
-    """Shared section view for CollectionSection, SelectionSection and LinksSection"""
+    """Shared section view for link type sections"""
 
     @property
     def items(self):
         return []
+
+    @property
+    def items_by_group(self):
+        items = self.items
+        size = self.context.group_size
+        return [items[i : i + size] for i in range(0, len(items), size)]
 
     @property
     def more_link_url(self):
