@@ -30,7 +30,7 @@ This product provides :
 - *CollectionSection* to link a section with a collection.
 - *SelectionSection* to link a section to other pages. The *SelectionSection* replace the *Related items* behavior.
 - *CardsSection* content type based on a collective.z3cform.datagridfield field to make nice information blocks/links on a page
-- *ImagesSection*, *LinksSection*, *FilesSection* folderish section content types to keep the site structured and facilitate the cup and paste of sections between pages.
+- *ImagesSection*, *LinksSection*, *FilesSection* folderish section content types to keep the site structured and facilitate the cut and paste of sections between pages.
 - A *Page view* for folderish content types
 - *BasicPage*, *EventPage* page content types
 
