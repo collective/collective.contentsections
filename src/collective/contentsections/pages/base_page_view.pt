@@ -42,12 +42,6 @@
         margin-bottom: 0px;
         padding: 1rem 0rem;
         }
-        .section-edit-links {
-        text-align: right;
-        }
-        .section-edit-links a{
-        text-decoration: none;
-        }
         #content-core {  /* FULL WIDTH */
         width: 100vw;
         position: relative;
@@ -86,9 +80,10 @@
           <div id="${section_id}" class="${section_class}"
             style="${python:section_style if section_background_image else ''}" data-section-id="${section/id}">
             <a tal:attributes="name string:${section_id}" />
-            <div class="${python:'' if section.is_full_width else 'container'}">
-              <div class="section-edit-links" tal:condition="can_edit"
-                tal:attributes="style python:'float: right' if not section.hide_title else ''">
+            <div class="position-relative ${python:'' if section.is_full_width else 'container'}">
+              <div class="section-edit-links position-absolute top-0 end-0 pt-1 pe-3"
+                style="z-index:100;"
+                tal:condition="can_edit">
                 <div class="btn-group">
                   <div class="dropdown">
                     <button class="btn btn-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
