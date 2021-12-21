@@ -47,17 +47,10 @@ class ICard(Interface):
         vocabulary=StaticCatalogVocabulary({}),
         required=False,
     )
-    remote_url = schema.TextLine(
-        title=_("Remote url"),
-        required=False,
-        default="",
-        missing_value="",
-    )
 
     directives.widget("title", placeholder=_("Card title"))
     directives.widget("subtitle", placeholder=_("Card subtitle"))
     directives.widget("icon", SelectFieldWidget, pattern_options={"placeholder": _("Select an icon")})
-    directives.widget("remote_url", placeholder=_("Remote url"))
 
     # SEE https://training.plone.org/5/mastering-plone/relations.html?highlight=catalogsource#using-different-widgets-for-relations
     directives.widget(
