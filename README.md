@@ -4,7 +4,7 @@ collective.contentsections
 This product offers a block approach for Plone 6 Classic based entirely on Dexterity content types.
 It is largely based on the code that was developed in the *imio.smartweb.core* product for the Walloon municipalities.
 
-The approach in this product can be seen as a generalisation of the *Full content* view available in Plone on  *Folder* content type.
+The approach in this product can be seen as a generalisation of the *Full content* view available in Plone on *Folder* content type.
 
 The plone site is seen as a folder hierarchy that contains pages.
 A page is a folderish content type composed of sections.
@@ -44,6 +44,26 @@ This product fits Plone with:
 - LeadImage on *File* and *Link* content types
 - a profile to simplify TinyMCE interface
 
+Demo content
+------------
+
+The file https://github.com/sverbois/collective.contentsections/blob/main/demo.json
+contains some demo pages that can be loaded into the site using the *@@import_content* view of the *collective.exportimport* product. *collective.exportimport* is installed on the developement environment. You have to hide *Plone Leftcolumn* and *Plone Rightcolumn* portlets on your site to display the pages correctly.
+
+Choices/Beliefs
+---------------
+
+- We want a KISS solution. 
+- We believe we can create the majority of websites with only one section per row.
+- We want a solution for junior integrators.
+- We believe that Plone can be used to create beautiful sites in less than a day.
+
+Possibilities
+-------------
+
+- If you activate workflow on sections, you can restrict access to certain sections of a page.
+- As section are Dexterity content types, you can create a collection/faceted navigation of sections.
+
 Installation
 ------------
 
@@ -64,12 +84,6 @@ Development
 
     make install
     make start
-
-Demo content
-------------
-
-The file https://github.com/sverbois/collective.contentsections/blob/main/demo.json
-contains some demo pages that can be loaded into the site using the *@@import_content* view of the *collective.exportimport* product. *collective.exportimport* is installed on the developement environment. You have to hide *Plone Leftcolumn* and *Plone Rightcolumn* portlets on your site to display the pages correctly.
 
 Credits
 -------
