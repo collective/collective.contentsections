@@ -27,6 +27,7 @@ This product provides :
 
 - basic schema and class for section content types
 - *LeadIcon* vocabulary and behavior based on plone.icons registry records
+- *collective.taxonomy.section_css_classes* taxonomy for available Section CSS Classes
 - *TextSection* wich contains a simplified TinyMCE field and the behavior *LeadImage*. A *TextSection* contains only the lead image. No more image in TinyMCE text field.
 - *HTMLSection* to integrate iframe from youtube, google map and other iframe providers. No more video, iframe in TinyMCE text field.
 - *CollectionSection* to link a section with a collection.
@@ -57,6 +58,7 @@ Choices/Beliefs
 - We believe we can create the majority of websites with only one section per row.
 - We want a solution for junior integrators.
 - We believe that Plone can be used to create beautiful sites in less than a day.
+- We don't have any NewsPage content type. We believe it can be replaced by a collection of BasicPAge.
 
 Possibilities
 -------------

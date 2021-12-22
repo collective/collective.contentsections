@@ -10,7 +10,7 @@ long_description = "\n\n".join(
 )
 setup(
     name="collective.contentsections",
-    version="1.0.0a8.dev0",
+    version="1.0.0a7.dev0",
     description="A block approach for Plone 6 Classic",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -32,8 +32,8 @@ setup(
     url="https://github.com/sverbois/collective.contentsections",
     project_urls={
         "PyPI": "https://pypi.python.org/pypi/collective.contentsections",
-        "Source": "https://github.com/sverbois/collective.contentsections",
-        "Tracker": "https://github.com/sverbois/collective.contentsections/issues",
+        "Source": "https://github.com/collective/collective.contentsections",
+        "Tracker": "https://github.com/collective/collective.contentsections/issues",
         # 'Documentation': 'https://collective.contentsections.readthedocs.io/en/latest/',
     },
     license="GPL version 2",
@@ -48,6 +48,7 @@ setup(
         # -*- Extra requirements: -*-
         "plone.api",
         "plone.app.dexterity",
+        "collective.taxonomy",
         "collective.z3cform.datagridfield",
     ],
     entry_points="""

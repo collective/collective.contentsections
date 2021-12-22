@@ -3,5 +3,6 @@
   <version>1000</version>
   <dependencies>
     <dependency>profile-collective.z3cform.datagridfield:default</dependency>
+    <dependency>profile-collective.taxonomy:default</dependency>
   </dependencies>
 </metadata>

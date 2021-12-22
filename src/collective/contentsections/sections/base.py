@@ -1,5 +1,6 @@
 from collective.contentsections import _
 from plone import schema
+from plone.app.z3cform.widget import SelectFieldWidget
 from plone.autoform import directives
 from plone.dexterity.content import Container
 from plone.namedfile.field import NamedBlobImage
@@ -27,12 +28,16 @@ class ISection(model.Schema):
         title=_("Background image"),
         required=False,
     )
-    css_classes = schema.TextLine(
+    css_classes = schema.List(
         title=_("CSS Classes"),
+        value_type=schema.Choice(
+            vocabulary="collective.taxonomy.section_css_classes",
+        ),
         required=False,
-        default="",
-        missing_value="",
+        missing_value=[],
     )
+
+    directives.widget(css_classes=SelectFieldWidget)
 
     model.fieldset(
         "layout",
