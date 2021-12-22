@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a8 (unreleased)
+1.0.0a8 (2021-12-22)
 --------------------
 
 - Use a collective.taxonomy to manage the available section CSS classes. [sverbois]
