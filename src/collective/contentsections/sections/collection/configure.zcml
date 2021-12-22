@@ -14,6 +14,18 @@
     layer="collective.contentsections.interfaces.IBrowserLayer"
     />
 
+  <!-- Card carousel view -->
+  <browser:page
+    name="card_carousel_view"
+    for=".content.ICollectionSection"
+    class=".views.CollectionSectionView"
+    template="../base_links_card_carousel.pt"
+    permission="zope2.View"
+    menu="plone_displayviews"
+    title="Card carousel view"
+    layer="collective.contentsections.interfaces.IBrowserLayer"
+    />
+
   <!-- Carousel view -->
   <browser:page
     name="carousel_view"

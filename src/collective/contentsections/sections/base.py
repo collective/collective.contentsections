@@ -95,7 +95,7 @@ class BaseLinksSectionView(SectionView):
         return []
 
     @property
-    def items_by_group(self):
+    def groups(self):
         items = self.items
         size = self.context.group_size
         return [items[i : i + size] for i in range(0, len(items), size)]

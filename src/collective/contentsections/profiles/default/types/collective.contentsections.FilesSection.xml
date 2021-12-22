@@ -23,6 +23,7 @@
     <property name="default_view">list_view</property>
     <property name="view_methods">
         <element value="card_view"/>
+        <element value="card_carousel_view"/>
         <element value="carousel_view"/>
         <element value="list_view"/>
     </property>
