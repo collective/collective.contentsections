@@ -8,8 +8,8 @@
     />
 
   <utility
-    name="collective.contentsections.ColumnWidths"
-    component=".vocabularies.ColumnWidthsVocabulary"
+    name="collective.contentsections.ContainerWidths"
+    component=".vocabularies.ContainerWidthsVocabulary"
     provides="zope.schema.interfaces.IVocabularyFactory"
     />
 

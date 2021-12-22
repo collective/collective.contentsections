@@ -18,9 +18,10 @@ class ISection(model.Schema):
         title=_("Hide section title in page"),
         default=False,
     )
-    is_full_width = schema.Bool(
-        title=_("Full width"),
-        default=False,
+    container_width = schema.Choice(
+        title=_("Container width"),
+        vocabulary="collective.contentsections.ContainerWidths",
+        default=12,
     )
     background_image = NamedBlobImage(
         title=_("Background image"),
@@ -36,7 +37,7 @@ class ISection(model.Schema):
     model.fieldset(
         "layout",
         label="Layout",
-        fields=["is_full_width", "background_image", "css_classes"],
+        fields=["container_width", "background_image", "css_classes"],
     )
 
 
@@ -67,7 +68,7 @@ class IBaseLinksSection(ISection):
             "group_size",
         ],
     )
-    directives.order_before(group_size="is_full_width")
+    directives.order_before(group_size="container_width")
 
 
 @implementer(ISection)

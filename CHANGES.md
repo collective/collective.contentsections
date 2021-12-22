@@ -8,6 +8,7 @@ Changelog
 - Add model Archimate view. [sverbois]
 - Remove remote_url field on CardsSection. We can use the relation_uid field with a Link content. [sverbois]
 - Add a Card carousel view on sections. [sverbois]
+- Add container width option on sections. [sverbois]
 
 
 1.0.0a6 (2021-12-20)

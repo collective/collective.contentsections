@@ -13,14 +13,11 @@ IMAGE_ALIGNMENTS = {
     "bottom": _("Bottom"),
     "top": _("Top"),
 }
-COLUMN_WIDTHS = {
-    0: "",
-    3: _("1/4"),
-    4: _("1/3"),
-    6: _("1/2"),
-    8: _("2/3"),
-    9: _("3/4"),
-    12: _("1/1"),
+CONTAINER_WIDTHS = {
+    12: _("Full Container"),
+    8: _("Two thirds of the container"),
+    6: _("Half of the container"),
+    0: _("Full width"),
 }
 COLUMN_ALIGNMENTS = {
     "start": _("Start"),
@@ -39,7 +36,7 @@ class VocabularyFactory:
 
 
 ImageAlignmentsVocabulary = VocabularyFactory(IMAGE_ALIGNMENTS)
-ColumnWidthsVocabulary = VocabularyFactory(COLUMN_WIDTHS)
+ContainerWidthsVocabulary = VocabularyFactory(CONTAINER_WIDTHS)
 ColumnAlignmentsVocabulary = VocabularyFactory(COLUMN_ALIGNMENTS)
 
 

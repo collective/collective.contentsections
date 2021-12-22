@@ -72,7 +72,7 @@
             section_type = section.portal_type.split(".")[-1]
             section_type_class = f"section-{section_type.lower()}"
             section_css_classes = section.css_classes if section.css_classes else ""
-            section_class = " ".join(["clearfix section section-sortable", section_type_class, section_css_classes])
+            section_class = " ".join(["section section-sortable clearfix", section_type_class, section_css_classes])
             section_background_image = section.background_image
             section_background_image_url = f"url({section_url}/@@images/background_image/huge)"
             section_style = f"background-image: {section_background_image_url}; background-size: cover; background-position: center;"
@@ -80,7 +80,7 @@
           <div id="${section_id}" class="${section_class}"
             style="${python:section_style if section_background_image else ''}" data-section-id="${section/id}">
             <a tal:attributes="name string:${section_id}" />
-            <div class="position-relative ${python:'' if section.is_full_width else 'container'}">
+            <div class="position-relative ${python:'container' if section.container_width else 'px-4'}">
               <div class="section-edit-links position-absolute top-0 end-0 pt-1 pe-3"
                 style="z-index:100;"
                 tal:condition="can_edit">
@@ -119,8 +119,18 @@
                   </div>
                 </div>
               </div>
-              <h2 tal:condition="not:section/hide_title">${section/title}</h2>
-              <span tal:replace="structure section/@@page_section_view | nothing" />
+              <div class="row">
+                <?python
+                  container_width = section.container_width if section.container_width else 0
+                  col_classes = "col-12" if not container_width else f"col-12 col-md-{container_width}"
+                  offset_width = (12-container_width)//2 if container_width else 0
+                  offset_classes = f"offset-md-{offset_width}" if offset_width else ""
+                  ?>
+                <div class="${col_classes} ${offset_classes}">
+                  <h2 tal:condition="not:section/hide_title">${section/title}</h2>
+                  <span tal:replace="structure section/@@page_section_view | nothing" />
+                </div>
+              </div>
             </div>
           </div>
         </tal:section>
