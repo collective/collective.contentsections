@@ -14,7 +14,7 @@
                             <h6 class="card-subtitle" tal:condition="item/subtitle">${item/subtitle}</h6>
                             <p class="card-text" tal:condition="item/description">${item/description}</p>
                             <a href="${item/relation_link_url}" tal:condition="item/relation_link_url">
-                                ${view/relation_link_text}
+                                ${view/card_link_text}
                             </a>
                         </div>
                     </div>

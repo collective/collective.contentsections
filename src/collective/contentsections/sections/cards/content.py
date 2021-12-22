@@ -79,8 +79,8 @@ class ICardsSection(ISection):
         values=[1, 2, 3, 4],
         default=3,
     )
-    relation_link_text = schema.TextLine(
-        title=_(u"Text for the link to the related content"),
+    card_link_text = schema.TextLine(
+        title=_(u"Card link text"),
         required=False,
     )
 

@@ -25,6 +25,6 @@ class CardsSectionView(SectionView):
         return results
 
     @property
-    def relation_link_text(self):
-        text = self.context.relation_link_text
+    def card_link_text(self):
+        text = self.context.card_link_text
         return text if text else _("More information")
