@@ -14,10 +14,10 @@ IMAGE_ALIGNMENTS = {
     "top": _("Top"),
 }
 CONTAINER_WIDTHS = {
-    12: _("Full Container"),
-    8: _("Two thirds of the container"),
-    6: _("Half of the container"),
-    0: _("Full width"),
+    12: _("Container 100%"),
+    8: _("Container 66%"),
+    6: _("Container 50%"),
+    0: _("Window 100%"),
 }
 COLUMN_ALIGNMENTS = {
     "start": _("Start"),
