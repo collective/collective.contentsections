@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a9 (unreleased)
+1.0.0a9 (2021-12-30)
 --------------------
 
 - Allow Python 3.7 as Plone 6. [sverbois]
