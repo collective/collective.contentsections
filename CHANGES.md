@@ -6,7 +6,7 @@ Changelog
 --------------------
 
 - Allow Python 3.7 as Plone 6. [sverbois]
-
+- Use Plone 6 alpha 2 in development buildout. [sverbois]
 
 1.0.0a8 (2021-12-22)
 --------------------
