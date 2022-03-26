@@ -40,4 +40,22 @@
       <langstring language="en-us">Text align center</langstring>
     </caption>
   </term>
+ <!--  <term>
+    <termIdentifier>float-start w-25</termIdentifier>
+    <caption>
+      <langstring language="en-us">Section float start 25%</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>float-start w-50</termIdentifier>
+    <caption>
+      <langstring language="en-us">Section float start 50%</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>float-start w-75</termIdentifier>
+    <caption>
+      <langstring language="en-us">Section float start 75%</langstring>
+    </caption>
+  </term> -->
 </vdex>
