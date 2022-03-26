@@ -5,7 +5,7 @@ Changelog
 1.0.0a10 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Allow BasicPage as default page type.  [sverbois]
 
 
 1.0.0a9 (2021-12-30)

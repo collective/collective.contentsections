@@ -49,4 +49,10 @@
     </value>
   </record>
 
+  <record name="plone.default_page_types" purge="false">
+    <value>
+      <element>collective.contentsections.BasicPage</element>
+    </value>
+  </record>
+
 </registry>
