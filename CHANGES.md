@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a10 (unreleased)
+1.0.0a10 (2022-03-26)
 ---------------------
 
 - Allow BasicPage as default page type.  [sverbois]
