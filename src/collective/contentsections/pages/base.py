@@ -2,9 +2,11 @@ from Acquisition import aq_inner
 from collective.contentsections import _
 from collective.contentsections.sections import ISection
 from plone import api
+from plone import schema
 from plone.app.content.browser.contents.rearrange import OrderContentsBaseAction
 from plone.app.content.utils import json_loads
 from plone.app.contenttypes.browser.full_view import FullViewItem
+from plone.autoform import directives
 from plone.dexterity.content import Container
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
@@ -14,6 +16,13 @@ from zope.interface import implementer
 
 class IPage(Interface):
     """Shared base marker interface and schema for Pages"""
+
+    hide_title = schema.Bool(
+        title=_("Hide page title"),
+        default=False,
+    )
+
+    directives.order_after(hide_title='IBasic.title')
 
 
 @implementer(IPage)

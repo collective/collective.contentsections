@@ -5,7 +5,7 @@ Changelog
 1.0.0a11 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Add hide_title field on IPage.  [sverbois]
 
 
 1.0.0a10 (2022-03-26)

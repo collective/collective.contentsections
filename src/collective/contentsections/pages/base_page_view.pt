@@ -1,6 +1,9 @@
 <metal:page define-macro="master">
   <html metal:use-macro="context/@@main_template/macros/master" i18n:domain="collective.contentsections">
 
+    <metal:title fill-slot="content-title">
+      <h1 tal:replace="structure context/@@title" tal:condition="not:context/hide_title"/>
+    </metal:title>
 
     <metal:content-core fill-slot="content-core"
       tal:define="can_edit python: checkPermission('Modify portal content', context);
