@@ -6,6 +6,7 @@ Changelog
 ---------------------
 
 - Allow BasicPage as default page type.  [sverbois]
+- Remove layout name in item_lead_image_scale method.  [sverbois]
 
 
 1.0.0a9 (2021-12-30)

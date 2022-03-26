@@ -119,15 +119,12 @@ class BaseLinksSectionView(SectionView):
         layout = self.context.getLayout()
         group_size = self.context.group_size
         cols = 12 / group_size
-        if layout in ["carousel_view", "cards_view"]:
-            if cols > 6:
-                return "huge"
-            elif cols > 3:
-                return "large"
-            else:
-                return "preview"
-        elif layout == "list_view":
+        if layout == "list_view":
             return "thumb"
+        if cols > 6:
+            return "huge"
+        elif cols > 3:
+                return "large"
         return "preview"
 
 
