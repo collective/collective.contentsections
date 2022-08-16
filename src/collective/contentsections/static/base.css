@@ -44,40 +44,10 @@ table#form-widgets-cards thead {
 }
 
 table#form-widgets-cards tr {
-    border: 2px solid #444;
-
+    border: 1px solid #444;
 }
 
-table#form-widgets-cards td.datagridwidget-cell {
+table#form-widgets-cards td {
     display: block;
-}
-
-table#form-widgets-cards td.datagridwidget-cell.cell-1 {
-    width: 75%;
-}
-
-table#form-widgets-cards td.datagridwidget-cell.cell-2 {
-    width: 75%;
-}
-
-table#form-widgets-cards td.datagridwidget-cell.cell-3 {
-    width: 100%;
-}
-
-table#form-widgets-cards td.datagridwidget-cell.cell-4 {
-    width: 50%;
-}
-
-table#form-widgets-cards td.datagridwidget-cell.cell-5 {
-    width: 50%;
-}
-
-table#form-widgets-cards td.datagridwidget-cell textarea {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-table#form-widgets-cards .select2-container {
-    margin-bottom: 0;
-    display: block;
+    border: none;
 }
