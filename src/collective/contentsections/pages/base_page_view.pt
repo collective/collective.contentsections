@@ -35,23 +35,17 @@
         }; /* end of fucntion */
       </script>
 
+      <script>
+        /* Sections are full width */
+        $("div.outer-wrapper > div").removeClass("container"); /* Remove container of https://github.com/plone/plonetheme.barceloneta/blob/master/plonetheme/barceloneta/theme/index.html */
+        $("#content > header").addClass("container"); /* Add container to page title */
+      </script>
+
       <style>
-        #content-core > div {
-        --bs-gutter-x: 0.75rem;
-        --bs-gutter-y: 0rem;
-        }
         .section {
         margin-top: 0px;
         margin-bottom: 0px;
         padding: 1rem 0rem;
-        }
-        #content-core {  /* FULL WIDTH */
-        width: 100vw;
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
         }
       </style>
 
