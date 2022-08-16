@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a12 (unreleased)
+1.0.0a12 (2022-08-16)
 ---------------------
 
 - Remove customized plone.allowed_sizes and plone.toolbar_position configurations. [sverbois]
