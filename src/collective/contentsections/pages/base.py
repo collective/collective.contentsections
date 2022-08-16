@@ -19,6 +19,7 @@ class IPage(Interface):
 
     hide_title = schema.Bool(
         title=_("Hide page title"),
+        required=False,
         default=False,
     )
 

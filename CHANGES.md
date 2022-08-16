@@ -6,19 +6,20 @@ Changelog
 ---------------------
 
 - Remove customized plone.allowed_sizes and plone.toolbar_position configurations. [sverbois]
+- Set boolean fields required option to False. [sverbois]
 
 
 1.0.0a11 (2022-03-26)
 ---------------------
 
-- Add hide_title field on IPage.  [sverbois]
+- Add hide_title field on IPage. [sverbois]
 
 
 1.0.0a10 (2022-03-26)
 ---------------------
 
-- Allow BasicPage as default page type.  [sverbois]
-- Remove layout name in item_lead_image_scale method.  [sverbois]
+- Allow BasicPage as default page type. [sverbois]
+- Remove layout name in item_lead_image_scale method. [sverbois]
 
 
 1.0.0a9 (2021-12-30)

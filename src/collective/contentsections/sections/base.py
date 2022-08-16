@@ -17,6 +17,7 @@ class ISection(model.Schema):
     )
     hide_title = schema.Bool(
         title=_("Hide section title in page"),
+        required=False,
         default=False,
     )
     container_width = schema.Choice(
@@ -51,14 +52,17 @@ class IBaseLinksSection(ISection):
 
     hide_item_lead_images = schema.Bool(
         title=_("Hide item lead images"),
+        required=False,
         default=False,
     )
     hide_item_descriptions = schema.Bool(
         title=_("Hide item descriptions"),
+        required=False,
         default=False,
     )
     hide_item_publication_dates = schema.Bool(
         title=_("Hide item publication dates"),
+        required=False,
         default=True,
     )
     group_size = schema.Choice(
