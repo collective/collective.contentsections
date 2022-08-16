@@ -7,6 +7,7 @@ Changelog
 
 - Remove customized plone.allowed_sizes and plone.toolbar_position configurations. [sverbois]
 - Set boolean fields required option to False. [sverbois]
+- Require version 3 of collective.taxonomy and collective.z3cform.datagridfield [sverbois]
 
 
 1.0.0a11 (2022-03-26)

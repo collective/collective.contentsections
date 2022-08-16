@@ -49,8 +49,8 @@ setup(
         # -*- Extra requirements: -*-
         "plone.api",
         "plone.app.dexterity",
-        "collective.taxonomy",
-        "collective.z3cform.datagridfield",
+        "collective.taxonomy >= 3.0.0a1",
+        "collective.z3cform.datagridfield >= 3.0.0a1",
     ],
     entry_points="""
     [z3c.autoinclude.plugin]
