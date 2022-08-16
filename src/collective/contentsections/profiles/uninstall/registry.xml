@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<registry>
+
+  <records
+    prefix="plone.bundles/collective-contentsections-base"
+    interface='Products.CMFPlone.interfaces.IBundleRegistry'
+    remove="true" />
+
+  <records
+    prefix="plone.bundles/collective-contentsections-edit"
+    interface='Products.CMFPlone.interfaces.IBundleRegistry'
+    remove="true" />
+    
+</registry>
