@@ -72,7 +72,7 @@ class IBaseLinksSection(ISection):
     )
     group_size = schema.Choice(
         title=_("Group size"),
-        values=[1, 2, 3, 4],
+        values=[1, 2, 3, 4, 6],
         default=3,
     )
 
