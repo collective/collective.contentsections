@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a13 (unreleased)
+1.0.0a13 (2022-08-21)
 ---------------------
 
 - Add a CSS class on each section with the section view template id. [sverbois]
