@@ -6,7 +6,7 @@ Changelog
 ---------------------
 
 - Add a CSS class on each section with the section view template id. [sverbois]
-
+- Add a hide_item_titles field on links sections. [sverbois]
 
 1.0.0a12 (2022-08-16)
 ---------------------

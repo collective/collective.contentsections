@@ -50,6 +50,11 @@ class ISection(model.Schema):
 class IBaseLinksSection(ISection):
     """Shared base marker interface and schema for link type sections"""
 
+    hide_item_titles = schema.Bool(
+        title=_("Hide item titles"),
+        required=False,
+        default=False,
+    )
     hide_item_lead_images = schema.Bool(
         title=_("Hide item lead images"),
         required=False,
@@ -128,7 +133,7 @@ class BaseLinksSectionView(SectionView):
         if cols > 6:
             return "huge"
         elif cols > 3:
-                return "large"
+            return "large"
         return "preview"
 
 
