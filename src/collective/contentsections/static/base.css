@@ -35,6 +35,21 @@
     margin: 0px;
 }
 
+.section.section-template-card_carousel_view .carousel-control-prev {
+    margin-left: -130px;
+}
+.section.section-template-card_carousel_view .carousel-control-next {
+    margin-right: -130px;
+}
+.section.section-template-carousel_view .carousel-control-prev-icon {
+    width: 4rem;
+    height: 4rem;
+}
+.section.section-template-carousel_view .carousel-control-next-icon {
+    width: 4rem;
+    height: 4rem;
+}
+
 .bg-image-fixed {
     background-attachment: fixed;
 }

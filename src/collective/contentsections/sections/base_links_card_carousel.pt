@@ -23,11 +23,16 @@
                             <div class="col" tal:repeat="item group">
                                 <div class="card">
                                     <img tal:condition="not:context/hide_item_lead_images" src="${item/lead_image_url}" class="card-img-top" alt="Lead image" />
-                                    <div class="card-body">
+                                    <?python
+                                        show_title = not context.hide_item_titles
+                                        show_description = not context.hide_item_descriptions
+                                        show_card_body = show_title or show_description
+                                    ?>
+                                    <div class="card-body"  tal:condition="show_card_body">
                                         <div class="card-tags fs-6" tal:condition="item/tags">
                                             <span class="card-tag" tal:repeat="tag item/tags">${tag}</span>
                                         </div>
-                                        <h5 class="card-title">${item/title}</h5>
+                                        <h5 class="card-title" tal:condition="not:context/hide_item_titles">>${item/title}</h5>
                                         <p class="card-text" tal:condition="not:context/hide_item_descriptions">${item/description}</p>
                                         <a tal:condition="item/url" href="${item/url}">
                                             En savoir plus
@@ -38,14 +43,16 @@
                         </div>
                     </div>
                 </div>
-                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#${carousel_id}" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"/>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#${carousel_id}" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"/>
-                    <span class="visually-hidden">Next</span>
-                </button>-->
+                <tal:if condition="python: context.container_width != 0">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#${carousel_id}" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#${carousel_id}" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"/>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </tal:if>
             </div>
             <div tal:condition="view/more_link_text | nothing" class="section-more-link">
                 <a href="${view/more_link_url}">${view/more_link_text}</a>
