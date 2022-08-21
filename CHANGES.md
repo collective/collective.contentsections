@@ -5,7 +5,7 @@ Changelog
 1.0.0a13 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Add a CSS class on each section with the section view template id. [sverbois]
 
 
 1.0.0a12 (2022-08-16)

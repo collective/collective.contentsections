@@ -67,9 +67,10 @@
             section_url = section.absolute_url()
             section_id = f"section-{section.id}"
             section_type = section.portal_type.split(".")[-1]
+            section_view_template_id = f"section-template-{section.restrictedTraverse('@@plone_context_state').view_template_id()}"
             section_type_class = f"section-{section_type.lower()}"
             section_css_classes = " ".join(section.css_classes) if section.css_classes else ""
-            section_class = " ".join(["section section-sortable clearfix", section_type_class, section_css_classes])
+            section_class = " ".join(["section section-sortable clearfix", section_type_class, section_view_template_id, section_css_classes])
             section_background_image = section.background_image
             section_background_image_url = f"url({section_url}/@@images/background_image/huge)"
             section_style = f"background-image: {section_background_image_url}; background-size: cover; background-position: center;"
