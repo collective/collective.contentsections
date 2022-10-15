@@ -32,7 +32,7 @@
                                         <div class="card-tags fs-6" tal:condition="item/tags">
                                             <span class="card-tag" tal:repeat="tag item/tags">${tag}</span>
                                         </div>
-                                        <h5 class="card-title" tal:condition="not:context/hide_item_titles">>${item/title}</h5>
+                                        <h5 class="card-title" tal:condition="not:context/hide_item_titles">${item/title}</h5>
                                         <p class="card-text" tal:condition="not:context/hide_item_descriptions">${item/description}</p>
                                         <a tal:condition="item/url" href="${item/url}">
                                             En savoir plus
