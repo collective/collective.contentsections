@@ -58,7 +58,7 @@ Choices/Beliefs
 - We believe we can create the majority of websites with only one section per row.
 - We want a solution for junior integrators.
 - We believe that Plone Classic can be used to create beautiful sites in less than a day.
-- We don't have any NewsPage content type. We believe it can be replaced by a collection of BasicPAge.
+- We don't have any NewsPage content type. We believe it can be replaced by a collection of BasicPage.
 
 Possibilities
 -------------
