@@ -3,7 +3,7 @@
     <metal:content-core define-macro="content-core">
 
       <?python
-        figure_class = {"top": "text-center", "right": "float-end ms-4", "bottom": "text-center", "left": "float-start me-4"}
+        figure_class = {"top": "w-100 text-center", "right": "float-end ms-4", "bottom": "w-100 text-center", "left": "float-start me-4"}
         ?>
       <div tal:condition="python: context.lead_image_alignment=='bottom'"
         class="text" tal:content="structure context/text/output | nothing" />
