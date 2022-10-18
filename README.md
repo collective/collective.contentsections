@@ -84,6 +84,8 @@ and then running ``bin/buildout``
 Development
 -----------
 
+    git clone https://github.com/collective/collective.contentsections.git
+    cd collective.contentsections
     make install
     make start
 
