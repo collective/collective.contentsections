@@ -50,6 +50,7 @@ setup(
         # -*- Extra requirements: -*-
         "plone.api",
         "plone.app.dexterity",
+        "collective.geolocationbehavior",
         "collective.taxonomy >= 3.0.0",
         "collective.z3cform.datagridfield >= 3.0.0",
     ],

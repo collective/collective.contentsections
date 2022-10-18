@@ -17,6 +17,8 @@ from .images.content import IImagesSection
 from .images.content import ImagesSection
 from .links.content import ILinksSection
 from .links.content import LinksSection
+from .locations.content import ILocationsSection
+from .locations.content import LocationsSection
 from .selection.content import ISelectionSection
 from .selection.content import SelectionSection
 from .text.content import ITextSection

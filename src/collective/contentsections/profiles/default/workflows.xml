@@ -7,6 +7,7 @@
     <type type_id="collective.contentsections.HTMLSection"/>
     <type type_id="collective.contentsections.ImagesSection"/>
     <type type_id="collective.contentsections.LinksSection"/>
+    <type type_id="collective.contentsections.LocationsSection"/>
     <type type_id="collective.contentsections.SelectionSection"/>
     <type type_id="collective.contentsections.TextSection"/>
     <type type_id="File"/>

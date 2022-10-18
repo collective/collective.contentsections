@@ -1,0 +1,9 @@
+<html metal:use-macro="context/@@main_template/macros/master">
+  <metal:main fill-slot="main">
+    <metal:content-core define-macro="content-core">
+
+    <div class="pat-leaflet" data-pat-leaflet="${view/data_pat_leaflet}" data-geojson="${view/data_geojson}" />
+    
+    </metal:content-core>
+  </metal:main>
+</html>
