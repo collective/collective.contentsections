@@ -1,22 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <registry>
 
+    <!-- See TinyMCE 5 version used in https://github.com/plone/mockup/blob/master/package.json -->
+
+    <!-- See possible values in https://www.tiny.cloud/docs/plugins/opensource/ -->
     <record name="plone.plugins"
         interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
         <value purge="true">
-            <element>autosave</element>
             <element>code</element>
             <element>fullscreen</element>
+            <element>nonbreaking</element>
+            <element>noneditable</element>
             <element>lists</element>
             <element>paste</element>
             <element>searchreplace</element>
             <element>table</element>
+            <element>template</element>
             <element>visualblocks</element>
+            <element>visualchars</element>
             <element>wordcount</element>
         </value>
     </record>
 
-    <!-- See possible values in https://www.tiny.cloud/docs-4x/advanced/editor-control-identifiers/#menucontrols -->
+    <record name="plone.menubar"
+        interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
+        <value>
+            <element>edit</element>
+            <element>format</element>
+            <element>table</element>
+            <element>view</element>
+        </value>
+    </record>
+
+    <!-- See possible values in https://www.tiny.cloud/docs/advanced/available-menu-items/ -->
     <record name="plone.menu"
         interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
         <value>
@@ -25,7 +41,7 @@
             "title": "Edit",
             "items": "undo redo | pastetext | searchreplace textpattern selectall | emoticons template"
             },
-            "formats": {
+            "format": {
             "title": "Formats",
             "items": "formats"
             },
@@ -35,33 +51,28 @@
             },
             "view": {
             "title": "View",
-            "items": "fullscreen code visualblocks"
+            "items": "fullscreen code visualblocks visualchars"
             }
             }
         </value>
     </record>
 
-    <!-- Superseded  by plone.menu but can not be empty -->
-    <record name="plone.menubar"
-        interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
-        <value>
-            <element>null</element>
-        </value>
-    </record>
-
-    <!-- See possible values in https://www.tiny.cloud/docs-4x/advanced/editor-control-identifiers/#toolbarcontrols -->
+    <!-- See possible values in https://www.tiny.cloud/docs/advanced/available-toolbar-buttons/ -->
     <record name="plone.toolbar"
         interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
-        <value>undo redo | bold italic | bullist numlist | plonelink unlink</value>
+        <value>undo redo | h3 h4 | bold italic | bullist numlist | plonelink unlink</value>
     </record>
 
-
-    <!-- See plugins options in https://www.tiny.cloud/docs-4x/plugins/ -->
+    
+    <!-- See options in https://www.tiny.cloud/docs/plugins/opensource/paste/#paste_as_text -->
+    <!-- See style_formats options in https://www.tiny.cloud/docs/configure/editor-appearance/#style_formats -->
+    <!-- See table plugin options in https://www.tiny.cloud/docs/plugins/opensource/table/ -->
     <record name="plone.other_settings"
         interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
         <value>
             {
             "paste_as_text": true,
+
             "style_formats": [
             { "title": "Headers", "items": [
             { "title": "Heading 2", "block": "h2"},
@@ -74,7 +85,8 @@
             { "title": "Paragraph", "block": "p"},
             { "title": "Blockquote", "block": "blockquote"},
             { "title": "Mark", "block": "mark"},
-            { "title": "Pre", "block": "pre"}
+            { "title": "Pre", "block": "pre"},
+            { "title": "Div", "block": "div"}
             ]},
             { "title": "Inline", "items": [
             { "title": "Bold", "inline": "bold" },
@@ -84,7 +96,8 @@
             { "title": "Code", "inline": "code" }
             ]}
             ],
-            "table_responsive_width": true,
+
+            "table_sizing_mode": "relative",
             "table_appearance_options": false,
             "table_advtab": false,
             "table_row_advtab": false,
@@ -108,4 +121,5 @@
             }
         </value>
     </record>
+
 </registry>
