@@ -11,8 +11,12 @@ class LocationsSectionView(SectionView):
     def data_pat_leaflet(self):
         data =  {
             "fullscreencontrol": True,
-            "zoomcontrol": True
+            "zoomcontrol": True,
+            # "latitude": 50.3343019,
+            # "longitude": 4.9862176,
         }
+        if self.context.initial_zoom_level:
+            data["zoom"] = self.context.initial_zoom_level
         return json.dumps(data)
 
     @property
@@ -21,7 +25,7 @@ class LocationsSectionView(SectionView):
         features = [
             {
                 "type": "Feature",
-                "properties": {"popup": "ICI"},
+                "properties": {"popup": "<h5>Bonjour tout le monde</h5><p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod.</p>"},
                 "geometry": {"type": "Point", "coordinates": [15.4382918, 47.0708101]}
             }
         ]
