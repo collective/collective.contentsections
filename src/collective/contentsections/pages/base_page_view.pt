@@ -80,7 +80,7 @@
             <a tal:attributes="name string:${section_id}" />
             <div class="position-relative ${python:'container' if section.container_width else 'px-4'}">
               <div class="section-edit-links position-absolute top-0 end-0 pt-1 pe-3"
-                style="z-index:100;"
+                style="z-index:10000;"
                 tal:condition="can_edit">
                 <div class="btn-group">
                   <div class="dropdown">

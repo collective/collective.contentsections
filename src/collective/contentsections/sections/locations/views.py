@@ -9,11 +9,11 @@ class LocationsSectionView(SectionView):
 
     @property
     def data_pat_leaflet(self):
-        data =  {
+        data = {
             "fullscreencontrol": True,
             "zoomcontrol": True,
-            # "latitude": 50.3343019,
-            # "longitude": 4.9862176,
+            # "latitude": 50.334,
+            # "longitude": 4.986,
         }
         if self.context.initial_zoom_level:
             data["zoom"] = self.context.initial_zoom_level
@@ -21,18 +21,24 @@ class LocationsSectionView(SectionView):
 
     @property
     def data_geojson(self):
-        # TODO : use locations
-        features = [
-            {
-                "type": "Feature",
-                "properties": {"popup": "<h5>Bonjour tout le monde</h5><p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod.</p>"},
-                "geometry": {"type": "Point", "coordinates": [15.4382918, 47.0708101]}
-            }
-        ]
-        data =  {
-            "type": "FeatureCollection",
-            "features": features
-        }
+        features = []
+        for loc in self.locations:
+            card_image = (
+                f"""<img src="{loc['lead_image_url']}" alt="picture">"""
+                if loc['lead_image_url']
+                else ""
+            )
+            card_title = f"""<h5>{loc['title']}</h5>"""
+            card_text = f"""<p>{loc['description']}</p>""" if loc['description'] else ""
+            popup = f"""<div>{card_image}<div>{card_title}{card_text}</div></div>"""
+            features.append(
+                {
+                    "type": "Feature",
+                    "properties": {"color": "blue", "popup": popup},
+                    "geometry": {"type": "Point", "coordinates": [loc['longitude'], loc['latitude']]},
+                }
+            )
+        data = {"type": "FeatureCollection", "features": features}
         return json.dumps(data)
 
     @property
@@ -42,9 +48,10 @@ class LocationsSectionView(SectionView):
             {
                 "title": brain.Title,
                 "description": brain.Description,
+                "tags": brain.Subject,
                 "latitude": brain.latitude,
                 "longitude": brain.longitude,
-                "lead_image_url": f"{brain.getURL()}/@@images/image/mini" if brain.image_scales else None,
+                "lead_image_url": f"{brain.getURL()}/@@images/image/preview" if brain.image_scales else None,
             }
             for brain in brains
         ]

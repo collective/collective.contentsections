@@ -22,6 +22,8 @@
       <element>collective.contentsections.HTMLSection</element>
       <element>collective.contentsections.ImagesSection</element>
       <element>collective.contentsections.LinksSection</element>
+      <element>collective.contentsections.Location</element>
+      <element>collective.contentsections.LocationsSection</element>
       <element>collective.contentsections.SelectionSection</element>
       <element>collective.contentsections.TextSection</element>
       <element>Image</element>
@@ -33,6 +35,13 @@
     <value>
       <element>collective.contentsections.BasicPage</element>
     </value>
+  </record>
+
+  <record name="geolocation.default_latitude">
+    <value>50.3343019</value>
+  </record>
+  <record name="geolocation.default_longitude">
+    <value>4.9862176</value>
   </record>
 
 </registry>
