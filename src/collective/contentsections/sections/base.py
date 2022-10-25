@@ -50,6 +50,11 @@ class ISection(model.Schema):
 class IBaseLinksSection(ISection):
     """Shared base marker interface and schema for link type sections"""
 
+    group_size = schema.Choice(
+        title=_("Group size"),
+        values=[1, 2, 3, 4, 6],
+        default=3,
+    )
     hide_item_titles = schema.Bool(
         title=_("Hide item titles"),
         required=False,
@@ -70,19 +75,8 @@ class IBaseLinksSection(ISection):
         required=False,
         default=True,
     )
-    group_size = schema.Choice(
-        title=_("Group size"),
-        values=[1, 2, 3, 4, 6],
-        default=3,
-    )
 
-    model.fieldset(
-        "layout",
-        fields=[
-            "group_size",
-        ],
-    )
-    directives.order_before(group_size="container_width")
+    directives.order_after(group_size="hide_title")
 
 
 @implementer(ISection)

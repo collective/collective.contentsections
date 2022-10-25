@@ -10,6 +10,7 @@ Changelog
 - Update TinyMCE registry profile to TinyMCE 5. [sverbois]
 - Add a shortcut in actions menu to add content in sections. [sverbois]
 - Use "Card view" as default view for "Images section". [sverbois]
+- Move "group_size" field to "default" fieldset. [sverbois]
 
 
 1.0.0a13 (2022-08-21)

@@ -85,7 +85,7 @@ class ICardsSection(ISection):
     )
 
     directives.widget("cards", DataGridFieldFactory, allow_reorder=True)
-    directives.order_before(group_size="container_width")
+    directives.order_after(group_size="hide_title")
 
 
 @implementer(ICardsSection)
