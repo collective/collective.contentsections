@@ -89,6 +89,17 @@
                       Actions
                     </button>
                     <ul class="dropdown-menu">
+                      <tal:block tal:condition="section/allowedContentTypes">
+                        <?python
+                          addable_types = section.restrictedTraverse('@@folder_factories').addable_types()
+                        ?>
+                        <li tal:repeat="item addable_types">
+                          <a class="dropdown-item" href="${item/action}">
+                            <tal:icon replace="structure python:icons.tag('plus-square', tag_class='')" />
+                            Add ${item/title}
+                          </a>
+                        </li>
+                      </tal:block>
                       <li tal:condition="section/allowedContentTypes">
                         <a class="dropdown-item" href="${section_url}/folder_contents">
                           <tal:icon replace="structure python:icons.tag('toolbar-action/folderContents', tag_class='')" />
