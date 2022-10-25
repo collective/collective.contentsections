@@ -20,7 +20,7 @@
         <element value="plone.locking"/>
     </property>
 
-    <property name="default_view">gallery_view</property>
+    <property name="default_view">card_view</property>
     <property name="view_methods">
         <element value="card_view"/>
         <element value="card_carousel_view"/>

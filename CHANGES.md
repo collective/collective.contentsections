@@ -9,6 +9,7 @@ Changelog
 - Use Plone 6 beta 3 in development buildout. [sverbois]
 - Update TinyMCE registry profile to TinyMCE 5. [sverbois]
 - Add a shortcut in actions menu to add content in sections. [sverbois]
+- Use "Card view" as default view for "Images section". [sverbois]
 
 
 1.0.0a13 (2022-08-21)
