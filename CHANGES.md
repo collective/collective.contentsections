@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a14 (unreleased)
+1.0.0a14 (2022-12-11)
 ---------------------
 
 - Set load_defer key to True for resource bundles. [sverbois]
