@@ -5,7 +5,7 @@ Changelog
 1.0.0a15 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Use Plone 6 final in development buildout. [sverbois]
 
 
 1.0.0a14 (2022-12-11)
