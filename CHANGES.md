@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a15 (unreleased)
+1.0.0a15 (2023-01-01)
 ---------------------
 
 - Use Plone 6 final in development buildout. [sverbois]
