@@ -6,6 +6,7 @@ Changelog
 ---------------------
 
 - Use Plone 6 final in development buildout. [sverbois]
+- Transform internal (resolveuid) links before rendering LinksSection. [sverbois]
 
 
 1.0.0a14 (2022-12-11)
