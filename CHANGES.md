@@ -1,18 +1,17 @@
 Changelog
 =========
 
-
 1.0.0a16 (unreleased)
 ---------------------
 
 - Add Locations section and Location element base on pat-leaflet. [sverbois]
+- Modify content type names to avoid confusion with Plone's default content types. [sverbois]
 
 1.0.0a15 (2023-01-01)
 ---------------------
 
 - Use Plone 6 final in development buildout. [sverbois]
 - Transform internal (resolveuid) links before rendering LinksSection. [sverbois]
-
 
 1.0.0a14 (2022-12-11)
 ---------------------
@@ -23,7 +22,6 @@ Changelog
 - Add a shortcut in actions menu to add content in sections. [sverbois]
 - Use "Card view" as default view for "Images section". [sverbois]
 - Move "group_size" field to "default" fieldset. [sverbois]
-
 
 1.0.0a13 (2022-08-21)
 ---------------------
@@ -41,19 +39,16 @@ Changelog
 - Require version 3 of collective.taxonomy and collective.z3cform.datagridfield. [sverbois]
 - Improve CSS for section full-width managment and card section edition. [sverbois] 
 
-
 1.0.0a11 (2022-03-26)
 ---------------------
 
 - Add hide_title field on IPage. [sverbois]
-
 
 1.0.0a10 (2022-03-26)
 ---------------------
 
 - Allow BasicPage as default page type. [sverbois]
 - Remove layout name in item_lead_image_scale method. [sverbois]
-
 
 1.0.0a9 (2021-12-30)
 --------------------
@@ -66,7 +61,6 @@ Changelog
 
 - Use a collective.taxonomy to manage the available section CSS classes. [sverbois]
 
-
 1.0.0a7 (2021-12-22)
 --------------------
 
@@ -75,19 +69,16 @@ Changelog
 - Add a Card carousel view on sections. [sverbois]
 - Add container width option on sections. [sverbois]
 
-
 1.0.0a6 (2021-12-20)
 --------------------
 
 - Use pat-sortable pattern to reorder sections in a page using drag and drop. [sverbois] 
-
 
 1.0.0a5 (2021-12-19)
 --------------------
 
 - Remove the use of accordion in edit forms. [sverbois]
 - Remove the row prototype. We want a KISS product. [sverbois]
-
 
 1.0.0a4 (2021-12-19)
 --------------------
@@ -102,12 +93,10 @@ Changelog
 - Add a demo.json export of collective.exportimport with demo pages. [sverbois]
 - Clean use of default and missing_value field attributes. [sverbois]
 
-
 1.0.0a2 (2021-12-17)
 --------------------
 
 - Add Event Page portal type. [sverbois]
-
 
 1.0.0a1 (2021-12-17)
 --------------------
