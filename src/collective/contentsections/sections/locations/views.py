@@ -1,7 +1,8 @@
 import json
 
-from collective.contentsections.sections.base import SectionView
 from plone import api
+
+from collective.contentsections.sections.base import SectionView
 
 
 class LocationsSectionView(SectionView):
@@ -12,8 +13,8 @@ class LocationsSectionView(SectionView):
         data = {
             "fullscreencontrol": True,
             "zoomcontrol": True,
-            # "latitude": 50.334,
-            # "longitude": 4.986,
+            # "latitude": 0,
+            # "longitude": 0,
         }
         if self.context.initial_zoom_level:
             data["zoom"] = self.context.initial_zoom_level
@@ -23,19 +24,15 @@ class LocationsSectionView(SectionView):
     def data_geojson(self):
         features = []
         for loc in self.locations:
-            card_image = (
-                f"""<img src="{loc['lead_image_url']}" alt="picture">"""
-                if loc['lead_image_url']
-                else ""
-            )
+            card_image = f"""<img src="{loc['lead_image_url']}" alt="picture">""" if loc["lead_image_url"] else ""
             card_title = f"""<h5>{loc['title']}</h5>"""
-            card_text = f"""<p>{loc['description']}</p>""" if loc['description'] else ""
+            card_text = f"""<p>{loc['description']}</p>""" if loc["description"] else ""
             popup = f"""<div>{card_image}<div>{card_title}{card_text}</div></div>"""
             features.append(
                 {
                     "type": "Feature",
                     "properties": {"color": "blue", "popup": popup},
-                    "geometry": {"type": "Point", "coordinates": [loc['longitude'], loc['latitude']]},
+                    "geometry": {"type": "Point", "coordinates": [loc["longitude"], loc["latitude"]]},
                 }
             )
         data = {"type": "FeatureCollection", "features": features}
