@@ -7,6 +7,7 @@ Changelog
 - Add Locations section and Location element base on pat-leaflet. [sverbois]
 - Modify content type names to avoid confusion with Plone's default content types. [sverbois]
 - Add plone.formwidget.geolocation >=3.0.4 dependency. [sverbois]
+- Add a Javascript workaround to fix "Add item to default page". [sverbois]
 
 1.0.0a15 (2023-01-01)
 ---------------------
