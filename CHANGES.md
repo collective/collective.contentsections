@@ -8,6 +8,7 @@ Changelog
 - Modify content type names to avoid confusion with Plone's default content types. [sverbois]
 - Add plone.formwidget.geolocation >=3.0.4 dependency. [sverbois]
 - Add a Javascript workaround to fix "Add item to default page". [sverbois]
+- Use Python 3.11 and Plone 6.0.6 in development buildout. [sverbois]
 
 1.0.0a15 (2023-01-01)
 ---------------------

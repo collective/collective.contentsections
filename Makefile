@@ -17,7 +17,7 @@ clean:
 bin/instance: bin/buildout
 
 bin/buildout: bin/pip
-	bin/pip install -r https://dist.plone.org/release/6.0.0/requirements.txt
+	bin/pip install -r https://dist.plone.org/release/6.0.6/requirements.txt
 
 bin/pip:
-	python3.9 -m venv .
+	python3.11 -m venv .
