@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<object name="collective.contentsections.ContactsSection" meta_type="Dexterity FTI" i18n:domain="collective.contentsections"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+    <property name="title" i18n:translate="">Contacts section</property>
+    <property name="icon_expr">string:people</property>
+
+    <property name="add_permission">cmf.AddPortalContent</property>
+    <property name="klass">collective.contentsections.sections.ContactsSection</property>
+    <property name="schema">collective.contentsections.sections.IContactsSection</property>
+
+    <property name="global_allow">False</property>
+    <property name="filter_content_types">True</property>
+    <property name="allowed_content_types">
+        <element value="collective.contentsections.Contact" />
+    </property>
+
+    <property name="behaviors">
+        <element value="collective.contentsections.namefromuuid" />
+        <element value="plone.locking" />
+    </property>
+
+    <property name="default_view">card_view</property>
+    <property name="view_methods">
+        <element value="card_view" />
+    </property>
+
+</object>

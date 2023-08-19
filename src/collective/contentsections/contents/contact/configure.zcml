@@ -3,7 +3,4 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     >
 
-  <include package=".contact" />
-  <include package=".location" />
-
 </configure>

@@ -9,6 +9,8 @@ from .cards.content import CardsSection
 from .cards.content import ICardsSection
 from .collection.content import CollectionSection
 from .collection.content import ICollectionSection
+from .contacts.content import ContactsSection
+from .contacts.content import IContactsSection
 from .files.content import FilesSection
 from .files.content import IFilesSection
 from .html.content import HTMLSection

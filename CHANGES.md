@@ -4,7 +4,7 @@ Changelog
 1.0.0a17 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Add Contacts section and Contact content type. [sverbois]
 
 
 1.0.0a16 (2023-08-19)
@@ -15,7 +15,7 @@ Changelog
 - Add plone.formwidget.geolocation >= 3.0.5 dependency. [sverbois]
 - Add a Javascript workaround to fix "Add item to default page". [sverbois]
 - Use Python 3.11 and Plone 6.0.6 in development buildout. [sverbois]
-- Add Newspage content type. [sverbois]
+- Add NewsPage content type. [sverbois]
 
 1.0.0a15 (2023-01-01)
 ---------------------
@@ -39,7 +39,7 @@ Changelog
 - Add a CSS class on each section with the section view template id. [sverbois]
 - Add a hide_item_titles field on links sections. [sverbois]
 - Allow "Group size" of 6 items. [sverbois]
-- Add control buttons and optional title section on card and carousel templates. [sverbois] 
+- Add control buttons and optional title section on card and carousel templates. [sverbois]
 
 1.0.0a12 (2022-08-16)
 ---------------------
@@ -47,7 +47,7 @@ Changelog
 - Remove customized plone.allowed_sizes and plone.toolbar_position configurations. [sverbois]
 - Set boolean fields required option to False. [sverbois]
 - Require version 3 of collective.taxonomy and collective.z3cform.datagridfield. [sverbois]
-- Improve CSS for section full-width managment and card section edition. [sverbois] 
+- Improve CSS for section full-width managment and card section edition. [sverbois]
 
 1.0.0a11 (2022-03-26)
 ---------------------
@@ -82,7 +82,7 @@ Changelog
 1.0.0a6 (2021-12-20)
 --------------------
 
-- Use pat-sortable pattern to reorder sections in a page using drag and drop. [sverbois] 
+- Use pat-sortable pattern to reorder sections in a page using drag and drop. [sverbois]
 
 1.0.0a5 (2021-12-19)
 --------------------

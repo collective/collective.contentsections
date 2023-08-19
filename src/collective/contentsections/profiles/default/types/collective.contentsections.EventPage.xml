@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<object name="collective.contentsections.EventPage" meta_type="Dexterity FTI"
-    i18n:domain="collective.contentsections" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+<object name="collective.contentsections.EventPage" meta_type="Dexterity FTI" i18n:domain="collective.contentsections"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
     <property name="title" i18n:translate="">Event page</property>
     <property name="icon_expr">string:calendar-date</property>
@@ -14,6 +14,7 @@
     <property name="allowed_content_types">
         <element value="collective.contentsections.CardsSection" />
         <element value="collective.contentsections.CollectionSection" />
+        <element value="collective.contentsections.ContactsSection" />
         <element value="collective.contentsections.FilesSection" />
         <element value="collective.contentsections.HTMLSection" />
         <element value="collective.contentsections.ImagesSection" />

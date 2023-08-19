@@ -19,6 +19,8 @@
     <value purge="false">
       <element>collective.contentsections.CardsSection</element>
       <element>collective.contentsections.CollectionSection</element>
+      <element>collective.contentsections.Contact</element>
+      <element>collective.contentsections.ContactsSection</element>
       <element>collective.contentsections.FilesSection</element>
       <element>collective.contentsections.HTMLSection</element>
       <element>collective.contentsections.ImagesSection</element>

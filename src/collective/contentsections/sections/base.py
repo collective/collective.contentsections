@@ -1,4 +1,3 @@
-from collective.contentsections import _
 from plone import schema
 from plone.app.z3cform.widget import SelectFieldWidget
 from plone.autoform import directives
@@ -7,6 +6,8 @@ from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from Products.Five.browser import BrowserView
 from zope.interface import implementer
+
+from collective.contentsections import _
 
 
 class ISection(model.Schema):
@@ -47,14 +48,21 @@ class ISection(model.Schema):
     )
 
 
-class IBaseLinksSection(ISection):
-    """Shared base marker interface and schema for link type sections"""
+class IBaseGroupSection(ISection):
+    """Shared base marker interface and schema for group sections"""
 
     group_size = schema.Choice(
         title=_("Group size"),
         values=[1, 2, 3, 4, 6],
         default=3,
     )
+
+    directives.order_after(group_size="hide_title")
+
+
+class IBaseLinksSection(IBaseGroupSection):
+    """Shared base marker interface and schema for link type sections"""
+
     hide_item_titles = schema.Bool(
         title=_("Hide item titles"),
         required=False,
@@ -76,8 +84,6 @@ class IBaseLinksSection(ISection):
         default=True,
     )
 
-    directives.order_after(group_size="hide_title")
-
 
 @implementer(ISection)
 class Section(Container):
@@ -96,8 +102,8 @@ class SectionView(BrowserView):
         self.request.response.redirect(url)
 
 
-class BaseLinksSectionView(SectionView):
-    """Shared section view for link type sections"""
+class BaseGroupSectionView(SectionView):
+    """Shared section view for group sections"""
 
     @property
     def items(self):
@@ -108,14 +114,6 @@ class BaseLinksSectionView(SectionView):
         items = self.items
         size = self.context.group_size
         return [items[i : i + size] for i in range(0, len(items), size)]
-
-    @property
-    def more_link_url(self):
-        return None
-
-    @property
-    def more_link_text(self):
-        return None
 
     @property
     def item_lead_image_scale(self):
@@ -129,6 +127,18 @@ class BaseLinksSectionView(SectionView):
         elif cols > 3:
             return "large"
         return "preview"
+
+
+class BaseLinksSectionView(BaseGroupSectionView):
+    """Shared section view for link type sections"""
+
+    @property
+    def more_link_url(self):
+        return None
+
+    @property
+    def more_link_text(self):
+        return None
 
 
 def reindex_parent_page(section, event):
