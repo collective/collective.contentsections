@@ -3,7 +3,7 @@
     xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
     <property name="title" i18n:translate="">Basic page</property>
-    <property name="icon_expr">string:file-earmark-text-fill</property>
+    <property name="icon_expr">string:file-earmark-text</property>
 
     <property name="add_permission">collective.contentsections.AddBasicPage</property>
     <property name="klass">collective.contentsections.pages.BasicPage</property>
