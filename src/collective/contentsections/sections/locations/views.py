@@ -1,6 +1,7 @@
 import json
 
 from plone import api
+from plone.memoize import view
 
 from collective.contentsections.sections.base import SectionView
 
@@ -9,15 +10,23 @@ class LocationsSectionView(SectionView):
     """LocationsSection view"""
 
     @property
+    @view.memoize
+    def center(self):
+        coordinates = [(loc["latitude"], loc["longitude"]) for loc in self.locations]
+        latitudes, longitudes = zip(*coordinates)
+        center = (min(latitudes) + max(latitudes)) / 2, (min(longitudes) + max(longitudes)) / 2
+        return center
+
+    @property
     def data_pat_leaflet(self):
         data = {
             "fullscreencontrol": True,
             "zoomcontrol": True,
-            # "latitude": 0,
-            # "longitude": 0,
         }
         if self.context.initial_zoom_level:
             data["zoom"] = self.context.initial_zoom_level
+            data["latitude"] = self.center[0]
+            data["longitude"] = self.center[1]
         return json.dumps(data)
 
     @property
@@ -39,6 +48,7 @@ class LocationsSectionView(SectionView):
         return json.dumps(data)
 
     @property
+    @view.memoize
     def locations(self):
         brains = api.content.find(context=self.context, depth=1, portal_type="collective.contentsections.Location")
         results = [
