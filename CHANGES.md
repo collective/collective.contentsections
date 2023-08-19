@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0.0a16 (unreleased)
+1.0.0a16 (2023-08-19)
 ---------------------
 
 - Add Locations section and Location element base on pat-leaflet. [sverbois]
