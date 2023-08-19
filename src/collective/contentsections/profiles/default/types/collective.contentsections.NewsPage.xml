@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<object name="collective.contentsections.NewsPage" meta_type="Dexterity FTI" i18n:domain="collective.contentsections"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+    <property name="title" i18n:translate="">News page</property>
+    <property name="icon_expr">string:file-earmark-richtext</property>
+
+    <property name="add_permission">collective.contentsections.AddNewsPage</property>
+    <property name="klass">collective.contentsections.pages.NewsPage</property>
+    <property name="schema">collective.contentsections.pages.INewsPage</property>
+
+    <property name="global_allow">True</property>
+    <property name="filter_content_types">True</property>
+    <property name="allowed_content_types">
+        <element value="collective.contentsections.CardsSection" />
+        <element value="collective.contentsections.CollectionSection" />
+        <element value="collective.contentsections.FilesSection" />
+        <element value="collective.contentsections.HTMLSection" />
+        <element value="collective.contentsections.ImagesSection" />
+        <element value="collective.contentsections.LinksSection" />
+        <element value="collective.contentsections.LocationsSection" />
+        <element value="collective.contentsections.SelectionSection" />
+        <element value="collective.contentsections.TextSection" />
+    </property>
+
+    <property name="behaviors">
+        <!-- behaviors order determines fields order in add/edit forms -->
+        <element value="plone.basic" />
+        <element value="plone.leadimage" />
+        <element value="plone.versioning" />
+        <element value="plone.categorization" />
+        <element value="plone.excludefromnavigation" />
+        <element value="plone.shortname" />
+        <element value="plone.publication" />
+        <element value="plone.locking" />
+        <element value="plone.namefromtitle" />
+    </property>
+
+    <property name="default_view">page_view</property>
+    <property name="view_methods">
+        <element value="page_view" />
+    </property>
+
+</object>

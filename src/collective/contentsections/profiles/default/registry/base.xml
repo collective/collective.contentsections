@@ -11,6 +11,7 @@
     <value purge="false">
       <element>collective.contentsections.BasicPage</element>
       <element>collective.contentsections.EventPage</element>
+      <element>collective.contentsections.NewsPage</element>
     </value>
   </record>
 

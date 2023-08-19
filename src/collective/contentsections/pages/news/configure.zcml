@@ -1,0 +1,11 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    >
+
+  <permission
+      id="collective.contentsections.AddNewsPage"
+      title="collective.contentsections: Add NewsPage"
+      />
+
+</configure>

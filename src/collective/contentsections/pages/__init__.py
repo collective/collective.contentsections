@@ -5,3 +5,5 @@ from .basic.content import BasicPage
 from .basic.content import IBasicPage
 from .event.content import EventPage
 from .event.content import IEventPage
+from .news.content import INewsPage
+from .news.content import NewsPage

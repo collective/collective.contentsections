@@ -8,7 +8,7 @@ The approach in this product can be seen as a generalisation of the *Full conten
 
 The plone site is seen as a folder hierarchy that contains pages.
 A page is a folderish content type composed of sections.
-A section can contain elements of the same type (File, Image, Link). Folders, pages, sections and elements are all Dexterity content types.
+A section can contain elements of the same type (File, Image, Link, Location, Contact). Folders, pages, sections and elements are all Dexterity content types.
 
 The section view view redirects to its position in its parent page view view.
 Section content types are hidden from research but their contents are indexed in the *SearchableText* index of their parent page.
@@ -35,9 +35,9 @@ This product provides :
 - *CollectionSection* to link a section with a collection.
 - *SelectionSection* to link a section to other pages. The *SelectionSection* replace the *Related items* behavior.
 - *CardsSection* content type based on a collective.z3cform.datagridfield field to make nice information blocks/links on a page
-- *ImagesSection*, *LinksSection*, *FilesSection* folderish section content types to keep the site structured and facilitate the cut and paste of sections between pages.
+- *ImagesSection*, *LinksSection*, *FilesSection*, *LocationsSection*, *ContactsSection* folderish section content types to keep the site structured and facilitate the cut and paste of sections between pages.
 - A *Page view* for folderish content types
-- *BasicPage*, *EventPage* page content types
+- *BasicPage*, *EventPage* and *NewsPage* page content types to replace default Plone content types.
 
 This product fits Plone with:
 
@@ -54,17 +54,20 @@ contains some demo pages that can be loaded into the site using the *@@import_co
 Choices/Beliefs
 ---------------
 
-- We want a KISS solution. 
-- We believe we can create the majority of websites with only one section per row.
+- We want a KISS solution.
 - We want a solution for junior integrators.
 - We believe that Plone Classic can be used to create beautiful sites in less than a day.
-- We don't have any NewsPage content type. We believe it can be replaced by a collection of BasicPage.
 
 Possibilities
 -------------
 
 - If you activate workflow on sections, you can restrict access to certain sections of a page.
 - As section are Dexterity content types, you can create a collection/faceted navigation of sections.
+
+Dependencies
+------------
+
+This product depends on the following products: *collective.taxonomy*, *collective.z3cform.datagridfield*, *collective.geolocationbehavior*
 
 Installation
 ------------

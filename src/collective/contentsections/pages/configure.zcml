@@ -1,40 +1,43 @@
 <configure
-  xmlns="http://namespaces.zope.org/zope"
-  xmlns:browser="http://namespaces.zope.org/browser">
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    >
 
   <browser:page
-    name="page_view"
-    for="plone.dexterity.interfaces.IDexterityContainer"
-    template="base_page_view.pt"
-    class=".base.PageView"
-    permission="zope2.View"
-    layer="collective.contentsections.interfaces.IBrowserLayer" />
+      name="page_view"
+      for="plone.dexterity.interfaces.IDexterityContainer"
+      class=".base.PageView"
+      template="base_page_view.pt"
+      permission="zope2.View"
+      layer="collective.contentsections.interfaces.IBrowserLayer"
+      />
 
   <browser:page
-    name="page_section_view"
-    for="collective.contentsections.sections.ISection"
-    class=".base.PageSectionView"
-    template="base_page_section_view.pt"
-    permission="zope2.View"
-    layer="collective.contentsections.interfaces.IBrowserLayer"
-    />
+      name="page_section_view"
+      for="collective.contentsections.sections.ISection"
+      class=".base.PageSectionView"
+      template="base_page_section_view.pt"
+      permission="zope2.View"
+      layer="collective.contentsections.interfaces.IBrowserLayer"
+      />
 
   <browser:page
-    name="base_page_template"
-    for="*"
-    class=".base.PageTemplateView"
-    permission="zope.Public"
-    />
+      name="base_page_template"
+      for="*"
+      class=".base.PageTemplateView"
+      permission="zope.Public"
+      />
 
   <browser:page
-    name="reorder_sections"
-    for=".base.IPage"
-    class=".base.PageSectionsOrderingView"
-    permission="cmf.ModifyPortalContent"
-    layer="collective.contentsections.interfaces.IBrowserLayer"
-    />
+      name="reorder_sections"
+      for=".base.IPage"
+      class=".base.PageSectionsOrderingView"
+      permission="cmf.ModifyPortalContent"
+      layer="collective.contentsections.interfaces.IBrowserLayer"
+      />
 
   <include package=".basic" />
   <include package=".event" />
+  <include package=".news" />
 
 </configure>
