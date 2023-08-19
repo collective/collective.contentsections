@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0.0a17 (unreleased)
+1.0.0a17 (2023-08-19)
 ---------------------
 
 - Add Contacts section and Contact content type. [sverbois]
