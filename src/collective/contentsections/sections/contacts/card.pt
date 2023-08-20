@@ -3,7 +3,7 @@
     <metal:content-core define-macro="content-core">
       <div class="row row-cols-1 row-cols-md-${context/group_size} g-4">
         <div class="col" tal:repeat="item view/items">
-          <div class="card text-center">
+          <div class="card text-center h-100">
             <img tal:condition="item/lead_image_url" src="${item/lead_image_url}" class="card-img-top" alt="Lead image" />
             <div class="text-end text-white pe-1 mt-n4" tal:condition="item/lead_image_caption">${item/lead_image_caption}</div>
             <div class="card-body">
