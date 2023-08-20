@@ -7,10 +7,10 @@
             <img tal:condition="item/lead_image_url" src="${item/lead_image_url}" class="card-img-top" alt="Lead image" />
             <div class="text-end text-white pe-1 mt-n4" tal:condition="item/lead_image_caption">${item/lead_image_caption}</div>
             <div class="card-body">
-              <h5 class="card-title">
+              <h4 class="card-title">
                 <span class="d-block">${item/title}</span>
-                <span class="d-block fs-6">${item/subtitle}</span>
-              </h5>
+                <span class="d-block fs-5">${item/subtitle}</span>
+              </h4>
               <p class="card-text">
                 <a class="d-block" href="tel:${item/phone}" tal:condition="item/phone">${item/phone}</a>
                 <a class="d-block" href="mailto:${item/email}" tal:condition="item/email">${item/email}</a>
