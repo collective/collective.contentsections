@@ -5,6 +5,7 @@ Changelog
 ---------------------
 
 - Disable workflow on ContactsSection and Contact content type. [sverbois]
+- Fix empty Locations section with zoom value. [sverbois]
 
 
 1.0.0a17 (2023-08-19)

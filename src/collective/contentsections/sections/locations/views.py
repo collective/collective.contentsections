@@ -12,6 +12,8 @@ class LocationsSectionView(SectionView):
     @property
     @view.memoize
     def center(self):
+        if not self.locations:
+            return (0.0, 0.0)
         coordinates = [(loc["latitude"], loc["longitude"]) for loc in self.locations]
         latitudes, longitudes = zip(*coordinates)
         center = (min(latitudes) + max(latitudes)) / 2, (min(longitudes) + max(longitudes)) / 2
