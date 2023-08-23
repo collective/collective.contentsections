@@ -4,7 +4,7 @@ Changelog
 1.0.0a18 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Disable workflow on ContactsSection and Contact content type. [sverbois]
 
 
 1.0.0a17 (2023-08-19)
