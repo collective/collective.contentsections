@@ -10,7 +10,7 @@ long_description = "\n\n".join(
 )
 setup(
     name="collective.contentsections",
-    version="1.0.0a18.dev0",
+    version="1.0.0a18",
     description="A block approach for Plone 6 Classic",
     long_description=long_description,
     long_description_content_type="text/markdown",
