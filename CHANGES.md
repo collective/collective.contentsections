@@ -5,6 +5,7 @@ Changelog
 ---------------------
 
 - Sort contacts section by position in parent. [sverbois]
+- Add content type icons. [sverbois]
 
 
 1.0.0a18 (2023-08-23)

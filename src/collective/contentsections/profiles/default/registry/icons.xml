@@ -1,0 +1,92 @@
+<registry>
+    <record name="plone.icon.contenttype/collective-contentsections-basicpage">
+        <field type="plone.registry.field.TextLine">
+            <title>Basic page content type icon</title>
+        </field>
+        <value key="resource">++plone++bootstrap-icons/file-earmark-text.svg</value>
+    </record>
+    <record name="plone.icon.contenttype/collective-contentsections-cardssection">
+        <field type="plone.registry.field.TextLine">
+            <title>Cards section content type icon</title>
+        </field>
+        <value key="resource">++plone++bootstrap-icons/card-heading.svg</value>
+    </record>
+    <record name="plone.icon.contenttype/collective-contentsections-collectionsection">
+        <field type="plone.registry.field.TextLine">
+            <title>Collection section content type icon</title>
+        </field>
+        <value key="resource">++plone++bootstrap-icons/file-earmark-richtext.svg</value>
+    </record>
+    <record name="plone.icon.contenttype/collective-contentsections-contact">
+        <field type="plone.registry.field.TextLine">
+            <title>Contact content type icon</title>
+        </field>
+        <value key="resource">++plone++bootstrap-icons/file-person.svg</value>
+    </record>
+    <record name="plone.icon.contenttype/collective-contentsections-contactssection">
+        <field type="plone.registry.field.TextLine">
+            <title>Contacts section content type icon</title>
+        </field>
+        <value key="resource">++plone++bootstrap-icons/people.svg</value>
+    </record>
+    <record name="plone.icon.contenttype/collective-contentsections-eventpage">
+        <field type="plone.registry.field.TextLine">
+            <title>Event page content type icon</title>
+        </field>
+        <value key="resource">++plone++bootstrap-icons/calendar-date.svg</value>
+    </record>
+    <record name="plone.icon.contenttype/collective-contentsections-filessection">
+        <field type="plone.registry.field.TextLine">
+            <title>Files section content type icon</title>
+        </field>
+        <value key="resource">++plone++bootstrap-icons/file-pdf.svg</value>
+    </record>
+    <record name="plone.icon.contenttype/collective-contentsections-htmlsection">
+        <field type="plone.registry.field.TextLine">
+            <title>HTML section content type icon</title>
+        </field>
+        <value key="resource">++plone++bootstrap-icons/file-code.svg</value>
+    </record>
+    <record name="plone.icon.contenttype/collective-contentsections-imagessection">
+        <field type="plone.registry.field.TextLine">
+            <title>Images section content type icon</title>
+        </field>
+        <value key="resource">++plone++bootstrap-icons/image.svg</value>
+    </record>
+    <record name="plone.icon.contenttype/collective-contentsections-linkssection">
+        <field type="plone.registry.field.TextLine">
+            <title>Links section content type icon</title>
+        </field>
+        <value key="resource">++plone++bootstrap-icons/link.svg</value>
+    </record>
+    <record name="plone.icon.contenttype/collective-contentsections-location">
+        <field type="plone.registry.field.TextLine">
+            <title>Location content type icon</title>
+        </field>
+        <value key="resource">++plone++bootstrap-icons/geo.svg</value>
+    </record>
+    <record name="plone.icon.contenttype/collective-contentsections-locationssection">
+        <field type="plone.registry.field.TextLine">
+            <title>Locations section content type icon</title>
+        </field>
+        <value key="resource">++plone++bootstrap-icons/globe.svg</value>
+    </record>
+    <record name="plone.icon.contenttype/collective-contentsections-newspage">
+        <field type="plone.registry.field.TextLine">
+            <title>News page content type icon</title>
+        </field>
+        <value key="resource">++plone++bootstrap-icons/file-earmark-richtext.svg</value>
+    </record>
+    <record name="plone.icon.contenttype/collective-contentsections-selectionsection">
+        <field type="plone.registry.field.TextLine">
+            <title>Selection section content type icon</title>
+        </field>
+        <value key="resource">++plone++bootstrap-icons/list-check.svg</value>
+    </record>
+    <record name="plone.icon.contenttype/collective-contentsections-textsection">
+        <field type="plone.registry.field.TextLine">
+            <title>Text section content type icon</title>
+        </field>
+        <value key="resource">++plone++bootstrap-icons/file-earmark-richtext.svg</value>
+    </record>
+</registry>
