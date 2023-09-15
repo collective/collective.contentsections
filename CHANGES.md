@@ -4,7 +4,7 @@ Changelog
 1.0.0a19 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Sort contacts section by position in parent. [sverbois]
 
 
 1.0.0a18 (2023-08-23)

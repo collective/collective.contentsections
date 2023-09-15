@@ -1,68 +1,72 @@
+#content > header {
+  margin-bottom: 0px;
+}
+
 #section-leadimage {
-    float: right;
+  float: right;
 }
 
 #section-leadimage img {
-    height: 100px;
-    width: auto;
+  height: 100px;
+  width: auto;
 }
 
 .section-htmlsection div.iframe-container {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25% !important;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25% !important;
 }
 
 .section-htmlsection div.iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .section .carousel-caption a {
-    display: block;
-    background-color: var(--bs-dark);
-    opacity: 0.8;
-    color: var(--bs-white);
-    text-decoration: none;
-    padding: 5px;
+  display: block;
+  background-color: var(--bs-dark);
+  opacity: 0.8;
+  color: var(--bs-white);
+  text-decoration: none;
+  padding: 5px;
 }
 
 .section .carousel-caption p {
-    margin: 0px;
+  margin: 0px;
 }
 
 .section.section-template-card_carousel_view .carousel-control-prev {
-    margin-left: -130px;
+  margin-left: -130px;
 }
 .section.section-template-card_carousel_view .carousel-control-next {
-    margin-right: -130px;
+  margin-right: -130px;
 }
 .section.section-template-carousel_view .carousel-control-prev-icon {
-    width: 4rem;
-    height: 4rem;
+  width: 4rem;
+  height: 4rem;
 }
 .section.section-template-carousel_view .carousel-control-next-icon {
-    width: 4rem;
-    height: 4rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 .bg-image-fixed {
-    background-attachment: fixed;
+  background-attachment: fixed;
 }
 
 table#form-widgets-cards thead {
-    display: none;
+  display: none;
 }
 
 table#form-widgets-cards tr {
-    border: 1px solid #444;
+  border: 1px solid #444;
 }
 
 table#form-widgets-cards td {
-    display: block;
-    border: none;
+  display: block;
+  border: none;
 }

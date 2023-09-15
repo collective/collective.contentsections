@@ -9,7 +9,12 @@ class ContactsSectionView(BaseGroupSectionView):
     @property
     def items(self):
         lead_image_scale = self.item_lead_image_scale
-        brains = api.content.find(context=self.context, depth=1, portal_type="collective.contentsections.Contact")
+        brains = api.content.find(
+            context=self.context,
+            depth=1,
+            portal_type="collective.contentsections.Contact",
+            sort_on="getObjPositionInParent",
+        )
         results = []
         for brain in brains:
             contact = brain.getObject()
