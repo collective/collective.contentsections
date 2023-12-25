@@ -4,8 +4,8 @@ Changelog
 1.0.0a19 (unreleased)
 ---------------------
 
-- Sort contacts section by position in parent. [sverbois]
 - Add content type icons. [sverbois]
+- Sort sections by position in parent.  [sverbois]
 
 
 1.0.0a18 (2023-08-23)

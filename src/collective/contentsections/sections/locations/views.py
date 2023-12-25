@@ -52,7 +52,12 @@ class LocationsSectionView(SectionView):
     @property
     @view.memoize
     def locations(self):
-        brains = api.content.find(context=self.context, depth=1, portal_type="collective.contentsections.Location")
+        brains = api.content.find(
+            context=self.context,
+            depth=1,
+            portal_type="collective.contentsections.Location",
+            sort_on="getObjPositionInParent",
+        )
         results = [
             {
                 "title": brain.Title,

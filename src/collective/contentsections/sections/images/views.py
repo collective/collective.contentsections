@@ -1,7 +1,8 @@
+from plone import api
+
 from collective.contentsections.sections.base import BaseLinksSectionView
 from collective.contentsections.sections.base import ISection
 from collective.contentsections.sections.base import SectionView
-from plone import api
 
 
 class ImagesSectionView(BaseLinksSectionView):
@@ -10,7 +11,12 @@ class ImagesSectionView(BaseLinksSectionView):
     @property
     def items(self):
         lead_image_scale = self.item_lead_image_scale
-        brains = api.content.find(context=self.context, depth=1, portal_type="Image")
+        brains = api.content.find(
+            context=self.context,
+            depth=1,
+            portal_type="Image",
+            sort_on="getObjPositionInParent",
+        )
         results = [
             {
                 "title": brain.Title,
@@ -29,7 +35,12 @@ class ImagesSectionGalleryView(SectionView):
     """ImagesSection gallery view"""
 
     def items(self):
-        brains = api.content.find(context=self.context, depth=1, portal_type="Image")
+        brains = api.content.find(
+            context=self.context,
+            depth=1,
+            portal_type="Image",
+            sort_on="getObjPositionInParent",
+        )
         results = [
             {
                 "title": brain.Title,

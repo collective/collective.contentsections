@@ -11,7 +11,12 @@ class LinksSectionView(BaseLinksSectionView):
     @property
     def items(self):
         lead_image_scale = self.item_lead_image_scale
-        brains = api.content.find(context=self.context, depth=1, portal_type="Link")
+        brains = api.content.find(
+            context=self.context,
+            depth=1,
+            portal_type="Link",
+            sort_on="getObjPositionInParent",
+        )
         results = []
         for brain in brains:
             remote_url = brain.getRemoteUrl

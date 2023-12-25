@@ -1,6 +1,6 @@
-from collective.contentsections.sections.base import BaseLinksSectionView
-from collective.contentsections.sections.base import ISection
 from plone import api
+
+from collective.contentsections.sections.base import BaseLinksSectionView, ISection
 
 
 class FilesSectionView(BaseLinksSectionView):
@@ -9,7 +9,12 @@ class FilesSectionView(BaseLinksSectionView):
     @property
     def items(self):
         lead_image_scale = self.item_lead_image_scale
-        brains = api.content.find(context=self.context, depth=1, portal_type="File")
+        brains = api.content.find(
+            context=self.context,
+            depth=1,
+            portal_type="File",
+            sort_on="getObjPositionInParent",
+        )
         results = [
             {
                 "title": brain.Title,
