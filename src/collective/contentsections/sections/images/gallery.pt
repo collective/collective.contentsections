@@ -1,40 +1,42 @@
 <html metal:use-macro="context/@@main_template/macros/master">
-    <metal:main fill-slot="main">
-        <metal:content-core define-macro="content-core">
-
-            <link rel="stylesheet" href="${portal_url}/++plone++collective.contentsections/flexbin.css" />
-            <style>
-                .flexbin > * {
-                height: 150px;
-                }
-                .flexbin > * > img {
-                height: 150px;
-                }
-                .flexbin a {
-                text-decoration: none;
-                }
-                .flexbin-image-title {
-                position: absolute;
-                bottom: 5px;
-                left: 5px;
-                padding: 5px;
-                color: white;
-                background-color: black;
-                opacity: 0.6;
-
-                display: none;
-                }
-            </style>
-            <script src="${portal_url}/++plone++collective.contentsections/spotlight.bundle.js"/>
-            <div class="flexbin flexbin-margin">
-                <a tal:repeat="item view/items" href="${item/full_image_url}"
-                    title="${item/title}" data-description="${item/description}"
-                    class="spotlight">
-                    <img src="${item/preview_image_url}" alt="${item/title}" title="${item/title}"/>
-                    <div class="flexbin-image-title">${item/title}</div>
-                </a>
-            </div>
-
-        </metal:content-core>
-    </metal:main>
+  <metal:main fill-slot="main">
+    <metal:content-core define-macro="content-core">
+      <link rel="stylesheet" href="${portal_url}/++plone++collective.contentsections/flexbin.css" />
+      <style>
+        .flexbin > * {
+          height: 150px;
+        }
+        .flexbin > * > img {
+          height: 150px;
+        }
+        .flexbin a {
+          text-decoration: none;
+        }
+        .flexbin-image-title {
+          position: absolute;
+          bottom: 5px;
+          left: 5px;
+          padding: 5px;
+          color: white;
+          background-color: black;
+          opacity: 0.6;
+          display: none;
+        }
+        /* Hide Plone toolbar on spotlight full view */
+        body.plone-toolbar-left #spotlight {
+          margin-left: calc(var(--plone-toolbar-width-collapsed) * -1);
+        }
+        body.plone-toolbar-left.plone-toolbar-left-expanded #spotlight {
+          margin-left: calc(var(--plone-toolbar-width) * -1);
+        }
+      </style>
+      <script src="${portal_url}/++plone++collective.contentsections/spotlight.bundle.js" />
+      <div class="flexbin flexbin-margin">
+        <a tal:repeat="item view/items" href="${item/full_image_url}" title="${item/title}" data-description="${item/description}" class="spotlight" data-control="fullscreen,close">
+          <img src="${item/preview_image_url}" alt="${item/title}" title="${item/title}" />
+          <div class="flexbin-image-title">${item/title}</div>
+        </a>
+      </div>
+    </metal:content-core>
+  </metal:main>
 </html>

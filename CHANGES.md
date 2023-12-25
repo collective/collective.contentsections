@@ -5,7 +5,8 @@ Changelog
 ---------------------
 
 - Add content type icons. [sverbois]
-- Sort sections by position in parent.  [sverbois]
+- Sort sections by position in parent. [sverbois]
+- Hide Plone toolbar on Spotlight.js view. [sverbois]
 
 
 1.0.0a18 (2023-08-23)
