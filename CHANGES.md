@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0.0a19 (unreleased)
+1.0.0a19 (2023-12-25)
 ---------------------
 
 - Add content type icons. [sverbois]
