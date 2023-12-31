@@ -19,8 +19,8 @@ class CollectionSectionView(BaseLinksSectionView):
                 "url": brain.getURL(),
                 "lead_image_url": f"{brain.getURL()}/@@images/image/{lead_image_scale}",
                 "effective_date": brain.effective,
-                "start_date": brain.start,
-                "end_date": brain.end,
+                "start_date": brain.start.isoformat(),
+                "end_date": brain.end.isoformat(),
                 "tags": brain.Subject,
             }
             for brain in brains
