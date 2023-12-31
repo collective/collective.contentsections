@@ -1,6 +1,7 @@
 from plone import api
 
-from collective.contentsections.sections.base import BaseLinksSectionView, ISection
+from collective.contentsections.sections.base import BaseLinksSectionView
+from collective.contentsections.sections.base import ISection
 
 
 class FilesSectionView(BaseLinksSectionView):
@@ -23,6 +24,7 @@ class FilesSectionView(BaseLinksSectionView):
                 "lead_image_url": f"{brain.getURL()}/@@images/image/{lead_image_scale}",
                 "effective_date": brain.effective,
                 "tags": brain.Subject,
+                "mimetype_icon": f"mimetype-{brain.mime_type}",
             }
             for brain in brains
         ]

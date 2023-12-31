@@ -4,7 +4,8 @@ Changelog
 1.0.0a110 (unreleased)
 ----------------------
 
-- Nothing changed yet.
+- Fix end_date field in selection view.  [sverbois]
+- Improve Bootstrap card component with bigger titles, publication date and event dates.  [sverbois]
 
 
 1.0.0a19 (2023-12-25)

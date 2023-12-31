@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    >
+
+  <browser:page
+      name="collective_contentsections_utils"
+      for="*"
+      class=".utils.UtilsView"
+      permission="zope2.View"
+      layer="collective.contentsections.interfaces.IBrowserLayer"
+      />
+
+</configure>

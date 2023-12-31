@@ -1,0 +1,36 @@
+<div class="card" metal:define-macro="card">
+  <img tal:condition="not:context/hide_item_lead_images" src="${item/lead_image_url}" class="card-img-top" alt="Lead image" />
+  <?python
+      show_title = not context.hide_item_titles
+      show_description = not context.hide_item_descriptions
+      show_card_body = show_title or show_description
+      show_start_date = item.get("start_date")
+      show_end_date = item.get("start_date") and item.get("end_date") and (item.get("start_date")[:10] != item.get("end_date")[:10])
+      item_url = item.get("url")
+      item_mimetype_icon = item.get("mimetype_icon")
+      icons = context.restrictedTraverse('@@iconresolver')
+  ?>
+  <div class="card-body" tal:condition="show_card_body">
+    <div class="card-tags fs-6" tal:condition="item/tags">
+      <span class="card-tag" tal:repeat="tag item/tags">${tag}</span>
+    </div>
+    <div class="card-date fs-5" tal:condition="show_start_date">
+      <time class="pat-display-time" data-pat-display-time="output-format: L" datetime="${item/start_date}">${item/start_date}</time>
+      <tal:if condition="show_end_date">
+                  -
+        <time class="pat-display-time" data-pat-display-time="output-format: L" datetime="${item/end_date}">${python:item.get("end_date")[:10]}</time>
+      </tal:if>
+    </div>
+    <h4 class="card-title" tal:condition="not:context/hide_item_titles">
+      <tal:icon condition="item_mimetype_icon" replace="structure python:icons.tag(item_mimetype_icon, tag_class='icon-x2 mb-2')" />
+      ${item/title}
+    </h4>
+    <div class="card-effective fs-6 fw-lighter" tal:condition="not:context/hide_item_publication_dates">
+      <span i18n:domain="plone" i18n:translate="">published</span>
+      <time class="pat-display-time" data-pat-display-time="from-now: true" datetime="${item/effective_date}">${item/effective_date}</time>
+    </div>
+    <p class="card-text" tal:condition="not:context/hide_item_descriptions">${item/description}</p>
+    <a tal:condition="python:item_url and not item_mimetype_icon" href="${item_url}" i18n:domain="plone" i18n:translate="read_more">Read More&hellip;</a>
+    <a tal:condition="python:item_url and item_mimetype_icon" href="${item_url}" i18n:domain="plone" i18n:translate="">Download</a>
+  </div>
+</div>
