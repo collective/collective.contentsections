@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0.0a21 (unreleased)
+1.0.0a21 (2023-12-31)
 ---------------------
 
 - Fix date isoformat in collection section. [sverbois]
