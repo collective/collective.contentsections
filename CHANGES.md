@@ -4,7 +4,7 @@ Changelog
 1.0.0a21 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Fix date isoformat in collection section. [sverbois]
 
 
 1.0.0a20 (2023-12-31)
