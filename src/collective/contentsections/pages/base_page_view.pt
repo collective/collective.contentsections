@@ -2,44 +2,13 @@
   <html metal:use-macro="context/@@main_template/macros/master" i18n:domain="collective.contentsections">
 
     <metal:title fill-slot="content-title">
-      <h1 tal:replace="structure context/@@title" tal:condition="not:context/hide_title"/>
+      <h1 tal:replace="structure context/@@title" tal:condition="not:context/hide_title" />
     </metal:title>
 
-    <metal:content-core fill-slot="content-core"
-      tal:define="can_edit python: checkPermission('Modify portal content', context);
+    <metal:content-core fill-slot="content-core" tal:define="can_edit python: checkPermission('Modify portal content', context);
                 sections view/sections;">
 
-      <script>
-        let orderedSectionIds;
-
-        function storeSectionOrder() {
-        orderedSectionIds = [];
-        $('.section-sortable').each(function() {
-        orderedSectionIds.push($(this).attr('data-section-id'));
-        });
-        };
-
-        $(storeSectionOrder);
-
-        function reorderSections($el, delta) {
-        let baseUrl = $('body').data('base-url');
-        let token = $('#protect-script').data('token');
-        if (delta !== 0) {
-        $.ajax({
-        url: baseUrl + '/@@reorder_sections',
-        type: 'POST',
-        data: {_authenticator: token, delta: delta, section_id: $el.attr('data-section-id'), ordered_section_ids: JSON.stringify(orderedSectionIds)}
-        });
-        storeSectionOrder();
-        }; /* end of if */
-        }; /* end of fucntion */
-      </script>
-
-      <script>
-        /* Sections are full width */
-        $("div.outer-wrapper > div").removeClass("container"); /* Remove container of https://github.com/plone/plonetheme.barceloneta/blob/master/plonetheme/barceloneta/theme/index.html */
-        $("#content > header").addClass("container"); /* Add container to page title */
-      </script>
+      <script tal:condition="can_edit" src="${portal_url}/++plone++collective.contentsections/Sortable.min.js" />
 
       <style>
         .section {
@@ -59,9 +28,7 @@
         </div>
       </tal:emptypage>
 
-      <div class="pat-sortable"
-        data-pat-sortable="selector:div.section-sortable;drop:reorderSections;"
-        tal:omit-tag="not:can_edit">
+      <div id="sortable-sections" tal:omit-tag="not:can_edit">
         <tal:section tal:repeat="section sections">
           <?python
             section_url = section.absolute_url()
@@ -70,18 +37,15 @@
             section_view_template_id = f"section-template-{section.restrictedTraverse('@@plone_context_state').view_template_id()}"
             section_type_class = f"section-{section_type.lower()}"
             section_css_classes = " ".join(section.css_classes) if section.css_classes else ""
-            section_class = " ".join(["section section-sortable clearfix", section_type_class, section_view_template_id, section_css_classes])
+            section_class = " ".join(["section sortable-section clearfix", section_type_class, section_view_template_id, section_css_classes])
             section_background_image = section.background_image
             section_background_image_url = f"url({section_url}/@@images/background_image/huge)"
             section_style = f"background-image: {section_background_image_url}; background-size: cover; background-position: center;"
             ?>
-          <div id="${section_id}" class="${section_class}"
-            style="${python:section_style if section_background_image else ''}" data-section-id="${section/id}">
+          <div id="${section_id}" class="${section_class}" style="${python:section_style if section_background_image else ''}" data-section-id="${section/id}">
             <a tal:attributes="name string:${section_id}" />
             <div class="position-relative ${python:'container' if section.container_width else 'px-4'}">
-              <div class="section-edit-links position-absolute top-0 end-0 pt-1 pe-3"
-                style="z-index:10000;"
-                tal:condition="can_edit">
+              <div class="section-edit-links position-absolute top-0 end-0 pt-1 pe-3" style="z-index:10000;" tal:condition="can_edit">
                 <div class="btn-group">
                   <div class="dropdown">
                     <button class="btn btn-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
@@ -126,7 +90,10 @@
                       </li>
                     </ul>
                   </div>
-                </div>
+                </div>                <!-- end of btn-group -->
+                <button class="sortable-handle btn btn-dark btn-sm">
+                  <tal:icon replace="structure python:icons.tag('grip-vertical', tag_class='')" />
+                </button>
               </div>
               <div class="row">
                 <?python
@@ -144,8 +111,48 @@
           </div>
         </tal:section>
       </div>
-    </metal:content-core>
 
+      <script>
+        /* Sections are full width */
+        $("div.outer-wrapper > div").removeClass("container"); /* Remove container of https://github.com/plone/plonetheme.barceloneta/blob/master/plonetheme/barceloneta/theme/index.html */
+        $("#content > header").addClass("container"); /* Add container to page title */
+      </script>
+
+      <script>
+        let orderedSectionIds;
+
+        function storeSectionOrder() {
+        orderedSectionIds = [];
+        $('.sortable-section').each(function() {
+        orderedSectionIds.push($(this).attr('data-section-id'));
+        });
+        };
+
+        $(storeSectionOrder);
+
+        function reorderSections($el, delta) {
+        let baseUrl = $('body').data('base-url');
+        let token = $('#protect-script').data('token');
+        if (delta !== 0) {
+        $.ajax({
+        url: baseUrl + '/@@reorder_sections',
+        type: 'POST',
+        data: {_authenticator: token, delta: delta, section_id: $el.attr('data-section-id'), ordered_section_ids: JSON.stringify(orderedSectionIds)}
+        });
+        storeSectionOrder();
+        }; /* end of if */
+        }; /* end of fucntion */
+
+        let sortableSections = document.getElementById("sortable-sections");
+        Sortable.create(sortableSections, {
+          draggable:"div.sortable-section",
+          handle:"button.sortable-handle",
+          animation: 150,
+          onEnd: function (e) {reorderSections($(e.item), e.newIndex - e.oldIndex);},
+        });
+      </script>
+
+    </metal:content-core>
 
   </html>
 </metal:page>
