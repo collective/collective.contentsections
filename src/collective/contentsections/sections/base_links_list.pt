@@ -10,7 +10,7 @@
                             ${item/description}
               <br tal:omit-tag="not:item/description" />
             </tal:if>
-            <a href="${item_url}" i18n:domain="plone" i18n:translate="read_more">Read More&hellip;</a>
+            <a href="${item/url}" i18n:domain="plone" i18n:translate="read_more">Read More&hellip;</a>
           </p>
         </article>
       </div>
