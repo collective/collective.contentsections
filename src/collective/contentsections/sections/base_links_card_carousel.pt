@@ -9,7 +9,7 @@
           margin-right: -25px;
         }
       </style>
-      <div tal:define="carousel_id string:carousel-${context/UID};groups view/groups;" id="${carousel_id}" class="carousel carousel-dark slide pb-5" data-bs-ride="carousel">
+      <div tal:define="carousel_id string:carousel-${context/UID};groups view/groups;" id="${carousel_id}" class="carousel carousel-dark slide pb-5">
         <div class="carousel-indicators w-100 m-0">
           <button tal:repeat="group groups" type="button" data-bs-target="#${carousel_id}" data-bs-slide-to="${repeat/group/index}" class="${python:'active' if repeat.group.start else ''}" />
         </div>

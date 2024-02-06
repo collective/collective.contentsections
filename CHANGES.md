@@ -4,7 +4,7 @@ Changelog
 1.0.0a22 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Remove bootstrap carousel ride. [sverbois]
 
 
 1.0.0a21 (2023-12-31)
