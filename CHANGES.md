@@ -6,6 +6,7 @@ Changelog
 
 - Remove bootstrap carousel ride. [sverbois]
 - Use h-100 class on card macro. [sverbois]
+- Add Section primary/secondary/black items to  section_css_classes taxonomy. [sverbois]
 
 
 1.0.0a21 (2023-12-31)
