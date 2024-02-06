@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0.0a22 (unreleased)
+1.0.0a22 (2024-02-06)
 ---------------------
 
 - Remove bootstrap carousel ride. [sverbois]
