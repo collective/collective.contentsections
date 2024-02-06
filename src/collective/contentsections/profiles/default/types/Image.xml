@@ -4,7 +4,12 @@
   <property name="global_allow">False</property>
 
   <property name="behaviors" purge="true">
-    <element value="collective.contentsections.namefromuuid"/>
+    <element value="collective.contentsections.namefromuuid" />
+  </property>
+
+  <property name="default_view">element_view</property>
+  <property name="view_methods">
+    <element value="element_view" />
   </property>
 
 </object>

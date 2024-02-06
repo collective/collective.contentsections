@@ -17,4 +17,9 @@
         <element value="plone.locking" />
     </property>
 
+    <property name="default_view">element_view</property>
+    <property name="view_methods">
+        <element value="element_view" />
+    </property>
+
 </object>

@@ -3,16 +3,14 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     >
 
-  <include package=".contact" />
-  <include package=".file" />
-  <include package=".image" />
-  <include package=".link" />
-  <include package=".location" />
+  <class class="plone.app.contenttypes.content.Link">
+    <implements interface="collective.contentsections.contents.base.IElement" />
+  </class>
 
   <browser:page
       name="element_view"
-      for=".base.IElement"
-      class=".base.ElementView"
+      for="plone.app.contenttypes.interfaces.ILink"
+      class=".views.ElementView"
       permission="zope2.View"
       layer="collective.contentsections.interfaces.IBrowserLayer"
       />

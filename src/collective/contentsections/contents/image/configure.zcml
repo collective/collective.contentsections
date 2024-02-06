@@ -1,0 +1,10 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    >
+
+  <class class="plone.app.contenttypes.content.Image">
+    <implements interface="collective.contentsections.contents.base.IElement" />
+  </class>
+
+</configure>

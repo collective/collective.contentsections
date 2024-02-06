@@ -4,6 +4,7 @@ from plone.supermodel import model
 from zope.interface import implementer
 
 from collective.contentsections import _
+from collective.contentsections.contents.base import IElement
 
 
 class IContact(model.Schema):
@@ -31,6 +32,6 @@ class IContact(model.Schema):
     )
 
 
-@implementer(IContact)
+@implementer(IContact, IElement)
 class Contact(Item):
     """Contact content type"""
