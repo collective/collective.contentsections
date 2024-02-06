@@ -5,6 +5,7 @@ Changelog
 ---------------------
 
 - Remove bootstrap carousel ride. [sverbois]
+- Use h-100 class on card macro. [sverbois]
 
 
 1.0.0a21 (2023-12-31)

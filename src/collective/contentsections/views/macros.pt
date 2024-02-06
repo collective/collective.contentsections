@@ -1,4 +1,4 @@
-<div class="card" metal:define-macro="card">
+<div class="card h-100" metal:define-macro="card">
   <img tal:condition="not:context/hide_item_lead_images" src="${item/lead_image_url}" class="card-img-top" alt="Lead image" />
   <?python
       show_title = not context.hide_item_titles
