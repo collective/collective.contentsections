@@ -12,12 +12,13 @@ start: bin/instance
 
 .PHONY: clean  # Clean development environment
 clean:
-	rm -r bin include lib parts pyvenv.cfg .installed.cfg
+	rm -r bin develop-eggs eggs include lib node_modules parts pyvenv.cfg .installed.cfg .python-version
 
 bin/instance: bin/buildout
 
 bin/buildout: bin/pip
-	bin/pip install -r https://dist.plone.org/release/6.0.6/requirements.txt
+	bin/pip install -r https://dist.plone.org/release/6.1.0/requirements.txt
 
 bin/pip:
-	python3.11 -m venv .
+	pyenv local 3.12
+	python3.12 -m venv .

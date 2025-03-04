@@ -1,10 +1,10 @@
 Changelog
 =========
 
-1.0.0a23 (unreleased)
+2.0.0a1 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Use Plone 6.1 and Python 3.12 in development buildout. [sverbois]
 
 
 1.0.0a22 (2024-02-06)
