@@ -1,17 +1,16 @@
-from collective.contentsections import _
-from collective.contentsections.sections.base import ISection
-from collective.contentsections.sections.base import Section
 from collective.z3cform.datagridfield.datagridfield import DataGridFieldFactory
 from collective.z3cform.datagridfield.row import DictRow
 from plone import schema
 from plone.app.vocabularies.catalog import StaticCatalogVocabulary
-from plone.app.z3cform.widget import AjaxSelectFieldWidget
-from plone.app.z3cform.widget import SelectFieldWidget
+from plone.app.z3cform.widgets.select import AjaxSelectFieldWidget
+from plone.app.z3cform.widgets.select import SelectFieldWidget
 from plone.autoform import directives
-from plone.supermodel import model
-from z3c.relationfield.schema import RelationChoice
 from zope.interface import Interface
 from zope.interface import implementer
+
+from collective.contentsections import _
+from collective.contentsections.sections.base import ISection
+from collective.contentsections.sections.base import Section
 
 
 class ICard(Interface):
@@ -80,7 +79,7 @@ class ICardsSection(ISection):
         default=3,
     )
     card_link_text = schema.TextLine(
-        title=_(u"Card link text"),
+        title=_("Card link text"),
         required=False,
     )
 

@@ -1,21 +1,22 @@
-from collective.contentsections import _
-from collective.contentsections.sections.base import ISection
-from collective.contentsections.sections.base import Section
 from plone import schema
 from plone.autoform import directives
 from zope.interface import implementer
+
+from collective.contentsections import _
+from collective.contentsections.sections.base import ISection
+from collective.contentsections.sections.base import Section
 
 
 class ITextSection(ISection):
     """TextSection schema"""
 
     lead_image_alignment = schema.Choice(
-        title=_(u"Lead image alignment"),
+        title=_("Lead image alignment"),
         vocabulary="collective.contentsections.ImageAlignments",
         default="right",
     )
     lead_image_scale = schema.Choice(
-        title=_(u"Lead image scale"),
+        title=_("Lead image scale"),
         vocabulary="plone.app.vocabularies.ImagesScales",
         default="preview",
     )

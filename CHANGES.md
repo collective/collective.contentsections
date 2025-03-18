@@ -8,6 +8,7 @@ Changelog
 - Remove portal_properties access. [sverbois]
 - Add a plone.distibution with demo content. [sverbois]
 - Update TinyMCE registry profile to TinyMCE 7. [sverbois]
+- Remove import deprecation warning. [sverbois]
 
 
 1.0.0a22 (2024-02-06)
