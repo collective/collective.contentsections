@@ -1,0 +1,31 @@
+{
+  "@id": "/demo/event-with-sections/imagessection-ec627db95abd4a308fd72dd69e7cc738/img_6149.jpeg",
+  "@type": "Image",
+  "UID": "5411cfb98ce44a63a96824206cafc64b",
+  "allow_discussion": null,
+  "created": "2021-12-17T17:27:11+00:00",
+  "description": "",
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "img_6149.jpeg",
+  "image": {
+    "blob_path": "5411cfb98ce44a63a96824206cafc64b/image/IMG_6149.jpeg",
+    "content-type": "image/jpeg",
+    "filename": "IMG_6149.jpeg",
+    "height": 3024,
+    "size": 3851910,
+    "width": 4032
+  },
+  "is_folderish": false,
+  "language": "##DEFAULT##",
+  "layout": "element_view",
+  "lock": {},
+  "modified": "2025-03-18T12:39:09+00:00",
+  "review_state": null,
+  "title": "IMG_6149.jpeg",
+  "type_title": "Image",
+  "version": "current",
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
+}

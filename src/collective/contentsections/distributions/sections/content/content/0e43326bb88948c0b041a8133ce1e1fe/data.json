@@ -1,0 +1,78 @@
+{
+  "@id": "/demo/news/index",
+  "@type": "Collection",
+  "UID": "0e43326bb88948c0b041a8133ce1e1fe",
+  "allow_discussion": null,
+  "contributors": [],
+  "created": "2021-12-14T08:55:37+00:00",
+  "creators": [
+    "admin"
+  ],
+  "customViewFields": [
+    "Title",
+    "Creator",
+    "Type",
+    "ModificationDate"
+  ],
+  "description": "",
+  "effective": "2021-12-14T09:57:00",
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "index",
+  "is_folderish": false,
+  "item_count": 30,
+  "items_total": 5,
+  "language": "##DEFAULT##",
+  "layout": "summary_view",
+  "limit": 1000,
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-03-18T12:46:58+00:00",
+  "query": [
+    {
+      "i": "path",
+      "o": "plone.app.querystring.operation.string.relativePath",
+      "v": "..::1::1"
+    },
+    {
+      "i": "portal_type",
+      "o": "plone.app.querystring.operation.selection.any",
+      "v": [
+        "collective.contentsections.NewsPage"
+      ]
+    }
+  ],
+  "review_state": "published",
+  "rights": null,
+  "sort_on": "created",
+  "sort_reversed": true,
+  "subjects": [],
+  "text": null,
+  "title": "News collection",
+  "type_title": "Collection",
+  "version": "current",
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2021-12-14T08:55:37+00:00"
+      },
+      {
+        "action": "publish",
+        "actor": "admin",
+        "comments": "",
+        "review_state": "published",
+        "time": "2021-12-14T08:57:12+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}

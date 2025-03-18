@@ -1,0 +1,64 @@
+{
+  "@id": "/demo/event-with-sections",
+  "@type": "collective.contentsections.EventPage",
+  "UID": "79ee6ccb92b44af9bf6c897c709ef7fc",
+  "allow_discussion": null,
+  "attendees": [],
+  "changeNote": "",
+  "contact_email": "sebastien.verbois@gmail.com",
+  "contact_name": "S\u00e9bastien Verbois",
+  "contact_phone": null,
+  "created": "2021-12-17T17:09:26+00:00",
+  "description": "The standard \"Event\" content type is replaced by a folderish \"Event page\" content type which can contain content sections.",
+  "effective": "2021-12-17T18:49:00",
+  "end": "2022-04-26T22:00:00+00:00",
+  "event_url": "https://www.plone.org",
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "hide_title": false,
+  "id": "event-with-sections",
+  "image": null,
+  "image_caption": null,
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "page_view",
+  "location": "Durnal, Belgium",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-03-18T13:08:08+00:00",
+  "open_end": false,
+  "recurrence": null,
+  "review_state": "published",
+  "start": "2022-04-26T22:00:00+00:00",
+  "subjects": [],
+  "sync_uid": null,
+  "title": "Event page with sections",
+  "type_title": "Event page",
+  "version": "current",
+  "versioning_enabled": true,
+  "whole_day": true,
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2021-12-17T17:09:26+00:00"
+      },
+      {
+        "action": "publish",
+        "actor": "admin",
+        "comments": "",
+        "review_state": "published",
+        "time": "2021-12-17T17:49:20+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}

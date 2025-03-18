@@ -1,0 +1,49 @@
+{
+  "@id": "/demo/page-with-text-sections/textsection-bfcc11e6f6b44f41bd6a9abc580d4ca4",
+  "@type": "collective.contentsections.TextSection",
+  "UID": "75e32b022a3047b6ac79c71fa08ac748",
+  "allow_discussion": null,
+  "background_image": {
+    "blob_path": "75e32b022a3047b6ac79c71fa08ac748/background_image/chat07.jpg",
+    "content-type": "image/jpeg",
+    "filename": "chat07.jpg",
+    "height": 720,
+    "size": 108865,
+    "width": 1280
+  },
+  "changeNote": "",
+  "container_width": 12,
+  "created": "2021-12-16T15:43:05+00:00",
+  "css_classes": [
+    "text-white"
+  ],
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "hide_title": false,
+  "id": "textsection-bfcc11e6f6b44f41bd6a9abc580d4ca4",
+  "image": null,
+  "image_caption": null,
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "view",
+  "lead_image_alignment": "right",
+  "lead_image_scale": "preview",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2021-12-22T16:48:17+00:00",
+  "review_state": null,
+  "text": {
+    "content-type": "text/html",
+    "data": "<p>Tu autem, Fanni, quod mihi tantum tribui dicis quantum ego nec adgnosco nec postulo, facis amice; sed, ut mihi videris, non recte iudicas de Catone; aut enim nemo, quod quidem magis credo, aut si quisquam, ille sapiens fuit. Quo modo, ut alia omittam, mortem filii tulit! memineram Paulum, videram Galum, sed hi in pueris, Cato in perfecto et spectato viro.</p>\r\n<p>Has autem provincias, quas Orontes ambiens amnis imosque pedes Cassii montis illius celsi praetermeans funditur in Parthenium mare, Gnaeus Pompeius superato Tigrane regnis Armeniorum abstractas dicioni Romanae coniunxit.</p>\r\n<p>Et licet quocumque oculos flexeris feminas adfatim multas spectare cirratas, quibus, si nupsissent, per aetatem ter iam nixus poterat suppetere liberorum, ad usque taedium pedibus pavimenta tergentes iactari volucriter gyris, dum exprimunt innumera simulacra, quae finxere fabulae theatrales.</p>",
+    "encoding": "utf-8"
+  },
+  "title": "Text section four",
+  "type_title": "Text section",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
+}

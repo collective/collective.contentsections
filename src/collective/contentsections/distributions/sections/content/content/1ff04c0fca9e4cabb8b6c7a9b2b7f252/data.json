@@ -1,0 +1,40 @@
+{
+  "@id": "/demo/page-with-text-sections/textsection-5762f05cb78b4e05a868336f5d6fab9c",
+  "@type": "collective.contentsections.TextSection",
+  "UID": "1ff04c0fca9e4cabb8b6c7a9b2b7f252",
+  "allow_discussion": null,
+  "background_image": null,
+  "changeNote": "",
+  "container_width": 12,
+  "created": "2021-12-16T17:06:16+00:00",
+  "css_classes": [],
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "hide_title": false,
+  "id": "textsection-5762f05cb78b4e05a868336f5d6fab9c",
+  "image": null,
+  "image_caption": null,
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "view",
+  "lead_image_alignment": "right",
+  "lead_image_scale": "preview",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-03-18T12:28:30+00:00",
+  "review_state": null,
+  "text": {
+    "content-type": "text/html",
+    "data": "<p>Haec igitur Epicuri non probo, inquam. De cetero vellem equidem aut ipse doctrinis fuisset instructior est enim, quod tibi ita videri necesse est, non satis politus iis artibus, quas qui tenent, eruditi appellantur aut ne deterruisset alios a studiis. quamquam te quidem <a href=\"https://www.plone.org\" data-linktype=\"external\" data-val=\"https://www.plone.org\">video minime esse</a> deterritum.</p>\r\n<p>Verum ad istam omnem orationem brevis est defensio. Nam quoad aetas M. Caeli dare potuit isti suspicioni locum, fuit primum ipsius pudore, deinde etiam patris diligentia disciplinaque munita. Qui ut huic virilem togam dedit\u0161nihil dicam hoc loco de me; tantum sit, quantum vos existimatis; hoc dicam, hunc a patre continuo ad me esse deductum; nemo hunc M. Caelium in illo aetatis flore vidit nisi aut cum patre aut mecum aut in M. Crassi castissima domo, cum artibus honestissimis erudiretur.</p>\r\n<table border=\"1\" class=\"table table-bordered\" style=\"width: 100%; height: 74px;\">\r\n<tbody>\r\n<tr style=\"height: 37px;\">\r\n<th style=\"width: 20%; height: 37px;\">2015</th>\r\n<th style=\"width: 20%; height: 37px;\">2016</th>\r\n<th style=\"width: 20%; height: 37px;\">2017</th>\r\n<th style=\"width: 20%; height: 37px;\">2018</th>\r\n<th style=\"width: 20%; height: 37px;\">2019</th>\r\n</tr>\r\n<tr style=\"height: 37px;\">\r\n<td scope=\"row\" style=\"width: 20%; height: 37px;\">Bucharest</td>\r\n<td style=\"width: 20%; height: 37px;\">Boston</td>\r\n<td style=\"width: 20%; height: 37px;\">Barcelona</td>\r\n<td style=\"width: 20%; height: 37px;\">Tokyo</td>\r\n<td scope=\"row\" style=\"width: 20%; height: 37px;\">Ferrara</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+    "encoding": "utf-8"
+  },
+  "title": "Text section five",
+  "type_title": "Text section",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
+}

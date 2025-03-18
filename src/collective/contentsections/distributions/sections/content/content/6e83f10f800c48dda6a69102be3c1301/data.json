@@ -1,0 +1,52 @@
+{
+  "@id": "/demo/page-with-sections",
+  "@type": "collective.contentsections.BasicPage",
+  "UID": "6e83f10f800c48dda6a69102be3c1301",
+  "allow_discussion": null,
+  "changeNote": "",
+  "created": "2021-12-14T09:15:04+00:00",
+  "description": "This page contains some sections.",
+  "effective": "2021-12-14T11:31:00",
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "hide_title": false,
+  "id": "page-with-sections",
+  "image": null,
+  "image_caption": null,
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "page_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-03-18T13:30:08+00:00",
+  "review_state": "published",
+  "subjects": [],
+  "title": "Basic page with other sections",
+  "type_title": "Basic page",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2021-12-14T09:15:04+00:00"
+      },
+      {
+        "action": "publish",
+        "actor": "admin",
+        "comments": "",
+        "review_state": "published",
+        "time": "2021-12-14T10:31:02+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}

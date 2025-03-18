@@ -1,0 +1,32 @@
+{
+  "@id": "/demo/event-with-sections/htmlsection-3151d126a8fe43419c8fefcbc0e3a9d9",
+  "@type": "collective.contentsections.HTMLSection",
+  "UID": "93258fd28e6d4f6c8aca75d3e2d9ea67",
+  "allow_discussion": null,
+  "background_image": null,
+  "changeNote": "",
+  "container_width": 12,
+  "created": "2021-12-22T14:21:15+00:00",
+  "css_classes": [],
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "hide_title": false,
+  "html": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/_yaYy86jdk8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+  "id": "htmlsection-3151d126a8fe43419c8fefcbc0e3a9d9",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-03-18T12:39:09+00:00",
+  "review_state": null,
+  "title": "HTML section with youtube iframe",
+  "type_title": "HTML section",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
+}

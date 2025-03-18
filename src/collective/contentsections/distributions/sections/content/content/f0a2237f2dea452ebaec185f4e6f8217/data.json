@@ -1,0 +1,50 @@
+{
+  "@id": "/demo/news",
+  "@type": "Folder",
+  "UID": "f0a2237f2dea452ebaec185f4e6f8217",
+  "allow_discussion": null,
+  "contributors": [],
+  "created": "2025-03-18T12:42:02+00:00",
+  "creators": [
+    "admin"
+  ],
+  "description": "",
+  "effective": "2025-03-18T13:42:00",
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "news",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "listing_view",
+  "lock": {},
+  "modified": "2025-03-18T13:21:38+00:00",
+  "nextPreviousEnabled": false,
+  "review_state": "published",
+  "rights": null,
+  "subjects": [],
+  "title": "News items for collection sections",
+  "type_title": "Folder",
+  "version": "current",
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2025-03-18T12:42:02+00:00"
+      },
+      {
+        "action": "publish",
+        "actor": "admin",
+        "comments": "",
+        "review_state": "published",
+        "time": "2025-03-18T12:42:05+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}

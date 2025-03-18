@@ -49,6 +49,7 @@ setup(
         "collective.taxonomy >= 3.1.5",
         "collective.z3cform.datagridfield >= 3.0.3",
         "plone.api",
+        "plone.distribution",
         "plone.formwidget.geolocation >= 3.0.7",
         "setuptools",
     ],

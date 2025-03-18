@@ -1,0 +1,49 @@
+{
+  "@id": "/demo/page-with-text-sections/textsection-9807367fb0004a969f017e6a7c1202cc",
+  "@type": "collective.contentsections.TextSection",
+  "UID": "d3d4c1cca1c84890b5209d8ecd2bb80c",
+  "allow_discussion": null,
+  "background_image": null,
+  "changeNote": "",
+  "container_width": 12,
+  "created": "2021-12-16T15:42:14+00:00",
+  "css_classes": [
+    "text-center"
+  ],
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "hide_title": false,
+  "id": "textsection-9807367fb0004a969f017e6a7c1202cc",
+  "image": {
+    "blob_path": "d3d4c1cca1c84890b5209d8ecd2bb80c/image/chat06.jpg",
+    "content-type": "image/jpeg",
+    "filename": "chat06.jpg",
+    "height": 720,
+    "size": 212130,
+    "width": 1280
+  },
+  "image_caption": null,
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "view",
+  "lead_image_alignment": "bottom",
+  "lead_image_scale": "large",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-03-18T12:27:54+00:00",
+  "review_state": null,
+  "text": {
+    "content-type": "text/html",
+    "data": "<p>Accedat huc suavitas quaedam oportet sermonum atque morum, haudquaquam mediocre condimentum amicitiae. Tristitia autem et in omni re severitas habet illa quidem gravitatem, sed amicitia remissior esse debet et liberior et dulcior et ad omnem comitatem facilitatemque proclivior.</p>\r\n<p>Metuentes igitur idem latrones Lycaoniam magna parte campestrem cum se inpares nostris fore congressione stataria documentis frequentibus scirent, tramitibus deviis petivere Pamphyliam diu quidem intactam sed timore populationum et caedium, milite per omnia diffuso propinqua, magnis undique praesidiis conmunitam.</p>\r\n<p>Inter haec Orfitus praefecti potestate regebat urbem aeternam ultra modum delatae dignitatis sese efferens insolenter, vir quidem prudens et forensium negotiorum oppido gnarus, sed splendore liberalium doctrinarum minus quam nobilem decuerat institutus, quo administrante seditiones sunt concitatae graves ob inopiam vini: huius avidis usibus vulgus intentum ad motus asperos excitatur et crebros.</p>",
+    "encoding": "utf-8"
+  },
+  "title": "Text section three",
+  "type_title": "Text section",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
+}

@@ -1,0 +1,30 @@
+{
+  "@id": "/demo/page-with-sections/locationssection-41c3bbdff4cf4d4585f764d4024b4b9a",
+  "@type": "collective.contentsections.LocationsSection",
+  "UID": "4544ab042b0f48c3827850a56019fdd4",
+  "allow_discussion": null,
+  "background_image": null,
+  "container_width": 12,
+  "created": "2025-03-18T12:33:40+00:00",
+  "css_classes": [],
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "hide_title": false,
+  "id": "locationssection-41c3bbdff4cf4d4585f764d4024b4b9a",
+  "initial_zoom_level": 15,
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-03-18T12:34:39+00:00",
+  "review_state": null,
+  "title": "A locations section",
+  "type_title": "Locations section",
+  "version": "current",
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
+}

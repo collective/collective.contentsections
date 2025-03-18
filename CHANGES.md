@@ -6,6 +6,7 @@ Changelog
 
 - Use Plone 6.1 and Python 3.12 in development buildout. [sverbois]
 - Remove portal_properties access. [sverbois]
+- Add a plone.distibution with demo content. [sverbois]
 
 
 1.0.0a22 (2024-02-06)
