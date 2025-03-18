@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<portlets>
+    <assignment name="navigation" category="context" key="/" manager="plone.leftcolumn" type="portlets.Navigation" visible="False" />
+    <assignment name="events" category="context" key="/" manager="plone.rightcolumn" type="portlets.Events" visible="False" />
+</portlets>
