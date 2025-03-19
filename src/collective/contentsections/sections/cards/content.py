@@ -43,7 +43,7 @@ class ICard(Interface):
     )
     relation_uid = schema.Choice(
         title=_("Selection"),
-        vocabulary=StaticCatalogVocabulary({}),
+        vocabulary=StaticCatalogVocabulary({}, title_template="{brain.Type}: {brain.Title} at {path}"),
         required=False,
     )
 
@@ -51,17 +51,18 @@ class ICard(Interface):
     directives.widget("subtitle", placeholder=_("Card subtitle"))
     directives.widget("icon", SelectFieldWidget, pattern_options={"placeholder": _("Select an icon")})
 
-    # SEE https://training.plone.org/5/mastering-plone/relations.html?highlight=catalogsource#using-different-widgets-for-relations
-    directives.widget(
-        "relation_uid",
-        AjaxSelectFieldWidget,
-        vocabulary=StaticCatalogVocabulary({}, title_template="{brain.Type}: {brain.Title} at {path}"),
-        pattern_options={
-            "placeholder": _("Select a related content"),
-            "minimumInputLength": 3,
-            "ajax": {"quietMillis": 300},
-        },
-    )
+    # SEE https://6.docs.plone.org/backend/relations.html#relation-fields-without-relations
+    # Does not work in Plone 6.1
+    # directives.widget(
+    #     "relation_uid",
+    #     AjaxSelectFieldWidget,
+    #     vocabulary=StaticCatalogVocabulary({}, title_template="{brain.Type}: {brain.Title} at {path}"),
+    #     pattern_options={
+    #         "placeholder": _("Select a related content"),
+    #         "minimumInputLength": 3,
+    #         "ajax": {"quietMillis": 300},
+    #     },
+    # )
 
 
 class ICardsSection(ISection):

@@ -10,6 +10,7 @@ Changelog
 - Update TinyMCE registry profile to TinyMCE 7. [sverbois]
 - Remove import deprecation warning. [sverbois]
 - Use h-100 class on cards section. [sverbois]
+- Disable AjaxSelectFieldWidget on relation_uid field of cards section (Not working on Plone 6.1). [sverbois]
 
 
 1.0.0a22 (2024-02-06)
