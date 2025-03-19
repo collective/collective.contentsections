@@ -1,21 +1,22 @@
-from collective.contentsections import _
-from collective.contentsections.sections.base import IBaseLinksSection
-from collective.contentsections.sections.base import Section
 from plone.app.vocabularies.catalog import StaticCatalogVocabulary
-from plone.app.z3cform.widget import AjaxSelectFieldWidget
+from plone.app.z3cform.widgets.select import AjaxSelectFieldWidget
 from plone.autoform import directives
 from z3c.relationfield.schema import RelationChoice
 from z3c.relationfield.schema import RelationList
 from zope.interface import implementer
+
+from collective.contentsections import _
+from collective.contentsections.sections.base import IBaseLinksSection
+from collective.contentsections.sections.base import Section
 
 
 class ISelectionSection(IBaseLinksSection):
     """SelectionSection schema"""
 
     relations = RelationList(
-        title=_(u"Items"),
+        title=_("Items"),
         value_type=RelationChoice(
-            title=_(u"Item"),
+            title=_("Item"),
             vocabulary=StaticCatalogVocabulary({}),
         ),
     )

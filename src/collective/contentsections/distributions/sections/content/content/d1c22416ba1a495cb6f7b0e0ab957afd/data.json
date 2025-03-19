@@ -1,0 +1,52 @@
+{
+  "@id": "/demo/page-with-collection-sections",
+  "@type": "collective.contentsections.BasicPage",
+  "UID": "d1c22416ba1a495cb6f7b0e0ab957afd",
+  "allow_discussion": null,
+  "changeNote": "",
+  "created": "2021-12-18T12:58:28+00:00",
+  "description": "This page contains Collection sections with different display views",
+  "effective": "2021-12-18T13:58:00",
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "hide_title": false,
+  "id": "page-with-collection-sections",
+  "image": null,
+  "image_caption": null,
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "page_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-03-18T13:08:08+00:00",
+  "review_state": "published",
+  "subjects": [],
+  "title": "Basic page with collection sections",
+  "type_title": "Basic page",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2021-12-18T12:58:28+00:00"
+      },
+      {
+        "action": "publish",
+        "actor": "admin",
+        "comments": "",
+        "review_state": "published",
+        "time": "2021-12-18T12:58:32+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}

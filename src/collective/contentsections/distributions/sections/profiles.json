@@ -1,0 +1,4 @@
+{
+  "base": ["plone.app.contenttypes:default", "plonetheme.barceloneta:default", "collective.contentsections:default"],
+  "content": []
+}

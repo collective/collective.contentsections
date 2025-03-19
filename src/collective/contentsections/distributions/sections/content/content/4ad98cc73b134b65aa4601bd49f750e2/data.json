@@ -1,0 +1,63 @@
+{
+  "@id": "/demo/page-with-sections/cardssection-02511681820c4d8891eee5e2e1a4a39e",
+  "@type": "collective.contentsections.CardsSection",
+  "UID": "4ad98cc73b134b65aa4601bd49f750e2",
+  "allow_discussion": null,
+  "background_image": null,
+  "card_link_text": null,
+  "cards": [
+    {
+      "description": "Join the 17th edition of Plone Conference in the amazing Ferrara and gain an unparalleled opportunity to discover insights from the inspiring keynote speakers and exchange experiences with designers and developers from all over the world.",
+      "icon": "countryflag/it",
+      "relation_uid": null,
+      "subtitle": "2019",
+      "title": "Ferrara"
+    },
+    {
+      "description": "We are pleased to present you the 16th Plone Conference in Tokyo. Tokyo is a unique, exciting city of modern and traditional charms. It is an honor for us to host this global event as first one in Asia as well.  Whole training, talks, sprint will be held in English language.",
+      "icon": "countryflag/jp",
+      "relation_uid": null,
+      "subtitle": "2018",
+      "title": "Tokyo"
+    },
+    {
+      "description": "The conference will be held at Universitat Polit\u00e8cnica de Catalunya - Barcelona Tech, the largest engineering university in Catalonia \u2014 also encompassing other disciplines such as mathematics and architecture \u2014 with more    than 35000 students and 5000 staff members.",
+      "icon": "languageflag/ca",
+      "relation_uid": null,
+      "subtitle": "2017",
+      "title": "Barcelona"
+    },
+    {
+      "description": "fdqdsfqs",
+      "icon": "",
+      "relation_uid": null,
+      "subtitle": "qsfqqsfdq",
+      "title": "fsdf"
+    }
+  ],
+  "changeNote": "",
+  "container_width": 12,
+  "created": "2021-12-14T09:26:17+00:00",
+  "css_classes": [],
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "group_size": 3,
+  "hide_title": false,
+  "id": "cardssection-02511681820c4d8891eee5e2e1a4a39e",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-03-18T13:30:08+00:00",
+  "review_state": null,
+  "title": "Cards section",
+  "type_title": "Cards section",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
+}

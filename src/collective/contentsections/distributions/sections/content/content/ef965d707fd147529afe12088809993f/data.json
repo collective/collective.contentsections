@@ -1,0 +1,50 @@
+{
+  "@id": "/demo",
+  "@type": "Folder",
+  "UID": "ef965d707fd147529afe12088809993f",
+  "allow_discussion": null,
+  "contributors": [],
+  "created": "2021-12-14T09:00:08+00:00",
+  "creators": [
+    "admin"
+  ],
+  "description": "",
+  "effective": "2021-12-14T10:00:38",
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "demo",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "summary_view",
+  "lock": {},
+  "modified": "2025-03-18T15:26:24+00:00",
+  "nextPreviousEnabled": false,
+  "review_state": "published",
+  "rights": null,
+  "subjects": [],
+  "title": "Demo of collective.contentsections",
+  "type_title": "Folder",
+  "version": "current",
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2021-12-14T09:00:08+00:00"
+      },
+      {
+        "action": "publish",
+        "actor": "admin",
+        "comments": "",
+        "review_state": "published",
+        "time": "2021-12-14T09:00:38+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}

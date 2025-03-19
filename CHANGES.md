@@ -1,10 +1,16 @@
 Changelog
 =========
 
-1.0.0a23 (unreleased)
+2.0.0a1 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Use Plone 6.1 and Python 3.12 in development buildout. [sverbois]
+- Remove portal_properties access. [sverbois]
+- Add a plone.distibution with demo content. [sverbois]
+- Update TinyMCE registry profile to TinyMCE 7. [sverbois]
+- Remove import deprecation warning. [sverbois]
+- Use h-100 class on cards section. [sverbois]
+- Disable AjaxSelectFieldWidget on relation_uid field of cards section (Not working on Plone 6.1). [sverbois]
 
 
 1.0.0a22 (2024-02-06)

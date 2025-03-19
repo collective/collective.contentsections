@@ -1,13 +1,14 @@
-from collective.contentsections.pages import IPage
-from collective.contentsections.sections import ICardsSection
-from collective.contentsections.sections import ISection
-from collective.contentsections.sections import ITextSection
 from plone import api
 from plone.app.contenttypes.behaviors.richtext import IRichText
 from plone.app.contenttypes.indexers import SearchableText
 from plone.app.contenttypes.indexers import _unicode_save_string_concat
+from plone.base.utils import base_hasattr
 from plone.indexer.decorator import indexer
-from Products.CMFPlone.utils import base_hasattr
+
+from collective.contentsections.pages import IPage
+from collective.contentsections.sections import ICardsSection
+from collective.contentsections.sections import ISection
+from collective.contentsections.sections import ITextSection
 
 
 def get_title_and_description_terms(obj):

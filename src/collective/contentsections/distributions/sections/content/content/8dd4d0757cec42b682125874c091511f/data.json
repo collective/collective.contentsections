@@ -1,0 +1,49 @@
+{
+  "@id": "/demo/page-with-text-sections/textsection-8e7a141d7afe4fcfbb96b08157937a54",
+  "@type": "collective.contentsections.TextSection",
+  "UID": "8dd4d0757cec42b682125874c091511f",
+  "allow_discussion": null,
+  "background_image": null,
+  "changeNote": "",
+  "container_width": 12,
+  "created": "2021-12-16T15:40:30+00:00",
+  "css_classes": [
+    "bg-black text-white"
+  ],
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "hide_title": false,
+  "id": "textsection-8e7a141d7afe4fcfbb96b08157937a54",
+  "image": {
+    "blob_path": "8dd4d0757cec42b682125874c091511f/image/chat05.jpg",
+    "content-type": "image/jpeg",
+    "filename": "chat05.jpg",
+    "height": 720,
+    "size": 154085,
+    "width": 1280
+  },
+  "image_caption": null,
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "view",
+  "lead_image_alignment": "left",
+  "lead_image_scale": "mini",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-03-18T12:27:25+00:00",
+  "review_state": null,
+  "text": {
+    "content-type": "text/html",
+    "data": "<p>Erat autem diritatis eius hoc quoque indicium nec obscurum nec latens, quod ludicris cruentis delectabatur et in circo sex vel septem aliquotiens vetitis certaminibus pugilum vicissim se concidentium perfusorumque sanguine specie ut lucratus ingentia laetabatur.</p>\r\n<p>Isdem diebus Apollinaris Domitiani gener, paulo ante agens palatii Caesaris curam, ad Mesopotamiam missus a socero per militares numeros immodice scrutabatur, an quaedam altiora meditantis iam Galli secreta susceperint scripta, qui conpertis Antiochiae gestis per minorem Armeniam lapsus Constantinopolim petit exindeque per protectores retractus artissime tenebatur.</p>\r\n<p>Post haec Gallus Hierapolim profecturus ut expeditioni specie tenus adesset, Antiochensi plebi suppliciter obsecranti ut inediae dispelleret metum, quae per multas difficilisque causas adfore iam sperabatur, non ut mos est principibus, quorum diffusa potestas localibus subinde medetur aerumnis, disponi quicquam statuit vel ex provinciis alimenta transferri conterminis, sed consularem Syriae Theophilum prope adstantem ultima metuenti multitudini dedit id adsidue replicando quod invito rectore nullus egere poterit victu.</p>",
+    "encoding": "utf-8"
+  },
+  "title": "Text section two",
+  "type_title": "Text section",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
+}

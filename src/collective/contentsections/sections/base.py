@@ -1,5 +1,5 @@
 from plone import schema
-from plone.app.z3cform.widget import SelectFieldWidget
+from plone.app.z3cform.widgets.select import SelectFieldWidget
 from plone.autoform import directives
 from plone.dexterity.content import Container
 from plone.namedfile.field import NamedBlobImage

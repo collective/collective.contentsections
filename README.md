@@ -10,7 +10,7 @@ The plone site is seen as a folder hierarchy that contains pages.
 A page is a folderish content type composed of sections.
 A section can contain elements of the same type (File, Image, Link, Location, Contact). Folders, pages, sections and elements are all Dexterity content types.
 
-The section view view redirects to its position in its parent page view view.
+The section view redirects to its position in its parent page view.
 Section content types are hidden from research but their contents are indexed in the *SearchableText* index of their parent page.
 
 Images and files are seen as elements.
@@ -22,6 +22,12 @@ Here is a picture of the model.
 
 ![Archimate Model](https://raw.githubusercontent.com/sverbois/collective.contentsections/main/docs/images/model.png)
 
+Compatibility
+-------------
+
+- Releases 1.x of collective.contentsections are for Plone 6.0
+- Releases 2.x of collective.contentsections are for Plone 6.1
+
 Features
 --------
 
@@ -29,7 +35,7 @@ This product provides :
 
 - basic schema and class for section content types
 - *LeadIcon* vocabulary and behavior based on plone.icons registry records
-- *collective.taxonomy.section_css_classes* taxonomy for available Section CSS Classes
+- *collective.taxonomy.section_css_classes* taxonomy for available section CSS Classes
 - *TextSection* wich contains a simplified TinyMCE field and the behavior *LeadImage*. A *TextSection* contains only the lead image. No more image in TinyMCE text field.
 - *HTMLSection* to integrate iframe from youtube, google map and other iframe providers. No more video, iframe in TinyMCE text field.
 - *CollectionSection* to link a section with a collection.
@@ -48,8 +54,8 @@ This product fits Plone with:
 Demo content
 ------------
 
-The file https://github.com/sverbois/collective.contentsections/blob/main/demo.json
-contains some demo pages that can be loaded into the site using the *@@import_content* view of the *collective.exportimport* product. *collective.exportimport* is installed on the developement environment. You have to hide *Plone Leftcolumn* and *Plone Rightcolumn* portlets on your site to display the pages correctly.
+The *collective.contentsections* product add a *plone.distribution* "Plone Site (Content Sections)" with some demo pages.
+
 
 Choices/Beliefs
 ---------------

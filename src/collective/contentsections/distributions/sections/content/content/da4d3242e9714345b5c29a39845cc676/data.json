@@ -1,0 +1,32 @@
+{
+  "@id": "/demo/page-with-sections/locationssection-41c3bbdff4cf4d4585f764d4024b4b9a/location-08332458ac6449e4ac9f0e85099a8950",
+  "@type": "collective.contentsections.Location",
+  "UID": "da4d3242e9714345b5c29a39845cc676",
+  "allow_discussion": null,
+  "created": "2025-03-18T12:34:14+00:00",
+  "description": "",
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "geolocation": {
+    "latitude": 48.83630835952872,
+    "longitude": 6.746903392812951
+  },
+  "id": "location-08332458ac6449e4ac9f0e85099a8950",
+  "image": null,
+  "image_caption": null,
+  "is_folderish": false,
+  "language": "##DEFAULT##",
+  "layout": "element_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-03-18T12:34:14+00:00",
+  "review_state": null,
+  "title": "Rue du Plone",
+  "type_title": "Location",
+  "version": "current",
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
+}

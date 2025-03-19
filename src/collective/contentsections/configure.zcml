@@ -4,6 +4,17 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     >
 
+  <include package="Products.CMFPlone" />
+  <include package="plone.distribution" />
+
+  <plone:distribution
+      name="sections"
+      title="Plone Site (Content Sections)"
+      description="A Plone site where pages are built with sections."
+      directory="distributions/sections"
+      headless="false"
+      />
+
   <genericsetup:registerProfile
       name="default"
       title="collective.contentsections"

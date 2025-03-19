@@ -1,0 +1,32 @@
+{
+  "@id": "/demo/event-with-sections/htmlsection-6de3e6ee39bf466a8f496b049c89b430",
+  "@type": "collective.contentsections.HTMLSection",
+  "UID": "8c75b1d03ddc4763ac7badcb49b9b920",
+  "allow_discussion": null,
+  "background_image": null,
+  "changeNote": "",
+  "container_width": 12,
+  "created": "2021-12-17T17:33:32+00:00",
+  "css_classes": [],
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "hide_title": false,
+  "html": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1674.5810110166517!2d4.984803058367662!3d50.33504319486489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c1bc3ab7eb72db%3A0x72d19459ef714715!2sRue%20du%20Baty%20de%20Crock%2014%2C%205530%20Yvoir!5e1!3m2!1sfr!2sbe!4v1639762342794!5m2!1sfr!2sbe\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+  "id": "htmlsection-6de3e6ee39bf466a8f496b049c89b430",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-03-18T12:39:09+00:00",
+  "review_state": null,
+  "title": "HTML section with google map iframe",
+  "type_title": "HTML section",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
+}

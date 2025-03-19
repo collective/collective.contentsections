@@ -1,0 +1,31 @@
+{
+  "@id": "/demo/page-with-sections/imagessection-c871f245e95240c4b8f599348e0e0b19/chat07.jpg",
+  "@type": "Image",
+  "UID": "be82cb720d6b42ad8a893f96909f68e2",
+  "allow_discussion": null,
+  "created": "2021-12-17T19:36:15+00:00",
+  "description": "",
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "chat07.jpg",
+  "image": {
+    "blob_path": "be82cb720d6b42ad8a893f96909f68e2/image/chat07.jpg",
+    "content-type": "image/jpeg",
+    "filename": "chat07.jpg",
+    "height": 720,
+    "size": 108865,
+    "width": 1280
+  },
+  "is_folderish": false,
+  "language": "##DEFAULT##",
+  "layout": "element_view",
+  "lock": {},
+  "modified": "2021-12-17T19:36:15+00:00",
+  "review_state": null,
+  "title": "chat07.jpg",
+  "type_title": "Image",
+  "version": "current",
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
+}

@@ -1,17 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <registry>
 
-    <!-- See TinyMCE 5 version used in https://github.com/plone/mockup/blob/master/package.json -->
+    <!-- See TinyMCE 7 version used in https://github.com/plone/mockup/blob/master/package.json -->
 
-    <!-- See possible values in https://www.tiny.cloud/docs/plugins/opensource/ -->
-    <record name="plone.plugins"
-        interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
+    <!-- See format documentation in https://www.tiny.cloud/docs/tinymce/latest/content-formatting/ -->
+    <record name="plone.formats" interface="plone.base.interfaces.controlpanel.ITinyMCESchema">
+        <value>{}</value>
+    </record>
+    <record name="plone.header_styles" interface="plone.base.interfaces.controlpanel.ITinyMCESchema">
+        <value>
+            <element>|</element>
+        </value>
+    </record>
+    <record name="plone.inline_styles" interface="plone.base.interfaces.controlpanel.ITinyMCESchema">
+        <value>
+            <element>||</element>
+        </value>
+    </record>
+    <record name="plone.block_styles" interface="plone.base.interfaces.controlpanel.ITinyMCESchema">
+        <value>
+            <element>|</element>
+        </value>
+    </record>
+    <record name="plone.alignment_styles" interface="plone.base.interfaces.controlpanel.ITinyMCESchema">
+        <value>
+            <element>||</element>
+        </value>
+    </record>
+    <record name="plone.table_styles" interface="plone.base.interfaces.controlpanel.ITinyMCESchema">
+        <value>
+            <element>|</element>
+        </value>
+    </record>
+
+    <!-- See possible values in https://www.tiny.cloud/docs/tinymce/latest/plugins/#open-source-plugins -->
+    <record name="plone.plugins" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
         <value purge="true">
             <element>code</element>
+            <element>charmap</element>
             <element>fullscreen</element>
+            <element>hr</element>
+            <element>lists</element>
             <element>nonbreaking</element>
             <element>noneditable</element>
-            <element>lists</element>
             <element>paste</element>
             <element>searchreplace</element>
             <element>table</element>
@@ -22,101 +53,108 @@
         </value>
     </record>
 
-    <record name="plone.menubar"
-        interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
-        <value>
+    <!-- See possible values in https://www.tiny.cloud/docs/tinymce/latest/menus-configuration-options/#menubar -->
+    <record name="plone.menubar" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
+        <value purge="true">
             <element>edit</element>
             <element>format</element>
+            <element>insert</element>
             <element>table</element>
             <element>view</element>
         </value>
     </record>
 
-    <!-- See possible values in https://www.tiny.cloud/docs/advanced/available-menu-items/ -->
-    <record name="plone.menu"
-        interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
+    <!-- See possible values in https://www.tiny.cloud/docs/tinymce/latest/available-menu-items/ -->
+    <record name="plone.menu" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
         <value>
-            {
-            "edit": {
-            "title": "Edit",
-            "items": "undo redo | pastetext | searchreplace textpattern selectall | emoticons template"
+        {
+            "file": {
+                "title": "File",
+                "items": "" 
             },
-            "format": {
-            "title": "Formats",
-            "items": "formats"
+            "tools": {
+                "title": "Tools",
+                "items": ""
             },
             "table": {
-            "title": "Table",
-            "items": "inserttable tableprops deletetable | cell row column"
+                "title": "Table",
+                "items": ""
+            },
+            "edit": {
+                "title": "Edit",
+                "items": "undo redo | cut copy paste pastetext | selectall | searchreplace"
+            },
+            "format": {
+                "title": "Format",
+                "items": "styles | removeformat"
+            },
+            "insert": {
+                "title": "Insert",
+                "items": "charmap | hr | template"
             },
             "view": {
-            "title": "View",
-            "items": "fullscreen code visualblocks visualchars"
+                "title": "View",
+                "items": "fullscreen code | visualblocks visualchars"
             }
-            }
+        }
         </value>
     </record>
 
-    <!-- See possible values in https://www.tiny.cloud/docs/advanced/available-toolbar-buttons/ -->
-    <record name="plone.toolbar"
-        interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
-        <value>undo redo | h3 h4 | bold italic | bullist numlist | plonelink unlink</value>
+    <!-- See possible values in https://www.tiny.cloud/docs/tinymce/latest/available-toolbar-buttons/ -->
+    <record name="plone.toolbar" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
+        <value>undo redo | h3 h4 | bold italic | bullist numlist | plonelink unlink | table</value>
     </record>
 
-    
-    <!-- See options in https://www.tiny.cloud/docs/plugins/opensource/paste/#paste_as_text -->
-    <!-- See style_formats options in https://www.tiny.cloud/docs/configure/editor-appearance/#style_formats -->
-    <!-- See table plugin options in https://www.tiny.cloud/docs/plugins/opensource/table/ -->
-    <record name="plone.other_settings"
-        interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
+
+    <!-- See paste_as_text options in https://www.tiny.cloud/docs/tinymce/latest/copy-and-paste/#paste_as_text -->
+    <!-- See style_formats options in https://www.tiny.cloud/docs/tinymce/latest/user-formatting-options/#style_formats -->
+    <!-- See default table options in https://www.tiny.cloud/docs/tinymce/latest/table-options/ -->
+    <!-- See plugin table options in https://www.tiny.cloud/docs/tinymce/latest/table/ -->
+    <record name="plone.other_settings" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
         <value>
-            {
+        {
             "paste_as_text": true,
-
             "style_formats": [
-            { "title": "Headers", "items": [
-            { "title": "Heading 2", "block": "h2"},
-            { "title": "Heading 3", "block": "h3" },
-            { "title": "Heading 4", "block": "h4" },
-            { "title": "Heading 5", "block": "h5" },
-            { "title": "Heading 6", "block": "h6" }
-            ]},
-            { "title": "Blocks", "items": [
-            { "title": "Paragraph", "block": "p"},
-            { "title": "Blockquote", "block": "blockquote"},
-            { "title": "Mark", "block": "mark"},
-            { "title": "Pre", "block": "pre"},
-            { "title": "Div", "block": "div"}
-            ]},
-            { "title": "Inline", "items": [
-            { "title": "Bold", "inline": "bold" },
-            { "title": "Italic", "inline": "em" },
-            { "title": "Superscript", "inline": "sup" },
-            { "title": "Subscript", "inline": "sub" },
-            { "title": "Code", "inline": "code" }
-            ]}
+                { "title": "Headers", "items": [
+                    { "title": "Heading 2", "format": "h2"},
+                    { "title": "Heading 3", "format": "h3" },
+                    { "title": "Heading 4", "format": "h4" },
+                    { "title": "Heading 5", "format": "h5" }
+                ]},
+                { "title": "Blocks", "items": [
+                    { "title": "Paragraph", "format": "p"},
+                    { "title": "Mark", "block": "mark"},
+                    { "title": "Pre", "block": "pre"},
+                    { "title": "Div", "block": "div"}
+                ]},
+                { "title": "Inline", "items": [
+                    { "title": "Bold", "format": "bold", "icon": "bold"},
+                    { "title": "Italic", "format": "italic", "icon": "italic"},
+                    { "title": "Superscript", "format": "superscript", "icon": "superscript"},
+                    { "title": "Subscript", "format": "subscript", "icon": "subscript"},
+                    { "title": "Code", "format": "code", "icon": "sourcecode"}
+                ]}
             ],
-
             "table_sizing_mode": "relative",
             "table_appearance_options": false,
             "table_advtab": false,
             "table_row_advtab": false,
             "table_cell_advtab": false,
             "table_default_styles": {
-            "width": "100%"
+                "width": "100%"
             },
             "table_class_list": [
-            {"title": "Standard", "value": "table"},
-            {"title": "Striped", "value": "table table-striped"},
-            {"title": "Bordered", "value": "table table-bordered "}
+                {"title": "Standard", "value": "table"},
+                {"title": "Striped", "value": "table table-striped"},
+                {"title": "Bordered", "value": "table table-bordered "}
             ],
             "table_row_class_list": [
-            {"title": "None", "value": ""},
-            {"title": "Important row", "value": "important"}
+                {"title": "None", "value": ""},
+                {"title": "Important row", "value": "important"}
             ],
             "table_cell_class_list": [
-            {"title": "None", "value": ""},
-            {"title": "Important cell", "value": "important"}
+                {"title": "None", "value": ""},
+                {"title": "Important cell", "value": "important"}
             ]
             }
         </value>

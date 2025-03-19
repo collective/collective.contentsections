@@ -1,5 +1,3 @@
-from plone import schema
-from plone.autoform import directives
 from zope.interface import implementer
 
 from collective.contentsections import _
