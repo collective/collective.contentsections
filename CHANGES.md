@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0.0a1 (unreleased)
+## 2.0.0a1 (2025-03-19)
 ---------------------
 
 - Use Plone 6.1 and Python 3.12 in development buildout. [sverbois]
