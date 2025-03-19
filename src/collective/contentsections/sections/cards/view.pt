@@ -3,7 +3,7 @@
     <metal:content-core define-macro="content-core" tal:define="icons python:context.restrictedTraverse('@@iconresolver');">
       <div class="row row-cols-1 row-cols-md-${context/group_size} g-4">
         <div class="col" tal:repeat="item view/items">
-          <div class="card">
+          <div class="card h-100">
             <div class="card-icon" style="font-size: 50px" tal:condition="item/icon">
               <tal:icon replace="structure python:icons.tag(item['icon'], tag_alt=item['icon'])" />
             </div>

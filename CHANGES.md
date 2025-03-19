@@ -9,6 +9,7 @@ Changelog
 - Add a plone.distibution with demo content. [sverbois]
 - Update TinyMCE registry profile to TinyMCE 7. [sverbois]
 - Remove import deprecation warning. [sverbois]
+- Use h-100 class on cards section. [sverbois]
 
 
 1.0.0a22 (2024-02-06)
