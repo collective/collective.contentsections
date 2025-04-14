@@ -19,6 +19,7 @@ setup(
         "Environment :: Web Environment",
         "Framework :: Plone",
         "Framework :: Plone :: Addon",
+        "Framework :: Plone :: Distribution",
         "Framework :: Plone :: 6.1",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3.10",
@@ -53,6 +54,16 @@ setup(
         "plone.formwidget.geolocation >= 3.0.7",
         "setuptools",
     ],
+    extras_require={
+        "test": [
+            "plone.app.testing",
+            "plone.app.robotframework[debug]",
+            "pytest",
+            "pytest-cov",
+            "pytest-plone",
+            "shutup",
+        ],
+    },
     entry_points="""
     [z3c.autoinclude.plugin]
     target = plone

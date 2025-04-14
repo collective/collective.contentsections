@@ -17,7 +17,7 @@ clean:
 bin/instance: bin/buildout
 
 bin/buildout: bin/pip
-	bin/pip install -r https://dist.plone.org/release/6.1.0/requirements.txt
+	bin/pip install -r https://dist.plone.org/release/6.1-dev/requirements.txt
 
 bin/pip:
 	pyenv local 3.12
