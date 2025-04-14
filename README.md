@@ -54,7 +54,7 @@ This product fits Plone with:
 Demo content
 ------------
 
-The *collective.contentsections* product add a *plone.distribution* "Plone Site (Content Sections)" with some demo pages.
+The *collective.contentsections* product adds a *plone.distribution* "Plone Site (Content Sections)" with some demo pages.
 
 
 Choices/Beliefs
