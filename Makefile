@@ -14,11 +14,21 @@ start: bin/instance
 clean:
 	rm -r bin develop-eggs eggs include lib node_modules parts pyvenv.cfg .installed.cfg .python-version
 
+.PHONY: test  # Run tests
+test: bin/pytest
+	bin/pytest tests
+
+.PHONY: coverage # Run tests with coverage
+coverage: bin/pytest
+	bin/pytest --cov=collective.contentsections tests
+
+bin/pytest: bin/buildout
+	bin/pip install -r requirements-test.txt
+
 bin/instance: bin/buildout
 
 bin/buildout: bin/pip
-	bin/pip install -r https://dist.plone.org/release/6.1-dev/requirements.txt
+	bin/pip install -r requirements.txt
 
 bin/pip:
-	pyenv local 3.12
 	python3.12 -m venv .

@@ -31,7 +31,10 @@ class VocabularyFactory:
         self.terms = terms
 
     def __call__(self, context=None):
-        terms = [SimpleTerm(value=value, token=str(value), title=title) for value, title in self.terms.items()]
+        terms = [
+            SimpleTerm(value=value, token=str(value), title=title)
+            for value, title in self.terms.items()
+        ]
         return SimpleVocabulary(terms)
 
 
@@ -52,7 +55,10 @@ class IconsVocabularyFactory:
             if key.startswith(self.prefix)
         ]
         items.sort(key=itemgetter(1))
-        terms = [SimpleTerm(value=value, token=str(value), title=title) for value, title in items]
+        terms = [
+            SimpleTerm(value=value, token=str(value), title=title)
+            for value, title in items
+        ]
         return SimpleVocabulary(terms)
 
 

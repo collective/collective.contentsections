@@ -7,6 +7,7 @@ from plone.app.testing import PloneSandboxLayer
 from plone.testing.zope import WSGI_SERVER_FIXTURE
 
 import collective.contentsections  # noQA
+
 import collective.geolocationbehavior  # noQA
 import collective.taxonomy  # noQA
 import collective.z3cform.datagridfield  # noQA
