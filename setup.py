@@ -1,6 +1,7 @@
 from setuptools import find_packages
 from setuptools import setup
 
+
 long_description = "\n\n".join(
     [
         open("README.md").read(),
@@ -56,12 +57,12 @@ setup(
     ],
     extras_require={
         "test": [
+            "Products.CMFPlacefulWorkflow",
             "plone.app.testing",
             "plone.app.robotframework[debug]",
             "pytest",
             "pytest-cov",
             "pytest-plone",
-            "shutup",
         ],
     },
     entry_points="""

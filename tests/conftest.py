@@ -1,12 +1,13 @@
+# from collective.geolocationbehavior.geolocation import IGeolocatable
+from collective.contentsections.contents.location.content import ILocation
 from collective.contentsections.testing import ACCEPTANCE_TESTING
 from collective.contentsections.testing import FUNCTIONAL_TESTING
 from collective.contentsections.testing import INTEGRATION_TESTING
 from plone import api
 from pytest_plone import fixtures_factory
 
-# from collective.geolocationbehavior.geolocation import IGeolocatable
-from collective.contentsections.contents.location.content import ILocation
 import pytest
+
 
 pytest_plugins = ["pytest_plone"]
 

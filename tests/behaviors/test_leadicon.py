@@ -1,6 +1,6 @@
 from collective.contentsections.behaviors.leadicon import ILeadIcon
-from plone.dexterity.interfaces import IDexterityContent
 from plone import api
+from plone.dexterity.interfaces import IDexterityContent
 
 import pytest
 
