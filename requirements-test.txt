@@ -4,6 +4,7 @@ plone.app.robotframework[debug]
 pytest
 pytest-cov
 pytest-plone
+tox
 
 # (Optional) Lock specific versions if needed
 # pytest==7.4.4

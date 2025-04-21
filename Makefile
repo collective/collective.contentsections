@@ -1,10 +1,12 @@
+VENV_FOLDER=.venv
+
 .PHONY: help  # List phony targets
 help:
 	@cat "Makefile" | grep '^.PHONY:' | sed -e "s/^.PHONY:/- make/"
 
 .PHONY: install  # Install development environment
-install: bin/buildout
-	bin/buildout
+install: $(VENV_FOLDER)/bin/buildout
+	$(VENV_FOLDER)/bin/buildout
 
 .PHONY: start  # Start Zope instance
 start: bin/instance
@@ -12,23 +14,25 @@ start: bin/instance
 
 .PHONY: clean  # Clean development environment
 clean:
-	rm -r bin develop-eggs eggs include lib node_modules parts pyvenv.cfg .installed.cfg .python-version
+	rm -r $(VENV_FOLDER) bin develop-eggs eggs include lib lib64 node_modules parts pyvenv.cfg .installed.cfg .python-version forest.dot forest.json .tox
 
 .PHONY: test  # Run tests
-test: bin/pytest
-	bin/pytest tests
+test: $(VENV_FOLDER)/bin/tox
+	$(VENV_FOLDER)/bin/tox test
 
 .PHONY: coverage # Run tests with coverage
-coverage: bin/pytest
-	bin/pytest --cov=collective.contentsections tests
+coverage: $(VENV_FOLDER)/bin/tox
+	$(VENV_FOLDER)/bin/tox coverage
 
-bin/pytest: bin/buildout
-	bin/pip install -r requirements-test.txt
+$(VENV_FOLDER)/bin/tox: $(VENV_FOLDER)/bin/buildout
+	$(VENV_FOLDER)/bin/uv pip install -r requirements-test.txt
 
-bin/instance: bin/buildout
+bin/instance: $(VENV_FOLDER)/bin/buildout
+	$(VENV_FOLDER)/bin/buildout
 
-bin/buildout: bin/pip
-	bin/pip install -r requirements.txt
+$(VENV_FOLDER)/bin/buildout: $(VENV_FOLDER)/bin/pip
+	$(VENV_FOLDER)/bin/uv pip install -r requirements.txt
 
-bin/pip:
-	python3.12 -m venv .
+$(VENV_FOLDER)/bin/pip:
+	uv venv --seed -p python3.12
+	$(VENV_FOLDER)/bin/pip3.12 install uv

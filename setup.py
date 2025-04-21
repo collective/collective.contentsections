@@ -62,7 +62,7 @@ setup(
             "plone.app.robotframework[debug]",
             "pytest",
             "pytest-cov",
-            "pytest-plone",
+            "pytest-plone>=0.5.0",
         ],
     },
     entry_points="""
