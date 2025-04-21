@@ -12,7 +12,7 @@ Changelog
 
 - Use Plone 6.1 and Python 3.12 in development buildout. [sverbois]
 - Remove portal_properties access. [sverbois]
-- Add a plone.distibution with demo content. [sverbois]
+- Add a plone.distribution with demo content. [sverbois]
 - Update TinyMCE registry profile to TinyMCE 7. [sverbois]
 - Remove import deprecation warning. [sverbois]
 - Use h-100 class on cards section. [sverbois]
@@ -102,7 +102,7 @@ Changelog
 - Remove customized plone.allowed_sizes and plone.toolbar_position configurations. [sverbois]
 - Set boolean fields required option to False. [sverbois]
 - Require version 3 of collective.taxonomy and collective.z3cform.datagridfield. [sverbois]
-- Improve CSS for section full-width managment and card section edition. [sverbois]
+- Improve CSS for section full-width management and card section edition. [sverbois]
 
 1.0.0a11 (2022-03-26)
 ---------------------

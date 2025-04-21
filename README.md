@@ -36,7 +36,7 @@ This product provides :
 - basic schema and class for section content types
 - *LeadIcon* vocabulary and behavior based on plone.icons registry records
 - *collective.taxonomy.section_css_classes* taxonomy for available section CSS Classes
-- *TextSection* wich contains a simplified TinyMCE field and the behavior *LeadImage*. A *TextSection* contains only the lead image. No more image in TinyMCE text field.
+- *TextSection* which contains a simplified TinyMCE field and the behavior *LeadImage*. A *TextSection* contains only the lead image. No more image in TinyMCE text field.
 - *HTMLSection* to integrate iframe from youtube, google map and other iframe providers. No more video, iframe in TinyMCE text field.
 - *CollectionSection* to link a section with a collection.
 - *SelectionSection* to link a section to other pages. The *SelectionSection* replace the *Related items* behavior.
