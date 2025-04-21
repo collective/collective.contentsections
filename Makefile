@@ -18,11 +18,11 @@ clean:
 
 .PHONY: test  # Run tests
 test: $(VENV_FOLDER)/bin/tox
-	$(VENV_FOLDER)/bin/tox test
+	$(VENV_FOLDER)/bin/tox -e test
 
 .PHONY: coverage # Run tests with coverage
 coverage: $(VENV_FOLDER)/bin/tox
-	$(VENV_FOLDER)/bin/tox coverage
+	$(VENV_FOLDER)/bin/tox -e coverage
 
 $(VENV_FOLDER)/bin/tox: $(VENV_FOLDER)/bin/buildout
 	$(VENV_FOLDER)/bin/uv pip install -r requirements-test.txt
