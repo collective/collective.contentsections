@@ -1,54 +1,55 @@
 <configure
-  xmlns="http://namespaces.zope.org/zope"
-  xmlns:browser="http://namespaces.zope.org/browser">
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    >
 
   <!-- Card view -->
   <browser:page
-    name="card_view"
-    for=".content.IImagesSection"
-    class=".views.ImagesSectionView"
-    template="../base_links_card.pt"
-    permission="zope2.View"
-    menu="plone_displayviews"
-    title="Card view"
-    layer="collective.contentsections.interfaces.IBrowserLayer"
-    />
+      name="card_view"
+      for=".content.IImagesSection"
+      class=".views.ImagesSectionView"
+      template="../base_links_card.pt"
+      permission="zope2.View"
+      layer="collective.contentsections.interfaces.IBrowserLayer"
+      menu="plone_displayviews"
+      title="Card view"
+      />
 
   <!-- Card carousel view -->
   <browser:page
-    name="card_carousel_view"
-    for=".content.IImagesSection"
-    class=".views.ImagesSectionView"
-    template="../base_links_card_carousel.pt"
-    permission="zope2.View"
-    menu="plone_displayviews"
-    title="Card carousel view"
-    layer="collective.contentsections.interfaces.IBrowserLayer"
-    />
+      name="card_carousel_view"
+      for=".content.IImagesSection"
+      class=".views.ImagesSectionView"
+      template="../base_links_card_carousel.pt"
+      permission="zope2.View"
+      layer="collective.contentsections.interfaces.IBrowserLayer"
+      menu="plone_displayviews"
+      title="Card carousel view"
+      />
 
   <!-- Carousel view -->
   <browser:page
-    name="carousel_view"
-    for=".content.IImagesSection"
-    class=".views.ImagesSectionView"
-    template="../base_links_carousel.pt"
-    permission="zope2.View"
-    menu="plone_displayviews"
-    title="Carousel view"
-    layer="collective.contentsections.interfaces.IBrowserLayer"
-    />
+      name="carousel_view"
+      for=".content.IImagesSection"
+      class=".views.ImagesSectionView"
+      template="../base_links_carousel.pt"
+      permission="zope2.View"
+      layer="collective.contentsections.interfaces.IBrowserLayer"
+      menu="plone_displayviews"
+      title="Carousel view"
+      />
 
   t
   <!-- Spotlight view -->
   <browser:page
-    name="gallery_view"
-    for=".content.IImagesSection"
-    class=".views.ImagesSectionGalleryView"
-    template="gallery.pt"
-    permission="zope2.View"
-    menu="plone_displayviews"
-    title="Gallery view"
-    layer="collective.contentsections.interfaces.IBrowserLayer"
-    />
+      name="gallery_view"
+      for=".content.IImagesSection"
+      class=".views.ImagesSectionGalleryView"
+      template="gallery.pt"
+      permission="zope2.View"
+      layer="collective.contentsections.interfaces.IBrowserLayer"
+      menu="plone_displayviews"
+      title="Gallery view"
+      />
 
 </configure>

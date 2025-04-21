@@ -2,7 +2,7 @@
   <metal:main fill-slot="main">
     <metal:content-core define-macro="content-core">
 
-      <div tal:content="structure context/html | nothing" />
+      <div tal:content="structure context/html | nothing"></div>
 
     </metal:content-core>
   </metal:main>

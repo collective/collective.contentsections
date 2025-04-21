@@ -1,21 +1,20 @@
-<configure
-    xmlns="http://namespaces.zope.org/zope">
+<configure xmlns="http://namespaces.zope.org/zope">
 
-    <adapter
-        name="SearchableText"
-        factory=".indexers.get_section_searchabletext"
-        />
-    <adapter
-        name="SearchableText"
-        factory=".indexers.get_textsection_searchabletext"
-        />
-    <adapter
-        name="SearchableText"
-        factory=".indexers.get_cardssection_searchabletext"
-        />
-    <adapter
-        name="SearchableText"
-        factory=".indexers.get_page_searchabletext"
-        />
+  <adapter
+      factory=".indexers.get_section_searchabletext"
+      name="SearchableText"
+      />
+  <adapter
+      factory=".indexers.get_textsection_searchabletext"
+      name="SearchableText"
+      />
+  <adapter
+      factory=".indexers.get_cardssection_searchabletext"
+      name="SearchableText"
+      />
+  <adapter
+      factory=".indexers.get_page_searchabletext"
+      name="SearchableText"
+      />
 
 </configure>

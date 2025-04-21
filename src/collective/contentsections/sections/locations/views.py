@@ -1,9 +1,8 @@
-import json
-
+from collective.contentsections.sections.base import SectionView
 from plone import api
 from plone.memoize import view
 
-from collective.contentsections.sections.base import SectionView
+import json
 
 
 class LocationsSectionView(SectionView):

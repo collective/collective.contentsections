@@ -1,8 +1,7 @@
-from zope.interface import implementer
-
 from collective.contentsections import _
 from collective.contentsections.sections.base import IBaseGroupSection
 from collective.contentsections.sections.base import Section
+from zope.interface import implementer
 
 
 class IContactsSection(IBaseGroupSection):

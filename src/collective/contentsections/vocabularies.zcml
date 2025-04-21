@@ -1,28 +1,27 @@
-<configure
-  xmlns="http://namespaces.zope.org/zope">
+<configure xmlns="http://namespaces.zope.org/zope">
 
   <utility
-    name="collective.contentsections.ColumnAlignments"
-    component=".vocabularies.ColumnAlignmentsVocabulary"
-    provides="zope.schema.interfaces.IVocabularyFactory"
-    />
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      name="collective.contentsections.ColumnAlignments"
+      component=".vocabularies.ColumnAlignmentsVocabulary"
+      />
 
   <utility
-    name="collective.contentsections.ContainerWidths"
-    component=".vocabularies.ContainerWidthsVocabulary"
-    provides="zope.schema.interfaces.IVocabularyFactory"
-    />
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      name="collective.contentsections.ContainerWidths"
+      component=".vocabularies.ContainerWidthsVocabulary"
+      />
 
   <utility
-    name="collective.contentsections.ImageAlignments"
-    component=".vocabularies.ImageAlignmentsVocabulary"
-    provides="zope.schema.interfaces.IVocabularyFactory"
-    />
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      name="collective.contentsections.ImageAlignments"
+      component=".vocabularies.ImageAlignmentsVocabulary"
+      />
 
   <utility
-    name="collective.contentsections.LeadIcons"
-    component=".vocabularies.LeadIconsVocabulary"
-    provides="zope.schema.interfaces.IVocabularyFactory"
-    />
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      name="collective.contentsections.LeadIcons"
+      component=".vocabularies.LeadIconsVocabulary"
+      />
 
 </configure>

@@ -1,14 +1,13 @@
-from plone import api
-from plone.app.contenttypes.behaviors.richtext import IRichText
-from plone.app.contenttypes.indexers import SearchableText
-from plone.app.contenttypes.indexers import _unicode_save_string_concat
-from plone.base.utils import base_hasattr
-from plone.indexer.decorator import indexer
-
 from collective.contentsections.pages import IPage
 from collective.contentsections.sections import ICardsSection
 from collective.contentsections.sections import ISection
 from collective.contentsections.sections import ITextSection
+from plone import api
+from plone.app.contenttypes.behaviors.richtext import IRichText
+from plone.app.contenttypes.indexers import _unicode_save_string_concat
+from plone.app.contenttypes.indexers import SearchableText
+from plone.base.utils import base_hasattr
+from plone.indexer.decorator import indexer
 
 
 def get_title_and_description_terms(obj):
@@ -45,7 +44,11 @@ def get_textsection_searchabletext(section):
     transforms = api.portal.get_tool("portal_transforms")
     text = IRichText(section).text
     raw = text.raw
-    plain = transforms.convertTo("text/plain", raw, mimetype=text.mimeType).getData().strip()
+    plain = (
+        transforms.convertTo("text/plain", raw, mimetype=text.mimeType)
+        .getData()
+        .strip()
+    )
     terms.append(plain)
     return " ".join(terms)
 

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <registry>
 
   <record name="plone.default_page">
@@ -34,7 +34,9 @@
     </value>
   </record>
 
-  <record name="plone.default_page_types" purge="false">
+  <record name="plone.default_page_types"
+          purge="false"
+  >
     <value>
       <element>collective.contentsections.BasicPage</element>
     </value>

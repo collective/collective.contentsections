@@ -1,6 +1,7 @@
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
+
 MACROS_PAGE_TEMPLATE_PATH = "macros.pt"
 
 

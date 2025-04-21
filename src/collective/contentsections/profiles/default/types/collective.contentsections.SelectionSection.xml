@@ -1,29 +1,34 @@
-<?xml version="1.0"?>
-<object name="collective.contentsections.SelectionSection" meta_type="Dexterity FTI"
-    i18n:domain="collective.contentsections" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+<?xml version="1.0" encoding="utf-8"?>
+<object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        meta_type="Dexterity FTI"
+        name="collective.contentsections.SelectionSection"
+        i18n:domain="collective.contentsections"
+>
 
-    <property name="title" i18n:translate="">Selection section</property>
-    <property name="icon_expr">string:list-check</property>
+  <property name="title"
+            i18n:translate=""
+  >Selection section</property>
+  <property name="icon_expr">string:list-check</property>
 
-    <property name="add_permission">cmf.AddPortalContent</property>
-    <property name="klass">collective.contentsections.sections.SelectionSection</property>
-    <property name="schema">collective.contentsections.sections.ISelectionSection</property>
+  <property name="add_permission">cmf.AddPortalContent</property>
+  <property name="klass">collective.contentsections.sections.SelectionSection</property>
+  <property name="schema">collective.contentsections.sections.ISelectionSection</property>
 
-    <property name="global_allow">False</property>
-    <property name="filter_content_types">True</property>
-    <property name="allowed_content_types" />
+  <property name="global_allow">False</property>
+  <property name="filter_content_types">True</property>
+  <property name="allowed_content_types" />
 
-    <property name="behaviors">
-        <element value="collective.contentsections.namefromuuid"/>
-        <element value="plone.locking"/>
-    </property>
+  <property name="behaviors">
+    <element value="collective.contentsections.namefromuuid" />
+    <element value="plone.locking" />
+  </property>
 
-    <property name="default_view">card_view</property>
-    <property name="view_methods">
-        <element value="card_view"/>
-        <element value="card_carousel_view"/>
-        <element value="carousel_view"/>
-        <element value="list_view"/>
-    </property>
+  <property name="default_view">card_view</property>
+  <property name="view_methods">
+    <element value="card_view" />
+    <element value="card_carousel_view" />
+    <element value="carousel_view" />
+    <element value="list_view" />
+  </property>
 
 </object>

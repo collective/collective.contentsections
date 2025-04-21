@@ -1,11 +1,11 @@
-from operator import itemgetter
-
 from collective.contentsections import _
+from operator import itemgetter
 from plone import api
 from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
+
 
 IMAGE_ALIGNMENTS = {
     "left": _("Left"),

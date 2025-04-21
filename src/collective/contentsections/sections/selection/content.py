@@ -1,13 +1,12 @@
+from collective.contentsections import _
+from collective.contentsections.sections.base import IBaseLinksSection
+from collective.contentsections.sections.base import Section
 from plone.app.vocabularies.catalog import StaticCatalogVocabulary
 from plone.app.z3cform.widgets.select import AjaxSelectFieldWidget
 from plone.autoform import directives
 from z3c.relationfield.schema import RelationChoice
 from z3c.relationfield.schema import RelationList
 from zope.interface import implementer
-
-from collective.contentsections import _
-from collective.contentsections.sections.base import IBaseLinksSection
-from collective.contentsections.sections.base import Section
 
 
 class ISelectionSection(IBaseLinksSection):
@@ -24,7 +23,9 @@ class ISelectionSection(IBaseLinksSection):
     directives.widget(
         "relations",
         AjaxSelectFieldWidget,
-        vocabulary=StaticCatalogVocabulary({}, title_template="{brain.Type}: {brain.Title} at {path}"),
+        vocabulary=StaticCatalogVocabulary(
+            {}, title_template="{brain.Type}: {brain.Title} at {path}"
+        ),
         pattern_options={
             "placeholder": _("Select items"),
             "minimumInputLength": 3,

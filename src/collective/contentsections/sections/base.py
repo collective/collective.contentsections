@@ -1,3 +1,4 @@
+from collective.contentsections import _
 from plone import schema
 from plone.app.z3cform.widgets.select import SelectFieldWidget
 from plone.autoform import directives
@@ -6,8 +7,6 @@ from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from Products.Five.browser import BrowserView
 from zope.interface import implementer
-
-from collective.contentsections import _
 
 
 class ISection(model.Schema):

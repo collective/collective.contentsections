@@ -1,28 +1,32 @@
-<?xml version="1.0"?>
-<object name="collective.contentsections.CardsSection" meta_type="Dexterity FTI"
-    i18n:domain="collective.contentsections" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+<?xml version="1.0" encoding="utf-8"?>
+<object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        meta_type="Dexterity FTI"
+        name="collective.contentsections.CardsSection"
+        i18n:domain="collective.contentsections"
+>
 
-    <property name="title" i18n:translate="">Cards section</property>
-    <property name="icon_expr">string:card-heading</property>
+  <property name="title"
+            i18n:translate=""
+  >Cards section</property>
+  <property name="icon_expr">string:card-heading</property>
 
-    <property name="add_permission">cmf.AddPortalContent</property>
-    <property name="klass">collective.contentsections.sections.CardsSection</property>
-    <property name="schema">collective.contentsections.sections.ICardsSection</property>
+  <property name="add_permission">cmf.AddPortalContent</property>
+  <property name="klass">collective.contentsections.sections.CardsSection</property>
+  <property name="schema">collective.contentsections.sections.ICardsSection</property>
 
-    <property name="global_allow">False</property>
-    <property name="filter_content_types">True</property>
-    <property name="allowed_content_types" />
+  <property name="global_allow">False</property>
+  <property name="filter_content_types">True</property>
+  <property name="allowed_content_types" />
 
-    <property name="behaviors">
-        <element value="plone.versioning" />
-        <element value="collective.contentsections.namefromuuid"/>
-        <element value="plone.locking"/>
-    </property>
+  <property name="behaviors">
+    <element value="plone.versioning" />
+    <element value="collective.contentsections.namefromuuid" />
+    <element value="plone.locking" />
+  </property>
 
-    <property name="default_view">view</property>
-    <property name="view_methods">
-        <element value="view"/>
-    </property>
+  <property name="default_view">view</property>
+  <property name="view_methods">
+    <element value="view" />
+  </property>
 
 </object>
-

@@ -2,17 +2,29 @@
   <metal:main fill-slot="main">
     <metal:content-core define-macro="content-core">
 
-      <div tal:define="carousel_id string:carousel-${context/UID}"
-        id="${carousel_id}" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel slide"
+           id="${carousel_id}"
+           data-bs-ride="carousel"
+           tal:define="
+             carousel_id string:carousel-${context/UID};
+           "
+      >
         <div class="carousel-indicators">
-          <button tal:repeat="item view/items"
-            type="button" data-bs-target="#${carousel_id}" data-bs-slide-to="${repeat/item/index}"
-            class="${python:'active' if repeat.item.start else ''}"/>
+          <button class="${python:'active' if repeat.item.start else ''}"
+                  type="button"
+                  data-bs-slide-to="${repeat/item/index}"
+                  data-bs-target="#${carousel_id}"
+                  tal:repeat="item view/items"
+          ></button>
         </div>
         <div class="carousel-inner">
-          <div tal:repeat="item view/items"
-            class="${python:'carousel-item active' if repeat.item.start else 'carousel-item'}">
-            <img src="${item/lead_image_url}" class="d-block w-100" alt="Item image" />
+          <div class="${python:'carousel-item active' if repeat.item.start else 'carousel-item'}"
+               tal:repeat="item view/items"
+          >
+            <img class="d-block w-100"
+                 alt="Item image"
+                 src="${item/lead_image_url}"
+            />
             <div class="carousel-caption">
               <a href="${item/url}">
                 <h5>${item/title}</h5>
@@ -22,17 +34,31 @@
           </div>
         </div>
         <tal:if condition="python: context.container_width != 0">
-                    <button class="carousel-control-prev" type="button" data-bs-target="#${carousel_id}" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"/>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#${carousel_id}" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"/>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-          </tal:if>
+          <button class="carousel-control-prev"
+                  type="button"
+                  data-bs-slide="prev"
+                  data-bs-target="#${carousel_id}"
+          >
+            <span class="carousel-control-prev-icon"
+                  aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next"
+                  type="button"
+                  data-bs-slide="next"
+                  data-bs-target="#${carousel_id}"
+          >
+            <span class="carousel-control-next-icon"
+                  aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </tal:if>
       </div>
-      <div tal:condition="view/more_link_text | nothing" class="section-more-link">
+      <div class="section-more-link"
+           tal:condition="view/more_link_text | nothing"
+      >
         <a href="${view/more_link_url}">${view/more_link_text}</a>
       </div>
     </metal:content-core>

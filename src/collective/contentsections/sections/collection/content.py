@@ -1,13 +1,12 @@
+from collective.contentsections import _
+from collective.contentsections.sections.base import IBaseLinksSection
+from collective.contentsections.sections.base import Section
 from plone import schema
 from plone.app.vocabularies.catalog import CatalogSource
 from plone.app.z3cform.widgets.relateditems import RelatedItemsFieldWidget
 from plone.autoform import directives
 from z3c.relationfield.schema import RelationChoice
 from zope.interface import implementer
-
-from collective.contentsections import _
-from collective.contentsections.sections.base import IBaseLinksSection
-from collective.contentsections.sections.base import Section
 
 
 class ICollectionSection(IBaseLinksSection):

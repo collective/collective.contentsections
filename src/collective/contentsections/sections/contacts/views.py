@@ -1,6 +1,5 @@
-from plone import api
-
 from collective.contentsections.sections.base import BaseGroupSectionView
+from plone import api
 
 
 class ContactsSectionView(BaseGroupSectionView):
@@ -25,7 +24,11 @@ class ContactsSectionView(BaseGroupSectionView):
                     "description": contact.description,
                     "email": contact.email,
                     "phone": contact.phone,
-                    "lead_image_url": f"{brain.getURL()}/@@images/image/{lead_image_scale}" if contact.image else None,
+                    "lead_image_url": (
+                        f"{brain.getURL()}/@@images/image/{lead_image_scale}"
+                        if contact.image
+                        else None
+                    ),
                     "lead_image_caption": contact.image_caption,
                 }
             )

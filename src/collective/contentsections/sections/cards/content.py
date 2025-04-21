@@ -1,3 +1,6 @@
+from collective.contentsections import _
+from collective.contentsections.sections.base import ISection
+from collective.contentsections.sections.base import Section
 from collective.z3cform.datagridfield.datagridfield import DataGridFieldFactory
 from collective.z3cform.datagridfield.row import DictRow
 from plone import schema
@@ -5,12 +8,8 @@ from plone.app.vocabularies.catalog import StaticCatalogVocabulary
 from plone.app.z3cform.widgets.select import AjaxSelectFieldWidget
 from plone.app.z3cform.widgets.select import SelectFieldWidget
 from plone.autoform import directives
-from zope.interface import Interface
 from zope.interface import implementer
-
-from collective.contentsections import _
-from collective.contentsections.sections.base import ISection
-from collective.contentsections.sections.base import Section
+from zope.interface import Interface
 
 
 class ICard(Interface):
@@ -43,13 +42,17 @@ class ICard(Interface):
     )
     relation_uid = schema.Choice(
         title=_("Selection"),
-        vocabulary=StaticCatalogVocabulary({}, title_template="{brain.Type}: {brain.Title} at {path}"),
+        vocabulary=StaticCatalogVocabulary(
+            {}, title_template="{brain.Type}: {brain.Title} at {path}"
+        ),
         required=False,
     )
 
     directives.widget("title", placeholder=_("Card title"))
     directives.widget("subtitle", placeholder=_("Card subtitle"))
-    directives.widget("icon", SelectFieldWidget, pattern_options={"placeholder": _("Select an icon")})
+    directives.widget(
+        "icon", SelectFieldWidget, pattern_options={"placeholder": _("Select an icon")}
+    )
 
     # SEE https://6.docs.plone.org/backend/relations.html#relation-fields-without-relations
     # Does not work in Plone 6.1

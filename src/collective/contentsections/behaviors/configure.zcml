@@ -1,28 +1,32 @@
 <configure
-  xmlns="http://namespaces.zope.org/zope"
-  xmlns:browser="http://namespaces.zope.org/browser"
-  xmlns:plone="http://namespaces.plone.org/plone"
-  xmlns:zcml="http://namespaces.zope.org/zcml"
-  i18n_domain="collective.contentsections">
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="collective.contentsections"
+    >
 
-  <include package="plone.behavior" file="meta.zcml"/>
-
-  <plone:behavior
-    name="collective.contentsections.leadicon"
-    title="Lead Icon"
-    description="Adds icon field"
-    provides=".leadicon.ILeadIconBehavior"
-    factory=".leadicon.LeadIcon"
-    for="plone.dexterity.interfaces.IDexterityContent"
-    marker=".leadicon.ILeadIcon"
-    />
+  <include
+      package="plone.behavior"
+      file="meta.zcml"
+      />
 
   <plone:behavior
-    name="collective.contentsections.namefromuuid"
-    title="Name from uuid"
-    description="Use uuid.uuid4 to generate short name of new object."
-    provides=".namechooser.INameFromUUID"
-    />
+      name="collective.contentsections.leadicon"
+      title="Lead Icon"
+      description="Adds icon field"
+      factory=".leadicon.LeadIcon"
+      provides=".leadicon.ILeadIconBehavior"
+      for="plone.dexterity.interfaces.IDexterityContent"
+      marker=".leadicon.ILeadIcon"
+      />
+
+  <plone:behavior
+      name="collective.contentsections.namefromuuid"
+      title="Name from uuid"
+      description="Use uuid.uuid4 to generate short name of new object."
+      provides=".namechooser.INameFromUUID"
+      />
   <adapter factory=".namechooser.NameFromUUID" />
 
 </configure>

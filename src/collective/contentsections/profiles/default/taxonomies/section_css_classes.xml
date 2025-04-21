@@ -1,6 +1,11 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <vdex xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsvdex_v1p0 imsvdex_v1p0.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd" orderSignificant="false" profileType="hierarchicalTokenTerms" language="en-us">
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      language="en-us"
+      orderSignificant="false"
+      profileType="hierarchicalTokenTerms"
+      xsi:schemaLocation="http://www.imsglobal.org/xsd/imsvdex_v1p0 imsvdex_v1p0.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd"
+>
   <vocabName>
     <langstring language="en-us">Section CSS classes</langstring>
   </vocabName>
@@ -14,7 +19,7 @@
   <term>
     <termIdentifier>bg-seconday text-white</termIdentifier>
     <caption>
-      <langstring language="en-us">Seconday section</langstring>
+      <langstring language="en-us">Secondary section</langstring>
     </caption>
   </term>
   <term>
