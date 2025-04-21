@@ -4,7 +4,8 @@ Changelog
 ## 2.0.0a2 (unreleased)
 -----------------------
 
-- Nothing changed yet.
+- Add basic tests [remdub]
+- Add GitHub Actions [remdub]
 
 
 ## 2.0.0a1 (2025-03-19)

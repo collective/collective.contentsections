@@ -98,6 +98,12 @@ Development
     make install
     make start
 
+Test
+----
+
+    make test
+    make coverage
+
 Credits
 -------
 
