@@ -17,16 +17,16 @@ clean:
 	rm -r $(VENV_FOLDER) bin develop-eggs eggs include lib lib64 node_modules parts pyvenv.cfg .installed.cfg .python-version forest.dot forest.json .tox
 
 .PHONY: test  # Run tests
-test: $(VENV_FOLDER)/bin/tox
-	$(VENV_FOLDER)/bin/tox -e test
+test: bin/tox
+	bin/tox -e test
 
 .PHONY: coverage # Run tests with coverage
-coverage: $(VENV_FOLDER)/bin/tox
-	$(VENV_FOLDER)/bin/tox -e coverage
+coverage: bin/tox
+	bin/tox -e coverage
 
 .PHONY: lint # Run tests with lint
-lint: $(VENV_FOLDER)/bin/tox
-	$(VENV_FOLDER)/bin/tox -e lint
+lint: bin/tox
+	bin/tox -e lint
 
 # i18n
 $(VENV_FOLDER)/bin/i18ndude: $(VENV_FOLDER)/bin/pip
@@ -39,8 +39,8 @@ i18n: bin/i18ndude
 	cd src/collective/contentsections/locales && ./update.sh
 
 
-$(VENV_FOLDER)/bin/tox: $(VENV_FOLDER)/bin/buildout
-	$(VENV_FOLDER)/bin/uv pip install -r requirements-test.txt
+# bin/tox: $(VENV_FOLDER)/bin/buildout
+# 	$(VENV_FOLDER)/bin/uv pip install -r requirements-test.txt
 
 bin/instance: $(VENV_FOLDER)/bin/buildout
 	$(VENV_FOLDER)/bin/buildout
