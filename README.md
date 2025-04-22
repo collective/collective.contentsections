@@ -1,5 +1,13 @@
 # collective.contentsections
 
+
+[![PyPI](https://img.shields.io/pypi/v/collective.contentsections)](https://pypi.org/project/collective.contentsections/)
+[![Python Version](https://img.shields.io/pypi/pyversions/collective.contentsections)](https://pypi.org/project/collective.contentsections/)
+[![License](https://img.shields.io/pypi/l/collective.contentsections)](https://pypi.org/project/collective.contentsections/)
+[![Status](https://img.shields.io/pypi/status/collective.contentsections)](https://pypi.org/project/collective.contentsections/)
+[![Stars](https://img.shields.io/github/stars/collective/collective.contentsections?style=social)](https://github.com/collective/collective.contentsections/stargazers)
+
+
 This product offers a block approach for Plone 6 Classic based entirely on Dexterity content types. It is largely based on the code that was developed in the *imio.smartweb.core* product for the Walloon municipalities.
 
 The approach in this product can be seen as a generalisation of the *Full content* view available in Plone on *Folder* content type.
@@ -85,7 +93,7 @@ See [installation guide](https://docs.astral.sh/uv/getting-started/installation/
 ### Environment initialization
 
 ```bash
-git clone https://github.com/collective/collective.contentsections.git
+git clone git@github.com:collective/collective.contentsections.git
 cd collective.contentsections
 make install
 make start
@@ -113,8 +121,8 @@ To add a new language, you need a "PO file" inside the `locales` folder.
 For example, to add German locales:
 
 ```bash
-mkdir -p src/collective/contentsections/locales/de/LC_MESSAGES
-touch src/collective/contentsections/locales/de/LC_MESSAGES/collective.contentsections.po
+mkdir -p src/collective/collective.contentsections/locales/de/LC_MESSAGES
+touch src/collective/collective.contentsections/locales/de/LC_MESSAGES/collective.contentsections.po
 ```
 
 After that, you can update the file with:
