@@ -39,9 +39,6 @@ i18n: bin/i18ndude
 	cd src/collective/contentsections/locales && ./update.sh
 
 
-# bin/tox: $(VENV_FOLDER)/bin/buildout
-# 	$(VENV_FOLDER)/bin/uv pip install -r requirements-test.txt
-
 bin/instance: $(VENV_FOLDER)/bin/buildout
 	$(VENV_FOLDER)/bin/buildout
 

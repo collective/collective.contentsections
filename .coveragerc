@@ -1,2 +1,2 @@
 [run]
-omit = tests/*
+omit = tests/*, src/collective/contentsections/locales/*

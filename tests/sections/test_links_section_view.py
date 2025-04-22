@@ -1,23 +1,24 @@
-from collective.contentsections.sections.locations.views import LocationsSectionView
+from collective.contentsections.sections.links.views import LinksSectionView
 from plone import api
 from zope.interface import implementedBy
 
 import pytest
 
 
-class TestLocationsSectionViews:
+class TestLinksSectionViews:
     @pytest.fixture(autouse=True)
     def _init(self, portal, contents):
         self.portal = portal
         self.contents = contents
 
-    def test_locations_section_views(self, contents):
+    def test_links_section_views(self, contents):
         """ """
-        content = api.content.get(path="/plone/basic-page-1/a-locations-section")
+        content = api.content.get(path="/plone/basic-page-1/a-links-section")
         view = api.content.get_view(
-            name="view",
+            name="card_view",
             context=content,
         )
+        # __import__("pdb").set_trace()
         # assert (
         #     view.data_pat_leaflet == '{"fullscreencontrol": true, "zoomcontrol": true}'
         # )

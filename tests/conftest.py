@@ -22,9 +22,25 @@ globals().update(
     )
 )
 
+BEHAVIOR = "collective.contentsections.leadicon"
+
+
+CONTENT_TYPES = [
+    "collective.contentsections.BasicPage",
+    "collective.contentsections.Contact",
+    "collective.contentsections.EventPage",
+    "collective.contentsections.Location",
+    "collective.contentsections.NewsPage",
+    "collective.contentsections.TextSection",
+    "Folder",
+    "File",
+    "Image",
+    "Link",
+]
+
 
 @pytest.fixture
-def contents(portal) -> list:
+def contents(portal, get_fti) -> list:
     """Create test contents."""
     response = {}
     with api.env.adopt_roles(
@@ -33,6 +49,11 @@ def contents(portal) -> list:
         ]
     ):
 
+        # enable collective.contentsections.leadicon behavior for some content types
+        for content_type in CONTENT_TYPES:
+            fti = get_fti(content_type)
+            if BEHAVIOR not in fti.behaviors:
+                fti.behaviors = fti.behaviors + (BEHAVIOR,)
         response = []
 
         basic_page = api.content.create(
@@ -40,6 +61,8 @@ def contents(portal) -> list:
             type="collective.contentsections.BasicPage",
             title="Basic page 1",
         )
+
+        # __import__("pdb").set_trace()
 
         event_page = api.content.create(
             container=portal,
@@ -105,6 +128,7 @@ def contents(portal) -> list:
             container=links_section,
             type="Link",
             title="A link",
+            link_target="https://www.imio.be",
         )
 
         locations_section = api.content.create(
@@ -124,6 +148,7 @@ def contents(portal) -> list:
         # location1.geolocation.longitude = 50.498973213459514
         # location1.geolocation.latitude = 4.719721850208658
         location1.reindexObject(idxs=["latitude", "longitude"])
+        # __import__("pdb").set_trace()
 
         selection_section = api.content.create(
             container=basic_page,
