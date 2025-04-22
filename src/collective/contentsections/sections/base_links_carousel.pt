@@ -1,4 +1,7 @@
-<html metal:use-macro="context/@@main_template/macros/master">
+<html xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      metal:use-macro="context/@@main_template/macros/master"
+      i18n:domain="collective.contentsections"
+>
   <metal:main fill-slot="main">
     <metal:content-core define-macro="content-core">
 
@@ -24,6 +27,7 @@
             <img class="d-block w-100"
                  alt="Item image"
                  src="${item/lead_image_url}"
+                 i18n:attributes="alt"
             />
             <div class="carousel-caption">
               <a href="${item/url}">
@@ -42,7 +46,9 @@
             <span class="carousel-control-prev-icon"
                   aria-hidden="true"
             ></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden"
+                  i18n:translate=""
+            >Previous</span>
           </button>
           <button class="carousel-control-next"
                   type="button"
@@ -52,7 +58,9 @@
             <span class="carousel-control-next-icon"
                   aria-hidden="true"
             ></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden"
+                  i18n:translate=""
+            >Next</span>
           </button>
         </tal:if>
       </div>

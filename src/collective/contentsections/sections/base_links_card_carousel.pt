@@ -46,7 +46,9 @@
             <span class="carousel-control-prev-icon"
                   aria-hidden="true"
             ></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden"
+                  i18n:translate=""
+            >Previous</span>
           </button>
           <button class="carousel-control-next"
                   type="button"
@@ -56,7 +58,9 @@
             <span class="carousel-control-next-icon"
                   aria-hidden="true"
             ></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden"
+                  i18n:translate=""
+            >Next</span>
           </button>
         </tal:if>
       </div>

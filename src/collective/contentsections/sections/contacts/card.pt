@@ -1,4 +1,9 @@
-<html metal:use-macro="context/@@main_template/macros/master">
+<html xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="context/@@main_template/macros/master"
+      i18n:domain="collective.contentsections"
+>
   <metal:main fill-slot="main">
     <metal:content-core define-macro="content-core">
       <div class="row row-cols-1 row-cols-md-${context/group_size} g-4">
@@ -10,6 +15,9 @@
                  alt="Lead image"
                  src="${item/lead_image_url}"
                  tal:condition="item/lead_image_url"
+                 tal:attributes="
+                   alt;
+                 "
             />
             <div class="text-end text-white pe-1 mt-n4"
                  tal:condition="item/lead_image_caption"

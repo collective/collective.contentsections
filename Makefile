@@ -24,6 +24,17 @@ test: $(VENV_FOLDER)/bin/tox
 coverage: $(VENV_FOLDER)/bin/tox
 	$(VENV_FOLDER)/bin/tox -e coverage
 
+# i18n
+$(VENV_FOLDER)/bin/i18ndude: $(VENV_FOLDER)/bin/pip
+	@echo "$(GREEN)==> Install translation tools$(RESET)"
+	$(VENV_FOLDER)/bin/uv pip install i18ndude
+
+.PHONY: i18n # Update locales
+i18n: bin/i18ndude
+	@echo "$(GREEN)==> Updating locales$(RESET)"
+	cd src/collective/contentsections/locales && ./update.sh
+
+
 $(VENV_FOLDER)/bin/tox: $(VENV_FOLDER)/bin/buildout
 	$(VENV_FOLDER)/bin/uv pip install -r requirements-test.txt
 

@@ -74,6 +74,7 @@
                     <button class="btn btn-dark btn-sm dropdown-toggle"
                             type="button"
                             data-bs-toggle="dropdown"
+                            i18n:translate=""
                     >
                       <tal:icon replace="structure python:icons.tag('toolbar-action/actions', tag_class='')" />
                       Actions
@@ -86,6 +87,7 @@
                         <li tal:repeat="item addable_types">
                           <a class="dropdown-item"
                              href="${item/action}"
+                             i18n:translate=""
                           >
                             <tal:icon replace="structure python:icons.tag('plus-square', tag_class='')" />
                             Add ${item/title}
@@ -95,6 +97,7 @@
                       <li tal:condition="section/allowedContentTypes">
                         <a class="dropdown-item"
                            href="${section_url}/folder_contents"
+                           i18n:translate=""
                         >
                           <tal:icon replace="structure python:icons.tag('toolbar-action/folderContents', tag_class='')" />
                           Section content
@@ -103,6 +106,7 @@
                       <li>
                         <a class="dropdown-item"
                            href="${section_url}/@@edit"
+                           i18n:translate=""
                         >
                           <tal:icon replace="structure python:icons.tag('toolbar-action/edit', tag_class='')" />
                           Edit section
@@ -111,6 +115,7 @@
                       <li tal:condition="python:len(section.getAvailableLayouts())>1">
                         <a class="dropdown-item"
                            href="${section_url}/select_default_view"
+                           i18n:translate=""
                         >
                           <tal:icon replace="structure python:icons.tag('toolbar-action/view', tag_class='')" />
                           Change section view
@@ -119,6 +124,7 @@
                       <li>
                         <a class="dropdown-item"
                            href="${section_url}/@@delete_confirmation"
+                           i18n:translate=""
                         >
                           <tal:icon replace="structure python:icons.tag('trash', tag_class='')" />
                           Delete section
