@@ -24,6 +24,10 @@ test: $(VENV_FOLDER)/bin/tox
 coverage: $(VENV_FOLDER)/bin/tox
 	$(VENV_FOLDER)/bin/tox -e coverage
 
+.PHONY: lint # Run tests with lint
+lint: $(VENV_FOLDER)/bin/tox
+	$(VENV_FOLDER)/bin/tox -e lint
+
 # i18n
 $(VENV_FOLDER)/bin/i18ndude: $(VENV_FOLDER)/bin/pip
 	@echo "$(GREEN)==> Install translation tools$(RESET)"

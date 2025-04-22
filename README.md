@@ -76,6 +76,14 @@ and then run `bin/buildout`.
 
 ## Development
 
+###  Prerequisites
+
+[uv](https://docs.astral.sh/uv/) 
+
+See [installation guide](https://docs.astral.sh/uv/getting-started/installation/) )
+
+### Environment initialization
+
 ```bash
 git clone https://github.com/collective/collective.contentsections.git
 cd collective.contentsections
@@ -83,11 +91,14 @@ make install
 make start
 ```
 
-## Test
+## Tests
+
+Tests are located inside `tests` folder. They can be run with tox.
 
 ```bash
 make test
 make coverage
+make lint
 ```
 
 ## Internationalization
