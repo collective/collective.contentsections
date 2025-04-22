@@ -4,8 +4,11 @@ Changelog
 ## 2.0.0a2 (unreleased)
 -----------------------
 
-- Add basic tests [remdub]
-- Add GitHub Actions [remdub]
+- Implemented **UV** for managing Python environment and dependencies. [remdub]
+- Introduced **pytest** as the testing framework. [remdub]
+- Added **plone/meta** for GitHub Actions CI/CD integration. [remdub]
+- Configured **Tox** to launch tests across multiple environments. [remdub]
+- Integrated **i18n/locales** support for improved internationalization and localization. [remdub]
 
 
 ## 2.0.0a1 (2025-03-19)
