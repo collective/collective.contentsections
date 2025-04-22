@@ -26,6 +26,8 @@ jobs:
     uses: plone/meta/.github/workflows/qa.yml@2.x
   test:
     uses: plone/meta/.github/workflows/test.yml@2.x
+    with:
+      py-versions: "['3.13', '3.12', '3.11', '3.10']"
   coverage:
     uses: plone/meta/.github/workflows/coverage.yml@2.x
   # dependencies:
