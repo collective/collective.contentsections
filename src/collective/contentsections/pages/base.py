@@ -1,4 +1,3 @@
-from Acquisition import aq_inner
 from collective.contentsections import _
 from collective.contentsections.sections import ISection
 from plone import api

@@ -1,4 +1,3 @@
-from collective.contentsections.views.utils import UtilsView
 from plone import api
 
 import pytest

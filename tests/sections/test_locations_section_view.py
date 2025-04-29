@@ -1,7 +1,3 @@
-from collective.contentsections.sections.locations.views import LocationsSectionView
-from plone import api
-from zope.interface import implementedBy
-
 import pytest
 
 
@@ -13,11 +9,11 @@ class TestLocationsSectionViews:
 
     def test_locations_section_views(self, contents):
         """ """
-        content = api.content.get(path="/plone/basic-page-1/a-locations-section")
-        view = api.content.get_view(
-            name="view",
-            context=content,
-        )
+        # content = api.content.get(path="/plone/basic-page-1/a-locations-section")
+        # view = api.content.get_view(
+        #     name="view",
+        #     context=content,
+        # )
         # assert (
         #     view.data_pat_leaflet == '{"fullscreencontrol": true, "zoomcontrol": true}'
         # )

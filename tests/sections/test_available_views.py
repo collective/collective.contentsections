@@ -1,4 +1,3 @@
-from collective.contentsections.sections import *
 from plone import api
 from zope.interface import implementedBy
 

@@ -1,6 +1,4 @@
-from collective.contentsections.sections.selection.views import SelectionSectionView
 from plone import api
-from zope.interface import implementedBy
 
 import pytest
 

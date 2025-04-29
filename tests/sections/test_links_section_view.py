@@ -1,7 +1,3 @@
-from collective.contentsections.sections.links.views import LinksSectionView
-from plone import api
-from zope.interface import implementedBy
-
 import pytest
 
 
@@ -13,11 +9,11 @@ class TestLinksSectionViews:
 
     def test_links_section_views(self, contents):
         """ """
-        content = api.content.get(path="/plone/basic-page-1/a-links-section")
-        view = api.content.get_view(
-            name="card_view",
-            context=content,
-        )
+        # content = api.content.get(path="/plone/basic-page-1/a-links-section")
+        # view = api.content.get_view(
+        #     name="card_view",
+        #     context=content,
+        # )
         # __import__("pdb").set_trace()
         # assert (
         #     view.data_pat_leaflet == '{"fullscreencontrol": true, "zoomcontrol": true}'

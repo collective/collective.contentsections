@@ -9,6 +9,19 @@ commit-id = "2.0.0"
 test_runner = "pytest"
 constraints_file = "https://dist.plone.org/release/6.1.1/constraints.txt"
 
+[flake8]
+extra_lines = """
+per-file-ignores = __init__.py:F401
+"""
+
+[pre_commit]
+codespell_extra_lines = """
+        exclude: (src/collective/contentsections/static/.*|src/collective/contentsections/distributions/.*.json)
+"""
+i18ndude_extra_lines = """
+        pass_filenames: false
+"""
+
 [github]
 jobs = [
     "qa",

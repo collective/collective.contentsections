@@ -1,6 +1,5 @@
 from collective.contentsections.pages.base import IPage
 from collective.contentsections.pages.base import Page
-from plone.dexterity.content import Container
 from zope.interface import implementer
 
 

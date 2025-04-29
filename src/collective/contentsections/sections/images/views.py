@@ -1,5 +1,4 @@
 from collective.contentsections.sections.base import BaseLinksSectionView
-from collective.contentsections.sections.base import ISection
 from collective.contentsections.sections.base import SectionView
 from plone import api
 

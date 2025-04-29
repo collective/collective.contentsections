@@ -14,9 +14,7 @@
                alt="Lead image"
                src="${item/lead_image_url}"
                tal:condition="not:context/hide_item_lead_images"
-               tal:attributes="
-                 alt;
-               "
+               i18n:attributes="alt"
           />
           <h5>${item/title}</h5>
           <p>

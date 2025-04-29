@@ -1,11 +1,13 @@
 graft src/collective
+graft tests
+include .coveragerc
+include .editorconfig
 include *.md
 include *.json
-include .editorconfig
 include LICENCE
 include Makefile
 include buildout.cfg
-exclude demo.json
+include requirements.txt
 global-exclude *.pyc
 global-exclude .DS_Store
 recursive-exclude node_modules *

@@ -1,6 +1,4 @@
-from collective.contentsections.sections.locations.views import LocationsSectionView
 from plone import api
-from zope.interface import implementedBy
 
 import pytest
 
