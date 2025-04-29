@@ -12,6 +12,7 @@ constraints_file = "https://dist.plone.org/release/6.1.1/constraints.txt"
 [github]
 jobs = [
     "qa",
+    "test",
     "coverage",
     "dependencies",
     "release_ready",
