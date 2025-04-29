@@ -5,7 +5,7 @@
       i18n:domain="collective.contentsections"
 >
   <metal:main fill-slot="main">
-    <metal:content-core define-macro="content-core">
+    <metal:core define-macro="content-core">
       <div class="row row-cols-1 row-cols-md-${context/group_size} g-4">
         <div class="col"
              tal:repeat="item view/items"
@@ -44,6 +44,6 @@
           </div>
         </div>
       </div>
-    </metal:content-core>
-  </metal:main>
+
+    </metal:core></metal:main>
 </html>

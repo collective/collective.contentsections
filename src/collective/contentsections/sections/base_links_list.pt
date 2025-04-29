@@ -27,7 +27,7 @@
             <a href="${item/url}"
                i18n:domain="plone"
                i18n:translate="read_more"
-            >Read More…</a>
+            >Read More</a>
           </p>
         </article>
       </div>

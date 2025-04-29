@@ -1,4 +1,5 @@
-from collective.contentsections.behaviors.namechooser import NameFromUUID, INameFromUUID
+from collective.contentsections.behaviors.namechooser import INameFromUUID
+from collective.contentsections.behaviors.namechooser import NameFromUUID
 from plone import api
 
 import pytest
