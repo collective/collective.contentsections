@@ -85,6 +85,7 @@ Zope = [
 python-dateutil = ['dateutil']
 pytest-plone = ['pytest', 'zope.pytestlayer', 'plone.testing', 'plone.app.testing']
 ignore-packages = ['i18ndude', 'plone.exportimport', 'plone.formwidget.geolocation', 'plone.meta', 'Products.CMFPlacefulWorkflow', 'pytest', 'pytest-cov', 'tox']
+'Products.CMFPlone' = ['Products.Five', 'plone.app.content', 'plone.app.contenttypes', 'plone.app.vocabularies', 'plone.app.uuid', 'plone.app.z3cform', 'plone.autoform', 'plone.base', 'plone.behavior', 'plone.dexterity', 'plone.indexer', 'plone.registry', 'plone.memoize', 'plone.namedfile', 'plone.schema', 'plone.supermodel', 'Products.GenericSetup','z3c.relationfield', 'zope.component', 'zope.i18nmessageid', 'zope.interface', 'zope.lifecycleevent', 'zope.publisher', 'zope.schema']
 
 ##
 # Add extra configuration options in .meta.toml:
