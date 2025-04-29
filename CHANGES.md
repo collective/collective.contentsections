@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.0a2 (unreleased)
+## 2.0.0a2 (2025-04-29)
 
 - Implement **UV** for managing Python environment and dependencies. [remdub]
 - Introduce **pytest** as the testing framework. [remdub]
