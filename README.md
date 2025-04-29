@@ -133,6 +133,11 @@ make i18n
 
 You will need to change `Language-Code` and `Language-Name` directives in the file.
 
+## Contributors
+
+- [Sébastien VERBOIS](https://github.com/sverbois)
+- [Rémi DUBOIS](https://github.com/remdub)
+
 ## Credits
 
 Most ideas developed in this product come from people who worked at iMio on the imio.smartweb product family during the year 2021. This team was composed of:

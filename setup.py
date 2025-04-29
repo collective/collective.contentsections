@@ -32,7 +32,7 @@ setup(
     ],
     keywords="Python Plone CMS",
     author="Sébastien Verbois",
-    author_email="sebastien.verbois@gmail.be",
+    author_email="sebastien.verbois@gmail.com",
     url="https://github.com/collective/collective.contentsections",
     project_urls={
         "PyPI": "https://pypi.python.org/pypi/collective.contentsections",
@@ -58,12 +58,18 @@ setup(
     ],
     extras_require={
         "test": [
-            "Products.CMFPlacefulWorkflow",
             "plone.app.testing",
             "plone.app.robotframework[debug]",
+            "Products.CMFPlacefulWorkflow",  # needed for plone.app.testing.layers.PLONE_FIXTURE
             "pytest",
             "pytest-cov",
-            "pytest-plone>=0.5.0",
+            "pytest-plone",
+            "tox",
+        ],
+        "dev": [
+            "i18ndude",
+            "plone.exportimport",
+            "plone.meta",
         ],
     },
     entry_points="""

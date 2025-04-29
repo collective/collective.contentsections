@@ -139,7 +139,7 @@ msgstr "Fin"
 
 #: ../profiles/default/types/collective.contentsections.EventPage.xml
 msgid "Event page"
-msgstr "Page d'événement"
+msgstr "Page événement"
 
 #: ../profiles/default/types/collective.contentsections.FilesSection.xml
 msgid "Files section"
@@ -249,7 +249,7 @@ msgstr "Nom à partir du uuid"
 
 #: ../profiles/default/types/collective.contentsections.NewsPage.xml
 msgid "News page"
-msgstr "Page d'actualités"
+msgstr "Page actualité"
 
 #: ../sections/base_links_carousel.pt:61
 msgid "Next"
