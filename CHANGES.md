@@ -2,8 +2,7 @@
 
 ## 2.0.0a4 (unreleased)
 
-
-- Nothing changed yet.
+- Add pre-commit to development environment. [remdub]
 
 
 ## 2.0.0a3 (2025-04-30)
