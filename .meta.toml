@@ -1,0 +1,19 @@
+# Generated from:
+# https://github.com/plone/meta/tree/main/src/plone/meta/default
+# See the inline comments on how to expand/tweak this configuration file
+[meta]
+template = "default"
+commit-id = "2.0.0"
+
+[tox]
+test_runner = "pytest"
+constraints_file = "https://dist.plone.org/release/6.1.1/constraints.txt"
+
+[github]
+jobs = [
+    "qa",
+    "coverage",
+    "dependencies",
+    "release_ready",
+    "circular",
+    ]

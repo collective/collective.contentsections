@@ -59,7 +59,7 @@ setup(
     extras_require={
         "test": [
             "plone.app.testing",
-            "plone.app.robotframework[debug]",
+            "plone.app.contenttypes [test]",
             "Products.CMFPlacefulWorkflow",  # needed for plone.app.testing.layers.PLONE_FIXTURE
             "pytest",
             "pytest-cov",

@@ -1,6 +1,5 @@
 # from collective.geolocationbehavior.geolocation import IGeolocatable
 from collective.contentsections.contents.location.content import ILocation
-from collective.contentsections.testing import ACCEPTANCE_TESTING
 from collective.contentsections.testing import FUNCTIONAL_TESTING
 from collective.contentsections.testing import INTEGRATION_TESTING
 from plone import api
@@ -15,7 +14,6 @@ pytest_plugins = ["pytest_plone"]
 globals().update(
     fixtures_factory(
         (
-            (ACCEPTANCE_TESTING, "acceptance"),
             (FUNCTIONAL_TESTING, "functional"),
             (INTEGRATION_TESTING, "integration"),
         )

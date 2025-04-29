@@ -14,7 +14,7 @@ start: bin/instance
 
 .PHONY: clean  # Clean development environment
 clean:
-	rm -r $(VENV_FOLDER) bin develop-eggs eggs node_modules parts .installed.cfg forest.dot forest.json .tox
+	rm -r $(VENV_FOLDER) bin .tox .coverage .installed.cfg coverage.xml develop-eggs eggs node_modules parts
 
 .PHONY: test  # Run tests
 test: bin/tox
