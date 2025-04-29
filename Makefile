@@ -16,6 +16,10 @@ start: bin/instance
 clean:
 	rm -r $(VENV_FOLDER) bin .tox .coverage .installed.cfg coverage.xml develop-eggs eggs forest.dot forest.json node_modules parts
 
+.PHONY: meta  # Update configuration files with plone.meta
+meta:
+	./bin/config-package --branch current --no-commit .
+
 .PHONY: test  # Run tests
 test: bin/tox
 	bin/tox -e test

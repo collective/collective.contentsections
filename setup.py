@@ -1,7 +1,6 @@
 from setuptools import find_packages
 from setuptools import setup
 
-
 long_description = "\n\n".join(
     [
         open("README.md").read(),
@@ -71,6 +70,7 @@ setup(
             "i18ndude",
             "plone.exportimport",
             "plone.meta",
+            "zest.releaser",
         ],
     },
     entry_points="""
