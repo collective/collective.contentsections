@@ -5,18 +5,28 @@
       <?python
         figure_class = {"top": "w-100 text-center", "right": "float-end ms-4", "bottom": "w-100 text-center", "left": "float-start me-4"}
         ?>
-      <div tal:condition="python: context.lead_image_alignment=='bottom'"
-        class="text" tal:content="structure context/text/output | nothing" />
-      <figure tal:condition="context/image | nothing"
-        class="${python:figure_class[context.lead_image_alignment]}">
+      <div class="text"
+           tal:condition="python: context.lead_image_alignment=='bottom'"
+           tal:content="structure context/text/output | nothing"
+      ></div>
+      <figure class="${python:figure_class[context.lead_image_alignment]}"
+              tal:condition="context/image | nothing"
+      >
         <img class="figure-image img-fluid img-size-${context/lead_image_scale}"
-          tal:attributes="src string:${context/absolute_url}/@@images/image/${context/lead_image_scale};" />
-        <figcaption tal:condition="context/image_caption" class="figure-caption">
+             tal:attributes="
+               src string:${context/absolute_url}/@@images/image/${context/lead_image_scale};
+             "
+        />
+        <figcaption class="figure-caption"
+                    tal:condition="context/image_caption"
+        >
           ${context/image_caption}
         </figcaption>
       </figure>
-      <div tal:condition="python: context.lead_image_alignment!='bottom'"
-        class="text" tal:content="structure context/text/output | nothing" />
+      <div class="text"
+           tal:condition="python: context.lead_image_alignment!='bottom'"
+           tal:content="structure context/text/output | nothing"
+      ></div>
 
     </metal:content-core>
   </metal:main>

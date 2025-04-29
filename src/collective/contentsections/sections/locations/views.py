@@ -1,9 +1,8 @@
-import json
-
+from collective.contentsections.sections.base import SectionView
 from plone import api
 from plone.memoize import view
 
-from collective.contentsections.sections.base import SectionView
+import json
 
 
 class LocationsSectionView(SectionView):
@@ -16,7 +15,9 @@ class LocationsSectionView(SectionView):
             return (0.0, 0.0)
         coordinates = [(loc["latitude"], loc["longitude"]) for loc in self.locations]
         latitudes, longitudes = zip(*coordinates)
-        center = (min(latitudes) + max(latitudes)) / 2, (min(longitudes) + max(longitudes)) / 2
+        center = (min(latitudes) + max(latitudes)) / 2, (
+            min(longitudes) + max(longitudes)
+        ) / 2
         return center
 
     @property
@@ -34,8 +35,13 @@ class LocationsSectionView(SectionView):
     @property
     def data_geojson(self):
         features = []
+        # __import__("pdb").set_trace()
         for loc in self.locations:
-            card_image = f"""<img src="{loc['lead_image_url']}" alt="picture">""" if loc["lead_image_url"] else ""
+            card_image = (
+                f"""<img src="{loc['lead_image_url']}" alt="picture">"""
+                if loc["lead_image_url"]
+                else ""
+            )
             card_title = f"""<h5>{loc['title']}</h5>"""
             card_text = f"""<p>{loc['description']}</p>""" if loc["description"] else ""
             popup = f"""<div>{card_image}<div>{card_title}{card_text}</div></div>"""
@@ -43,7 +49,10 @@ class LocationsSectionView(SectionView):
                 {
                     "type": "Feature",
                     "properties": {"color": "blue", "popup": popup},
-                    "geometry": {"type": "Point", "coordinates": [loc["longitude"], loc["latitude"]]},
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [loc["longitude"], loc["latitude"]],
+                    },
                 }
             )
         data = {"type": "FeatureCollection", "features": features}
@@ -58,6 +67,7 @@ class LocationsSectionView(SectionView):
             portal_type="collective.contentsections.Location",
             sort_on="getObjPositionInParent",
         )
+        # __import__("pdb").set_trace()
         results = [
             {
                 "title": brain.Title,
@@ -65,7 +75,11 @@ class LocationsSectionView(SectionView):
                 "tags": brain.Subject,
                 "latitude": brain.latitude,
                 "longitude": brain.longitude,
-                "lead_image_url": f"{brain.getURL()}/@@images/image/preview" if brain.image_scales else None,
+                "lead_image_url": (
+                    f"{brain.getURL()}/@@images/image/preview"
+                    if brain.image_scales
+                    else None
+                ),
             }
             for brain in brains
         ]

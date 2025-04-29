@@ -1,10 +1,9 @@
-from plone import schema
-from plone.autoform import directives
-from zope.interface import implementer
-
 from collective.contentsections import _
 from collective.contentsections.sections.base import ISection
 from collective.contentsections.sections.base import Section
+from plone import schema
+from plone.autoform import directives
+from zope.interface import implementer
 
 
 class ITextSection(ISection):

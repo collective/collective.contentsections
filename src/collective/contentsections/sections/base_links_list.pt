@@ -1,20 +1,37 @@
-<html metal:use-macro="context/@@main_template/macros/master">
+<html xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="context/@@main_template/macros/master"
+      i18n:domain="collective.contentsections"
+>
   <metal:main fill-slot="main">
     <metal:content-core define-macro="content-core">
       <div class="row row-cols-1 row-cols-md-${context/group_size} g-4">
-        <article tal:repeat="item view/items" class="clearfix mb-3">
-          <img tal:condition="not:context/hide_item_lead_images" src="${item/lead_image_url}" class="float-start me-2" alt="Lead image" />
+        <article class="clearfix mb-3"
+                 tal:repeat="item view/items"
+        >
+          <img class="float-start me-2"
+               alt="Lead image"
+               src="${item/lead_image_url}"
+               tal:condition="not:context/hide_item_lead_images"
+               i18n:attributes="alt"
+          />
           <h5>${item/title}</h5>
           <p>
             <tal:if tal:condition="not:context/hide_item_descriptions">
                             ${item/description}
               <br tal:omit-tag="not:item/description" />
             </tal:if>
-            <a href="${item/url}" i18n:domain="plone" i18n:translate="read_more">Read More&hellip;</a>
+            <a href="${item/url}"
+               i18n:domain="plone"
+               i18n:translate="read_more"
+            >Read More</a>
           </p>
         </article>
       </div>
-      <div tal:condition="view/more_link_text | nothing" class="section-more-link">
+      <div class="section-more-link"
+           tal:condition="view/more_link_text | nothing"
+      >
         <a href="${view/more_link_url}">${view/more_link_text}</a>
       </div>
 

@@ -1,6 +1,7 @@
 from setuptools import find_packages
 from setuptools import setup
 
+
 long_description = "\n\n".join(
     [
         open("README.md").read(),
@@ -19,17 +20,19 @@ setup(
         "Environment :: Web Environment",
         "Framework :: Plone",
         "Framework :: Plone :: Addon",
+        "Framework :: Plone :: Distribution",
         "Framework :: Plone :: 6.1",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
         "Operating System :: OS Independent",
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     ],
     keywords="Python Plone CMS",
     author="Sébastien Verbois",
-    author_email="sebastien.verbois@gmail.be",
+    author_email="sebastien.verbois@gmail.com",
     url="https://github.com/collective/collective.contentsections",
     project_urls={
         "PyPI": "https://pypi.python.org/pypi/collective.contentsections",
@@ -43,7 +46,7 @@ setup(
     package_dir={"": "src"},
     include_package_data=True,
     zip_safe=False,
-    python_requires=">=3.8",
+    python_requires=">=3.10",
     install_requires=[
         "collective.geolocationbehavior >= 1.7.2",
         "collective.taxonomy >= 3.1.5",
@@ -51,8 +54,25 @@ setup(
         "plone.api",
         "plone.distribution",
         "plone.formwidget.geolocation >= 3.0.7",
+        "Products.CMFPlone",
         "setuptools",
     ],
+    extras_require={
+        "test": [
+            "plone.app.testing",
+            "plone.app.contenttypes [test]",
+            "Products.CMFPlacefulWorkflow",  # needed for plone.app.testing.layers.PLONE_FIXTURE
+            "pytest",
+            "pytest-cov",
+            "pytest-plone",
+            "tox",
+        ],
+        "dev": [
+            "i18ndude",
+            "plone.exportimport",
+            "plone.meta",
+        ],
+    },
     entry_points="""
     [z3c.autoinclude.plugin]
     target = plone

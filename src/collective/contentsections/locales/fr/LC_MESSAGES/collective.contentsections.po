@@ -1,0 +1,350 @@
+#--- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+#SOME DESCRIPTIVE TITLE.
+#FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2025-04-22 06:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ../pages/base_page_view.pt:79
+msgid "${DYNAMIC_CONTENT} Actions"
+msgstr ""
+
+#: ../pages/base_page_view.pt:92
+msgid "${DYNAMIC_CONTENT} Add ${item/title}"
+msgstr "${DYNAMIC_CONTENT} Ajouter ${item/title}"
+
+#: ../pages/base_page_view.pt:120
+msgid "${DYNAMIC_CONTENT} Change section view"
+msgstr "${DYNAMIC_CONTENT} Changer la vue de la section"
+
+#: ../pages/base_page_view.pt:129
+msgid "${DYNAMIC_CONTENT} Delete section"
+msgstr "${DYNAMIC_CONTENT} Supprimer la section"
+
+#: ../pages/base_page_view.pt:111
+msgid "${DYNAMIC_CONTENT} Edit section"
+msgstr "${DYNAMIC_CONTENT} Modifier la section"
+
+#: ../pages/base_page_view.pt:102
+msgid "${DYNAMIC_CONTENT} Section content"
+msgstr "${DYNAMIC_CONTENT} Contenu de la section"
+
+#: ../configure.zcml:20
+msgid "A Plone site where pages are built with sections."
+msgstr "Un site Plone dans lequel les pages sont construites avec des sections."
+
+#: ../behaviors/configure.zcml:22
+msgid "Adds icon field"
+msgstr "Ajoute le champ d'icône"
+
+#: ../sections/base.py:29
+msgid "Background image"
+msgstr "Image d'arrière-plan"
+
+#: ../profiles/default/types/collective.contentsections.BasicPage.xml
+msgid "Basic page"
+msgstr "Page basique"
+
+#: ../vocabularies.py:13
+msgid "Bottom"
+msgstr "En bas"
+
+#: ../sections/base.py:33
+msgid "CSS Classes"
+msgstr "Classes CSS"
+
+#: ../sections/cards/content.py:76
+msgid "Card"
+msgstr "Carte"
+
+#: ../sections/cards/content.py:86
+msgid "Card link text"
+msgstr "Texte du lien de la carte"
+
+#: ../sections/cards/content.py:52
+msgid "Card subtitle"
+msgstr "Sous-titre de la carte"
+
+#: ../sections/cards/content.py:51
+msgid "Card title"
+msgstr "Titre de la carte"
+
+#: ../sections/cards/content.py:75
+msgid "Cards"
+msgstr "Cartes"
+
+#: ../profiles/default/types/collective.contentsections.CardsSection.xml
+msgid "Cards section"
+msgstr "Sections cartes"
+
+#: ../vocabularies.py:24
+msgid "Center"
+msgstr "Centrer"
+
+#: ../sections/collection/content.py:16
+msgid "Collection"
+msgstr "Collection"
+
+#: ../profiles/default/types/collective.contentsections.CollectionSection.xml
+msgid "Collection section"
+msgstr "Section collection"
+
+#: ../profiles/default/types/collective.contentsections.Contact.xml
+msgid "Contact"
+msgstr "Contact"
+
+#: ../profiles/default/types/collective.contentsections.ContactsSection.xml
+msgid "Contacts section"
+msgstr "Section contacts"
+
+#: ../vocabularies.py:17
+msgid "Container 100%"
+msgstr "Conteneur 100%"
+
+#: ../vocabularies.py:19
+msgid "Container 50%"
+msgstr "Conteneur 50%"
+
+#: ../vocabularies.py:18
+msgid "Container 66%"
+msgstr "Conteneur 66%"
+
+#: ../sections/base.py:24
+msgid "Container width"
+msgstr "Largeur du conteneur"
+
+#: ../contents/contact/content.py:21
+msgid "Description"
+msgstr "Description"
+
+#: ../contents/contact/content.py:25
+msgid "Email"
+msgstr "Adresse courriel"
+
+#: ../vocabularies.py:25
+msgid "End"
+msgstr "Fin"
+
+#: ../profiles/default/types/collective.contentsections.EventPage.xml
+msgid "Event page"
+msgstr "Page événement"
+
+#: ../profiles/default/types/collective.contentsections.FilesSection.xml
+msgid "Files section"
+msgstr "Section fichiers"
+
+#: ../sections/base.py:54
+#: ../sections/cards/content.py:81
+msgid "Group size"
+msgstr "Taille du groupe"
+
+#: ../sections/html/content.py:12
+msgid "HTML"
+msgstr "HTML"
+
+#: ../profiles/default/types/collective.contentsections.HTMLSection.xml
+msgid "HTML section"
+msgstr "Section HTML"
+
+#: ../sections/base.py:76
+msgid "Hide item descriptions"
+msgstr "Cacher les descriptions de l'élément"
+
+#: ../sections/base.py:71
+msgid "Hide item lead images"
+msgstr "Cacher les images principales de l'élément"
+
+#: ../sections/base.py:81
+msgid "Hide item publication dates"
+msgstr "Cacher les dates de publication de l'élément"
+
+#: ../sections/base.py:66
+msgid "Hide item titles"
+msgstr "Cacher les titres de l'élément"
+
+#: ../pages/base.py:21
+msgid "Hide page title"
+msgstr "Cacher le titre de la page"
+
+#: ../sections/base.py:19
+msgid "Hide section title in page"
+msgstr "Cacher le titre de la section dans la page"
+
+#: ../sections/cards/content.py:37
+msgid "Icon"
+msgstr "Icône"
+
+#: ../profiles/default/types/collective.contentsections.ImagesSection.xml
+msgid "Images section"
+msgstr "Section images"
+
+#: ../sections/locations/content.py:12
+msgid "Initial zoom level"
+msgstr "Niveau de zoom initial"
+
+#: ../configure.zcml:28
+msgid "Installs the collective.contentsections add-on"
+msgstr "Installe le module complémentaire collective.contentsections"
+
+#: ../sections/selection/content.py:18
+msgid "Item"
+msgstr "Élément"
+
+#: ../sections/base_links_carousel.pt:27
+msgid "Item image"
+msgstr "Image de l'élément"
+
+#: ../sections/selection/content.py:16
+msgid "Items"
+msgstr "Éléments"
+
+#: ../behaviors/configure.zcml:22
+#: ../behaviors/leadicon.py:20
+msgid "Lead Icon"
+msgstr "Icône principale"
+
+#: ../sections/text/content.py:13
+msgid "Lead image alignment"
+msgstr "Alignement de l'image principale"
+
+#: ../sections/text/content.py:18
+msgid "Lead image scale"
+msgstr "Échelle de l'image principale"
+
+#: ../vocabularies.py:11
+msgid "Left"
+msgstr "Gauche"
+
+#: ../profiles/default/types/collective.contentsections.LinksSection.xml
+msgid "Links section"
+msgstr "Section liens"
+
+#: ../profiles/default/types/collective.contentsections.Location.xml
+msgid "Location"
+msgstr "Emplacement"
+
+#: ../profiles/default/types/collective.contentsections.LocationsSection.xml
+msgid "Locations section"
+msgstr "Section emplacements"
+
+#: ../sections/cards/views.py:30
+msgid "More information"
+msgstr "Plus d'informations"
+
+#: ../behaviors/configure.zcml:29
+msgid "Name from uuid"
+msgstr "Nom à partir du uuid"
+
+#: ../profiles/default/types/collective.contentsections.NewsPage.xml
+msgid "News page"
+msgstr "Page actualité"
+
+#: ../sections/base_links_carousel.pt:61
+msgid "Next"
+msgstr "Suivant"
+
+#: ../sections/collection/content.py:20
+msgid "Number of items to display"
+msgstr "Nombre d'éléments à afficher"
+
+#: ../contents/contact/content.py:29
+msgid "Phone"
+msgstr "Téléphone"
+
+#: ../configure.zcml:20
+msgid "Plone Site (Content Sections)"
+msgstr "Site Plone (Content Sections)"
+
+#: ../sections/base_links_carousel.pt:49
+msgid "Previous"
+msgstr "Précédent"
+
+#: ../vocabularies.py:12
+msgid "Right"
+msgstr "Droite"
+
+#: ../sections/base.py:16
+msgid "Section title"
+msgstr "Titre de la section"
+
+#: ../sections/cards/content.py:54
+msgid "Select an icon"
+msgstr "Sélectionner une icône"
+
+#: ../sections/selection/content.py:30
+msgid "Select items"
+msgstr "Sélectionner des éléments"
+
+#: ../sections/cards/content.py:44
+msgid "Selection"
+msgstr "Sélection"
+
+#: ../profiles/default/types/collective.contentsections.SelectionSection.xml
+msgid "Selection section"
+msgstr "Section sélection"
+
+#: ../vocabularies.py:23
+msgid "Start"
+msgstr "Début"
+
+#: ../contents/contact/content.py:17
+#: ../sections/cards/content.py:25
+msgid "Subtitle"
+msgstr "Sous-titre"
+
+#: ../sections/cards/content.py:31
+msgid "Text"
+msgstr "Texte"
+
+#: ../sections/collection/content.py:25
+msgid "Text for the link to the collection"
+msgstr "Texte pour le lien vers la collection"
+
+#: ../profiles/default/types/collective.contentsections.TextSection.xml
+msgid "Text section"
+msgstr "Section texte"
+
+#: ../pages/base_page_view.pt:36
+msgid "There is no section on this page."
+msgstr "Il n'y a pas de section sur cette page."
+
+#: ../contents/contact/content.py:13
+#: ../sections/cards/content.py:19
+msgid "Title"
+msgstr "Titre"
+
+#: ../vocabularies.py:14
+msgid "Top"
+msgstr "Haut"
+
+#: ../configure.zcml:36
+msgid "Uninstalls the collective.contentsections add-on"
+msgstr "Désinstalle le module complémentaire collective.contentsections"
+
+#: ../behaviors/configure.zcml:29
+msgid "Use uuid.uuid4 to generate short name of new object."
+msgstr "Utiliser le uuid.uuid4 pour générer le nom court du nouvel objet."
+
+#: ../vocabularies.py:20
+msgid "Window 100%"
+msgstr "Fenêtre 100%"
+
+#: ../configure.zcml:28
+msgid "collective.contentsections"
+msgstr "collective.contentsections"
+
+#: ../configure.zcml:36
+msgid "collective.contentsections (uninstall)"
+msgstr "collective.contentsections (désinstallation)"

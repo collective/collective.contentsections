@@ -1,7 +1,5 @@
-from plone import api
-
 from collective.contentsections.sections.base import BaseLinksSectionView
-from collective.contentsections.sections.base import ISection
+from plone import api
 
 
 class FilesSectionView(BaseLinksSectionView):

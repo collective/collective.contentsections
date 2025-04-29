@@ -1,20 +1,52 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<object name="portal_types" meta_type="Plone Types Tool">
+<?xml version="1.0" encoding="utf-8"?>
+<object meta_type="Plone Types Tool"
+        name="portal_types"
+>
 
-  <object meta_type="Dexterity FTI" name="collective.contentsections.BasicPage" />
-  <object meta_type="Dexterity FTI" name="collective.contentsections.CardsSection" />
-  <object meta_type="Dexterity FTI" name="collective.contentsections.CollectionSection" />
-  <object meta_type="Dexterity FTI" name="collective.contentsections.Contact" />
-  <object meta_type="Dexterity FTI" name="collective.contentsections.ContactsSection" />
-  <object meta_type="Dexterity FTI" name="collective.contentsections.EventPage" />
-  <object meta_type="Dexterity FTI" name="collective.contentsections.FilesSection" />
-  <object meta_type="Dexterity FTI" name="collective.contentsections.HTMLSection" />
-  <object meta_type="Dexterity FTI" name="collective.contentsections.ImagesSection" />
-  <object meta_type="Dexterity FTI" name="collective.contentsections.LinksSection" />
-  <object meta_type="Dexterity FTI" name="collective.contentsections.Location" />
-  <object meta_type="Dexterity FTI" name="collective.contentsections.LocationsSection" />
-  <object meta_type="Dexterity FTI" name="collective.contentsections.NewsPage" />
-  <object meta_type="Dexterity FTI" name="collective.contentsections.SelectionSection" />
-  <object meta_type="Dexterity FTI" name="collective.contentsections.TextSection" />
+  <object meta_type="Dexterity FTI"
+          name="collective.contentsections.BasicPage"
+  />
+  <object meta_type="Dexterity FTI"
+          name="collective.contentsections.CardsSection"
+  />
+  <object meta_type="Dexterity FTI"
+          name="collective.contentsections.CollectionSection"
+  />
+  <object meta_type="Dexterity FTI"
+          name="collective.contentsections.Contact"
+  />
+  <object meta_type="Dexterity FTI"
+          name="collective.contentsections.ContactsSection"
+  />
+  <object meta_type="Dexterity FTI"
+          name="collective.contentsections.EventPage"
+  />
+  <object meta_type="Dexterity FTI"
+          name="collective.contentsections.FilesSection"
+  />
+  <object meta_type="Dexterity FTI"
+          name="collective.contentsections.HTMLSection"
+  />
+  <object meta_type="Dexterity FTI"
+          name="collective.contentsections.ImagesSection"
+  />
+  <object meta_type="Dexterity FTI"
+          name="collective.contentsections.LinksSection"
+  />
+  <object meta_type="Dexterity FTI"
+          name="collective.contentsections.Location"
+  />
+  <object meta_type="Dexterity FTI"
+          name="collective.contentsections.LocationsSection"
+  />
+  <object meta_type="Dexterity FTI"
+          name="collective.contentsections.NewsPage"
+  />
+  <object meta_type="Dexterity FTI"
+          name="collective.contentsections.SelectionSection"
+  />
+  <object meta_type="Dexterity FTI"
+          name="collective.contentsections.TextSection"
+  />
 
 </object>

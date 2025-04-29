@@ -1,4 +1,3 @@
-from Acquisition import aq_inner
 from collective.contentsections import _
 from collective.contentsections.sections import ISection
 from plone import api
@@ -10,8 +9,8 @@ from plone.autoform import directives
 from plone.dexterity.content import Container
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from zope.interface import Interface
 from zope.interface import implementer
+from zope.interface import Interface
 
 
 class IPage(Interface):
@@ -23,7 +22,7 @@ class IPage(Interface):
         default=False,
     )
 
-    directives.order_after(hide_title='IBasic.title')
+    directives.order_after(hide_title="IBasic.title")
 
 
 @implementer(IPage)

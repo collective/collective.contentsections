@@ -1,5 +1,3 @@
-from plone import api
-
 from collective.contentsections.sections.base import BaseLinksSectionView
 
 
@@ -9,7 +7,9 @@ class SelectionSectionView(BaseLinksSectionView):
     @property
     def items(self):
         lead_image_scale = self.item_lead_image_scale
-        objects = [rel.to_object for rel in self.context.relations if not rel.isBroken()]
+        objects = [
+            rel.to_object for rel in self.context.relations if not rel.isBroken()
+        ]
         results = [
             {
                 "title": obj.title,

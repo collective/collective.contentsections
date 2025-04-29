@@ -1,10 +1,9 @@
+from collective.contentsections import _
+from collective.contentsections.contents.base import IElement
 from plone import schema
 from plone.dexterity.content import Item
 from plone.supermodel import model
 from zope.interface import implementer
-
-from collective.contentsections import _
-from collective.contentsections.contents.base import IElement
 
 
 class IContact(model.Schema):

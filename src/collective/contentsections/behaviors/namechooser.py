@@ -1,11 +1,9 @@
-# -*- coding: utf-8 -*-
-
-import uuid
-
 from plone.app.content.interfaces import INameFromTitle
 from zope.component import adapter
-from zope.interface import Interface
 from zope.interface import implementer
+from zope.interface import Interface
+
+import uuid
 
 
 class INameFromUUID(Interface):
@@ -14,7 +12,7 @@ class INameFromUUID(Interface):
 
 @implementer(INameFromTitle)
 @adapter(INameFromUUID)
-class NameFromUUID(object):
+class NameFromUUID:
     def __init__(self, context):
         self.context = context
 

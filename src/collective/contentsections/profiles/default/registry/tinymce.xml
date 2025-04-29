@@ -1,72 +1,90 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <registry>
 
-    <!-- See TinyMCE 7 version used in https://github.com/plone/mockup/blob/master/package.json -->
+  <!-- See TinyMCE 7 version used in https://github.com/plone/mockup/blob/master/package.json -->
 
-    <!-- See format documentation in https://www.tiny.cloud/docs/tinymce/latest/content-formatting/ -->
-    <record name="plone.formats" interface="plone.base.interfaces.controlpanel.ITinyMCESchema">
-        <value>{}</value>
-    </record>
-    <record name="plone.header_styles" interface="plone.base.interfaces.controlpanel.ITinyMCESchema">
-        <value>
-            <element>|</element>
-        </value>
-    </record>
-    <record name="plone.inline_styles" interface="plone.base.interfaces.controlpanel.ITinyMCESchema">
-        <value>
-            <element>||</element>
-        </value>
-    </record>
-    <record name="plone.block_styles" interface="plone.base.interfaces.controlpanel.ITinyMCESchema">
-        <value>
-            <element>|</element>
-        </value>
-    </record>
-    <record name="plone.alignment_styles" interface="plone.base.interfaces.controlpanel.ITinyMCESchema">
-        <value>
-            <element>||</element>
-        </value>
-    </record>
-    <record name="plone.table_styles" interface="plone.base.interfaces.controlpanel.ITinyMCESchema">
-        <value>
-            <element>|</element>
-        </value>
-    </record>
+  <!-- See format documentation in https://www.tiny.cloud/docs/tinymce/latest/content-formatting/ -->
+  <record interface="plone.base.interfaces.controlpanel.ITinyMCESchema"
+          name="plone.formats"
+  >
+    <value>{}</value>
+  </record>
+  <record interface="plone.base.interfaces.controlpanel.ITinyMCESchema"
+          name="plone.header_styles"
+  >
+    <value>
+      <element>|</element>
+    </value>
+  </record>
+  <record interface="plone.base.interfaces.controlpanel.ITinyMCESchema"
+          name="plone.inline_styles"
+  >
+    <value>
+      <element>||</element>
+    </value>
+  </record>
+  <record interface="plone.base.interfaces.controlpanel.ITinyMCESchema"
+          name="plone.block_styles"
+  >
+    <value>
+      <element>|</element>
+    </value>
+  </record>
+  <record interface="plone.base.interfaces.controlpanel.ITinyMCESchema"
+          name="plone.alignment_styles"
+  >
+    <value>
+      <element>||</element>
+    </value>
+  </record>
+  <record interface="plone.base.interfaces.controlpanel.ITinyMCESchema"
+          name="plone.table_styles"
+  >
+    <value>
+      <element>|</element>
+    </value>
+  </record>
 
-    <!-- See possible values in https://www.tiny.cloud/docs/tinymce/latest/plugins/#open-source-plugins -->
-    <record name="plone.plugins" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
-        <value purge="true">
-            <element>code</element>
-            <element>charmap</element>
-            <element>fullscreen</element>
-            <element>hr</element>
-            <element>lists</element>
-            <element>nonbreaking</element>
-            <element>noneditable</element>
-            <element>paste</element>
-            <element>searchreplace</element>
-            <element>table</element>
-            <element>template</element>
-            <element>visualblocks</element>
-            <element>visualchars</element>
-            <element>wordcount</element>
-        </value>
-    </record>
+  <!-- See possible values in https://www.tiny.cloud/docs/tinymce/latest/plugins/#open-source-plugins -->
+  <record interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema"
+          name="plone.plugins"
+  >
+    <value purge="true">
+      <element>code</element>
+      <element>charmap</element>
+      <element>fullscreen</element>
+      <element>hr</element>
+      <element>lists</element>
+      <element>nonbreaking</element>
+      <element>noneditable</element>
+      <element>paste</element>
+      <element>searchreplace</element>
+      <element>table</element>
+      <element>template</element>
+      <element>visualblocks</element>
+      <element>visualchars</element>
+      <element>wordcount</element>
+    </value>
+  </record>
 
-    <!-- See possible values in https://www.tiny.cloud/docs/tinymce/latest/menus-configuration-options/#menubar -->
-    <record name="plone.menubar" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
-        <value purge="true">
-            <element>edit</element>
-            <element>format</element>
-            <element>insert</element>
-            <element>table</element>
-            <element>view</element>
-        </value>
-    </record>
+  <!-- See possible values in https://www.tiny.cloud/docs/tinymce/latest/menus-configuration-options/#menubar -->
+  <record interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema"
+          name="plone.menubar"
+  >
+    <value purge="true">
+      <element>edit</element>
+      <element>format</element>
+      <element>insert</element>
+      <element>table</element>
+      <element>view</element>
+    </value>
+  </record>
 
-    <!-- See possible values in https://www.tiny.cloud/docs/tinymce/latest/available-menu-items/ -->
-    <record name="plone.menu" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
-        <value>
+  <!-- See possible values in https://www.tiny.cloud/docs/tinymce/latest/available-menu-items/ -->
+  <record interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema"
+          name="plone.menu"
+  >
+    <value>
         {
             "file": {
                 "title": "File",
@@ -98,20 +116,24 @@
             }
         }
         </value>
-    </record>
+  </record>
 
-    <!-- See possible values in https://www.tiny.cloud/docs/tinymce/latest/available-toolbar-buttons/ -->
-    <record name="plone.toolbar" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
-        <value>undo redo | h3 h4 | bold italic | bullist numlist | plonelink unlink | table</value>
-    </record>
+  <!-- See possible values in https://www.tiny.cloud/docs/tinymce/latest/available-toolbar-buttons/ -->
+  <record interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema"
+          name="plone.toolbar"
+  >
+    <value>undo redo | h3 h4 | bold italic | bullist numlist | plonelink unlink | table</value>
+  </record>
 
 
-    <!-- See paste_as_text options in https://www.tiny.cloud/docs/tinymce/latest/copy-and-paste/#paste_as_text -->
-    <!-- See style_formats options in https://www.tiny.cloud/docs/tinymce/latest/user-formatting-options/#style_formats -->
-    <!-- See default table options in https://www.tiny.cloud/docs/tinymce/latest/table-options/ -->
-    <!-- See plugin table options in https://www.tiny.cloud/docs/tinymce/latest/table/ -->
-    <record name="plone.other_settings" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema">
-        <value>
+  <!-- See paste_as_text options in https://www.tiny.cloud/docs/tinymce/latest/copy-and-paste/#paste_as_text -->
+  <!-- See style_formats options in https://www.tiny.cloud/docs/tinymce/latest/user-formatting-options/#style_formats -->
+  <!-- See default table options in https://www.tiny.cloud/docs/tinymce/latest/table-options/ -->
+  <!-- See plugin table options in https://www.tiny.cloud/docs/tinymce/latest/table/ -->
+  <record interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema"
+          name="plone.other_settings"
+  >
+    <value>
         {
             "paste_as_text": true,
             "style_formats": [
@@ -158,6 +180,6 @@
             ]
             }
         </value>
-    </record>
+  </record>
 
 </registry>

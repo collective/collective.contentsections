@@ -1,14 +1,17 @@
 <tal:block tal:define="
-    content_core_macro nocall:view/item_macros/content-core|nothing;
-    view nocall:view/default_view;
-    icons python:context.restrictedTraverse('@@iconresolver');
-    plone_view python:context.restrictedTraverse('@@plone');
-    portal_state python:context.restrictedTraverse('@@plone_portal_state');
-    context_state python:context.restrictedTraverse('@@plone_context_state');
-    plone_layout python:context.restrictedTraverse('@@plone_layout');
-    lang python:portal_state.language();
-    dummy python: plone_layout.mark_view(view);
-    portal_url python:portal_state.portal_url();
-    checkPermission python:context.restrictedTraverse('portal_membership').checkPermission;" tal:condition="content_core_macro">
-  <div metal:use-macro="content_core_macro" />
+             content_core_macro nocall:view/item_macros/content-core|nothing;
+             view nocall:view/default_view;
+             icons python:context.restrictedTraverse('@@iconresolver');
+             plone_view python:context.restrictedTraverse('@@plone');
+             portal_state python:context.restrictedTraverse('@@plone_portal_state');
+             context_state python:context.restrictedTraverse('@@plone_context_state');
+             plone_layout python:context.restrictedTraverse('@@plone_layout');
+             lang python:portal_state.language();
+             dummy python: plone_layout.mark_view(view);
+             portal_url python:portal_state.portal_url();
+             checkPermission python:context.restrictedTraverse('portal_membership').checkPermission;
+           "
+           tal:condition="content_core_macro"
+>
+  <div metal:use-macro="content_core_macro"></div>
 </tal:block>

@@ -1,23 +1,28 @@
-<?xml version="1.0"?>
-<object name="collective.contentsections.LocationsSection" meta_type="Dexterity FTI"
-    i18n:domain="collective.contentsections" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+<?xml version="1.0" encoding="utf-8"?>
+<object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        meta_type="Dexterity FTI"
+        name="collective.contentsections.LocationsSection"
+        i18n:domain="collective.contentsections"
+>
 
-    <property name="title" i18n:translate="">Locations section</property>
-    <property name="icon_expr">string:globe</property>
+  <property name="title"
+            i18n:translate=""
+  >Locations section</property>
+  <property name="icon_expr">string:globe</property>
 
-    <property name="add_permission">cmf.AddPortalContent</property>
-    <property name="klass">collective.contentsections.sections.LocationsSection</property>
-    <property name="schema">collective.contentsections.sections.ILocationsSection</property>
+  <property name="add_permission">cmf.AddPortalContent</property>
+  <property name="klass">collective.contentsections.sections.LocationsSection</property>
+  <property name="schema">collective.contentsections.sections.ILocationsSection</property>
 
-    <property name="global_allow">False</property>
-    <property name="filter_content_types">True</property>
-    <property name="allowed_content_types">
-        <element value="collective.contentsections.Location"/>
-    </property>
+  <property name="global_allow">False</property>
+  <property name="filter_content_types">True</property>
+  <property name="allowed_content_types">
+    <element value="collective.contentsections.Location" />
+  </property>
 
-    <property name="behaviors">
-        <element value="collective.contentsections.namefromuuid"/>
-        <element value="plone.locking"/>
-    </property>
+  <property name="behaviors">
+    <element value="collective.contentsections.namefromuuid" />
+    <element value="plone.locking" />
+  </property>
 
 </object>

@@ -1,0 +1,347 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2025-04-22 06:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.contentsections\n"
+
+#: ../pages/base_page_view.pt:79
+msgid "${DYNAMIC_CONTENT} Actions"
+msgstr ""
+
+#: ../pages/base_page_view.pt:92
+msgid "${DYNAMIC_CONTENT} Add ${item/title}"
+msgstr ""
+
+#: ../pages/base_page_view.pt:120
+msgid "${DYNAMIC_CONTENT} Change section view"
+msgstr ""
+
+#: ../pages/base_page_view.pt:129
+msgid "${DYNAMIC_CONTENT} Delete section"
+msgstr ""
+
+#: ../pages/base_page_view.pt:111
+msgid "${DYNAMIC_CONTENT} Edit section"
+msgstr ""
+
+#: ../pages/base_page_view.pt:102
+msgid "${DYNAMIC_CONTENT} Section content"
+msgstr ""
+
+#: ../configure.zcml:20
+msgid "A Plone site where pages are built with sections."
+msgstr ""
+
+#: ../behaviors/configure.zcml:22
+msgid "Adds icon field"
+msgstr ""
+
+#: ../sections/base.py:29
+msgid "Background image"
+msgstr ""
+
+#: ../profiles/default/types/collective.contentsections.BasicPage.xml
+msgid "Basic page"
+msgstr ""
+
+#: ../vocabularies.py:13
+msgid "Bottom"
+msgstr ""
+
+#: ../sections/base.py:33
+msgid "CSS Classes"
+msgstr ""
+
+#: ../sections/cards/content.py:76
+msgid "Card"
+msgstr ""
+
+#: ../sections/cards/content.py:86
+msgid "Card link text"
+msgstr ""
+
+#: ../sections/cards/content.py:52
+msgid "Card subtitle"
+msgstr ""
+
+#: ../sections/cards/content.py:51
+msgid "Card title"
+msgstr ""
+
+#: ../sections/cards/content.py:75
+msgid "Cards"
+msgstr ""
+
+#: ../profiles/default/types/collective.contentsections.CardsSection.xml
+msgid "Cards section"
+msgstr ""
+
+#: ../vocabularies.py:24
+msgid "Center"
+msgstr ""
+
+#: ../sections/collection/content.py:16
+msgid "Collection"
+msgstr ""
+
+#: ../profiles/default/types/collective.contentsections.CollectionSection.xml
+msgid "Collection section"
+msgstr ""
+
+#: ../profiles/default/types/collective.contentsections.Contact.xml
+msgid "Contact"
+msgstr ""
+
+#: ../profiles/default/types/collective.contentsections.ContactsSection.xml
+msgid "Contacts section"
+msgstr ""
+
+#: ../vocabularies.py:17
+msgid "Container 100%"
+msgstr ""
+
+#: ../vocabularies.py:19
+msgid "Container 50%"
+msgstr ""
+
+#: ../vocabularies.py:18
+msgid "Container 66%"
+msgstr ""
+
+#: ../sections/base.py:24
+msgid "Container width"
+msgstr ""
+
+#: ../contents/contact/content.py:21
+msgid "Description"
+msgstr ""
+
+#: ../contents/contact/content.py:25
+msgid "Email"
+msgstr ""
+
+#: ../vocabularies.py:25
+msgid "End"
+msgstr ""
+
+#: ../profiles/default/types/collective.contentsections.EventPage.xml
+msgid "Event page"
+msgstr ""
+
+#: ../profiles/default/types/collective.contentsections.FilesSection.xml
+msgid "Files section"
+msgstr ""
+
+#: ../sections/base.py:54
+#: ../sections/cards/content.py:81
+msgid "Group size"
+msgstr ""
+
+#: ../sections/html/content.py:12
+msgid "HTML"
+msgstr ""
+
+#: ../profiles/default/types/collective.contentsections.HTMLSection.xml
+msgid "HTML section"
+msgstr ""
+
+#: ../sections/base.py:76
+msgid "Hide item descriptions"
+msgstr ""
+
+#: ../sections/base.py:71
+msgid "Hide item lead images"
+msgstr ""
+
+#: ../sections/base.py:81
+msgid "Hide item publication dates"
+msgstr ""
+
+#: ../sections/base.py:66
+msgid "Hide item titles"
+msgstr ""
+
+#: ../pages/base.py:21
+msgid "Hide page title"
+msgstr ""
+
+#: ../sections/base.py:19
+msgid "Hide section title in page"
+msgstr ""
+
+#: ../sections/cards/content.py:37
+msgid "Icon"
+msgstr ""
+
+#: ../profiles/default/types/collective.contentsections.ImagesSection.xml
+msgid "Images section"
+msgstr ""
+
+#: ../sections/locations/content.py:12
+msgid "Initial zoom level"
+msgstr ""
+
+#: ../configure.zcml:28
+msgid "Installs the collective.contentsections add-on"
+msgstr ""
+
+#: ../sections/selection/content.py:18
+msgid "Item"
+msgstr ""
+
+#: ../sections/base_links_carousel.pt:27
+msgid "Item image"
+msgstr ""
+
+#: ../sections/selection/content.py:16
+msgid "Items"
+msgstr ""
+
+#: ../behaviors/configure.zcml:22
+#: ../behaviors/leadicon.py:20
+msgid "Lead Icon"
+msgstr ""
+
+#: ../sections/text/content.py:13
+msgid "Lead image alignment"
+msgstr ""
+
+#: ../sections/text/content.py:18
+msgid "Lead image scale"
+msgstr ""
+
+#: ../vocabularies.py:11
+msgid "Left"
+msgstr ""
+
+#: ../profiles/default/types/collective.contentsections.LinksSection.xml
+msgid "Links section"
+msgstr ""
+
+#: ../profiles/default/types/collective.contentsections.Location.xml
+msgid "Location"
+msgstr ""
+
+#: ../profiles/default/types/collective.contentsections.LocationsSection.xml
+msgid "Locations section"
+msgstr ""
+
+#: ../sections/cards/views.py:30
+msgid "More information"
+msgstr ""
+
+#: ../behaviors/configure.zcml:29
+msgid "Name from uuid"
+msgstr ""
+
+#: ../profiles/default/types/collective.contentsections.NewsPage.xml
+msgid "News page"
+msgstr ""
+
+#: ../sections/base_links_carousel.pt:61
+msgid "Next"
+msgstr ""
+
+#: ../sections/collection/content.py:20
+msgid "Number of items to display"
+msgstr ""
+
+#: ../contents/contact/content.py:29
+msgid "Phone"
+msgstr ""
+
+#: ../configure.zcml:20
+msgid "Plone Site (Content Sections)"
+msgstr ""
+
+#: ../sections/base_links_carousel.pt:49
+msgid "Previous"
+msgstr ""
+
+#: ../vocabularies.py:12
+msgid "Right"
+msgstr ""
+
+#: ../sections/base.py:16
+msgid "Section title"
+msgstr ""
+
+#: ../sections/cards/content.py:54
+msgid "Select an icon"
+msgstr ""
+
+#: ../sections/selection/content.py:30
+msgid "Select items"
+msgstr ""
+
+#: ../sections/cards/content.py:44
+msgid "Selection"
+msgstr ""
+
+#: ../profiles/default/types/collective.contentsections.SelectionSection.xml
+msgid "Selection section"
+msgstr ""
+
+#: ../vocabularies.py:23
+msgid "Start"
+msgstr ""
+
+#: ../contents/contact/content.py:17
+#: ../sections/cards/content.py:25
+msgid "Subtitle"
+msgstr ""
+
+#: ../sections/cards/content.py:31
+msgid "Text"
+msgstr ""
+
+#: ../sections/collection/content.py:25
+msgid "Text for the link to the collection"
+msgstr ""
+
+#: ../profiles/default/types/collective.contentsections.TextSection.xml
+msgid "Text section"
+msgstr ""
+
+#: ../pages/base_page_view.pt:36
+msgid "There is no section on this page."
+msgstr ""
+
+#: ../contents/contact/content.py:13
+#: ../sections/cards/content.py:19
+msgid "Title"
+msgstr ""
+
+#: ../vocabularies.py:14
+msgid "Top"
+msgstr ""
+
+#: ../configure.zcml:36
+msgid "Uninstalls the collective.contentsections add-on"
+msgstr ""
+
+#: ../behaviors/configure.zcml:29
+msgid "Use uuid.uuid4 to generate short name of new object."
+msgstr ""
+
+#: ../vocabularies.py:20
+msgid "Window 100%"
+msgstr ""
+
+#: ../configure.zcml:28
+msgid "collective.contentsections"
+msgstr ""
+
+#: ../configure.zcml:36
+msgid "collective.contentsections (uninstall)"
+msgstr ""

@@ -1,0 +1,39 @@
+# Generated from:
+# https://github.com/plone/meta/tree/main/src/plone/meta/default
+# See the inline comments on how to expand/tweak this configuration file
+[meta]
+template = "default"
+commit-id = "2.0.0"
+
+[tox]
+test_runner = "pytest"
+constraints_file = "https://dist.plone.org/release/6.1-dev/constraints.txt"
+
+[flake8]
+extra_lines = """
+per-file-ignores = __init__.py:F401
+"""
+
+[pre_commit]
+codespell_extra_lines = """
+        exclude: (src/collective/contentsections/static/.*|src/collective/contentsections/distributions/.*.json)
+"""
+i18ndude_extra_lines = """
+        pass_filenames: false
+"""
+
+[github]
+jobs = [
+    "qa",
+    "test",
+    "coverage",
+    "dependencies",
+    "release_ready",
+    "circular",
+    ]
+
+[pyproject]
+dependencies_ignores = "['i18ndude', 'plone.exportimport', 'plone.formwidget.geolocation', 'plone.meta', 'Products.CMFPlacefulWorkflow', 'pytest', 'pytest-cov', 'tox']"
+dependencies_mappings = [
+    "'Products.CMFPlone' = ['Products.Five', 'plone.app.content', 'plone.app.contenttypes', 'plone.app.vocabularies', 'plone.app.uuid', 'plone.app.z3cform', 'plone.autoform', 'plone.base', 'plone.behavior', 'plone.dexterity', 'plone.indexer', 'plone.registry', 'plone.memoize', 'plone.namedfile', 'plone.schema', 'plone.supermodel', 'Products.GenericSetup','z3c.relationfield', 'zope.component', 'zope.i18nmessageid', 'zope.interface', 'zope.lifecycleevent', 'zope.publisher', 'zope.schema']"
+]
