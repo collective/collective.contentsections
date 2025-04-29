@@ -31,3 +31,6 @@ jobs = [
     "release_ready",
     "circular",
     ]
+
+[pyproject]
+dependencies_ignores = "['i18ndude', 'plone.exportimport', 'plone.formwidget.geolocation', 'plone.meta', 'Products.CMFPlacefulWorkflow', 'pytest', 'pytest-cov', 'tox']"
