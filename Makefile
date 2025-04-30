@@ -5,7 +5,7 @@ help:
 	@cat "Makefile" | grep '^.PHONY:' | sed -e "s/^.PHONY:/- make/"
 
 .PHONY: install  # Install development environment
-install: $(VENV_FOLDER)/bin/buildout
+install: $(VENV_FOLDER)/bin/buildout $(VENV_FOLDER)/bin/pre-commit
 	$(VENV_FOLDER)/bin/buildout
 
 .PHONY: start  # Start Zope instance
@@ -50,3 +50,7 @@ $(VENV_FOLDER)/bin/pip:
 
 bin/instance: $(VENV_FOLDER)/bin/buildout
 	$(VENV_FOLDER)/bin/buildout
+
+$(VENV_FOLDER)/bin/pre-commit: $(VENV_FOLDER)/bin/pip
+	$(VENV_FOLDER)/bin/uv pip install pre-commit
+	$(VENV_FOLDER)/bin/pre-commit install
