@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0a4 (unreleased)
+
+
+- Nothing changed yet.
+
+
 ## 2.0.0a3 (2025-04-30)
 
 - Fix typos in card.pt and macros.pt template. [remdub]
