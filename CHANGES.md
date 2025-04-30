@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.0a3 (unreleased)
+## 2.0.0a3 (2025-04-30)
 
 - Fix typos in card.pt and macros.pt template. [remdub]
 - Enable i18ndude pre-commit checks. [remdub]
