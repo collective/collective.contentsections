@@ -2,8 +2,8 @@
 
 ## 2.0.0a3 (unreleased)
 
-
-- Nothing changed yet.
+- Fix typos in card.pt and macros.pt template. [remdub]
+- Enable i18ndude pre-commit checks. [remdub]
 
 
 ## 2.0.0a2 (2025-04-29)

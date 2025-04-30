@@ -18,9 +18,6 @@ per-file-ignores = __init__.py:F401
 codespell_extra_lines = """
         exclude: (src/collective/contentsections/static/.*|src/collective/contentsections/distributions/.*.json)
 """
-i18ndude_extra_lines = """
-        pass_filenames: false
-"""
 
 [github]
 jobs = [
