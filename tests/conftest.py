@@ -188,6 +188,7 @@ def contents(portal, get_fti) -> list:
             container=basic_page,
             type="collective.contentsections.LinksSection",
             title="A links section",
+            group_size=1,
         )
 
         link1 = api.content.create(
@@ -209,6 +210,20 @@ def contents(portal, get_fti) -> list:
             type="Link",
             title="A link with resolveuid",
             remoteUrl=f"http://nohost/plone/resolveuid/{api.content.get_uuid(obj=event_page)}",
+        )
+
+        links_section2 = api.content.create(
+            container=basic_page,
+            type="collective.contentsections.LinksSection",
+            title="Another links section",
+            group_size=6,
+        )
+
+        link4 = api.content.create(
+            container=links_section2,
+            type="Link",
+            title="A link in another section",
+            remoteUrl="https://www.github.com/collective/collective.contentsections",
         )
 
         empty_locations_section = api.content.create(
@@ -343,6 +358,7 @@ def contents(portal, get_fti) -> list:
             files_section,
             html_section,
             links_section,
+            links_section2,
             locations_section,
             location1,
             selection_section,
@@ -355,6 +371,7 @@ def contents(portal, get_fti) -> list:
             link1,
             link2,
             link3,
+            link4,
             location1,
             location2,
             empty_locations_section,
@@ -368,5 +385,4 @@ def content(contents) -> dict:
     """Return one content item."""
     content_uid = [key for key in contents.keys()][0]
     brains = api.content.find(UID=content_uid)
-    # __import__("pdb").set_trace()
     return brains[0].getObject()
