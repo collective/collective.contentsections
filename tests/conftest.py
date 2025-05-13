@@ -1,4 +1,3 @@
-# from collective.contentsections.contents.location.content import ILocation
 from collective.contentsections.testing import FUNCTIONAL_TESTING
 from collective.contentsections.testing import INTEGRATION_TESTING
 from plone import api
@@ -45,7 +44,7 @@ CONTENT_TYPES = [
 
 
 @pytest.fixture
-def contents(portal, get_fti) -> list:
+def contents(portal, get_fti) -> dict:
     """Create test contents."""
     response = {}
     with api.env.adopt_roles(
@@ -59,7 +58,6 @@ def contents(portal, get_fti) -> list:
             fti = get_fti(content_type)
             if BEHAVIOR not in fti.behaviors:
                 fti.behaviors = fti.behaviors + (BEHAVIOR,)
-        response = []
 
         collection_query = [
             {
@@ -148,6 +146,7 @@ def contents(portal, get_fti) -> list:
             container=basic_page,
             type="collective.contentsections.ContactsSection",
             title="A contacts section",
+            description="A contacts section description",
         )
 
         contact1 = api.content.create(
@@ -196,6 +195,7 @@ def contents(portal, get_fti) -> list:
             type="Link",
             title="A link",
             remoteUrl="https://www.imio.be",
+            description="A link description",
         )
 
         link2 = api.content.create(
@@ -203,6 +203,7 @@ def contents(portal, get_fti) -> list:
             type="Link",
             title="Another link",
             remoteUrl="https://www.plone.org",
+            description="Another link description",
         )
 
         link3 = api.content.create(
@@ -376,13 +377,5 @@ def contents(portal, get_fti) -> list:
             location2,
             empty_locations_section,
         ]:
-            response.append(content.UID())
+            response[content.UID()] = content.title
     return response
-
-
-@pytest.fixture
-def content(contents) -> dict:
-    """Return one content item."""
-    content_uid = [key for key in contents.keys()][0]
-    brains = api.content.find(UID=content_uid)
-    return brains[0].getObject()

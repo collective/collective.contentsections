@@ -3,7 +3,7 @@
 ## 2.0.0a4 (unreleased)
 
 
-- Nothing changed yet.
+- Increase test coverage to 100%. [remdub]
 
 
 ## 2.0.0a3 (2025-04-30)

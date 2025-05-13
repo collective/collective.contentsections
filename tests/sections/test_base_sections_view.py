@@ -1,13 +1,15 @@
+from collective.contentsections.sections.base import BaseGroupSectionView
 from plone import api
 
 import pytest
 
 
-class TestBaseContent:
+class TestBaseSections:
     @pytest.fixture(autouse=True)
-    def _init(self, portal, contents):
+    def _init(self, portal, contents, http_request):
         self.portal = portal
         self.contents = contents
+        self.request = http_request
 
     def test_card_view(self, contents):
         """Test the card_view view."""
@@ -60,3 +62,7 @@ class TestBaseContent:
 
         assert view_links.more_link_url is None
         assert view_links.more_link_text is None
+
+    def test_base_group_section_view_items(self, request):
+        section = BaseGroupSectionView(self, request)
+        assert section.items == []

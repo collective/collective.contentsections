@@ -71,7 +71,6 @@ def get_page_searchabletext(page):
     catalog = api.portal.get_tool("portal_catalog")
     brains = api.content.find(context=page, depth=1, object_provides=ISection)
     for brain in brains:
-        # __import__("pdb").set_trace()
         indexes = catalog.getIndexDataForRID(brain.getRID())
         searchable_terms = indexes.get("SearchableText") or []
         terms.extend(searchable_terms)
