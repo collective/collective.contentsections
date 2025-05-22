@@ -1,3 +1,5 @@
+from plone import api
+
 import pytest
 
 
@@ -9,14 +11,23 @@ class TestLocationsSectionViews:
 
     def test_locations_section_views(self, contents):
         """ """
-        # content = api.content.get(path="/plone/basic-page-1/a-locations-section")
-        # view = api.content.get_view(
-        #     name="view",
-        #     context=content,
-        # )
-        # assert (
-        #     view.data_pat_leaflet == '{"fullscreencontrol": true, "zoomcontrol": true}'
-        # )
-        # __import__("pdb").set_trace()
-        # assert view.data_geojson.get("type") == "FeatureCollection"
-        # TODO : why no latitude / longitude ?
+        content = api.content.get(path="/plone/basic-page-1/a-locations-section")
+        view = api.content.get_view(
+            name="view",
+            context=content,
+        )
+        assert (
+            view.data_pat_leaflet
+            == '{"fullscreencontrol": true, "zoomcontrol": true, "zoom": 10, "latitude": -40.64948618626043, "longitude": 45.22943849691794}'
+        )
+        assert view.center == (-40.64948618626043, 45.22943849691794)
+
+        content = api.content.get(path="/plone/basic-page-1/an-empty-locations-section")
+        view = api.content.get_view(
+            name="view",
+            context=content,
+        )
+        assert (
+            view.data_pat_leaflet == '{"fullscreencontrol": true, "zoomcontrol": true}'
+        )
+        assert view.center == (0.0, 0.0)

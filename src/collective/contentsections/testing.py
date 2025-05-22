@@ -18,10 +18,10 @@ class Layer(PloneSandboxLayer):
         # Load any other ZCML that is required for your tests.
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
-        self.loadZCML(package=collective.contentsections)
         self.loadZCML(package=collective.z3cform.datagridfield)
         self.loadZCML(package=collective.taxonomy)
         self.loadZCML(package=collective.geolocationbehavior)
+        self.loadZCML(package=collective.contentsections)
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, "collective.contentsections:default")
