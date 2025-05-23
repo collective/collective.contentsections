@@ -35,7 +35,6 @@ class LocationsSectionView(SectionView):
     @property
     def data_geojson(self):
         features = []
-        # __import__("pdb").set_trace()
         for loc in self.locations:
             card_image = (
                 f"""<img src="{loc['lead_image_url']}" alt="picture">"""
@@ -67,7 +66,6 @@ class LocationsSectionView(SectionView):
             portal_type="collective.contentsections.Location",
             sort_on="getObjPositionInParent",
         )
-        # __import__("pdb").set_trace()
         results = [
             {
                 "title": brain.Title,

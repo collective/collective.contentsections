@@ -3,8 +3,8 @@ from zope.schema.vocabulary import SimpleVocabulary
 import pytest
 
 
-class TestVocabColumnAlignments:
-    name = "collective.contentsections.ColumnAlignments"
+class TestVocabImageAlignments:
+    name = "collective.contentsections.ImageAlignments"
 
     @pytest.fixture(autouse=True)
     def _vocab(self, get_vocabulary, portal):
@@ -17,11 +17,12 @@ class TestVocabColumnAlignments:
     @pytest.mark.parametrize(
         "token,title",
         [
-            ["start", "Start"],
-            ["center", "Center"],
-            ["end", "End"],
+            ["left", "Left"],
+            ["right", "Right"],
+            ["bottom", "Bottom"],
+            ["top", "Top"],
         ],
     )
-    def test_column_alignments(self, token, title):
+    def test_image_alignments(self, token, title):
         term = self.vocab.getTerm(token)
         assert title == term.title

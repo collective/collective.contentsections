@@ -1,4 +1,5 @@
 from collective.contentsections.behaviors.leadicon import ILeadIcon
+from collective.contentsections.behaviors.leadicon import ILeadIconBehavior
 from plone import api
 
 import pytest
@@ -39,5 +40,11 @@ class TestLeadIconBehavior:
             content = api.content.get(UID=uid)
             if content.portal_type in CONTENT_TYPES:
                 assert ILeadIcon.providedBy(content)
+
+    def test_leadicon_setter(self, contents):
+        page = api.content.get(path="/plone/basic-page-1")
+        adapter = ILeadIconBehavior(page)
+        adapter.icon = "kamoulox"
+        assert adapter.icon == "kamoulox"
 
     # TODO : test icon()
