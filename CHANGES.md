@@ -2,7 +2,7 @@
 
 ## 2.0.0a4 (unreleased)
 
-
+- Add pre-commit to development environment. [remdub]
 - Increase test coverage to 100%. [remdub]
 
 
