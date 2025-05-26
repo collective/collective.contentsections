@@ -67,12 +67,6 @@ setup(
             "pytest-plone",
             "tox",
         ],
-        "dev": [
-            "i18ndude",
-            "plone.exportimport",
-            "plone.meta",
-            "zest.releaser",
-        ],
     },
     entry_points="""
     [z3c.autoinclude.plugin]

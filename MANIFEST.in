@@ -2,6 +2,7 @@ graft src/collective
 graft tests
 include .coveragerc
 include .editorconfig
+include .python-version
 include *.md
 include *.json
 include LICENCE
