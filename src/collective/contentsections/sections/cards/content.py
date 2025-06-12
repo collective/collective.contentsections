@@ -5,7 +5,7 @@ from collective.z3cform.datagridfield.datagridfield import DataGridFieldFactory
 from collective.z3cform.datagridfield.row import DictRow
 from plone import schema
 from plone.app.vocabularies.catalog import StaticCatalogVocabulary
-from plone.app.z3cform.widgets.select import SelectFieldWidget
+from plone.app.z3cform.widgets.select import Select2FieldWidget
 from plone.autoform import directives
 from zope.interface import implementer
 from zope.interface import Interface
@@ -41,16 +41,27 @@ class ICard(Interface):
     )
     relation_uid = schema.Choice(
         title=_("Selection"),
-        vocabulary=StaticCatalogVocabulary(
-            {}, title_template="{brain.Type}: {brain.Title} at {path}"
-        ),
+        vocabulary=StaticCatalogVocabulary({}, title_template="{brain.Type}: {brain.Title} at {path}"),
         required=False,
     )
 
-    directives.widget("title", placeholder=_("Card title"))
-    directives.widget("subtitle", placeholder=_("Card subtitle"))
     directives.widget(
-        "icon", SelectFieldWidget, pattern_options={"placeholder": _("Select an icon")}
+        "title",
+        placeholder=_("Card title"),
+    )
+    directives.widget(
+        "subtitle",
+        placeholder=_("Card subtitle"),
+    )
+    directives.widget(
+        "icon",
+        Select2FieldWidget,
+        pattern_options={"placeholder": _("Select an icon")},
+    )
+    directives.widget(
+        "relation_uid",
+        Select2FieldWidget,
+        pattern_options={"placeholder": _("Select a related content")},
     )
 
     # SEE https://6.docs.plone.org/backend/relations.html#relation-fields-without-relations

@@ -4,6 +4,7 @@
 
 - Add pre-commit to development environment. [remdub]
 - Increase test coverage to 100%. [remdub]
+- Use Select2FieldWidget instead of SelectFieldWidget in ICard. [sverbois]
 
 
 ## 2.0.0a3 (2025-04-30)
