@@ -1,17 +1,1 @@
-packaging==25.0
-pip==25.1.1
-setuptools==79.0.1
-wheel==0.45.1
-zc.buildout==4.1.10
-
-# Windows specific down here (has to be installed here, fails in buildout)
-# Dependency of zope.sendmail:
-pywin32 ; platform_system == 'Windows'
-
-# SSL Certs on windows, because Python is missing them otherwise:
-certifi ; platform_system == 'Windows'
-
-# VSCode robotframework-lsp requires robotframework directly in venv
-robotframework==6.0.2
-# robotframework >= 6.1 is only supported with robotframwork-lsp >= 1.11.0,
-# but https://github.com/robocorp/robotframework-lsp/issues/947
+-r https://raw.githubusercontent.com/plone/buildout.coredev/refs/heads/6.1/requirements.txt
