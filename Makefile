@@ -1,56 +1,56 @@
-VENV_FOLDER=.venv
+ifeq (, $(shell which uv ))
+  $(error "[ERROR] The 'uv' command is missing from your PATH. Install it from: https://docs.astral.sh/uv/getting-started/installation/")
+endif
 
-.PHONY: help  # List phony targets
-help:
-	@cat "Makefile" | grep '^.PHONY:' | sed -e "s/^.PHONY:/- make/"
+.PHONY: help
+help: ## Display this help message
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-.PHONY: install  # Install development environment
-install: $(VENV_FOLDER)/bin/buildout $(VENV_FOLDER)/bin/pre-commit
-	$(VENV_FOLDER)/bin/buildout
+.PHONY: bootstrap
+bootstrap: ## Bootstrap the development environment
+	@echo "Creating virtual environment with uv venv"
+	@uv venv
+	@echo "Installing buildout with uv pip"
+	@uv pip install -r requirements.txt
+	@echo "Installing pre-commit hooks"
+	uvx pre-commit install
 
-.PHONY: start  # Start Zope instance
-start: bin/instance
+.PHONY: install
+install: .venv/bin/buildout ## Install Plone
+	.venv/bin/buildout
+
+.PHONY: start
+start: bin/instance ## Start Zope instance
 	bin/instance fg
 
-.PHONY: clean  # Clean development environment
-clean:
-	rm -r $(VENV_FOLDER) bin .tox .coverage .installed.cfg coverage.xml develop-eggs eggs forest.dot forest.json node_modules parts
+.PHONY: clean
+clean: ## Clean development environment
+	rm -rf .venv bin .coverage .git/hooks/pre-commit .installed.cfg .tox coverage.xml develop-eggs eggs forest.dot forest.json node_modules parts
 
-.PHONY: meta  # Update configuration files with plone.meta
-meta:
-	./bin/config-package --branch current --no-commit .
+.PHONY: meta
+meta: ## Update configuration files with plone.meta
+	uvx --from plone.meta config-package --branch current --no-commit .
 
-.PHONY: test  # Run tests
-test: bin/tox
-	bin/tox -e test
+.PHONY: test
+test: ## Run tests
+	uvx tox -e test
 
-.PHONY: coverage # Run tests with coverage
-coverage: bin/tox
-	bin/tox -e coverage
+.PHONY: coverage
+coverage: ## Run tests and report code coverage
+	uvx tox -e coverage
 
-.PHONY: lint # Run tests with lint
-lint: bin/tox
-	bin/tox -e lint
+.PHONY: lint
+lint: ## Run all code quality and formatting checks
+	uvx tox -e lint
 
-.PHONY: i18n # Update locales
-i18n: bin/i18ndude
+.PHONY: i18n
+i18n: ## Update locales
 	@echo "$(GREEN)==> Updating locales$(RESET)"
 	cd src/collective/contentsections/locales && ./update.sh
 
-$(VENV_FOLDER)/bin/i18ndude: $(VENV_FOLDER)/bin/pip
-	@echo "$(GREEN)==> Install translation tools$(RESET)"
-	$(VENV_FOLDER)/bin/uv pip install i18ndude
+.PHONY: fullrelease
+fullrelease: ## Release package with zest.releaser fullrelease
+	uvx --from zest.releaser fullrelease
 
-$(VENV_FOLDER)/bin/buildout: $(VENV_FOLDER)/bin/pip
-	$(VENV_FOLDER)/bin/uv pip install -r requirements.txt
-
-$(VENV_FOLDER)/bin/pip:
-	uv venv --seed -p python3.12
-	$(VENV_FOLDER)/bin/pip3.12 install uv
-
-bin/instance: $(VENV_FOLDER)/bin/buildout
-	$(VENV_FOLDER)/bin/buildout
-
-$(VENV_FOLDER)/bin/pre-commit: $(VENV_FOLDER)/bin/pip
-	$(VENV_FOLDER)/bin/uv pip install pre-commit
-	$(VENV_FOLDER)/bin/pre-commit install
+.venv/bin/buildout: bootstrap
+bin/instance: install

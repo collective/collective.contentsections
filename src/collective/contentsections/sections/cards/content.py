@@ -41,7 +41,9 @@ class ICard(Interface):
     )
     relation_uid = schema.Choice(
         title=_("Selection"),
-        vocabulary=StaticCatalogVocabulary({}, title_template="{brain.Type}: {brain.Title} at {path}"),
+        vocabulary=StaticCatalogVocabulary(
+            {}, title_template="{brain.Type}: {brain.Title} at {path}"
+        ),
         required=False,
     )
 

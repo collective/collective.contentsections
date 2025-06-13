@@ -8,5 +8,5 @@
 
 domain=collective.contentsections
 
-i18ndude rebuild-pot --pot $domain.pot --create $domain ../
-i18ndude sync --pot $domain.pot */LC_MESSAGES/$domain.po
+uvx i18ndude rebuild-pot --pot $domain.pot --create $domain ../
+uvx i18ndude sync --pot $domain.pot */LC_MESSAGES/$domain.po
