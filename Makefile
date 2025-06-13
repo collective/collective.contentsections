@@ -16,11 +16,11 @@ bootstrap: ## Bootstrap the development environment
 	uvx pre-commit install
 
 .PHONY: install
-install: ## Install Plone
+install: .venv/bin/buildout ## Install Plone
 	.venv/bin/buildout
 
 .PHONY: start
-start: ## Start Zope instance
+start: bin/instance ## Start Zope instance
 	bin/instance fg
 
 .PHONY: clean
@@ -51,3 +51,6 @@ i18n: ## Update locales
 .PHONY: fullrelease
 fullrelease: ## Release package with zest.releaser fullrelease
 	uvx --from zest.releaser fullrelease
+
+.venv/bin/buildout: bootstrap
+bin/instance: install
