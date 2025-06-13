@@ -8,6 +8,9 @@ commit-id = "2.0.0"
 [tox]
 test_runner = "pytest"
 constraints_file = "https://dist.plone.org/release/6.1.1/constraints.txt"
+testenv_options = """
+commands_pre = python -m pip install --no-deps twine==6.1.0
+"""
 
 [flake8]
 extra_lines = """
