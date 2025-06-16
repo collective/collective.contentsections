@@ -86,7 +86,7 @@ and then run `bin/buildout`.
 
 ###  Prerequisites
 
-[uv](https://docs.astral.sh/uv/) 
+[uv](https://docs.astral.sh/uv/)
 
 See [installation guide](https://docs.astral.sh/uv/getting-started/installation/) )
 
@@ -149,7 +149,3 @@ Most ideas developed in this product come from people who worked at iMio on the 
 ![Preview 1](https://raw.githubusercontent.com/sverbois/collective.contentsections/main/docs/images/preview1.png)
 
 ![Preview 2](https://raw.githubusercontent.com/sverbois/collective.contentsections/main/docs/images/preview2.png)
-
-![Preview 3](https://raw.githubusercontent.com/sverbois/collective.contentsections/main/docs/images/preview3.png)
-
-![Preview 4](https://raw.githubusercontent.com/sverbois/collective.contentsections/main/docs/images/preview4.png)
