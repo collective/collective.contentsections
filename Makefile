@@ -7,13 +7,7 @@ help: ## Display this help message
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 .PHONY: bootstrap
-bootstrap: ## Bootstrap the development environment
-	@echo "Creating virtual environment with uv venv"
-	@uv venv
-	@echo "Installing buildout with uv pip"
-	@uv pip install -r requirements.txt
-	@echo "Installing pre-commit hooks"
-	uvx pre-commit install
+bootstrap: .venv/bin/buildout ## Bootstrap the development environment
 
 .PHONY: install
 install: .venv/bin/buildout ## Install Plone
@@ -52,5 +46,10 @@ i18n: ## Update locales
 fullrelease: ## Release package with zest.releaser fullrelease
 	uvx --from zest.releaser fullrelease
 
-.venv/bin/buildout: bootstrap
-bin/instance: install
+.venv/bin/buildout:
+	uv venv
+	uv pip install -r requirements.txt
+	uvx pre-commit install
+
+bin/instance: .venv/bin/buildout
+	.venv/bin/buildout
