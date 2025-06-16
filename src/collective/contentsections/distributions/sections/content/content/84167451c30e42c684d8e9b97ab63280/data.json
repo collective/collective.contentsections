@@ -1,0 +1,31 @@
+{
+  "@id": "/demo/page-with-sections/contactssection-d411187f29184defa768c1e697a77d98/contact-91ea16cd89624db8955a9830432a1881",
+  "@type": "collective.contentsections.Contact",
+  "UID": "84167451c30e42c684d8e9b97ab63280",
+  "allow_discussion": null,
+  "created": "2025-06-16T15:15:39+00:00",
+  "description": "\u00c9rico Andrei worked for over fifteen years with content management projects using Plone.",
+  "email": "erico@plone.org",
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "contact-91ea16cd89624db8955a9830432a1881",
+  "image": null,
+  "image_caption": null,
+  "is_folderish": false,
+  "language": "##DEFAULT##",
+  "layout": "element_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-06-16T15:20:48+00:00",
+  "phone": null,
+  "review_state": null,
+  "subtitle": "Vice President",
+  "title": "\u00c9rico",
+  "type_title": "Contact",
+  "version": "current",
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
+}

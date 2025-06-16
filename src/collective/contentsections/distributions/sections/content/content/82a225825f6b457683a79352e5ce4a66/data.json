@@ -1,0 +1,31 @@
+{
+  "@id": "/demo/page-with-sections/contactssection-d411187f29184defa768c1e697a77d98/contact-27fa82ba07014a16932a21e4a1589b71",
+  "@type": "collective.contentsections.Contact",
+  "UID": "82a225825f6b457683a79352e5ce4a66",
+  "allow_discussion": null,
+  "created": "2025-06-16T15:17:36+00:00",
+  "description": "Since v1.0 Jens has been part of the Plone community as a core developer, sprint organizer and in various other roles.",
+  "email": "jens@plone.org",
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "contact-27fa82ba07014a16932a21e4a1589b71",
+  "image": null,
+  "image_caption": null,
+  "is_folderish": false,
+  "language": "##DEFAULT##",
+  "layout": "element_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-06-16T15:20:53+00:00",
+  "phone": null,
+  "review_state": null,
+  "subtitle": "Secretary",
+  "title": "Jens",
+  "type_title": "Contact",
+  "version": "current",
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
+}

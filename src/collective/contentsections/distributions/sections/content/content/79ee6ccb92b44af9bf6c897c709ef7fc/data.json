@@ -10,7 +10,7 @@
   "contact_phone": null,
   "created": "2021-12-17T17:09:26+00:00",
   "description": "The standard \"Event\" content type is replaced by a folderish \"Event page\" content type which can contain content sections.",
-  "effective": "2021-12-17T18:49:00",
+  "effective": "2021-12-17T17:49:00+00:00",
   "end": "2022-04-26T22:00:00+00:00",
   "event_url": "https://www.plone.org",
   "exclude_from_nav": false,
@@ -29,7 +29,7 @@
     "locked": false,
     "stealable": true
   },
-  "modified": "2025-03-18T13:08:08+00:00",
+  "modified": "2025-06-16T10:07:59+00:00",
   "open_end": false,
   "recurrence": null,
   "review_state": "published",

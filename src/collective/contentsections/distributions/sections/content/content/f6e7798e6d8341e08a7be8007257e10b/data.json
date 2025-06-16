@@ -1,0 +1,30 @@
+{
+  "@id": "/demo/page-with-sections/contactssection-d411187f29184defa768c1e697a77d98",
+  "@type": "collective.contentsections.ContactsSection",
+  "UID": "f6e7798e6d8341e08a7be8007257e10b",
+  "allow_discussion": null,
+  "background_image": null,
+  "container_width": 12,
+  "created": "2025-06-16T15:13:18+00:00",
+  "css_classes": [],
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "group_size": 3,
+  "hide_title": false,
+  "id": "contactssection-d411187f29184defa768c1e697a77d98",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "card_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2025-06-16T15:19:28+00:00",
+  "review_state": null,
+  "title": "Contacts section",
+  "type_title": "Contacts section",
+  "version": "current",
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
+}
