@@ -31,6 +31,7 @@ jobs = [
     "release_ready",
     "circular",
     ]
+py_versions='["3.12", "3.10"]'
 
 [pyproject]
 dependencies_ignores = "['i18ndude', 'plone.exportimport', 'plone.formwidget.geolocation', 'plone.meta', 'Products.CMFPlacefulWorkflow', 'pre-commit', 'pytest', 'pytest-cov', 'tox','zest.releaser']"
