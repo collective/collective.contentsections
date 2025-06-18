@@ -9,6 +9,9 @@
   <i18n:registerTranslations directory="locales" />
 
   <include package="Products.CMFPlone" />
+  <include package="collective.geolocationbehavior" />
+  <include package="collective.taxonomy" />
+  <include package="collective.z3cform.datagridfield" />
   <include package="plone.distribution" />
 
   <plone:distribution
