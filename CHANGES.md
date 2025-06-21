@@ -6,6 +6,7 @@
 - Increase test coverage to 100%. [remdub]
 - Use Select2FieldWidget instead of SelectFieldWidget in ICard. [sverbois]
 - Fix ZCML includes [ale-rt]
+- Fix TinyMCE plone.menu registry setting. TinyMCE plone.menu is not longer a list, it's now a text. Plone 6.1.2 is now the minimal version for collective.contentsections. [sverbois]
 
 
 ## 2.0.0a3 (2025-04-30)

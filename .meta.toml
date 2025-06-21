@@ -7,9 +7,8 @@ commit-id = "2.0.0"
 
 [tox]
 test_runner = "pytest"
-constraints_file = "https://dist.plone.org/release/6.1.1/constraints.txt"
+constraints_file = "https://dist.plone.org/release/6.1.2/constraints.txt"
 testenv_options = """
-commands_pre = python -m pip install --no-deps twine==6.1.0
 """
 
 [flake8]
@@ -31,7 +30,7 @@ jobs = [
     "release_ready",
     "circular",
     ]
-py_versions='["3.12", "3.10"]'
+py_versions='["3.13", "3.10"]'
 
 [pyproject]
 dependencies_ignores = "['i18ndude', 'plone.exportimport', 'plone.formwidget.geolocation', 'plone.meta', 'Products.CMFPlacefulWorkflow', 'pre-commit', 'pytest', 'pytest-cov', 'tox','zest.releaser']"
