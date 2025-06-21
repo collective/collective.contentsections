@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <registry>
-
   <!-- See TinyMCE 7 version used in https://github.com/plone/mockup/blob/master/package.json -->
 
   <!-- See format documentation in https://www.tiny.cloud/docs/tinymce/latest/content-formatting/ -->
@@ -71,13 +70,7 @@
   <record interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema"
           name="plone.menubar"
   >
-    <value purge="true">
-      <element>edit</element>
-      <element>format</element>
-      <element>insert</element>
-      <element>table</element>
-      <element>view</element>
-    </value>
+    <value purge="true">edit format insert view</value>
   </record>
 
   <!-- See possible values in https://www.tiny.cloud/docs/tinymce/latest/available-menu-items/ -->
@@ -86,18 +79,6 @@
   >
     <value>
         {
-            "file": {
-                "title": "File",
-                "items": "" 
-            },
-            "tools": {
-                "title": "Tools",
-                "items": ""
-            },
-            "table": {
-                "title": "Table",
-                "items": ""
-            },
             "edit": {
                 "title": "Edit",
                 "items": "undo redo | cut copy paste pastetext | selectall | searchreplace"
@@ -115,7 +96,7 @@
                 "items": "fullscreen code | visualblocks visualchars"
             }
         }
-        </value>
+    </value>
   </record>
 
   <!-- See possible values in https://www.tiny.cloud/docs/tinymce/latest/available-toolbar-buttons/ -->
@@ -179,7 +160,7 @@
                 {"title": "Important cell", "value": "important"}
             ]
             }
-        </value>
+    </value>
   </record>
 
 </registry>

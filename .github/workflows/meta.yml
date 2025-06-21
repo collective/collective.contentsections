@@ -30,7 +30,7 @@ jobs:
     uses: plone/meta/.github/workflows/test.yml@2.x
     with:
 
-       py-versions: '["3.12", "3.10"]'
+       py-versions: '["3.13", "3.10"]'
   coverage:
     uses: plone/meta/.github/workflows/coverage.yml@2.x
   dependencies:
