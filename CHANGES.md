@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0a5 (unreleased)
+
+
+- Nothing changed yet.
+
+
 ## 2.0.0a4 (2025-06-21)
 
 - Add pre-commit to development environment. [remdub]
