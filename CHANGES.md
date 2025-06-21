@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.0a4 (unreleased)
+## 2.0.0a4 (2025-06-21)
 
 - Add pre-commit to development environment. [remdub]
 - Increase test coverage to 100%. [remdub]
