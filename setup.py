@@ -1,5 +1,18 @@
-from setuptools import find_packages
 from setuptools import setup
+
+
+try:
+    __import__("pkg_resources")
+except ImportError:
+    kwargs = {}
+else:
+    from setuptools import find_packages
+
+    kwargs = {
+        "namespace_packages": ["collective"],
+        "package_dir": {"": "src"},
+        "packages": find_packages(where="src", exclude=["ez_setup"]),
+    }
 
 
 long_description = "\n\n".join(
@@ -41,9 +54,6 @@ setup(
         # 'Documentation': 'https://collective.contentsections.readthedocs.io/en/latest/',
     },
     license="GPL version 2",
-    packages=find_packages(where="src", exclude=["ez_setup"]),
-    namespace_packages=["collective"],
-    package_dir={"": "src"},
     include_package_data=True,
     zip_safe=False,
     python_requires=">=3.10",
@@ -72,4 +82,5 @@ setup(
     [z3c.autoinclude.plugin]
     target = plone
     """,
+    **kwargs,
 )
