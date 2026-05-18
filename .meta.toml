@@ -25,12 +25,17 @@ codespell_extra_lines = """
 jobs = [
     "qa",
     "test",
-    "coverage",
     "dependencies",
     "release_ready",
     "circular",
     ]
 py_versions='["3.13", "3.10"]'
+extra_lines= """
+  coverage:
+    uses: remdub/meta/.github/workflows/coverage.yml@upload-to-coveralls
+    with:
+      upload-to-coveralls: true
+"""
 
 [pyproject]
 dependencies_ignores = "['i18ndude', 'plone.exportimport', 'plone.formwidget.geolocation', 'plone.meta', 'Products.CMFPlacefulWorkflow', 'pre-commit', 'pytest', 'pytest-cov', 'tox','zest.releaser']"

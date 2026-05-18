@@ -31,8 +31,6 @@ jobs:
     with:
 
        py-versions: '["3.13", "3.10"]'
-  coverage:
-    uses: plone/meta/.github/workflows/coverage.yml@2.x
   dependencies:
     uses: plone/meta/.github/workflows/dependencies.yml@2.x
   release_ready:
@@ -67,6 +65,10 @@ jobs:
 # py_versions = "['3.12', '3.11']"
 ##
 
+  coverage:
+    uses: remdub/meta/.github/workflows/coverage.yml@upload-to-coveralls
+    with:
+      upload-to-coveralls: true
 
 ##
 # Specify additional jobs in .meta.toml:
