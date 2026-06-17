@@ -52,11 +52,8 @@
       <element>code</element>
       <element>charmap</element>
       <element>fullscreen</element>
-      <element>hr</element>
       <element>lists</element>
       <element>nonbreaking</element>
-      <element>noneditable</element>
-      <element>paste</element>
       <element>searchreplace</element>
       <element>table</element>
       <element>template</element>
