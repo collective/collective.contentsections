@@ -14,14 +14,14 @@ class ITextSection(ISection):
         vocabulary="collective.contentsections.ImageAlignments",
         default="right",
     )
-    lead_image_scale = schema.Choice(
-        title=_("Lead image scale"),
-        vocabulary="plone.app.vocabularies.ImagesScales",
-        default="preview",
+    lead_image_width = schema.Choice(
+        title=_("Lead image width"),
+        vocabulary="collective.contentsections.LeadImageWidths",
+        default=4,
     )
 
     directives.order_before(lead_image_alignment="IVersionable.changeNote")
-    directives.order_after(lead_image_scale="lead_image_alignment")
+    directives.order_after(lead_image_width="lead_image_alignment")
 
 
 @implementer(ITextSection)

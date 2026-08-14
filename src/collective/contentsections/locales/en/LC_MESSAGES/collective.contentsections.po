@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-04-22 06:36+0000\n"
+"POT-Creation-Date: 2026-08-14 11:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,7 +38,31 @@ msgstr ""
 msgid "${DYNAMIC_CONTENT} Section content"
 msgstr ""
 
-#: ../configure.zcml:20
+#: ../vocabularies.py:32
+msgid "100%"
+msgstr ""
+
+#: ../vocabularies.py:27
+msgid "25%"
+msgstr ""
+
+#: ../vocabularies.py:28
+msgid "33%"
+msgstr ""
+
+#: ../vocabularies.py:29
+msgid "50%"
+msgstr ""
+
+#: ../vocabularies.py:30
+msgid "66%"
+msgstr ""
+
+#: ../vocabularies.py:31
+msgid "75%"
+msgstr ""
+
+#: ../configure.zcml:23
 msgid "A Plone site where pages are built with sections."
 msgstr ""
 
@@ -54,7 +78,7 @@ msgstr ""
 msgid "Basic page"
 msgstr ""
 
-#: ../vocabularies.py:13
+#: ../vocabularies.py:12
 msgid "Bottom"
 msgstr ""
 
@@ -62,23 +86,23 @@ msgstr ""
 msgid "CSS Classes"
 msgstr ""
 
-#: ../sections/cards/content.py:76
+#: ../sections/cards/content.py:88
 msgid "Card"
 msgstr ""
 
-#: ../sections/cards/content.py:86
+#: ../sections/cards/content.py:98
 msgid "Card link text"
 msgstr ""
 
-#: ../sections/cards/content.py:52
+#: ../sections/cards/content.py:56
 msgid "Card subtitle"
 msgstr ""
 
-#: ../sections/cards/content.py:51
+#: ../sections/cards/content.py:52
 msgid "Card title"
 msgstr ""
 
-#: ../sections/cards/content.py:75
+#: ../sections/cards/content.py:87
 msgid "Cards"
 msgstr ""
 
@@ -86,7 +110,7 @@ msgstr ""
 msgid "Cards section"
 msgstr ""
 
-#: ../vocabularies.py:24
+#: ../vocabularies.py:23
 msgid "Center"
 msgstr ""
 
@@ -106,15 +130,15 @@ msgstr ""
 msgid "Contacts section"
 msgstr ""
 
-#: ../vocabularies.py:17
+#: ../vocabularies.py:16
 msgid "Container 100%"
 msgstr ""
 
-#: ../vocabularies.py:19
+#: ../vocabularies.py:18
 msgid "Container 50%"
 msgstr ""
 
-#: ../vocabularies.py:18
+#: ../vocabularies.py:17
 msgid "Container 66%"
 msgstr ""
 
@@ -130,7 +154,7 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: ../vocabularies.py:25
+#: ../vocabularies.py:24
 msgid "End"
 msgstr ""
 
@@ -143,7 +167,7 @@ msgid "Files section"
 msgstr ""
 
 #: ../sections/base.py:54
-#: ../sections/cards/content.py:81
+#: ../sections/cards/content.py:93
 msgid "Group size"
 msgstr ""
 
@@ -171,7 +195,7 @@ msgstr ""
 msgid "Hide item titles"
 msgstr ""
 
-#: ../pages/base.py:21
+#: ../pages/base.py:20
 msgid "Hide page title"
 msgstr ""
 
@@ -179,7 +203,7 @@ msgstr ""
 msgid "Hide section title in page"
 msgstr ""
 
-#: ../sections/cards/content.py:37
+#: ../sections/cards/content.py:36
 msgid "Icon"
 msgstr ""
 
@@ -191,7 +215,7 @@ msgstr ""
 msgid "Initial zoom level"
 msgstr ""
 
-#: ../configure.zcml:28
+#: ../configure.zcml:31
 msgid "Installs the collective.contentsections add-on"
 msgstr ""
 
@@ -212,15 +236,20 @@ msgstr ""
 msgid "Lead Icon"
 msgstr ""
 
+#: ../sections/base_links_list.pt:13
+#: ../sections/contacts/card.pt:14
+msgid "Lead image"
+msgstr ""
+
 #: ../sections/text/content.py:13
 msgid "Lead image alignment"
 msgstr ""
 
 #: ../sections/text/content.py:18
-msgid "Lead image scale"
+msgid "Lead image width"
 msgstr ""
 
-#: ../vocabularies.py:11
+#: ../vocabularies.py:10
 msgid "Left"
 msgstr ""
 
@@ -260,7 +289,7 @@ msgstr ""
 msgid "Phone"
 msgstr ""
 
-#: ../configure.zcml:20
+#: ../configure.zcml:23
 msgid "Plone Site (Content Sections)"
 msgstr ""
 
@@ -268,7 +297,7 @@ msgstr ""
 msgid "Previous"
 msgstr ""
 
-#: ../vocabularies.py:12
+#: ../vocabularies.py:11
 msgid "Right"
 msgstr ""
 
@@ -276,7 +305,11 @@ msgstr ""
 msgid "Section title"
 msgstr ""
 
-#: ../sections/cards/content.py:54
+#: ../sections/cards/content.py:66
+msgid "Select a related content"
+msgstr ""
+
+#: ../sections/cards/content.py:61
 msgid "Select an icon"
 msgstr ""
 
@@ -284,7 +317,7 @@ msgstr ""
 msgid "Select items"
 msgstr ""
 
-#: ../sections/cards/content.py:44
+#: ../sections/cards/content.py:43
 msgid "Selection"
 msgstr ""
 
@@ -292,16 +325,16 @@ msgstr ""
 msgid "Selection section"
 msgstr ""
 
-#: ../vocabularies.py:23
+#: ../vocabularies.py:22
 msgid "Start"
 msgstr ""
 
 #: ../contents/contact/content.py:17
-#: ../sections/cards/content.py:25
+#: ../sections/cards/content.py:24
 msgid "Subtitle"
 msgstr ""
 
-#: ../sections/cards/content.py:31
+#: ../sections/cards/content.py:30
 msgid "Text"
 msgstr ""
 
@@ -318,15 +351,15 @@ msgid "There is no section on this page."
 msgstr ""
 
 #: ../contents/contact/content.py:13
-#: ../sections/cards/content.py:19
+#: ../sections/cards/content.py:18
 msgid "Title"
 msgstr ""
 
-#: ../vocabularies.py:14
+#: ../vocabularies.py:13
 msgid "Top"
 msgstr ""
 
-#: ../configure.zcml:36
+#: ../configure.zcml:39
 msgid "Uninstalls the collective.contentsections add-on"
 msgstr ""
 
@@ -334,14 +367,14 @@ msgstr ""
 msgid "Use uuid.uuid4 to generate short name of new object."
 msgstr ""
 
-#: ../vocabularies.py:20
+#: ../vocabularies.py:19
 msgid "Window 100%"
 msgstr ""
 
-#: ../configure.zcml:28
+#: ../configure.zcml:31
 msgid "collective.contentsections"
 msgstr ""
 
-#: ../configure.zcml:36
+#: ../configure.zcml:39
 msgid "collective.contentsections (uninstall)"
 msgstr ""
