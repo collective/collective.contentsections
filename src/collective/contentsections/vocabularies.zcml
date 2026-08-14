@@ -24,4 +24,10 @@
       component=".vocabularies.LeadIconsVocabulary"
       />
 
+  <utility
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      name="collective.contentsections.LeadImageWidths"
+      component=".vocabularies.LeadImageWidthsVocabulary"
+      />
+
 </configure>

@@ -48,7 +48,8 @@ VIEWS = {
         "list_view",
     ],
     "ITextSection": [
-        "view",
+        "column_view",
+        "float_view",
     ],
 }
 

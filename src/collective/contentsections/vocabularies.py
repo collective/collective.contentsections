@@ -23,6 +23,14 @@ COLUMN_ALIGNMENTS = {
     "center": _("Center"),
     "end": _("End"),
 }
+LEAD_IMAGE_WIDTHS = {
+    3: _("25%"),
+    4: _("33%"),
+    6: _("50%"),
+    8: _("66%"),
+    9: _("75%"),
+    12: _("100%"),
+}
 
 
 class VocabularyFactory:
@@ -40,6 +48,7 @@ class VocabularyFactory:
 ImageAlignmentsVocabulary = VocabularyFactory(IMAGE_ALIGNMENTS)
 ContainerWidthsVocabulary = VocabularyFactory(CONTAINER_WIDTHS)
 ColumnAlignmentsVocabulary = VocabularyFactory(COLUMN_ALIGNMENTS)
+LeadImageWidthsVocabulary = VocabularyFactory(LEAD_IMAGE_WIDTHS)
 
 
 class IconsVocabularyFactory:
