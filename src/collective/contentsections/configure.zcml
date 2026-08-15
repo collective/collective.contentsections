@@ -46,6 +46,7 @@
   <include package=".contents" />
   <include package=".pages" />
   <include package=".sections" />
+  <include package=".upgrades" />
   <include package=".views" />
 
   <plone:static
