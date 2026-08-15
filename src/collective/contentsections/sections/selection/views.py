@@ -1,4 +1,5 @@
 from collective.contentsections.sections.base import BaseLinksSectionView
+from plone import api
 
 
 class SelectionSectionView(BaseLinksSectionView):
@@ -8,7 +9,9 @@ class SelectionSectionView(BaseLinksSectionView):
     def items(self):
         lead_image_scale = self.item_lead_image_scale
         objects = [
-            rel.to_object for rel in self.context.relations if not rel.isBroken()
+            rel.to_object
+            for rel in self.context.relations
+            if not rel.isBroken() and api.user.has_permission("View", obj=rel.to_object)
         ]
         results = [
             {
