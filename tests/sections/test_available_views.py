@@ -3,7 +3,6 @@ from zope.interface import implementedBy
 
 import pytest
 
-
 VIEWS = {
     "ICardsSection": [
         "view",

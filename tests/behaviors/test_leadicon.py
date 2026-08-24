@@ -4,7 +4,6 @@ from plone import api
 
 import pytest
 
-
 BEHAVIOR = "collective.contentsections.leadicon"
 
 

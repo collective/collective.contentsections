@@ -5,7 +5,6 @@ from plone import api
 import pytest
 import re
 
-
 BEHAVIOR = "collective.contentsections.namefromuuid"
 CONTENT_TYPES = [
     "collective.contentsections.CardsSection",

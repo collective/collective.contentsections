@@ -5,7 +5,6 @@ from zope.component import getUtility
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
-
 IMAGE_ALIGNMENTS = {
     "left": _("Left"),
     "right": _("Right"),

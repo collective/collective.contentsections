@@ -3,7 +3,6 @@ from plone import api
 
 import logging
 
-
 logger = logging.getLogger("collective.contentsections.upgrades")
 
 

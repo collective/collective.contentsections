@@ -13,7 +13,6 @@ from zope.intid.interfaces import IIntIds
 import base64
 import pytest
 
-
 pytest_plugins = ["pytest_plone"]
 
 

@@ -4,7 +4,6 @@ from plone.namedfile.file import NamedBlobImage
 import base64
 import pytest
 
-
 IMAGE_B64 = "iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAADUlEQVR4nGP4DwQMDAAAAFAABaL95YQAAAAASUVORK5CYII="
 
 WIDTH_TO_SCALE = {
