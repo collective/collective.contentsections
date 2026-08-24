@@ -1,7 +1,6 @@
 from setuptools import find_packages
 from setuptools import setup
 
-
 long_description = "\n\n".join(
     [
         open("README.md").read(),
@@ -23,8 +22,6 @@ setup(
         "Framework :: Plone :: Distribution",
         "Framework :: Plone :: 6.1",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.10",
-        "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: 3.13",
         "Operating System :: OS Independent",
@@ -46,7 +43,7 @@ setup(
     package_dir={"": "src"},
     include_package_data=True,
     zip_safe=False,
-    python_requires=">=3.10",
+    python_requires=">=3.12",
     install_requires=[
         "collective.geolocationbehavior >= 1.7.2",
         "collective.taxonomy >= 3.1.5",
