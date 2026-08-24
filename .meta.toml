@@ -6,8 +6,7 @@ template = "default"
 commit-id = "2.11.1"
 
 [tox]
-use_test_matrix = true
-test_matrix = {"6.1" = ["3.13", "3.12"]}
+test_matrix = {"6.1" = ["3.13", "3.12", "3.11"]}
 test_runner = "pytest"
 constraints_file = "https://dist.plone.org/release/6.1.2/constraints.txt"
 testenv_options = """
@@ -31,7 +30,6 @@ jobs = [
     "release_ready",
     "circular",
     ]
-py_versions='["3.13", "3.12"]'
 
 [pyproject]
 dependencies_ignores = "['i18ndude', 'plone.exportimport', 'plone.formwidget.geolocation', 'plone.meta', 'Products.CMFPlacefulWorkflow', 'pre-commit', 'pytest', 'pytest-cov', 'tox','zest.releaser']"

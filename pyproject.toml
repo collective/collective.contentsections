@@ -26,7 +26,7 @@ profile = "plone"
 ##
 
 [tool.black]
-target-version = ["py312"]
+target-version = ["py311"]
 
 ##
 # Add extra configuration options in .meta.toml:
