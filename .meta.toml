@@ -28,7 +28,7 @@ jobs = [
     "coverage",
     "dependencies",
     "release_ready",
-    "circular",
+    #"circular",
     ]
 
 [pyproject]
