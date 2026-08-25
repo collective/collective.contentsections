@@ -57,13 +57,18 @@ setup(
     ],
     extras_require={
         "test": [
+            "AccessControl",
+            "beautifulsoup4",
             "plone.app.testing",
             "plone.app.contenttypes [test]",
+            "plone.app.textfield",
+            "plone.protect",
             "Products.CMFPlacefulWorkflow",  # needed for plone.app.testing.layers.PLONE_FIXTURE
             "pytest",
             "pytest-cov",
             "pytest-plone",
             "tox",
+            "zope.intid",
         ],
     },
     entry_points="""
