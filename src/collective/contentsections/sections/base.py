@@ -52,7 +52,7 @@ class IBaseGroupSection(ISection):
 
     group_size = schema.Choice(
         title=_("Group size"),
-        values=[1, 2, 3, 4, 6],
+        values=[1, 2, 3, 4, 5, 6],
         default=3,
     )
 

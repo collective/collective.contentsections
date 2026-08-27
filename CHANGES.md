@@ -4,6 +4,7 @@
 
 - Remove hr, noneditable and paste TinyMCE plugins. They are now in TinyMCE 7 Core. [sverbois]
 - Fix Unauthorized Error in CardsSection and SelectionSection. [sverbois]
+- Add option 5 to the IBaseGroupSection group size options. [sverbois]
 
 
 ## 2.0.0a4 (2025-06-21)
