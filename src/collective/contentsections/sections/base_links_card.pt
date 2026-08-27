@@ -1,7 +1,11 @@
 <html metal:use-macro="context/@@main_template/macros/master">
   <metal:main fill-slot="main">
     <metal:content-core define-macro="content-core">
-      <div class="row row-cols-1 row-cols-md-${context/group_size} g-4">
+      <?python
+        group_size_for_xl = context.group_size
+        group_size_for_lg = min(group_size_for_xl, 3)
+      ?>
+      <div class="row row-cols-1 row-cols-lg-${group_size_for_lg} row-cols-xl-${group_size_for_xl} g-4 justify-content-center">
         <div class="col"
              tal:repeat="item view/items"
         >
