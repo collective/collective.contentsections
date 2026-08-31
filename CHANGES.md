@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0a6 (unreleased)
+
+
+- Nothing changed yet.
+
+
 ## 2.0.0a5 (2026-08-31)
 
 - Remove hr, noneditable and paste TinyMCE plugins. They are now in TinyMCE 7 Core. [sverbois]
