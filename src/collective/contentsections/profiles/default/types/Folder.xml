@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object name="Folder">
+
+  <property name="behaviors"
+            purge="true"
+  >
+    <!-- behaviors order determines fields order in add/edit forms -->
+    <element value="plone.basic" />
+    <element value="plone.leadimage" />
+    <element value="plone.excludefromnavigation" />
+    <element value="plone.shortname" />
+    <element value="plone.namefromtitle" />
+    <element value="plone.nextprevioustoggle" />
+    <element value="plone.constraintypes" />
+    <element value="plone.locking" />
+  </property>
+
+</object>
