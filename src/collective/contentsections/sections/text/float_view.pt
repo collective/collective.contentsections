@@ -1,0 +1,42 @@
+<html metal:use-macro="context/@@main_template/macros/master">
+  <metal:main fill-slot="main">
+    <metal:content-core define-macro="content-core">
+
+      <?python
+        alignment = context.lead_image_alignment
+        vertical = alignment in ("top", "bottom")
+        lead_image_cols = context.lead_image_width
+        lead_image_pourcentage = round(lead_image_cols / 12 * 100, 2)
+        lead_image_pixels = lead_image_cols * 100 # TODO: This is a temporary hack to have full width images in top and bottom alignment on mobile.
+        lead_image_scale = view.lead_image_scale
+        figure_class = {"top": "mx-auto d-block mb-4", "right": "float-end ms-4", "bottom": "mx-auto d-block mt-4", "left": "float-start me-4"}
+        figure_style = f"max-width: {lead_image_pixels}px;" if vertical else f"width: {lead_image_pourcentage}%;"
+        ?>
+      <div class="text"
+           tal:condition="python: alignment=='bottom'"
+           tal:content="structure context/text/output | nothing"
+      ></div>
+      <figure class="${python:figure_class[alignment]}"
+              style="${figure_style}"
+              tal:condition="context/image | nothing"
+      >
+        <img class="figure-image img-fluid"
+             tal:attributes="
+               src string:${context/absolute_url}/@@images/image/${view/lead_image_scale};
+             "
+        />
+        <figcaption class="figure-caption"
+                    style="display:block"
+                    tal:condition="context/image_caption"
+        >
+          ${context/image_caption}
+        </figcaption>
+      </figure>
+      <div class="text"
+           tal:condition="python: alignment!='bottom'"
+           tal:content="structure context/text/output | nothing"
+      ></div>
+
+    </metal:content-core>
+  </metal:main>
+</html>

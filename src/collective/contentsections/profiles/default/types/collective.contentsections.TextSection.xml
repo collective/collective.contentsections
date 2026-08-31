@@ -27,4 +27,10 @@
     <element value="plone.locking" />
   </property>
 
+  <property name="default_view">column_view</property>
+  <property name="view_methods">
+    <element value="column_view" />
+    <element value="float_view" />
+  </property>
+
 </object>

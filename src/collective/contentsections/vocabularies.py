@@ -5,7 +5,6 @@ from zope.component import getUtility
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
-
 IMAGE_ALIGNMENTS = {
     "left": _("Left"),
     "right": _("Right"),
@@ -22,6 +21,14 @@ COLUMN_ALIGNMENTS = {
     "start": _("Start"),
     "center": _("Center"),
     "end": _("End"),
+}
+LEAD_IMAGE_WIDTHS = {
+    3: _("25%"),
+    4: _("33%"),
+    6: _("50%"),
+    8: _("66%"),
+    9: _("75%"),
+    12: _("100%"),
 }
 
 
@@ -40,6 +47,7 @@ class VocabularyFactory:
 ImageAlignmentsVocabulary = VocabularyFactory(IMAGE_ALIGNMENTS)
 ContainerWidthsVocabulary = VocabularyFactory(CONTAINER_WIDTHS)
 ColumnAlignmentsVocabulary = VocabularyFactory(COLUMN_ALIGNMENTS)
+LeadImageWidthsVocabulary = VocabularyFactory(LEAD_IMAGE_WIDTHS)
 
 
 class IconsVocabularyFactory:

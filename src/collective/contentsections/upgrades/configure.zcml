@@ -1,0 +1,23 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    >
+
+  <include file="profiles.zcml" />
+
+  <genericsetup:upgradeSteps
+      profile="collective.contentsections:default"
+      source="1000"
+      destination="1001"
+      >
+    <genericsetup:upgradeStep
+        title="Upgrade from 1000 to 1001"
+        handler=".upgrades.upgrade_from_1000_to_1001"
+        />
+    <genericsetup:upgradeDepends
+        title="Run to1001 upgrade profile"
+        import_profile="collective.contentsections.upgrades:to1001"
+        />
+  </genericsetup:upgradeSteps>
+
+</configure>

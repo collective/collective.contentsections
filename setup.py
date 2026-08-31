@@ -1,7 +1,6 @@
 from setuptools import find_packages
 from setuptools import setup
 
-
 long_description = "\n\n".join(
     [
         open("README.md").read(),
@@ -11,7 +10,7 @@ long_description = "\n\n".join(
 )
 setup(
     name="collective.contentsections",
-    version="2.0.0a6.dev0",
+    version="2.1.0a1.dev0",
     description="A block approach for Plone 6 Classic",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -23,7 +22,6 @@ setup(
         "Framework :: Plone :: Distribution",
         "Framework :: Plone :: 6.1",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: 3.13",
@@ -46,7 +44,7 @@ setup(
     package_dir={"": "src"},
     include_package_data=True,
     zip_safe=False,
-    python_requires=">=3.10",
+    python_requires=">=3.11",
     install_requires=[
         "collective.geolocationbehavior >= 1.7.2",
         "collective.taxonomy >= 3.1.5",
@@ -59,13 +57,18 @@ setup(
     ],
     extras_require={
         "test": [
+            "AccessControl",
+            "beautifulsoup4",
             "plone.app.testing",
             "plone.app.contenttypes [test]",
+            "plone.app.textfield",
+            "plone.protect",
             "Products.CMFPlacefulWorkflow",  # needed for plone.app.testing.layers.PLONE_FIXTURE
             "pytest",
             "pytest-cov",
             "pytest-plone",
             "tox",
+            "zope.intid",
         ],
     },
     entry_points="""

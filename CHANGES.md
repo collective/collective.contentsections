@@ -1,9 +1,8 @@
 # Changelog
 
-## 2.0.0a6 (unreleased)
+## 2.1.0a1 (unreleased)
 
-
-- Nothing changed yet.
+- Replace ITextSection `lead_image_scale` with `lead_image_width` (Bootstrap grid columns). Add a `column_view` (image next to the text, now the default view) and adapt the existing view to this new width, renamed `float_view`. Add an upgrade step (profile version 1001) migrating existing `lead_image_scale` values to `lead_image_width`. [sverbois]
 
 
 ## 2.0.0a5 (2026-08-31)

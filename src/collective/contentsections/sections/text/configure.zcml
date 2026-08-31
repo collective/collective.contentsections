@@ -3,14 +3,28 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     >
 
-  <!-- View view -->
+  <!-- Column view -->
   <browser:page
-      name="view"
+      name="column_view"
       for="collective.contentsections.sections.ITextSection"
-      class="collective.contentsections.sections.SectionView"
-      template="view.pt"
+      class=".views.TextSectionView"
+      template="column_view.pt"
       permission="zope2.View"
       layer="collective.contentsections.interfaces.IBrowserLayer"
+      menu="plone_displayviews"
+      title="Column view"
+      />
+
+  <!-- Float view -->
+  <browser:page
+      name="float_view"
+      for="collective.contentsections.sections.ITextSection"
+      class=".views.TextSectionView"
+      template="float_view.pt"
+      permission="zope2.View"
+      layer="collective.contentsections.interfaces.IBrowserLayer"
+      menu="plone_displayviews"
+      title="Float view"
       />
 
 </configure>

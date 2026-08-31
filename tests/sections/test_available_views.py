@@ -3,7 +3,6 @@ from zope.interface import implementedBy
 
 import pytest
 
-
 VIEWS = {
     "ICardsSection": [
         "view",
@@ -48,7 +47,8 @@ VIEWS = {
         "list_view",
     ],
     "ITextSection": [
-        "view",
+        "column_view",
+        "float_view",
     ],
 }
 
