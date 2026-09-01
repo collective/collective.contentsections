@@ -273,6 +273,22 @@ def contents(portal, get_fti) -> dict:
             source=selection_section, target=event_page, relationship="relations"
         )
 
+        query_section = api.content.create(
+            container=basic_page,
+            type="collective.contentsections.QuerySection",
+            title="A query section",
+        )
+        query_section.query = [
+            {
+                "i": "portal_type",
+                "o": "plone.app.querystring.operation.selection.any",
+                "v": ["collective.contentsections.NewsPage"],
+            },
+        ]
+        query_section.sort_on = "sortable_title"
+        query_section.limit = 12
+        query_section.reindexObject()
+
         text_section = api.content.create(
             container=basic_page,
             type="collective.contentsections.TextSection",
@@ -361,6 +377,7 @@ def contents(portal, get_fti) -> dict:
             links_section2,
             locations_section,
             location1,
+            query_section,
             selection_section,
             text_section,
             file1,

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-08-14 11:03+0000\n"
+"POT-Creation-Date: 2026-08-31 13:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,27 +41,27 @@ msgstr "${DYNAMIC_CONTENT} Modifier la section"
 msgid "${DYNAMIC_CONTENT} Section content"
 msgstr "${DYNAMIC_CONTENT} Contenu de la section"
 
-#: ../vocabularies.py:32
+#: ../vocabularies.py:31
 msgid "100%"
 msgstr "100%"
 
-#: ../vocabularies.py:27
+#: ../vocabularies.py:26
 msgid "25%"
 msgstr "25%"
 
-#: ../vocabularies.py:28
+#: ../vocabularies.py:27
 msgid "33%"
 msgstr "33%"
 
-#: ../vocabularies.py:29
+#: ../vocabularies.py:28
 msgid "50%"
 msgstr "50%"
 
-#: ../vocabularies.py:30
+#: ../vocabularies.py:29
 msgid "66%"
 msgstr "66%"
 
-#: ../vocabularies.py:31
+#: ../vocabularies.py:30
 msgid "75%"
 msgstr "75%"
 
@@ -81,7 +81,7 @@ msgstr "Image d'arrière-plan"
 msgid "Basic page"
 msgstr "Page basique"
 
-#: ../vocabularies.py:12
+#: ../vocabularies.py:11
 msgid "Bottom"
 msgstr "En bas"
 
@@ -113,7 +113,7 @@ msgstr "Cartes"
 msgid "Cards section"
 msgstr "Sections cartes"
 
-#: ../vocabularies.py:23
+#: ../vocabularies.py:22
 msgid "Center"
 msgstr "Centrer"
 
@@ -133,15 +133,15 @@ msgstr "Contact"
 msgid "Contacts section"
 msgstr "Section contacts"
 
-#: ../vocabularies.py:16
+#: ../vocabularies.py:15
 msgid "Container 100%"
 msgstr "Conteneur 100%"
 
-#: ../vocabularies.py:18
+#: ../vocabularies.py:17
 msgid "Container 50%"
 msgstr "Conteneur 50%"
 
-#: ../vocabularies.py:17
+#: ../vocabularies.py:16
 msgid "Container 66%"
 msgstr "Conteneur 66%"
 
@@ -157,7 +157,7 @@ msgstr "Description"
 msgid "Email"
 msgstr "Adresse courriel"
 
-#: ../vocabularies.py:24
+#: ../vocabularies.py:23
 msgid "End"
 msgstr "Fin"
 
@@ -252,7 +252,7 @@ msgstr "Alignement de l'image principale"
 msgid "Lead image width"
 msgstr "Largeur de l'image principale"
 
-#: ../vocabularies.py:10
+#: ../vocabularies.py:9
 msgid "Left"
 msgstr "Gauche"
 
@@ -268,7 +268,7 @@ msgstr "Emplacement"
 msgid "Locations section"
 msgstr "Section emplacements"
 
-#: ../sections/cards/views.py:30
+#: ../sections/cards/views.py:41
 msgid "More information"
 msgstr "Plus d'informations"
 
@@ -300,7 +300,11 @@ msgstr "Site Plone (Content Sections)"
 msgid "Previous"
 msgstr "Précédent"
 
-#: ../vocabularies.py:11
+#: ../profiles/default/types/collective.contentsections.QuerySection.xml
+msgid "Query section"
+msgstr "Section requête"
+
+#: ../vocabularies.py:10
 msgid "Right"
 msgstr "Droite"
 
@@ -328,7 +332,7 @@ msgstr "Sélection"
 msgid "Selection section"
 msgstr "Section sélection"
 
-#: ../vocabularies.py:22
+#: ../vocabularies.py:21
 msgid "Start"
 msgstr "Début"
 
@@ -358,7 +362,7 @@ msgstr "Il n'y a pas de section sur cette page."
 msgid "Title"
 msgstr "Titre"
 
-#: ../vocabularies.py:13
+#: ../vocabularies.py:12
 msgid "Top"
 msgstr "Haut"
 
@@ -370,7 +374,7 @@ msgstr "Désinstalle le module complémentaire collective.contentsections"
 msgid "Use uuid.uuid4 to generate short name of new object."
 msgstr "Utiliser le uuid.uuid4 pour générer le nom court du nouvel objet."
 
-#: ../vocabularies.py:19
+#: ../vocabularies.py:18
 msgid "Window 100%"
 msgstr "Fenêtre 100%"
 

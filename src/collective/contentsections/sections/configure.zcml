@@ -29,6 +29,7 @@
   <include package=".images" />
   <include package=".links" />
   <include package=".locations" />
+  <include package=".query" />
   <include package=".selection" />
   <include package=".text" />
 

@@ -27,6 +27,7 @@
       <element>collective.contentsections.LinksSection</element>
       <element>collective.contentsections.Location</element>
       <element>collective.contentsections.LocationsSection</element>
+      <element>collective.contentsections.QuerySection</element>
       <element>collective.contentsections.SelectionSection</element>
       <element>collective.contentsections.TextSection</element>
       <element>Image</element>

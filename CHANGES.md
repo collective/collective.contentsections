@@ -1,9 +1,9 @@
 # Changelog
 
-## 2.1.0a2 (unreleased)
+## 2.2.0a1 (unreleased)
 
 
-- Nothing changed yet.
+- Add QuerySection, a new section content type using the `plone.collection` behavior to define its own search query. [sverbois]
 
 
 ## 2.1.0a1 (2026-08-31)

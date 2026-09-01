@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-08-14 11:03+0000\n"
+"POT-Creation-Date: 2026-08-31 13:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,27 +38,27 @@ msgstr ""
 msgid "${DYNAMIC_CONTENT} Section content"
 msgstr ""
 
-#: ../vocabularies.py:32
+#: ../vocabularies.py:31
 msgid "100%"
 msgstr ""
 
-#: ../vocabularies.py:27
+#: ../vocabularies.py:26
 msgid "25%"
 msgstr ""
 
-#: ../vocabularies.py:28
+#: ../vocabularies.py:27
 msgid "33%"
 msgstr ""
 
-#: ../vocabularies.py:29
+#: ../vocabularies.py:28
 msgid "50%"
 msgstr ""
 
-#: ../vocabularies.py:30
+#: ../vocabularies.py:29
 msgid "66%"
 msgstr ""
 
-#: ../vocabularies.py:31
+#: ../vocabularies.py:30
 msgid "75%"
 msgstr ""
 
@@ -78,7 +78,7 @@ msgstr ""
 msgid "Basic page"
 msgstr ""
 
-#: ../vocabularies.py:12
+#: ../vocabularies.py:11
 msgid "Bottom"
 msgstr ""
 
@@ -110,7 +110,7 @@ msgstr ""
 msgid "Cards section"
 msgstr ""
 
-#: ../vocabularies.py:23
+#: ../vocabularies.py:22
 msgid "Center"
 msgstr ""
 
@@ -130,15 +130,15 @@ msgstr ""
 msgid "Contacts section"
 msgstr ""
 
-#: ../vocabularies.py:16
+#: ../vocabularies.py:15
 msgid "Container 100%"
 msgstr ""
 
-#: ../vocabularies.py:18
+#: ../vocabularies.py:17
 msgid "Container 50%"
 msgstr ""
 
-#: ../vocabularies.py:17
+#: ../vocabularies.py:16
 msgid "Container 66%"
 msgstr ""
 
@@ -154,7 +154,7 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: ../vocabularies.py:24
+#: ../vocabularies.py:23
 msgid "End"
 msgstr ""
 
@@ -249,7 +249,7 @@ msgstr ""
 msgid "Lead image width"
 msgstr ""
 
-#: ../vocabularies.py:10
+#: ../vocabularies.py:9
 msgid "Left"
 msgstr ""
 
@@ -265,7 +265,7 @@ msgstr ""
 msgid "Locations section"
 msgstr ""
 
-#: ../sections/cards/views.py:30
+#: ../sections/cards/views.py:41
 msgid "More information"
 msgstr ""
 
@@ -297,7 +297,11 @@ msgstr ""
 msgid "Previous"
 msgstr ""
 
-#: ../vocabularies.py:11
+#: ../profiles/default/types/collective.contentsections.QuerySection.xml
+msgid "Query section"
+msgstr ""
+
+#: ../vocabularies.py:10
 msgid "Right"
 msgstr ""
 
@@ -325,7 +329,7 @@ msgstr ""
 msgid "Selection section"
 msgstr ""
 
-#: ../vocabularies.py:22
+#: ../vocabularies.py:21
 msgid "Start"
 msgstr ""
 
@@ -355,7 +359,7 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: ../vocabularies.py:13
+#: ../vocabularies.py:12
 msgid "Top"
 msgstr ""
 
@@ -367,7 +371,7 @@ msgstr ""
 msgid "Use uuid.uuid4 to generate short name of new object."
 msgstr ""
 
-#: ../vocabularies.py:19
+#: ../vocabularies.py:18
 msgid "Window 100%"
 msgstr ""
 
