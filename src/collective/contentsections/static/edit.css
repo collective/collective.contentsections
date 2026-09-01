@@ -1,0 +1,11 @@
+/* QuerySection: hide plone.collection fields that have no effect on the section views . */
+body.template-collective-contentsections-querysection
+  #formfield-form-widgets-ICollection-item_count,
+body.template-collective-contentsections-querysection
+  #formfield-form-widgets-ICollection-customViewFields,
+body.portaltype-collective-contentsections-querysection
+  #formfield-form-widgets-ICollection-item_count,
+body.portaltype-collective-contentsections-querysection
+  #formfield-form-widgets-ICollection-customViewFields {
+  display: none;
+}

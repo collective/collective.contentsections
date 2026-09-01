@@ -78,6 +78,12 @@
     </field>
     <value key="resource">++plone++bootstrap-icons/file-earmark-richtext.svg</value>
   </record>
+  <record name="plone.icon.contenttype/collective-contentsections-querysection">
+    <field type="plone.registry.field.TextLine">
+      <title>Query section content type icon</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/search.svg</value>
+  </record>
   <record name="plone.icon.contenttype/collective-contentsections-selectionsection">
     <field type="plone.registry.field.TextLine">
       <title>Selection section content type icon</title>

@@ -8,7 +8,7 @@
 [![Stars](https://img.shields.io/github/stars/collective/collective.contentsections?style=social)](https://github.com/collective/collective.contentsections/stargazers)
 
 
-This product offers a block approach for Plone 6 Classic based entirely on Dexterity content types. It is largely based on the code that was developed in the *imio.smartweb.core* product for the Walloon municipalities.
+This product offers a block approach for Plone 6 Blicca based entirely on Dexterity content types. It is largely based on the code that was developed in the *imio.smartweb.core* product for the Walloon municipalities.
 
 The approach in this product can be seen as a generalisation of the *Full content* view available in Plone on *Folder* content type.
 
@@ -57,7 +57,7 @@ The *collective.contentsections* product adds a *plone.distribution* "Plone Site
 
 - We want a KISS solution.
 - We want a solution for junior integrators.
-- We believe that Plone Classic can be used to create beautiful sites in less than a day.
+- We believe that Plone Blicca can be used to create beautiful sites in less than a day.
 
 ## Possibilities
 

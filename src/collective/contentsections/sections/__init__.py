@@ -19,6 +19,8 @@ from .links.content import ILinksSection
 from .links.content import LinksSection
 from .locations.content import ILocationsSection
 from .locations.content import LocationsSection
+from .query.content import IQuerySection
+from .query.content import QuerySection
 from .selection.content import ISelectionSection
 from .selection.content import SelectionSection
 from .text.content import ITextSection

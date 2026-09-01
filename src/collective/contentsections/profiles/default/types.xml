@@ -43,6 +43,9 @@
           name="collective.contentsections.NewsPage"
   />
   <object meta_type="Dexterity FTI"
+          name="collective.contentsections.QuerySection"
+  />
+  <object meta_type="Dexterity FTI"
           name="collective.contentsections.SelectionSection"
   />
   <object meta_type="Dexterity FTI"

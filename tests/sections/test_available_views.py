@@ -40,6 +40,12 @@ VIEWS = {
     "ILocationsSection": [
         "view",
     ],
+    "IQuerySection": [
+        "card_view",
+        "card_carousel_view",
+        "carousel_view",
+        "list_view",
+    ],
     "ISelectionSection": [
         "card_view",
         "card_carousel_view",

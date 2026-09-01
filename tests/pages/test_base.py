@@ -48,6 +48,7 @@ class TestBase:
             "an-empty-locations-section",
             "a-locations-section",
             "a-selection-section",
+            "a-query-section",
             "a-text-section",
             "an-images-section",
         ]
@@ -68,6 +69,7 @@ class TestBase:
             "an-empty-locations-section",
             "a-locations-section",
             "a-selection-section",
+            "a-query-section",
             "a-text-section",
             "an-images-section",
         ]
