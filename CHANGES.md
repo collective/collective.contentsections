@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.0a2 (unreleased)
+
+
+- Nothing changed yet.
+
+
 ## 2.2.0a1 (2026-09-01)
 
 
