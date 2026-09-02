@@ -9,3 +9,43 @@ body.portaltype-collective-contentsections-querysection
   #formfield-form-widgets-ICollection-customViewFields {
   display: none;
 }
+
+body.template-page_view .add-button-wrapper button {
+  width: 1.75rem;
+  height: 1.75rem;
+  line-height: 1;
+  padding: 0;
+}
+body.template-page_view .add-button-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+body.template-page_view .add-button-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  border-top: 1px solid black;
+  z-index: 0;
+}
+body.template-page_view .add-button-dropdown {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+}
+body.template-page_view .add-button-dropdown:has(.dropdown-menu.show) {
+  z-index: 10002;
+}
+body.template-page_view .add-button-dropdown .dropdown-menu {
+  left: 50%;
+  transform: translateX(-50%);
+}
+body.template-page_view .section-edit-links {
+  top: -1.5rem;
+  z-index: 10000;
+}
+body.template-page_view .section-edit-links:has(.dropdown-menu.show) {
+  z-index: 10001;
+}

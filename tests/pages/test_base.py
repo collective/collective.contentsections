@@ -21,7 +21,7 @@ class TestBase:
             context=page,
         )
         assert view.template_name == "base_page_view.pt"
-        assert view.macros.names == ["master"]
+        assert view.macros.names == ["master", "add_button"]
         assert view().id == "base_page_view.pt"
 
         view_reorder = api.content.get_view(
