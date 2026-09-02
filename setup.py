@@ -54,6 +54,7 @@ setup(
         "plone.formwidget.geolocation >= 3.0.7",
         "Products.CMFPlone",
         "setuptools",
+        "z3c.form",
     ],
     extras_require={
         "test": [
