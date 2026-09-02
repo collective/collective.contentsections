@@ -4,6 +4,7 @@
 
 
 - Add "+" buttons between sections to create a new section directly from the page. The new section is automatically moved right after the section the "+" button was attached to. This is made possible by customising the default section add form. [sverbois]
+- Add preview toggle for editors on pages. [sverbois]
 
 
 ## 2.2.0a1 (2026-09-01)

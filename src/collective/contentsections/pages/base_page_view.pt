@@ -27,8 +27,28 @@
         margin-bottom: 0px;
         padding: 1rem 0rem;
         }
+        .edition-menu-hidden {
+        display: none !important;
+        }
+        #switchPreview:checked {
+        background-color: #000;
+        border-color: #000;
+        }
       </style>
 
+      <div class="form-check form-switch mb-0 position-absolute top-0 end-0 mt-2 me-2"
+           tal:condition="can_edit"
+      >
+        <input class="form-check-input"
+               id="switchPreview"
+               role="switch"
+               type="checkbox"
+        />
+        <label class="form-check-label"
+               for="switchPreview"
+               i18n:translate=""
+        >Preview</label>
+      </div>
       <metal:slot define-slot="content-top" />
 
       <div class="pb-3"
@@ -37,7 +57,7 @@
            "
            tal:condition="can_edit"
       >
-        <div class="add-button-wrapper text-center my-1"
+        <div class="add-button-wrapper edition-menu text-center my-1"
              metal:define-macro="add-button"
              tal:condition="addable_sections"
         >
@@ -89,7 +109,7 @@
             <a tal:attributes="
                  name string:${section_id};
                "></a>
-            <div class="section-edit-links position-absolute end-0 pe-2"
+            <div class="section-edit-links edition-menu position-absolute end-0 pe-2"
                  tal:condition="can_edit"
             >
               <div class="btn-group">
@@ -185,6 +205,12 @@
           </div>
         </tal:section>
       </div>
+
+      <script>
+        $('#switchPreview').on('change', function() {
+          $('.edition-menu').toggleClass('edition-menu-hidden', this.checked);
+        });
+      </script>
 
       <script>
         /* Sections are full width */
