@@ -2,10 +2,15 @@ from collective.contentsections import _
 from plone import schema
 from plone.app.z3cform.widgets.select import SelectFieldWidget
 from plone.autoform import directives
+from plone.dexterity.browser.add import DefaultAddForm
+from plone.dexterity.browser.add import DefaultAddView
 from plone.dexterity.content import Container
 from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from Products.Five.browser import BrowserView
+from z3c.form import field
+from z3c.form.interfaces import HIDDEN_MODE
+from zope import schema as zope_schema
 from zope.interface import implementer
 
 
@@ -144,3 +149,54 @@ def reindex_parent_page(section, event):
     page = section.__parent__
     if page is not None:
         page.reindexObject()
+
+
+class SectionAddForm(DefaultAddForm):
+    """Add form for Sections, with an extra hidden "insert_after" field so
+    the "+" buttons in base_page_view.pt can tell this form where to place
+    the new section.
+    """
+
+    def updateFields(self):
+        super().updateFields()
+        self.fields += field.Fields(
+            field.Field(zope_schema.TextLine(__name__="insert_after", required=False))
+        )
+        self.fields["insert_after"].mode = HIDDEN_MODE
+
+    def updateWidgets(self):
+        super().updateWidgets()
+        if "insert_after" in self.request.form:
+            self.widgets["insert_after"].value = self.request.form["insert_after"]
+
+    def create(self, data):
+        data = dict(data)
+        self._insert_after = data.pop("insert_after", None)
+        return super().create(data)
+
+    def add(self, object):
+        super().add(object)
+        insert_after = getattr(self, "_insert_after", None)
+        if not insert_after:
+            return
+        ordering = self.container.getOrdering()
+        if ordering is None:
+            return
+        if insert_after == "top":
+            target_position = 0
+        else:
+            try:
+                target_position = ordering.getObjectPosition(insert_after) + 1
+            except KeyError:
+                return
+        section_id = object.getId()
+        if ordering.getObjectPosition(section_id) != target_position:
+            ordering.moveObjectToPosition(section_id, target_position)
+
+
+class SectionAddView(DefaultAddView):
+    """Add view for Sections, registered as a more specific override of
+    Dexterity's generic ++add++ traversal adapter
+    """
+
+    form = SectionAddForm

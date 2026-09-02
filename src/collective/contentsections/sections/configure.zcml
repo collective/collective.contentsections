@@ -3,6 +3,20 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     >
 
+  <adapter
+      factory=".base.SectionAddView"
+      provides="zope.publisher.interfaces.browser.IBrowserPage"
+      for="..pages.base.IPage
+           ..interfaces.IBrowserLayer
+           plone.dexterity.interfaces.IDexterityFTI"
+      />
+  <class class=".base.SectionAddView">
+    <require
+        permission="cmf.AddPortalContent"
+        interface="zope.publisher.interfaces.browser.IBrowserPage"
+        />
+  </class>
+
   <subscriber
       for=".base.ISection
            zope.lifecycleevent.interfaces.IObjectAddedEvent"

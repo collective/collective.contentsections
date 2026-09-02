@@ -13,6 +13,7 @@
                         tal:define="
                           can_edit python: checkPermission('Modify portal content', context);
                           sections view/sections;
+                          addable_sections python: context.restrictedTraverse('@@folder_factories').addable_types() if can_edit else [];
                         "
     >
 
@@ -30,15 +31,39 @@
 
       <metal:slot define-slot="content-top" />
 
-      <tal:emptypage tal:condition="not:sections">
-        <div class="row">
-          <div class="col-sm-12">
-            <p class="container"
-               i18n:translate=""
-            >There is no section on this page.</p>
+      <div class="pb-3"
+           tal:define="
+             insert_after_value string:top;
+           "
+           tal:condition="can_edit"
+      >
+        <div class="add-button-wrapper text-center my-1"
+             metal:define-macro="add-button"
+             tal:condition="addable_sections"
+        >
+          <hr class="add-button-line" />
+          <div class="dropdown d-inline-block add-button-dropdown">
+            <button class="btn btn-sm btn-dark rounded-circle"
+                    title="Add a section"
+                    type="button"
+                    data-bs-display="static"
+                    data-bs-toggle="dropdown"
+                    i18n:attributes="title"
+            >+</button>
+            <ul class="dropdown-menu">
+              <li tal:repeat="item addable_sections">
+                <a class="dropdown-item d-flex align-items-center gap-2"
+                   href="${item/action}?insert_after=${insert_after_value}"
+                   i18n:translate=""
+                >
+                  <tal:icon replace="structure python:icons.tag(item['icon'], tag_class='')" />
+                        ${item/title}
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-      </tal:emptypage>
+      </div>
 
       <div id="sortable-sections"
            tal:omit-tag="not:can_edit"
@@ -56,7 +81,7 @@
             section_background_image_url = f"url({section_url}/@@images/background_image/huge)"
             section_style = f"background-image: {section_background_image_url}; background-size: cover; background-position: center;"
             ?>
-          <div class="${section_class}"
+          <div class="position-relative ${section_class}"
                id="${section_id}"
                style="${python:section_style if section_background_image else ''}"
                data-section-id="${section/id}"
@@ -64,80 +89,79 @@
             <a tal:attributes="
                  name string:${section_id};
                "></a>
-            <div class="position-relative ${python:'container' if section.container_width else 'px-4'}">
-              <div class="section-edit-links position-absolute top-0 end-0 pt-1 pe-3"
-                   style="z-index:10000;"
-                   tal:condition="can_edit"
-              >
-                <div class="btn-group">
-                  <div class="dropdown">
-                    <button class="btn btn-dark btn-sm dropdown-toggle"
-                            type="button"
-                            data-bs-toggle="dropdown"
-                            i18n:translate=""
-                    >
-                      <tal:icon replace="structure python:icons.tag('toolbar-action/actions', tag_class='')" />
+            <div class="section-edit-links position-absolute end-0 pe-2"
+                 tal:condition="can_edit"
+            >
+              <div class="btn-group">
+                <div class="dropdown">
+                  <button class="btn btn-dark btn-sm dropdown-toggle"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          i18n:translate=""
+                  >
+                    <tal:icon replace="structure python:icons.tag('toolbar-action/actions', tag_class='')" />
                       Actions
-                    </button>
-                    <ul class="dropdown-menu">
-                      <tal:block tal:condition="section/allowedContentTypes">
-                        <?python
-                          addable_types = section.restrictedTraverse('@@folder_factories').addable_types()
+                  </button>
+                  <ul class="dropdown-menu">
+                    <tal:block tal:condition="section/allowedContentTypes">
+                      <?python
+                          addable_contents = section.restrictedTraverse('@@folder_factories').addable_types()
                         ?>
-                        <li tal:repeat="item addable_types">
-                          <a class="dropdown-item"
-                             href="${item/action}"
-                             i18n:translate=""
-                          >
-                            <tal:icon replace="structure python:icons.tag('plus-square', tag_class='')" />
+                      <li tal:repeat="item addable_contents">
+                        <a class="dropdown-item"
+                           href="${item/action}"
+                           i18n:translate=""
+                        >
+                          <tal:icon replace="structure python:icons.tag('plus-square', tag_class='')" />
                             Add ${item/title}
-                          </a>
-                        </li>
-                      </tal:block>
-                      <li tal:condition="section/allowedContentTypes">
-                        <a class="dropdown-item"
-                           href="${section_url}/folder_contents"
-                           i18n:translate=""
-                        >
-                          <tal:icon replace="structure python:icons.tag('toolbar-action/folderContents', tag_class='')" />
+                        </a>
+                      </li>
+                    </tal:block>
+                    <li tal:condition="section/allowedContentTypes">
+                      <a class="dropdown-item"
+                         href="${section_url}/folder_contents"
+                         i18n:translate=""
+                      >
+                        <tal:icon replace="structure python:icons.tag('toolbar-action/folderContents', tag_class='')" />
                           Section content
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item"
-                           href="${section_url}/@@edit"
-                           i18n:translate=""
-                        >
-                          <tal:icon replace="structure python:icons.tag('toolbar-action/edit', tag_class='')" />
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item"
+                         href="${section_url}/@@edit"
+                         i18n:translate=""
+                      >
+                        <tal:icon replace="structure python:icons.tag('toolbar-action/edit', tag_class='')" />
                           Edit section
-                        </a>
-                      </li>
-                      <li tal:condition="python:len(section.getAvailableLayouts())>1">
-                        <a class="dropdown-item"
-                           href="${section_url}/select_default_view"
-                           i18n:translate=""
-                        >
-                          <tal:icon replace="structure python:icons.tag('toolbar-action/view', tag_class='')" />
+                      </a>
+                    </li>
+                    <li tal:condition="python:len(section.getAvailableLayouts())>1">
+                      <a class="dropdown-item"
+                         href="${section_url}/select_default_view"
+                         i18n:translate=""
+                      >
+                        <tal:icon replace="structure python:icons.tag('toolbar-action/view', tag_class='')" />
                           Change section view
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item"
-                           href="${section_url}/@@delete_confirmation"
-                           i18n:translate=""
-                        >
-                          <tal:icon replace="structure python:icons.tag('trash', tag_class='')" />
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item"
+                         href="${section_url}/@@delete_confirmation"
+                         i18n:translate=""
+                      >
+                        <tal:icon replace="structure python:icons.tag('trash', tag_class='')" />
                           Delete section
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-                <!-- end of btn-group -->
-                <button class="sortable-handle btn btn-dark btn-sm">
-                  <tal:icon replace="structure python:icons.tag('grip-vertical', tag_class='')" />
-                </button>
               </div>
+              <!-- end of btn-group -->
+              <button class="sortable-handle btn btn-dark btn-sm">
+                <tal:icon replace="structure python:icons.tag('grip-vertical', tag_class='')" />
+              </button>
+            </div>
+            <div class="${python:'container' if section.container_width else 'px-4'}">
               <div class="row">
                 <?python
                   container_width = section.container_width if section.container_width else 0
@@ -151,6 +175,13 @@
                 </div>
               </div>
             </div>
+            <tal:addafter tal:define="
+                            insert_after_value section/id;
+                          "
+                          tal:condition="can_edit"
+            >
+              <tal:block metal:use-macro="template/macros/add-button" />
+            </tal:addafter>
           </div>
         </tal:section>
       </div>
