@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.3.0a1 (unreleased)
+## 2.3.0a1 (2026-09-02)
 
 
 - Add "+" buttons between sections to create a new section directly from the page. The new section is automatically moved right after the section the "+" button was attached to. This is made possible by customising the default section add form. [sverbois]
