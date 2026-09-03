@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.3.0a2 (unreleased)
+## 2.3.0 (2026-09-03)
 
 
 - Fix the list of addable sections when a page is the default page for its folder. [sverbois]
