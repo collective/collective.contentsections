@@ -29,6 +29,14 @@
       />
 
   <browser:page
+      name="page_factories"
+      for=".base.IPage"
+      class=".base.PageFactoriesView"
+      permission="cmf.AddPortalContent"
+      layer="collective.contentsections.interfaces.IBrowserLayer"
+      />
+
+  <browser:page
       name="reorder_sections"
       for=".base.IPage"
       class=".base.PageSectionsOrderingView"
