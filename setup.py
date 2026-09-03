@@ -46,6 +46,7 @@ setup(
     zip_safe=False,
     python_requires=">=3.11",
     install_requires=[
+        "Acquisition",
         "collective.geolocationbehavior >= 1.7.2",
         "collective.taxonomy >= 3.1.5",
         "collective.z3cform.datagridfield >= 3.0.3",
