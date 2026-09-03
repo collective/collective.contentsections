@@ -1,8 +1,10 @@
+from Acquisition import aq_inner
 from collective.contentsections import _
 from collective.contentsections.sections import ISection
 from plone import api
 from plone import schema
 from plone.app.content.browser.contents.rearrange import OrderContentsBaseAction
+from plone.app.content.browser.folderfactories import FolderFactoriesView
 from plone.app.content.utils import json_loads
 from plone.app.contenttypes.browser.full_view import FullViewItem
 from plone.autoform import directives
@@ -63,6 +65,19 @@ class PageTemplateView(BrowserView):
     @property
     def macros(self):
         return ViewPageTemplateFile(self.template_name).macros
+
+
+class PageFactoriesView(FolderFactoriesView):
+    """Addable types (sections) for the Page itself.
+
+    ``@@folder_factories`` delegates to the parent folder's addable types
+    when its context is folderish and is the parent's default page (so the
+    generic "Add" toolbar targets the folder, not the item used to display
+    it).
+    """
+
+    def add_context(self):
+        return aq_inner(self.context)
 
 
 class PageSectionsOrderingView(OrderContentsBaseAction):

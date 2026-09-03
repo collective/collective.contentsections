@@ -3,7 +3,7 @@
 ## 2.3.0a2 (unreleased)
 
 
-- Nothing changed yet.
+- Fix the list of addable sections when a page is the default page for its folder. [sverbois]
 
 
 ## 2.3.0a1 (2026-09-02)

@@ -13,7 +13,7 @@
                         tal:define="
                           can_edit python: checkPermission('Modify portal content', context);
                           sections view/sections;
-                          addable_sections python: context.restrictedTraverse('@@folder_factories').addable_types() if can_edit else [];
+                          addable_sections python: context.restrictedTraverse('@@page_factories').addable_types() if can_edit else [];
                         "
     >
 
